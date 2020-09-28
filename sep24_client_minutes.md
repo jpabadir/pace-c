@@ -1,12 +1,12 @@
-#PACE GROUP C
-#INTRODUCTORY MEETING 09/24
+# PACE GROUP C
+# INTRODUCTORY MEETING 09/24
 
-##24 SEPTEMBER 2020 / 9:00 AM - 9:27 AM (PST) / VIA ZOOM
+## 24 SEPTEMBER 2020 / 9:00 AM - 9:27 AM (PST) / VIA ZOOM
 
-###ATTENDEES
+### ATTENDEES
 Katrina Martel, Jean-Phillippe Abadir, Rouchan WANG, Shannon Farvolden, Maya Tomoum, Philip Okanlawon, Daniel Elizondo, Shamus Boulianne, Christian Pasteris. 
 
-###AGENDA
+### AGENDA
 
 Introduce Team Members and Associated Roles
 1.	Katrina Martel - Client Liaison 
@@ -27,7 +27,7 @@ Project Details
 ●	Confirm programming language(s)
 
 
-###NOTES
+### NOTES
 ●	Shannon attended UBCO and completed her Capstone Project five years ago. She is currently working for Pace, which uses machine learning and AI to create dynamic pricing for hostels to generate higher revenue. 
 ●	Meetings will be held Tuesdays from 9-10AM(PST) over Zoom. 
 ●	Notes to be collaborated on with Pace A and Pace B (such as establishing initial system requirements) will be on a public Google Doc.
@@ -41,13 +41,13 @@ Project Details
 ■	Mentees should be able to pair with mentors and view a calendar for Mentor availability (Front-end web development).
 ●	There is nothing too specific for how the website should look, the styling is essentially up to us.
 
-###ACTION ITEMS
+### ACTION ITEMS
 09/24-01. Katrina will confirm that Maya has created a recurring Zoom meeting for Tuesdays from 9-10AM by the end of today (September 24th, 2020). 
 2-09/24. Katrina will create a public folder for Pace A, Pace B, and Pace C groups to collaborate on to establish a shared understanding of system requirements by September 25th, 2020. 
 3-09/24. The document that will be created to establish an understanding will be sent to Shannon from Katrina by September 28th, 2020 so that it can be reviewed with the client during September 29th’s client meeting.
 4-09/24. Details of the introductory meeting will be reviewed during the team meeting on September 28th at 7AM(PST) to ensure all team members have a concrete preliminary understanding of the project. 
 4-09/24. Each team member should create a low-fidelity prototype from our understanding of the system requirements. During the team meeting on September 28th, we will collaborate to compile one prototype to present to the client during the September 29th client meeting. 
 
-##NEXT WEEK’S AGENDA
+### NEXT WEEK’S AGENDA
 1)	Confirm overarching system requirements.
 2)	Present low-fidelity prototype to the client.
