@@ -6,7 +6,7 @@
 ### AGENDA
 
 ### ATTENDEES
-Katrina Martel, Maya T., Philip O., Anthony B., Shannon F., Christian P.
+Katrina M., Maya T., Philip O., Anthony B., Shannon F., Christian P.
 
 #### BUSINESS FROM THE PREVIOUS MEETING
 - 09/24-01. Katrina will confirm that Maya has created a recurring Zoom meeting for Tuesdays from 9-10AM by the end of September 24th, 2020. ***Completed***
@@ -22,49 +22,48 @@ Katrina Martel, Maya T., Philip O., Anthony B., Shannon F., Christian P.
 ### NOTES
 Please be advised: I am currently referring to the Mentorship/Mentee login platform (website) where Mentors and Mentees are matched as the ‘mentorship portal’. It will continue to be referred to as such throughout the duration of this week’s client meeting notes. 
 
-The meeting started by Shannon sharing her screen and providing answers to the questions provided on the Pace A, B, and C shared Google Doc. The corresponding questions and answers are as follows (questions are numbered 1-10, answers are denoted by “a”):
+The meeting started by Shannon sharing her screen and providing answers to the questions provided on the Pace A, B, and C shared Google Doc. The corresponding questions and answers are as follows (questions are numbered 1-10, answers are denoted by “i.”):
 
 1.	Do you have any preferences for coding styles. I.e. variable names and such for integration with your stuff.
-    a.	The coding style is up to each team. However, teams should look up the best practice for the language of choice. Javascript: testVariableName (camel case), python: test_variable_name (snake case)
+    1. The coding style is up to each team. However, teams should look up the best practice for the language of choice. Javascript: testVariableName (camel case), python: test_variable_name (snake case)
 
 2.	Should we make our own repo or do you have something to provide for us.
-    a.	Yes, teams are to create their own repo on github.
+    1. Yes, teams are to create their own repo on github.
 
 3.	What are the end users? Mentors, Mentees, anything else? (Admins, maybe? If so, what kind?)
-    a.	End users include: Mentors, Mentees, and Admins. 
-    b.	Admins create an account for their organization. 
+    1. End users include: Mentors, Mentees, and Admins. 
+    2. Admins create an account for their organization. 
 
 4.	For the machine learning aspect of matching mentors to mentees, will we be using a specific service that Pace has access to, or using and/or implementing a new service?
-    a.	Machine Learning is not a necessary requirement for the project at the moment. The matching process is based around conditional logic based on similar number of skills, etc. Therefore, no, machine learning is not needed at this point. 
+    1.  Machine Learning is not a necessary requirement for the project at the moment. The matching process is based around conditional logic based on similar number of skills, etc. Therefore, no, machine learning is not needed at this point. 
 
 5.	Will there be localization?
-    a.	English, as the first step. If we can support more languages, that’s a bonus, but it’s not necessary. Being able to handle time zones is more important.
+    1.  English, as the first step. If we can support more languages, that’s a bonus, but it’s not necessary. Being able to handle time zones is more important.
 
 6.	Validation of users working for a company?
-    a.	Admins should be able to invite mentors through email. Start with associating admins to a company based on their email (i.e @ubc.ca would be associated with UBC). It is essentially up to the admin of the organization who signed up whether they choose to display the form publicly on their website, or through an invitation-based email.
+    1. Admins should be able to invite mentors through email. Start with associating admins to a company based on their email (i.e @ubc.ca would be associated with UBC). It is essentially up to the admin of the organization who signed up whether they choose to display the form publicly on their website, or through an invitation-based email.
 
 7.	How does a company sign up who is in charge of the admin account?
-    a.	The person that creates/ registers the organization is the admin. This is done through the user providing a unique email. 
+    1. The person that creates/ registers the organization is the admin. This is done through the user providing a unique email. 
 
 8.	Is there PACE admins?
-    a.	In a round-about way. Whoever creates the account is the admin, so if someone from PACE decides to create an account, that person would be the admin for the mentorship site for Pace.
+    1. In a round-about way. Whoever creates the account is the admin, so if someone from PACE decides to create an account, that person would be the admin for the mentorship site for Pace.
 
 9.	Is there a support system?
-    a.	There is no customer support system.
+    1. There is no customer support system.
 
 10.	Is there a database that we will be working with?
-    a.	Teams are to create their own database. 
+    1. Teams are to create their own database. 
 
 After discussing the questions and answers from that Google Doc, Katrina asked if anyone had prototypes to share since that was discussed at the last meeting. Pace A and B’s prototypes were still in progress, so they didn’t have anything to show. Since many questions from our team’s Google Doc titled “Pace C System Requirements” could be answered by walking through the prototype, Katrina offered to show the prototype from Balsamiq. The information gained from walking through the prototype is as follows:
--	Yes, the form is to be dynamic so that organizations can modify the fields. 
+-	Yes, the form is to be **dynamic** so that organizations can modify the fields. 
 -	The way the form is currently set up (where fields are dynamically displayed whether the “mentor” vs. “mentee” radio button is selected, as well as having the form split up into sections by “next”) is acceptable. 
     - A suggestion would be to rank the skills according to importance when gathering the user’s skills (rather than checkboxes). This will help streamline the matching process. 
 -	The way the prototype has the form embedded publicly is fine, but remember that an admin might not want to display the form publicly, and so that form would then be accessed  on an invite basis (like the functionality on Google Docs where the accessibility can be set to be viewed by only people with the link/email addresses  can be manually added on). 
 -	Rather than having the user signup on the embedded form itself, have the user signup/login on the mentorship portal.
--	Once the user completes the signup form, it’s a good idea to have a popup say something along the lines of “Thank you for your interest in the mentoring program!
--	To access your account, go to domainname.com” (like it’s currently setup in the prototype, where domainname.com represents the mentorship portal).
+-	Once the user completes the signup form, it’s a good idea to have a popup saying something along the lines of “Thank you for your interest in the mentoring program! To access your account, go to domainname.com” (like it’s currently setup in the prototype, where domainname.com represents the mentorship portal).
 -	The index of the mentorship portal should display a way to login, create an account, register an organization, and obtain a forgotten password.
--	When a user is registering for either a mentee or mentor account, the email is the most important part. For simplicity, a user cannot be both a mentee and a mentor. For the system requirements, that is not necessary for the end-product. However, if teams want, they can play around to see if there’s a way to allow a user to be both a mentee and mentor. The key idea is that *emails are unique. A user cannot create multiple accounts using the same email. The email address is essentially the username and is therefore unique. *
+-	When a user is registering for either a mentee or mentor account, **the email is the most important part**. For simplicity, **a user cannot be both a mentee and a mentor**. For the system requirements, that is not necessary for the end-product. However, if teams want, they can play around to see if there’s a way to allow a user to be both a mentee and mentor. The key idea is that *emails are unique. A user cannot create multiple accounts using the same email. The email address is essentially the username and is therefore unique. *
 -	We have the choice of either: 
     1.	Allowing mentors and mentees the ability to login to their account right after account creation 
     2.	Requiring the user to validate their account by receiving a link through their email. 
@@ -79,10 +78,10 @@ The meeting was then open for other attendees to ask question. The following bul
     - Mentors should be at least 17 and older (essentially end of high school and up). Mentors should strictly not be between ages 5 – 10. 
 -	In regard to non-functional requirements: Security is a great starting point since we’ve discussed the ability for admins to be able to request users, account approval, and account activation through email. 
 -	For databases: Firebase could be simple to use. Essentially, we should **use third party tools wherever possible** (for example, libraries for authentication, user search, calendar, etc). Shannon suggested the following:
-- Firebase (Authentication or DB)
-- Google Cloud - hosts different db’s / backend servers
-- AWS - hosts different db’s / backend servers
-- mlab: MongoDB
+    - Firebase (Authentication or DB)
+    - Google Cloud - hosts different db’s / backend servers
+    - AWS - hosts different db’s / backend servers
+    - mlab: MongoDB
 -	In regard to the tech stack, Shannon suggested the following:
 *Front end Javascript libraries*
 - React
@@ -112,10 +111,11 @@ The meeting was then open for other attendees to ask question. The following bul
 
 -	Shannon is happy to answer any questions, even if it’s not requirements based (like industry standards)
 
-Action Items: *Still in progress of being finalized* 
+Action Items: *Still in the process of being finalized* 
 - 09/29-01. Aleks and Eric will the modify the prototype to incorporate the following changes:
     - Instead of the skills being a checkbox, make it a ranking system. 
     - On the mentorship portal, ensure that there’s options to login, create an account, and register an organization (which also entails that the user creates an account to become an admin). 
         - Show the UI for each of those pages. 
-09/29-02. When we create the form, we can create it to be static first, and then modify it to be dynamic later on. 
+- 09/29-02. When we create the form, we can create it to be static first, and then modify it to be dynamic later on. 
+- 09/29-03. Team members should think of a name for the website (currently dubbed as the "mentorship portal"). 
 
