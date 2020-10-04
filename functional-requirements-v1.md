@@ -1,10 +1,10 @@
 # Functional Requirements for Each Milestone
 
 According to the course website, the major target milestones within the course are as follows:
-    - Technical Requirements - October 21st, 2020
-    - Peer Testing #1 – December 2nd, 2020
-    - Peer Testing #2 - March 3rd, 2021
-    - Final Report, Code Repo, Video Demo - April (during Final Exam Period)
+- Technical Requirements - October 21st, 2020
+- Peer Testing #1 – December 2nd, 2020
+- Peer Testing #2 - March 3rd, 2021
+- Final Report, Code Repo, Video Demo - April (during Final Exam Period)
 
 *The technical breakdown for each milestone is a such:*
 
@@ -13,7 +13,7 @@ FR1. Create a static form that can be embedded into a website via iFrame (with N
 
 FR2. The form will be split into subsections, using a “next” button to navigate to the next section.
 
-FR3. Both mentors and mentees will use a ranking system to indicate either their skills or areas seeking mentorship. This, as well as time-zone selection will be used to weigh matching mentees to mentors.
+FR3. Both mentors and mentees will use a ranking system to indicate either their skills or areas seeking mentorship. This, as well as time-zone selection and availability will be used to weigh matching mentees to mentors.
 
 FR4. The form should restrict the age of Mentors (anyone under 17 should not be able to become a mentor). 
 
@@ -42,7 +42,7 @@ FR15. After logging in, Mentees will immediately be able to see Mentors they mat
 FR16. Mentees, Mentors, and Admins will be able to logout of their account, to which they will return to the index of the mentorship portal, where they can login, create an account, retrieve their password, or register an organization. 
 
 ## 2) Peer Testing #2
-FR17. The admin will decide how to host the Mentorship form. (either publicly, or internally through email invite)
+FR17. The admin will decide how to host the Mentorship form. (either publicly, or internally through email invite).
 
 FR18. The form will be dynamic in the way that admins can edit the fields of the form to suit their needs.
 
@@ -52,7 +52,7 @@ FR20. Mentees should be able to change their availability using a calendar.
 
 FR21. Mentors who validate their email address will be able to login, however, they will not be able to view any mentees until an admin approves their account.
 
-FR22. Admins will be able to approve mentors through the mentorship portal
+FR22. Admins will be able to approve mentors through the mentorship portal.
 
 FR23. Mentees should be able to select Mentors they want to work with from the ones that they matched with. This would appear under a heading titled “Current Mentors”.
 
@@ -60,8 +60,8 @@ FR23. Mentees should be able to select Mentors they want to work with from the o
 FR24. Ensure all components of the system are functional, fixing any final bugs. 
 
 FR25. Implement “bonus features” (a.k.a features that are not required of the system, but that would be nice to have):
-    - Allow a user to be both a Mentor and Mentee 
-    - Allow admins to be associated with more than one organization
-    - Allow the system to support more than one language. 
+- Allow a user to be both a Mentor and Mentee 
+- Allow admins to be associated with more than one organization
+- Allow the system to support more than one language. 
 
 
