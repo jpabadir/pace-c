@@ -1,0 +1,2 @@
+# Description
+The software we are building is to create a web-based Mentorship platform that would allow users to register as a mentor or a mentee. In addition, users from the organization can register and sign in as administrators. After registering, a mentor or mentee are required to fill a mentor-ship form for identification. Then, the platform shows viewable calendar for availability of mentors from which mentees can request for a meeting.
