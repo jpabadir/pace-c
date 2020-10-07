@@ -65,3 +65,30 @@ FR25. Implement “bonus features” (a.k.a features that are not required of th
 - Allow the system to support more than one language. 
 
 
+
+
+# Non-Functional Requirements and Environmental Constraints
+
+### What are non-functional requirements and environmental constraints? 
+(Source: https://en.wikipedia.org/wiki/Non-functional_requirement)
+
+First, I'm pretty sure environmental constraints and non-functional requirements are fairly synonymous. 
+
+Broadly, functional requirements define what a system is supposed to do and non-functional requirements define how a system is supposed to be. Functional requirements are usually in the form of "system shall do <requirement>". In contrast, non-functional requirements are in the form of "system shall be <requirement>", an overall property of the system as a whole or of a particular aspect and not a specific function. 
+
+Non-functional requirements are often called "quality attributes" of a system. Other terms for non-functional requirements are "qualities", "quality goals", "quality of service requirements", "constraints", "non-behavioral requirements", or "technical requirements". Informally these are sometimes called the "ilities", from attributes like stability and portability.
+
+Refer to wikipedia page linked above for a list of examples of non-functional requirements. Below are some of the ones I think are relevant to our project.
+
+Adaptability  
+Availability  
+Capacity, current and forecast  
+Documentation  
+Durability  
+Exploitability  
+Extensibility (adding features, and carry-forward of customizations at next major version upgrade)  
+Flexibility (e.g. to deal with future changes in requirements)  
+Stability  
+Supportability  
+Testability  
+Usability (human factors) by target user community  
