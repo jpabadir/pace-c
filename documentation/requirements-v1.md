@@ -76,19 +76,19 @@ First, I'm pretty sure environmental constraints and non-functional requirements
 
 Broadly, functional requirements define what a system is supposed to do and non-functional requirements define how a system is supposed to be. Functional requirements are usually in the form of "system shall do <requirement>". In contrast, non-functional requirements are in the form of "system shall be <requirement>", an overall property of the system as a whole or of a particular aspect and not a specific function. 
 
-Non-functional requirements are often called "quality attributes" of a system. Other terms for non-functional requirements are "qualities", "quality goals", "quality of service requirements", "constraints", "non-behavioral requirements",[2] or "technical requirements".[3] Informally these are sometimes called the "ilities", from attributes like stability and portability.
+Non-functional requirements are often called "quality attributes" of a system. Other terms for non-functional requirements are "qualities", "quality goals", "quality of service requirements", "constraints", "non-behavioral requirements", or "technical requirements". Informally these are sometimes called the "ilities", from attributes like stability and portability.
 
 Refer to wikipedia page linked above for a list of examples of non-functional requirements. Below are some of the ones I think are relevant to our project.
 
-Adaptability
-Availability
-Capacity, current and forecast
-Documentation
-Durability
-Exploitability
-Extensibility (adding features, and carry-forward of customizations at next major version upgrade)
-Flexibility (e.g. to deal with future changes in requirements)
-Stability
-Supportability
-Testability
-Usability (human factors) by target user community
+Adaptability  
+Availability  
+Capacity, current and forecast  
+Documentation  
+Durability  
+Exploitability  
+Extensibility (adding features, and carry-forward of customizations at next major version upgrade)  
+Flexibility (e.g. to deal with future changes in requirements)  
+Stability  
+Supportability  
+Testability  
+Usability (human factors) by target user community  
