@@ -111,11 +111,12 @@ The meeting was then open for other attendees to ask question. The following bul
 
 -	Shannon is happy to answer any questions, even if it’s not requirements based (like industry standards)
 
-Action Items: *Still in the process of being finalized* 
+Action Items: 
 - 09/29-01. Aleks and Eric will the modify the prototype to incorporate the following changes:
     - Instead of the skills being a checkbox, make it a ranking system. 
     - On the mentorship portal, ensure that there’s options to login, create an account, and register an organization (which also entails that the user creates an account to become an admin). 
         - Show the UI for each of those pages. 
-- 09/29-02. When we create the form, we can create it to be static first, and then modify it to be dynamic later on. 
-- 09/29-03. Team members should think of a name for the website (currently dubbed as the "mentorship portal"). 
+    - This should be done by the end of the Scrum Sprint. 
+- 09/29-02. When we create the form, we can create it to be static first, and then modify it to be dynamic later on. This should be completed before the first peer testing milestone. *Need to decide on a date during Octover 5th's team meeting*
+- 09/29-03. Team members should think of a name for the website (currently dubbed as the "mentorship portal"). *Need to decide on a date during Octover 5th's team meeting*
 
