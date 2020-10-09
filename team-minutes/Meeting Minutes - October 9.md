@@ -16,3 +16,4 @@
 
 ## Action Items:
 - JP will tell each member what is needed for the video
+- Aleks will create Trello board with github tasks
