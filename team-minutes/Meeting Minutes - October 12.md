@@ -1,4 +1,4 @@
-# Meeting Minutes - October 5
+# Meeting Minutes - October 12
 
 ## Agenda Items:
 - 
