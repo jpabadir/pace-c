@@ -19,4 +19,4 @@ These slides will be submitted as part of the "Requirements and Design Milestone
 | Non-functional Requirements | The slide can contain key points from the non-functional requirements document. Styling can be applied to the slide to faciliate aesthetics where neccessary.  |    Eric |
 | Tech Stack - Pros & Cons | A chart can be displayed to highlight the tech stack that has been considered.|    JP |
 | Tech Stack - Decision | Key points highlighting the rationale for the chosen tech stack can be displayed on the slide. |    JP |
-| Testing Plan | This will most likely be split into multiple slides, depending on how much information is needed. Try to limit how many words are on the slides, and include any visuals if possible/neccessary. |    JP |
+| Testing Plan | This will most likely be split into multiple slides, depending on how much information is needed. Try to limit how many words are on the slides, and include any visuals if possible/necessary. |    JP |
