@@ -14,3 +14,6 @@ computeResult(); // Not here
 - Put a space after a word:<br>
 // Incorrect: if(true){<br>
 // Correct: if (true) {
+
+## File naming
+In general, prefer kebab-case-for-file-naming. 
