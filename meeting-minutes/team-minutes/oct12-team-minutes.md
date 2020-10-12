@@ -12,7 +12,7 @@
 - what should the admin page/create account look like
 - How should a user start the process of registering a organization or admin account
 - What does it mean by ranking system instead of skills being a check box
-
+- decide program name
 ## Detailed Notes:
 - 
 
