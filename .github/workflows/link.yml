@@ -36,4 +36,5 @@ jobs:
         uses: getsentry/action-eslint-fix@main
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          dry: true
       
