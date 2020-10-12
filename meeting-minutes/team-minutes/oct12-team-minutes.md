@@ -22,6 +22,7 @@
 - decide program name and slogan if needed
 - Check with Katrina whether we are required to record audio on the slides or if recording movie is enough
 
+
 ## Detailed Notes:
 - 
 
