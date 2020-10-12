@@ -34,4 +34,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: eslint + fix
         uses: getsentry/action-eslint-fix@main
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
       
