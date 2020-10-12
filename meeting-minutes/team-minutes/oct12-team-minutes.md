@@ -13,6 +13,9 @@
 - How should a user start the process of registering a organization or admin account
 - What does it mean by ranking system instead of skills being a check box
 - decide program name and slogan if needed
+- [JP] Check with Katrina whether we are required to record audio on the slides or if recording movie is enough
+- [JP] Show how to see where files will go 
+- [JP] Fix PR #86
 - Check with Katrina whether we are required to record audio on the slides or if recording movie is enough
 - How should a user start the process of registering a organization or admin account
 - What does it mean by ranking system instead of skills being a check box
