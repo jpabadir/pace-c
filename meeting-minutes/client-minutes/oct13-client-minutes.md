@@ -47,7 +47,7 @@ Shannon was interested in reviewing the documentation that had been created. Thi
 - Feedback on the Tech Stack: The chart looks good for sorting out pros and cons. The client approves of our current tech stack (Front-end: React + UI libraries; Back end: NodeJS; Database and authentication: Firebase). 
 - Feedback on Testing: The client agrees with our choice of testing for using React Testing Library as well as Jest (especially since testing using Enzyme is now being moved away from within the industry). She didn't see the portion in our document on ESLint, but when Pace B was going over their requirements, the client suggested linting, and mentioned ESLint. Overall, it sounds like our choices are strong based on client experience and personal recommendation. 
 - Functional Requirements: The client noted that the general guideline looks good for our current milestone. However, as we start development, we'll need to split tasks down further to align with weekly sprints. 
-- DFD Level0 - At a glance the DFD level 0 looks fine. The client mentioned that mentors and mentees will need to interact, which they will, but they will interact primarily outside of the mentoring system. 
+- DFD Level0:  At a glance the DFD level 0 looks fine. The client mentioned that mentors and mentees will need to interact, which they will, but they will interact primarily outside of the mentoring system. 
 For the sake of time, the description of the milestone and non-functional requirements were not reviewed. The powerpoint was briefly shown, to highlight what was dispalyed for the prototype. 
 
 General notes taken as Maya and Philip presented on behalf of their group:
@@ -64,6 +64,6 @@ General notes taken as Maya and Philip presented on behalf of their group:
 ### ACTION ITEMS
 - 09/29-02. When we create the form, we can create it to be static first, and then modify it to be dynamic later on. This should be completed before the first peer testing milestone. **Definitive Date will be determined once we know when we can start programming**
 - 09/29-03. Team members should think of a name for the website (currently dubbed as the "Mentorship Portal"). **In progress. Should be completed by October 13**
-- 10/13-01. Is the team ok with Katrina screen-sharing to show Shannon what was accomplished during the week? Keep in my mind that members from other teams can also see this. This decision should be made during the next team meeting, so either on **October 16* or *October 19**
+- 10/13-01. Is the team ok with Katrina screen-sharing to show Shannon what was accomplished during the week? Keep in my mind that members from other teams can also see this. This decision should be made during the next team meeting, so either on **October 16 or October 19**
 - 10/13-02. The team should decide on what should be shown to Shannon during October 20th's meeting if there's anything that needs to be clarified for the System Requirements Document, which is due on October 21st. This should be done during the **October 19th** team meeting.
 
