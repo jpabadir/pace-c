@@ -10,4 +10,4 @@
 - 
 
 ## Action Items:
-- 
+- No team meeting -> moved to monday
