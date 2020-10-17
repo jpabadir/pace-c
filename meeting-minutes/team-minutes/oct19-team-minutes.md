@@ -1,4 +1,4 @@
-# Meeting Minutes - October 16
+# Meeting Minutes - October 19
 
 ## Agenda Items:
 - clarify more about admin account and about the prototype
@@ -10,4 +10,4 @@
 - 
 
 ## Action Items:
-- No team meeting -> moved to monday
+- 
