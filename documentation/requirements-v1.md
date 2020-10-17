@@ -71,6 +71,30 @@ FR27. Implement “bonus features” (a.k.a features that are not required of th
 - Allow Admins to be associated with more than one organization
 - Allow the system to support more than one language. 
 
+## User Stories:
+Mentee:
+-	I want to be able to be matched with a Mentor from an organization who is offering mentorship so I can learn more about specific skills. 
+-	As a mentee, I want to be able to provide information about myself, including my preferences in meeting availability and skills that I’m seeking mentorship in. 
+-	I want to create an appointment with a mentor once we’ve been matched, and the ability to communicate with them via email so we can stay in touch.
+
+Mentors:
+-	I want to be able to select skills that I’m able to provide mentorship in, as well as other relevant information about myself.
+-	I want to be able to create an account so that I can view a list of the mentees I’m mentoring.
+-	I want to be able to accept Mentees that I want to Mentor and view a list of Mentees that I’m mentoring. 
+-	I want to select my availability and have this sent out to Mentees so that they can book an appointment. 
+
+Admins:
+-	I want to be able to sign up for the mentorship platform on behalf of my organization.
+-	I want to have the ability to create an account where I can view the Mentors and Mentees within our organization.
+-	I want to be able to verify and approve Mentors who want to mentor through our organization.
+-	I want to be able to edit the intake form for the organization’s preferences.
+-	I want the ability either to host the form publicly, or internally through the organization by email invite. 
+
+References:
+https://www.visual-paradigm.com/guide/agile-software-development/what-is-user-story/
+
+https://www.theserverside.com/featureThe-7-user-story-guidelines-every-Agile-developer-should-know?_ga=2.191533999.44778962.1602895908-2114816780.1602895908
+
 
 
 
