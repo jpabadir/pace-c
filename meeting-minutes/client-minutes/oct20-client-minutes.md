@@ -38,7 +38,7 @@ Pace A and B were waiting for members to join the call, so Katrina started the s
 - Admins do not need to fill out any information on the embedded iFrame form. The iFrame form should only be used to gain information about Mentors and Mentees. As such, the radio button on the prototype titled "Organization" can be removed. If a user of an organization navigates to another organization's website, sees the form, and is interested in the program, we can have a web token on our form, which would link to our website. From there, that user would be able to gain information about our platform, and then follow the flow of creating an admin account for their organization. 
 - The role of an Admin is to decide how to host the form, edit the form, and approve Mentors. The Admin could have the ability to remove Mentors, and possibly pass on Admin privileges to another user if that Admin decides to leave the platform. 
 
-# General Notes:
+General Notes:
 - Pace B asked if Mentors should then be included in the publicly hosted form as well, or if the public iFrame forms should only be used to gain information about Mentees.
     - The client  mentioned that for security purposes, it's possible that the only users who would fill in information on **publicly** displayed forms would be Mentees. 
     - Mentors would then only ever access **private** forms. To access private forms to become a Mentor, the admin would have to send out the link. Therefore, this could ensure security since Admins would only ever recruit users who are known to the company. This would also eliminate the possible need for Admins to approve Mentors. 
@@ -48,3 +48,4 @@ Pace A and B were waiting for members to join the call, so Katrina started the s
 
 ### ACTION ITEMS
 10/20-1. The team needs to decide on how Mentors register, and reflect any changes in the System requirements document **Due October 20th**
+10/20-2. The team shoud discuss how we want to deploy the site **During October 23 Team Meeting**
