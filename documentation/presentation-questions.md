@@ -27,10 +27,14 @@ Do you guys have any system in place to deal with abuse, such as mentees constan
 
 ## [JP] Testing/Tech Stack:
 Do you have a plan on which browsers you would like to support and how that will be incorporated into your testing process? Will the project be limited to desktops, or will it be usable on mobile?
+- As per [this source](https://gs.statcounter.com/), the worldwide market share for browsers is as follows: Chrome 66.3%, Safari 16.76%, Firefox 4.08%, and other browsers. Therefore, those 3 browsers will be our main focus, and we will manually test the products on these browsers to ensure it works well across them. 
+- Our primary focus will be on desktop development, with full mobile compatibility being more of a nice-to-have. However, we are hoping that the design libraries we use will help us with mobile compatibility, since many of them include solutions to this issue out of the box. 
 
 When the Mentor and Mentee both import information into the database at the same time, how will the system handle multiple queries and results at the same time?
+- This problem will be solved by using the dedicated Firebase solution, which is called [Transactions](https://firebase.google.com/docs/firestore/manage-data/transactions). From the linked document: "Cloud Firestore supports atomic operations for reading and writing data". 
 
 Will there be a manual confirmation for admin and mentor signups? If not, what is the verification process going to look like other than the age verification?
+- Regarding mentors, it is the admins who will have to validate their registration. For admins, we will have a fourth type of user, which we call the "superuser", who will be responsible for validating admin registration. Indeed, this will be a manual verification process, where there will be a UI for each type of user, with requests coming in, and options to accept or reject them. 
 
 ## [Katrina] Account Creation:
 Why would the mentor complete the form before being verified? What is the benefit of storing information in a database that you may not use?
