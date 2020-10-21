@@ -5,7 +5,7 @@
 #### General Description
 The software we are building is to create a web-based Mentorship platform that would allow users to register as a mentor or a mentee. In addition, users from the organization using our product can register and sign in as administrators. After registering, a mentor or mentee are required to fill a mentor-ship form for identification. Then, the platform shows viewable calendar for availability of mentors from which mentees can request for a meeting, and, on their version of the site, mentors can view and manage mentees' mentorship requests. 
 
-#### Function requirement description
+#### Functional requirement description
 * Mentor:
 System requires mentors to create their own accounts and fill out the sign-up form in order to approve mentee's matching requests via emails. In addition, System requires mentors to provide email address and availability of their schedule for mentees to book an appointment.
 
@@ -18,10 +18,10 @@ The role of an Admin is to decide how to host the form, edit the form, and appro
 
 ## <div align="center">System Architecture in DFD</div>
 #### DFD Level 0:
-![DFD Level 0] (https://github.com/jpabadir/pace-c/blob/requirements-milestone/documentation/dfd-level0.pdf)
+[DFD Level 0](https://github.com/jpabadir/pace-c/blob/requirements-milestone/documentation/dfd-level0.pdf)
 
 #### DFD Level 1:
-![DFD Level 1] (https://github.com/jpabadir/pace-c/blob/requirements-milestone/documentation/dfd-level-1/dfd-full.jpg)
+[DFD Level 1](https://github.com/jpabadir/pace-c/blob/requirements-milestone/documentation/dfd-level-1/dfd-full.jpg)
 
 ## <div align="center">Breakdown of the Target Components for Each Milestone</div>
 #### Target Components: According to the course website, the major target milestones within the course are as follows:
@@ -153,6 +153,34 @@ System should not meet any conflicts when users are tasking.
 
 #### Data reliability  
 System collects users' personal infomation when accessing the software. Backend data management should be safe and stable to store personal information. (e.g. users who have registered should not be required to register again because of loss of data.)
+
+
+## <div align="center">Tech Stack Chosen and Rationale</div>
+
+### Options, pros and cons
+
+| Tech type | Tech name                                                                             | Pros                                                                                                 | Cons                                                                                               |
+|-----------|---------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| FE        | React + UI libraries such as: Ant design, bootstrap, material UI, bulma, tailwind CSS | - Client first choice - Widely supported and documented - Facebook-backed                            | - A bit harder to learn than Vue                                                                   |
+| FE        | Vue                                                                                   | - JP has experience - Easy learning curve                                                            | - Not as much support and documentation - No major company backing                                 |
+| FE        | Angular                                                                               | - Most mature of all three frameworks                                                                | - Steep learning curve                                                                             |
+| BE        | Node with Express.JS                                                                  | - Client first choice - Uses JS, like the front-end - JP has experience - V8 engine (very fast)      | - Callback syntax can become complex  - Slower than Python if trying to do heavy computation tasks |
+| BE        | Python with one of Django, Flask, Nameko                                              | - Python syntax (subjective advantage)                                                               | - Doesn't natively support asynchronous development - Slower than node                             |
+| DB        | Firebase                                                                              | - Client first choice - JP has experience - Easy to learn and use - Large community                  | - Expensive when scaling                                                                           |
+| DB        | AWS                                                                                   | - Large suite of tools (authentication, data processing) - More capable & customizable than Firebase | - Steeper learning curve - Harder to set up                                                        |
+| DB        | MongoDB                                                                               | - More predictable pricing                                                                          | - Harder to set up than AWS                                                                         |
+
+
+### Final choice
+#### The final tech choice will be the following: 
+- Front-end: React + UI libraries
+- Back end: NodeJS
+- Database and authentication: Firebase
+
+#### Rationale:  
+Our client told us that the tech stack we use is, eventually, up to us. However, the client did seem to have a preference for the tech stack above. This is a big reason why we opted for this final choice. In addition, the table above shows some of the significant advantages that our chosen tech stack presents. 
+
+In addition to React, we will be using various front-end libraries, such as: Ant design, bootstrap, material UI, bulma, or tailwind CSS. Again, this is a suggestion from our client. Using such front-end libraries has a few drawbacks. First, it will add a bit of complexity to our setup, and dependencies on external codebases, which means we are vulnerable to the future potential lack of maintenance or breaking changes of libraries. However, using such libraries will help us craft a professional and good-looking front-end, with code that is less error-prone than ours, since it is "tried-and-tested" by many developers. In addition, we believe that using well-supported libraries with large communities of developers relying on them (such as Bootstrap or Ant design) will mitigate the issue of being dependent on other developers to maintain the libraries. 
 
 
 ## <div align="center">Test Strategy </div>
