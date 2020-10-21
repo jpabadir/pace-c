@@ -6,11 +6,11 @@ Can you explain how mentors and mentees will be matched? Will you use a specific
 
 - The process of how mentors and mentees will be matched will be decided by the skills and skill levels that both the mentor and mentee possess. The mentor will then be able to view all of the mentees that have matched based on their skills and their level in those skills. The ultimate decision will be up to the mentor to accept the mentee.
 
+- The system will also match the mentor and mentee based off of time zones, and availability of both users.
+
 Is the system limited to a specific kind of mentoring, and will the mentors have to pay to be on this service?
 
 - The system is not limited to a specific kind of mentoring. The mentee will have the ability to write down and select any skill(s) that they have. If there is a mentor who has the same type of skill(s) as the mentee, the mentee and mentor will be matched.
-
-- The system will also match the mentor and mentee based off of time zones, and availability of both users.
 
 - The mentors/mentees do not need to pay for this service. 
 
