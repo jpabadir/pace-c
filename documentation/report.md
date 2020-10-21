@@ -18,15 +18,15 @@ The role of an Admin is to decide how to host the form, edit the form, and appro
 
 ## <div align="center">System Architecture in DFD</div>
 #### DFD Level 0:
-A description of this DFD can be found at the bottom of the linked image.
+A description of this DFD can be found at the bottom of the linked image.<br>
 [DFD Level 0](https://github.com/jpabadir/pace-c/blob/requirements-milestone/documentation/dfd-level0.pdf)
 
 #### DFD Level 1:
 - This DFD shows the system architecture within more detail. 
 - It is encouraged to download the image to view it with more ease. 
-- This DFD has the same three external entities as the previous one, but the mentor and mentee are duplicated in a few different places in order to advoid data flows crossing one another. Furthermore, it goes deeper into showing how accounts are actually created, and matches actually made. In addition, this DFD also shows the system's data stores, as opposed to its level 0 counterpart. 
+- This DFD has the same three external entities as the previous one, but the mentor and mentee are duplicated in a few different places in order to avoid data flows crossing one another. Furthermore, it goes deeper into showing how accounts are actually created, and matches actually made. In addition, this DFD also shows the system's data stores, as opposed to its level 0 counterpart. 
 - Any feature included in a red rectangle is to be completed for the Peer Review #2 milestone. 
-- Any feature inluded in a dotted rectangle (or shown in a dotted fashion itself) is to be completed for the Final Project milestone. 
+- Any feature included in a dotted rectangle (or shown in a dotted fashion itself) is to be completed for the Final Project milestone.<br>
 [DFD Level 1](https://github.com/jpabadir/pace-c/blob/requirements-milestone/documentation/dfd-level-1/dfd-full.jpg)
 
 ## <div align="center">Breakdown of the Target Components for Each Milestone</div>
@@ -61,7 +61,7 @@ FR9. To complete organization registration, the user will create an account usin
 
 FR10. The Admin will publicly host the form (by embedding the form within their website via iFrame) for Mentee registration. 
 
-FR11. Account registration for Mentors requires a unique email address, and a password. To register an account successfully, the email must not be associated to a pre-existing account but must match with an email used in the mentorship form (which will be accessbile through email invite). If the entered email has not been associated to a form, an error message directing the user to fill out a form will be displayed.
+FR11. Account registration for Mentors requires a unique email address, and a password. To register an account successfully, the email must not be associated to a pre-existing account but must match with an email used in the mentorship form (which will be accessible through email invite). If the entered email has not been associated to a form, an error message directing the user to fill out a form will be displayed.
 
 FR12. An email will be sent to the address provided in account registration. The user must click that link to be able to login to their account.
 
@@ -86,7 +86,7 @@ FR21. The form will be dynamic in the way that depending on the user filling out
 
 FR22. The email that notifies Mentees that they have been matched to a Mentor will link to a third-party calendar (such as Google Calendar) with the Mentor's availability. Mentees will be able to create an appointment with Mentors through that calendar. 
 
-FR23. To "unmatch" Mentees and Mentors, the Mentee can remove themself from the calendar, cancelling all future appointments. The Mentor could then remove them for their dashboard on the Mentorship Portal. 
+FR23. To "unmatch" Mentees and Mentors, the Mentee can remove themselves from the calendar, cancelling all future appointments. The Mentor could then remove them for their dashboard on the Mentorship Portal. 
 
 FR24. Mentors who validate their email address will be able to login, however, they will not be able to view any matched Mentees until an Admin approves their account.
 
@@ -158,7 +158,7 @@ System should be easily editable if a new feature is going to be added because a
 System should not meet any conflicts when users are tasking.
 
 #### Data reliability  
-System collects users' personal infomation when accessing the software. Backend data management should be safe and stable to store personal information. (e.g. users who have registered should not be required to register again because of loss of data.)
+System collects users' personal information when accessing the software. Backend data management should be safe and stable to store personal information. (e.g. users who have registered should not be required to register again because of loss of data.)
 
 
 ## <div align="center">Tech Stack Chosen and Rationale</div>
@@ -251,7 +251,7 @@ We will convert the wireframe to the actual design by using HTML and CSS to mode
 
 ### Security Questions:
 #### Does safety in non-functional requirements mean security? Did the client ask for security to be non-functional?
-Yes, safety means system security. From our meetings with the client, security is not sepcifically required, but it was mentioned for some security purposes such as Account registration of administrators.
+Yes, safety means system security. From our meetings with the client, security is not specifically required, but it was mentioned for some security purposes such as Account registration of administrators.
 
 #### How will security be approached when it comes to registration? (for example, to protect against SQL injection attacks, data encryption, etc.)
 To protect collected data from users, we will make security measures for data within our reach.
