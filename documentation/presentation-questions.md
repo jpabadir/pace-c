@@ -4,23 +4,45 @@
 ## [Aleks] Matching Process/Prototype:
 Can you explain how mentors and mentees will be matched? Will you use a specific algorithm or something more generic (match based on which attributes overlap the most)?
 
+- The process of how mentors and mentees will be matched will be decided by the skills and skill levels that both the mentor and mentee possess. The mentor will then be able to view all of the mentees that have matched based on their skills and their level in those skills. The ultimate decision will be up to the mentor to accept the mentee.
+
+- The system will also match the mentor and mentee based off of time zones, and availability of both users.
+
 Is the system limited to a specific kind of mentoring, and will the mentors have to pay to be on this service?
 
+- The system is not limited to a specific kind of mentoring. The mentee will have the ability to write down and select any skill(s) that they have. If there is a mentor who has the same type of skill(s) as the mentee, the mentee and mentor will be matched.
+
+- The mentors/mentees do not need to pay for this service. 
+
 What software did you use to make the wireframing? How will you convert your design sketches into an actual design for the website?
+
+- The software we used to create the wireframe is called Balsamiq.
+
+- We will convert the wireframe to the actual design by using HTML and CSS to model and improve our initial wireframe. 
 
 ## [Eric] Security:
 Does safety in non-functional requirements mean security? Did the client ask for security to be non-functional?
 
+- yes, safety means system security. From our meetings with the client, security is not sepcifically required, but it was mentioned for some security purposes such as Account registration of administrators.
+
 How will security be approached when it comes to registration? (for example, to protect against SQL injection attacks, data encryption, etc.)
+
+- To protect collected data from users, we will make security measures for data within our reach.
 
 Do you guys have any system in place to deal with abuse, such as mentees constantly denying mentorship etc?
 
+- We have not consider this part yet. However, if we enough time, we can discuss about it but not for sure because this is a human factor and should not be included in system requirement.
+
 ## [JP] Testing/Tech Stack:
 Do you have a plan on which browsers you would like to support and how that will be incorporated into your testing process? Will the project be limited to desktops, or will it be usable on mobile?
+- As per [this source](https://gs.statcounter.com/), the worldwide market share for browsers is as follows: Chrome 66.3%, Safari 16.76%, Firefox 4.08%, and other browsers. Therefore, those 3 browsers will be our main focus, and we will manually test the products on these browsers to ensure it works well across them. 
+- Our primary focus will be on desktop development, with full mobile compatibility being more of a nice-to-have. However, we are hoping that the design libraries we use will help us with mobile compatibility, since many of them include solutions to this issue out of the box. 
 
 When the Mentor and Mentee both import information into the database at the same time, how will the system handle multiple queries and results at the same time?
+- This problem will be solved by using the dedicated Firebase solution, which is called [Transactions](https://firebase.google.com/docs/firestore/manage-data/transactions). From the linked document: "Cloud Firestore supports atomic operations for reading and writing data". 
 
 Will there be a manual confirmation for admin and mentor signups? If not, what is the verification process going to look like other than the age verification?
+- Regarding mentors, it is the admins who will have to validate their registration. For admins, we will have a fourth type of user, which we call the "superuser", who will be responsible for validating admin registration. Indeed, this will be a manual verification process, where there will be a UI for each type of user, with requests coming in, and options to accept or reject them. 
 
 ## [Katrina] Account Creation:
 Why would the mentor complete the form before being verified? What is the benefit of storing information in a database that you may not use?
