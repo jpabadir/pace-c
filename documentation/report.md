@@ -217,13 +217,13 @@ We will convert the wireframe to the actual design by using HTML and CSS to mode
 
 ### Security Questions:
 #### Does safety in non-functional requirements mean security? Did the client ask for security to be non-functional?
-answer
+Yes, safety means system security. From our meetings with the client, security is not sepcifically required, but it was mentioned for some security purposes such as Account registration of administrators.
 
 #### How will security be approached when it comes to registration? (for example, to protect against SQL injection attacks, data encryption, etc.)
-answer
+To protect collected data from users, we will make security measures for data within our reach.
 
 #### Do you guys have any system in place to deal with abuse, such as mentees constantly denying mentorship etc?
-answer
+We have not consider this part yet. However, if we enough time, we can discuss about it but not for sure because this is a human factor and should not be included in system requirement.
 
 ### Testing/Tech Stack Questions:
 #### Do you have a plan on which browsers you would like to support and how that will be incorporated into your testing process? Will the project be limited to desktops, or will it be usable on mobile?
