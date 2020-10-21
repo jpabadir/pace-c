@@ -10,6 +10,8 @@ Is the system limited to a specific kind of mentoring, and will the mentors have
 
 - The system is not limited to a specific kind of mentoring. The mentee will have the ability to write down and select any skill(s) that they have. If there is a mentor who has the same type of skill(s) as the mentee, the mentee and mentor will be matched.
 
+- The system will also match the mentor and mentee based off of time zones, and availability of both users.
+
 - The mentors/mentees do not need to pay for this service. 
 
 What software did you use to make the wireframing? How will you convert your design sketches into an actual design for the website?
