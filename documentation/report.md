@@ -104,14 +104,14 @@ FR27. Implement “bonus features” (a.k.a features that are not required of th
 - Allow Admins to pass their admin privileges to another user if that current admin no longer wishes to sustain an Admin role.
 
 #### User Stories
-Mentee:
+Mentee:<br>
 - I want to be able to be matched with a Mentor who is willing to share their accomplishments and experiences within their organization to enable myself to gain knowledge in various lifelong skills.
 
 - As a mentee, I want to be able to share information about myself, including my preferences and schedule so that I can be matched with a Mentor who is available based on my timeframe and skill interests.
 
 - Once I’ve been matched with a Mentor, I want to be able to communicate through email so that we can stay in touch and book appointments around our schedules. I want to be able to have the flexibility of gaining knowledge without being constrained to schedules that don’t work for me.
 
-Mentors:
+Mentors:<br>
 - I want to be able to share my knowledge and skills with individuals looking for mentorship, in the areas I have experience and am comfortable in sharing.
 
 - I want to be able to create an account within my organization so that I can view and accept possible mentees to mentor, as well as current mentees that I have accepted to mentor. 
@@ -120,7 +120,7 @@ Mentors:
 
 - I want the flexibility of Mentoring around my availability. I want to be able to send the information of my availability through a calendar's interface to my matched Mentees and have them book an appointment accordingly.
 
-Admins:
+Admins:<br>
 - I want my organization to be part of a program/system that allows individuals with experience and knowledge in our organization to provide Mentorship to other individuals seeking guidance.
 
 - I want to have the ability to create an account so that I can monitor accounts for Mentors and Mentees within my organization to ensure guidelines are being adhered to for security.
