@@ -3,11 +3,11 @@
 
 ## <div align="center">High-Level Project Description with Correct Identification of User Groups</div>
 #### General Description
-The software we are building is to create a web-based Mentorship platform that would allow users to register as a mentor or a mentee. In addition, users from the organization using our product can register and sign in as administrators. After registering, a mentor or mentee are required to fill a mentor-ship form for identification. Then, the platform shows viewable calendar for availability of mentors from which mentees can request for a meeting, and, on their version of the site, mentors can view and manage mentees' mentorship requests. 
+The software we are building is to create a web-based Mentorship platform that would allow users to register as a mentor or a mentee. In addition, users from the organization using our product can register and sign in as administrators. After registering, a mentor or mentee are required to fill a mentorship form for identification. Then, the platform shows viewable calendar for availability of mentors from which mentees can request for a meeting, and, on their version of the site, mentors can view and manage mentees' mentorship requests. 
 
-#### Functional requirement description
+#### How the three user groups use the system
 * Mentor:
-System requires mentors to create their own accounts and fill out the sign-up form in order to approve mentee's matching requests via emails. In addition, System requires mentors to provide email address and availability of their schedule for mentees to book an appointment.
+System requires mentors to create their own accounts and fill out the sign-up form in order to approve mentee's matching requests via emails. In addition, the system requires mentors to provide email address and availability of their schedule for mentees to book an appointment.
 
 * Mentee:
 System does not require mentees to have their own account. Instead, they are required to fill out the sign-up form in order to view availability of mentors they are going to match with. Also, they need to provide contact info while filling the form.
@@ -18,9 +18,15 @@ The role of an Admin is to decide how to host the form, edit the form, and appro
 
 ## <div align="center">System Architecture in DFD</div>
 #### DFD Level 0:
+A description of this DFD can be found at the bottom of the linked image.
 [DFD Level 0](https://github.com/jpabadir/pace-c/blob/requirements-milestone/documentation/dfd-level0.pdf)
 
 #### DFD Level 1:
+- This DFD shows the system architecture within more detail. 
+- It is encouraged to download the image to view it with more ease. 
+- This DFD has the same three external entities as the previous one, but the mentor and mentee are duplicated in a few different places in order to advoid data flows crossing one another. Furthermore, it goes deeper into showing how accounts are actually created, and matches actually made. In addition, this DFD also shows the system's data stores, as opposed to its level 0 counterpart. 
+- Any feature included in a red rectangle is to be completed for the Peer Review #2 milestone. 
+- Any feature inluded in a dotted rectangle (or shown in a dotted fashion itself) is to be completed for the Final Project milestone. 
 [DFD Level 1](https://github.com/jpabadir/pace-c/blob/requirements-milestone/documentation/dfd-level-1/dfd-full.jpg)
 
 ## <div align="center">Breakdown of the Target Components for Each Milestone</div>
@@ -143,7 +149,7 @@ Errors that users make is undoable and should be simple to operate. (e.g. undo b
 System provides sufficient functionality for users to accommodate range of users tasks. For example, availability of mentor on calendar, registration, sign up form, personal account modification module, etc.(core functions)
 
 #### Testability  
-System should be able to test by non-staff users to collect feedback.
+System should be able to be tested by non-staff users to collect feedback.
 
 #### Extensibility  
 System should be easily editable if a new feature is going to be added because again this should be a helpful tool and keep updating system to be more useful by users feedback if possible.
@@ -214,7 +220,7 @@ We might add more features (smoke testing, for instance) to this continuous inte
 For now, we have setup a GitHub Action, and we have [a basic script](https://github.com/jpabadir/pace-c/edit/continuous-integration/.github/workflows/link.yml) that runs on every pull request to our develop and master branches. We have added an ESLint action in this script, but we will need to wait until we have actual code in our repository before we can add more useful actions and commands to this script. 
 
 
-## <div align="center">List of Questions</div>
+## <div align="center">List of Questions and Answers</div>
 ### Account Creation Questions:
 #### Why would the mentor complete the form before being verified? What is the benefit of storing information in a database that you may not use?
 Crucial to the matching process is for users to fill in their information through the form so that an appropriate mentor/mentee match can be found. Not only this, but by providing user information, the administrators from each organization can verify that the user is legitimate, which is why we’re gaining information from the user before verification. However, this could potentially result in information being stored in the database for an idle account, as the question addresses. To ensure only active users are considered, a timestamp could potentially be utilized. If a user doesn’t verify their email within a set timeframe (say, for a week), and the user doesn’t log onto the portal for an extended time (possibly a month), then their information could be removed from the database to reduce unnecessary storage. If the user was previously active, an email could be sent out before deletion to see if the user still wishes to remain in the system. 
