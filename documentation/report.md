@@ -13,7 +13,7 @@ System requires mentors to create their own accounts and fill out the sign-up fo
 System does not require mentees to have their own account. Instead, they are required to fill out the sign-up form in order to view availability of mentors they are going to match with. Also, they need to provide contact info while filling the form.
 
 * Admins:
-TBA
+The role of an Admin is to decide how to host the form, edit the form, and approve Mentors. The Admin could have the ability to remove Mentors, and possibly pass on Admin privileges to another user if that Admin decides to leave the platform.
 
 
 ## <div align="center">System Architecture in DFD</div>
