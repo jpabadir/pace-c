@@ -18,9 +18,10 @@ TBA
 
 ## <div align="center">System Architecture in DFD</div>
 #### DFD Level 0:
+![DFD Level 0] (https://github.com/jpabadir/pace-c/blob/requirements-milestone/documentation/dfd-level0.pdf)
 
 #### DFD Level 1:
-
+![DFD Level 1] (https://github.com/jpabadir/pace-c/blob/requirements-milestone/documentation/dfd-level-1/dfd-full.jpg)
 
 ## <div align="center">Breakdown of the Target Components for Each Milestone</div>
 #### Target Components: According to the course website, the major target milestones within the course are as follows:
