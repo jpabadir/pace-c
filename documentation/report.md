@@ -96,12 +96,13 @@ FR25. Admins will be able to approve Mentors through the Mentorship Portal.
 FR26. Ensure all components of the system are functional, fixing any final bugs. 
 
 FR27. Implement “bonus features” (a.k.a features that are not required of the system, but that would be nice to have):
-- Allow Mentees to create an account with the system, and develop surrounding UI, with additional features.
-- Allow Mentors the ability to continue receiving Mentee requests, or put them on hold.
-- Allow a user to be both a Mentor and Mentee 
-- Allow Admins to be associated with more than one organization
-- Allow the system to support more than one language. 
-- Allow Admins to pass their admin privileges to another user if that current admin no longer wishes to sustain an Admin role.
+<br>
+- Allow Mentees to create an account with the system, and develop surrounding UI, with additional features.<br>
+- Allow Mentors the ability to continue receiving Mentee requests, or put them on hold.<br>
+- Allow a user to be both a Mentor and Mentee<br>
+- Allow Admins to be associated with more than one organization<br>
+- Allow the system to support more than one language.<br> 
+- Allow Admins to pass their admin privileges to another user if that current admin no longer wishes to sustain an Admin role.<br>
 
 #### User Stories
 Mentee:<br>  
