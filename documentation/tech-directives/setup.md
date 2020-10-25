@@ -1,4 +1,4 @@
-# Steps to setting up your local environment
+# Setting up and troubleshooting your local environment
 
 ## Setup steps
 ### General
