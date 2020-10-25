@@ -28,5 +28,5 @@ If you run both the front-end and back-end, you can try the button I added on th
 You're done! Happy hacking. 🍳
 
 ### Possible errors
-#### nodemon: command not found:  
+#### nodemon: command not found
 Google this error and try to fix it, I am not sure what the general fix is. Please note that instead of using nodemon, you can also simply run `node app.js` to run your server, you will simply have to stop and re-run your server if you make edits (if you're a front-end expert, this will not be an issue since you won't be editing the server much).  
