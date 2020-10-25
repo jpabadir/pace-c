@@ -1,5 +1,5 @@
 # Comprehensive list of the code standards the team follows
-## When possible, IDE code-linting rule files will be made and shared with the team to facilitate code standaridzing. 
+## When possible, IDE code-linting rule files will be made and shared with the team to facilitate code standardizing. 
 
 ## General: 
 - Add inline comments before the code they document:<br>

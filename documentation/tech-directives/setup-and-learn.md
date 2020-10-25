@@ -2,5 +2,5 @@
 
 ## Setup steps
 ### Front-end
-1. Download or update node (get the latest version): https://nodejs.org/en/download/
+1. Download (or update to the latest) node (get the latest version): https://nodejs.org/en/download/
 2. 
