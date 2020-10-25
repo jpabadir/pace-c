@@ -1,4 +1,4 @@
-# Meeting Minutes - October 5
+# Meeting Minutes - October 26
 
 ## Agenda Items:
 - [JP] Merge PR closing issue 127
