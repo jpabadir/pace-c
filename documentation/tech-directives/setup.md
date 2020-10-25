@@ -1,4 +1,4 @@
-# A document helping the team learn the tech stack and setup their local environment
+# A document helping the team setup their local environment
 
 ## Setup steps
 ### General
