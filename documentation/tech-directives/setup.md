@@ -25,7 +25,7 @@ When you're coding, you'll have to have both the front-end and the back-end runn
 
 If you run both the front-end and back-end, you can try the button I added on the react app, which makes a basic request to the server, to see the front-end <-> back-end communication in action. 
 
-You're done! Happy hacking. 🍳
+That's it! Happy hacking. 🍳
 
 ### Possible errors
 #### nodemon: command not found
