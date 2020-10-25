@@ -1,4 +1,4 @@
-# A document helping the team setup their local environment
+# Steps to setting up your local environment
 
 ## Setup steps
 ### General
