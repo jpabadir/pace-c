@@ -36,11 +36,11 @@ To address the points under "New Business":
 - Our team's sprint was then discussed. While doing so, the chart from yesterday's team meeting was displayed to showcase the varying roles. 
     - The client thinks that it's a good idea to have divided the roles evenly between front-end and back-end. This allows team members the ability to hone their learning towards the components that they'll be required to know, rather than everyone on the team learning everything for something that they might not be working on. This also slightly reduces the learning curve. 
 
-The meeting was then open for any other general questions. Since everything had been covered, the meeting was able to end early. The client noted that it sounds like we're all on track. 
+The meeting was then open for any other general questions. Since everything had been covered, the meeting was able to end early. The client noted that it sounds like we're all on track. Since the meeting through Google Meets was successful, we'll continue to hold meetings through that platform rather than Zoom. 
 
 ### ACTION ITEMS
-10/27-1. Decide on what to show the client for November 3rd's meeting and discuss any 'road bumps'. **During November 2nd's team meeting**
-10/27-2. Ensure the IP agreement has been signed by all members and sent to Dr. Hui **Should be done by Friday, October 30th**
+- 10/27-1. Decide on what to show the client for November 3rd's meeting and discuss any 'road bumps'. **During November 2nd's team meeting**
+- 10/27-2. Ensure the IP agreement has been signed by all members and sent to Dr. Hui **Should be done by Friday, October 30th**
 
 
 
