@@ -14,6 +14,9 @@
 - App is viewable for everyone, both front end and back end
 - New setup for how branches work
 - New setup for how issues work
+- Issues are created only during sprint meetings, and each member will have 2-4 issues per week
+- Branches are created for the issue then deleted after the issue is done
+- Team meeting and Client meeting branches are to stay even after issue is closed because they are needed every week
 - Sign IP document
 - Client meetings on google meets
 - Interests in parts of the project and leader roles:
@@ -27,3 +30,4 @@
 
 ## Action Items:
 - everyone needs to sign IP document, pass the document around
+- Ip document should be completed by Friday October 30th
