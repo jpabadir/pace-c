@@ -1,3 +1,5 @@
+import React from 'react';
+import { Button } from 'antd';
 import './App.css';
 
 function callServer() {
@@ -8,7 +10,7 @@ function callServer() {
 function App() {
   return (
     <div className='App'>
-      <button onClick={callServer}>Call the server!</button>
+      <Button type="primary" onClick={callServer}>Call the server!</Button>
     </div>
   );
 }
