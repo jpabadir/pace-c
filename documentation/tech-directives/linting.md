@@ -5,3 +5,7 @@
 ### Front-end
 
 While in the src/front-end directory, run `eslint src/*.js --fix` to lint your code using the project's ESLint standard presets.
+
+### Back-end
+
+While in the src/back-end directory, run `eslint src/*.js --fix` to lint your code using the project's ESLint standard presets.
