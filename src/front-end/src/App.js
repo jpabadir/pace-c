@@ -23,6 +23,9 @@ function App() {
         <button onClick={callServer} type="submit">
           Call the server!
         </button>
+        <button onClick={callServer} type="submit">
+          Some trial change
+        </button>
         <a
           className="App-link"
           href="https://reactjs.org"
