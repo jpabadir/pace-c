@@ -12,7 +12,9 @@ function callServer() {
 function App() {
   return (
     <div className="App">
-      <Button type="primary" onClick={callServer}>Call the server!</Button>
+      <Button type="primary" onClick={callServer}>
+        ⏎········Call·the·server!⏎······!
+      </Button>
       <MentorshipForm />
     </div>
   );
