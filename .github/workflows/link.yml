@@ -19,9 +19,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
-      - name: Install modules
-        run: npm install
         
       - name: Run ESLint
-        run: eslint src/front-end/src/*.js src/back-end/src/*.js --fix
+        run: |
+          npm install eslint
+          eslint src/front-end/src/*.js src/back-end/src/*.js --fix
