@@ -20,24 +20,72 @@ class MentorshipForm extends Component {
     render() {
         return (
             <Form>
-                <Form.Item
+                 <Form.Item
+                    //TEST ITEM (will be deleted):
                     label="Test"
                     name="testInput"
+                    //must have an input:
                     rules={[{ required: true, message: "Please input something" }]}
                 >
                     <Input
                         placeholder="Placeholder for test"
                         prefix={
+                            //tooltip test:
                             <Tooltip title="This field will likely be deleted. I just wanted to test out this feature.">
                                 <InfoCircleOutlined style={{ color: 'rgba(0,0,0,.45)' }} />
                             </Tooltip>
                         } />
                 </Form.Item>
                 <Form.Item
+                    label="Name"
+                    name="nameInput"
+                    //must have an input:
+                    rules={[{ required: true, message: "Please input something" }]}
+                >
+                    <Input
+                        placeholder="please enter your name" 
+                    />
+                </Form.Item>
+                <Form.Item
+                    label="Email"
+                    name="emailInput"
+                    //must have an input:
+                    rules={[{ required: true, message: "Please input something" }]}
+                >
+                    <Input
+                        placeholder="please enter your email" 
+                    />
+                </Form.Item>
+                <Form.Item
+                    label="Are you a mentor or mentee?"
+                    name="mentorMentee"
+                    //must have an input:
+                    rules={[{ required: true, message: "Please input something" }]}
+                >
+                    <Select
+                        //only one option can be selected:
+                        mode="single"
+                        style={{ width: '100%' }}
+                        placeholder="select available time"
+                        onChange={handleChange}
+                        optionLabelProp="label"
+                    >
+                        <Option
+                        //if mentor:
+                        value="Mentor" label="Mentor">
+                        </Option>
+                        <Option 
+                        //if mentee:
+                        value="Mentee" label="Mentee">
+                        </Option>
+                    </Select>
+            
+                </Form.Item>
+                <Form.Item
                     label={
                         <span>
                             Timeframe Seeking Mentorship&nbsp;
-                        <Tooltip title="Please pick an estimated duration for how long you would like to use the platform">
+                            <Tooltip title="Please pick an estimated duration for how long you would like to use the platform">
                                 <QuestionCircleOutlined />
                             </Tooltip>
                         </span>
@@ -52,22 +100,25 @@ class MentorshipForm extends Component {
                 <Form.Item
                     label="Please Select Your Time-zone"
                     name="timeZone"
+                    //must have an input:
                     rules={[{ required: true, message: "This field is required" }]}
                 >
                     <TimezonePicker
+                        //time zones: 
                         absolute={false}
                         defaultValue="America/Los_Angeles"
                         placeholder="Select timezone..."
                         onChange={this.handleChange}
                     />
                 </Form.Item>
-                <p> Please enter your reoccuring availability</p>
+                <p> Please enter your reoccuring availability:</p>
                 <Form.Item
                     label="Monday"
                     name="availabilityMonday"
                 >
                     <Select
-                        mode="multiple" //so that multiple options can be selected 
+                        //so that multiple options can be selected:
+                        mode="multiple"
                         style={{ width: '100%' }}
                         placeholder="select available time"
                         onChange={handleChange}
@@ -91,6 +142,7 @@ class MentorshipForm extends Component {
                     name="availabilityTuesday"
                 >
                     <Select
+                        //so that multiple options can be selected:
                         mode="multiple"
                         style={{ width: '100%' }}
                         placeholder="select available time"
@@ -112,10 +164,17 @@ class MentorshipForm extends Component {
                 </Form.Item>
                 <Button type="primary" htmlType="submit">
                         Submit
-        </Button>
+                </Button>
+                <p>{/*used to space buttons*/}</p>
+                <Button type="primary" htmlType="button">
+                        Back
+                </Button>
+                <Button type="primary" htmlType="button">
+                        Next
+                </Button>
             </Form>
         );
     }
 }
-
+//exports:
 export default MentorshipForm;
