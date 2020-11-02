@@ -27,4 +27,6 @@ jobs:
       - run: npm install -g eslint
         
       - name: Run ESLint
-        run: eslint src/front-end/src/*.js src/back-end/src/*.js --fix
+        run: |
+          npm install -g eslint-plugin-react@latest --save-dev
+          eslint src/front-end/src/*.js src/back-end/src/*.js --fix
