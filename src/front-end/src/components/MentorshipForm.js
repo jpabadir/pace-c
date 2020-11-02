@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Button, Input, DatePicker, Tooltip, Select } from 'antd';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { InfoCircleOutlined, QuestionCircleOutlined } from '@ant-design/icons';
 import TimezonePicker from 'react-bootstrap-timezone-picker';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
