@@ -24,10 +24,9 @@ jobs:
         uses: actions/setup-node@v1
         with: 
           node-version: '15.x'
-      - run: npm install -g eslint
-        
-      - name: Install eslint-plugin-react
-      - run: npm install eslint-plugin-react@latest --save-dev
+      - run: | 
+          npm install -g eslint
+          npm install eslint-plugin-react@latest --save-dev
         
       - name: Run ESLint
         run: eslint src/front-end/src/*.js src/back-end/src/*.js --fix
