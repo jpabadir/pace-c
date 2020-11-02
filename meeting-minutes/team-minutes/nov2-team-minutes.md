@@ -8,6 +8,7 @@
 - [Eric] fix 'Unexpected end of JSON input'
 - [Aleks] Should we use console to pull/commit or VS to pull/commit
 - [Aleks] Does it matter if we use VS or console to pull/commit
+- [Aleks] On the form for front end we have a "submit" button but we also have a "back" and "next" button, what is the purpose of the "back" and "next" buttons?
 
 ## Detailed Notes:
 - 
