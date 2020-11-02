@@ -2,6 +2,13 @@
 ## When possible, IDE code-linting rule files will be made and shared with the team to facilitate code standardizing. 
 
 ## General: 
+### Front-end
+We will use the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript), which will be enforced by ESLint. 
+
+### Back-end
+We will use the [JavaScript Standard Style Guide](https://standardjs.com/), which will be enforced by ESLint. 
+
+### (Below is probably deprecated. Keeping until we are sure that it isn't needed)
 - Add inline comments before the code they document:<br>
 // Place comment here<br>
 computeResult();<br>

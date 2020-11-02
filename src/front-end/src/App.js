@@ -1,11 +1,13 @@
+// import request from 'request';
 import React from 'react';
+import logo from './logo.svg';
 import { Button } from 'antd';
 import './App.css';
 import MentorshipForm from './components/MentorshipForm';
 
 function callServer() {
-  var request = require('request');
-  request('http://localhost:8000/', function (error, response, body) {});
+  // const request = require('request');
+  // request('http://localhost:8000/', (error, response, body) => {});
 }
 
 function App() {
