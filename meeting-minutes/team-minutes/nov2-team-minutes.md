@@ -23,8 +23,8 @@
 - Basic front end is setup
 - Code will automatically run ESLint
 - ESLint will keep all syntax the same 
-- Run ESLint before you do a start the program so that your syntax is the same as the standard we are using
-- Fix the ESLint problems before you make a pull request
+- Run ESLint before you start the program locally so that your syntax is the same as the standard we are using
+- Fix the ESLint problems before you make a pull request to the github repo
 - We can use the Prettier code formater to help with the ESLint errors 
 - Can change the settings of Prettier in VS so that it works better with ESLint
 - If you see ESLint errors, You have to run the commands given in the tech directives, and you may have to fix them manually as well
