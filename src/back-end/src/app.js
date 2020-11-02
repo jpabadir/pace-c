@@ -23,7 +23,7 @@ firebase.initializeApp(firebaseConfig)
 // Server logic
 app.get('/', (req, res) => {
   res.send('Hello World!')
-  console.log('Server received GET request! 🚀')
+  console.log('Server received GET request! 🚀');
 })
 
 app.post('/save-signup-form', jsonParser, (req, res) => {
