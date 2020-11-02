@@ -12,6 +12,7 @@
 - [JP] Extraneous files in top-level src
 - [JP] Explain ESLint process
 - [Katrina] Discuss possible ways to obtain user availability (the current way is a field for the day of a week, and pre-determined time ranges in a drop-down to choose from. A possible alternative could be something like this: https://fullcalendar.io/)
+- [Katrina] The course website (https://people.ok.ubc.ca/bowenhui/499/) outlines suggested bullet points for November 6th (Friday). We should discuss how to tackle this (possibly, since heuristics evaluations deal with the flow/how users interact with the platform (primarily concerned with the client side)), the front-end team members could work on that.
 
 ## Detailed Notes:
 - 
