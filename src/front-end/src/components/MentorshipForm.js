@@ -9,6 +9,7 @@ import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min
 
 const { RangePicker } = DatePicker;
 var daysOfTheWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']; 
+var timeFrames = ['9-10AM', '10-11AM', '11AM-12PM', '12-1PM', '1-2PM']; 
 const { Option } = Select;
 
 function handleChange(value) {
@@ -78,9 +79,9 @@ class MentorshipForm extends Component {
                         </Option>
                         <Option value="11AM-12PM" label="11AM-12AM">
                         </Option>
-                        <Option value="12-1PM" label="12-1AM">
+                        <Option value="12-1PM" label="12-1PM">
                         </Option>
-                        <Option value="1-2PM" label="9-10AM">
+                        <Option value="1-2PM" label="1-2PM">
                         </Option>
                     </Select>
                    
@@ -100,11 +101,11 @@ class MentorshipForm extends Component {
                         </Option>
                         <Option value="10-11AM" label="10-11AM">
                         </Option>
-                        <Option value="11AM-12PM" label="11AM-12AM">
+                        <Option value="11AM-12PM" label="11AM-12PM">
                         </Option>
-                        <Option value="12-1PM" label="12-1AM">
+                        <Option value="12-1PM" label="12-1PM">
                         </Option>
-                        <Option value="1-2PM" label="9-10AM">
+                        <Option value="1-2PM" label="1-2PM">
                         </Option>
                     </Select>
                    
