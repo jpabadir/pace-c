@@ -11,6 +11,7 @@
 - [Aleks] On the form for front end we have a "submit" button but we also have a "back" and "next" button, what is the purpose of the "back" and "next" buttons?
 - [JP] Extraneous files in top-level src
 - [JP] Explain ESLint process
+- [Katrina] Discuss possible ways to obtain user availability (the current way is a field for the day of a week, and pre-determined time ranges in a drop-down to choose from. A possible alternative could be something like this: https://fullcalendar.io/)
 
 ## Detailed Notes:
 - 
