@@ -14,7 +14,7 @@ While in the src/front-end directory, run `eslint src/*.js --fix` to lint your c
 4. Run the follow script `npx install-peerdeps --dev eslint-config-airbnb`
    - For the first propmt, select npm by entering `2`
    - Enter `2` to indicate that you prefer the ESLint and Prettier configurations to be formatted as .json
-   - When asked to "Write .eslintrc.js (Y/n)? Enter `2`
+   - When asked to "Write .eslintrc.js (Y/n)? Enter `Y`
    - For the max line length, say `80`
    - When asked about the trailing commas, enter `3`
      You _should_ be good to go! To doulbe check,run `eslint src/*.js --fix`, and see if there's any errors in the terminal or Problems, fixing where required.
