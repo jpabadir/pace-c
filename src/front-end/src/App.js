@@ -1,6 +1,5 @@
 // import request from 'request';
 import React from 'react';
-import logo from './logo.svg';
 import { Button } from 'antd';
 import './App.css';
 import MentorshipForm from './components/MentorshipForm';
@@ -12,7 +11,7 @@ function callServer() {
 
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <Button type="primary" onClick={callServer}>Call the server!</Button>
       <MentorshipForm />
     </div>
