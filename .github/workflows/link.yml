@@ -26,7 +26,8 @@ jobs:
           node-version: '15.x'
       - run: npm install -g eslint
         
+      - name: Install eslint-plugin-react
+      - run: npm install eslint-plugin-react@latest --save-dev
+        
       - name: Run ESLint
-        run: |
-          npm install -g eslint-plugin-react@latest --save-dev
-          eslint src/front-end/src/*.js src/back-end/src/*.js --fix
+        run: eslint src/front-end/src/*.js src/back-end/src/*.js --fix
