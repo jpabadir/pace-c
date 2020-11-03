@@ -23,3 +23,10 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run ESLint
         run: eslint src/front-end/src/*.js src/back-end/src/*.js --fix
+       # jest tests
+      - name: Tests
+      - run: npm install jest --save-dev
+      - run: npm run build --if-present
+      - run: npm test
+        env:
+          CI: true
