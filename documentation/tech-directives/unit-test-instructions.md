@@ -9,9 +9,8 @@
   - The coverage should be **at least 80 percent** or higher.
 
 # Setup Jest #
-  ### Frontend ###
   1. Install Jest: run the following command in a terminal: `npm install --save-dev jest@26.6.0`
-  2. Install React test renderer: run the following command in a terminal when you are done #1: `npm install reac-test-            renderer`
+  2. Install React test renderer: run the following command in a terminal when you are done #1: `npm install react-test-            renderer`
   3. Start server: run `cd src/front-end/ ` and then `npm start`
   4. Now check your package.json file, jest and react-test-renderer should be in dependencies.
   5. Here is an example for what you can do to create a test for a function.
@@ -32,12 +31,12 @@
        expect(sum(1, 2)).toBe(3);
      });
      ```
-     When you are done writing tests, run `npm run test` and the following result should print:
+     When you are done writing tests, run `npm run test` and the similar result should print:
      
      ```javascript
      PASS  ./sum.test.js
      ✓ adds 1 + 2 to equal 3 (5ms)
      ```
-  ### Backend ###
+  
 ## Reference ##
 1. https://jestjs.io/docs/en/getting-started.html
