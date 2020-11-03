@@ -27,6 +27,7 @@ jobs:
       - run: | 
           npm install -g eslint
           npm install eslint-plugin-react@latest --save-dev
+          npm install --save eslint-config-airbnb
           npm install 
         
       - name: Run ESLint
