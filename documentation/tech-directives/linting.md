@@ -6,7 +6,9 @@
 - Globally: While in the root directory, run `eslint src/front-end/src/*.js src/back-end/src/*.js --fix` to lint the whole project. 
 - On the front-end or back-end specifically: while in the src/front-end or src/back-end directory, run `eslint src/*.js --fix` to lint the front or back-end. 
 
-After the above commands are run, you may still have issues. While you may have to fix some by hand, many of them can be fixed by auto-formatting using prettier. Make sure you setup prettier so that it reflects ESLint's requirements as closely as possible. After that, you can use VSCode's "Format Document" command (which you can find by opening the command palette, shortcut ctrl + shift + P) to auto-format. This command is mapped to shift + alt + F, by default. 
+After the above commands are run, you may still have issues. While you may have to fix some by hand, many of them can be fixed by auto-formatting using prettier. Make sure you setup prettier so that it reflects ESLint's requirements as closely as possible. After that, you can use VSCode's "Format Document" command (which you can find by opening the command palette, shortcut ctrl + shift + P) to auto-format. This command is mapped to shift + alt + F, by default.  
+
+Tip: In VSCode, ctrl + shift + L and ctrl + shift + D (multi-select shortcuts) are especially useful to fix linting issues manually quickly.
 
 ## Front-end initial Setup for Automatic Formatting
 
