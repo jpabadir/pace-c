@@ -1,9 +1,5 @@
 {
-  "extends": [
-    "airbnb",
-    "plugin:prettier/recommended",
-    "prettier/react"
-  ],
+  "extends": ["airbnb", "plugin:prettier/recommended", "prettier/react"],
   "env": {
     "browser": true,
     "commonjs": true,
@@ -26,13 +22,6 @@
         "ignoreStrings": true,
         "ignoreTemplateLiterals": true,
         "ignoreRegExpLiterals": true
-      },
-      {
-        "parser": "babel-eslint",
-        "parserOptions": {
-          "sourceType": "module",
-          "allowImportExportEverywhere": true
-        }
       }
     ]
   }
