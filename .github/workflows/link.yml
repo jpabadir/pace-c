@@ -17,6 +17,12 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - uses: actions/checkout@v1
+      - name: Run Tests
+        run: |
+          npm install
+          npm test
+          
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
         
@@ -30,3 +36,5 @@ jobs:
         
       - name: Run ESLint
         run: eslint src/front-end/src/*.js src/back-end/src/*.js --fix
+      
+
