@@ -1,12 +1,14 @@
-# Comprehensive list of the code standards the team follows
+# Following the team's linting rules
+##### Our team enforces its code-style conventions through continuous-integration, and each developer can ensure they comply with these style rules by following this linting guide. 
 
-###### When possible, IDE code-linting rule files will be made and shared with the team to facilitate code standardizing.
+## Linting and fixing as many issues as possible using the project's standards
 
-### Front-end
+- Globally: While in the root directory, run `eslint src/front-end/src/*.js src/back-end/src/*.js --fix` to lint the whole project. 
+- On the front-end or back-end specifically: while in the src/front-end or src/back-end directory, run `eslint src/*.js --fix` to lint the front or back-end. 
 
-While in the src/front-end directory, run `eslint src/*.js --fix` to lint your code using the project's ESLint standard presets.
+After the above commands are run, you may still have issues. While you may have to fix some by hand, many of them can be fixed by auto-formatting using prettier. Make sure you setup prettier so that it reflects ESLint's requirements as closely as possible. After that, you can use VSCode's "Format Document" command (which you can find by opening the command palette, shortcut ctrl + shift + P) to auto-format. This command is mapped to shift + alt + F, by default. 
 
-#### Initial Setup for Automatic Formatting
+## Front-end initial Setup for Automatic Formatting
 
 1. In VSCode, click on the "Extensions" icon on the leftmost navigation bar.
 2. Install "Prettier - Code formatter 5.7.1" and "EsLint 2.1.13".
@@ -18,7 +20,3 @@ While in the src/front-end directory, run `eslint src/*.js --fix` to lint your c
    - For the max line length, say `80`
    - When asked about the trailing commas, enter `3`
      You _should_ be good to go! To doulbe check,run `eslint src/*.js --fix`, and see if there's any errors in the terminal or Problems, fixing where required.
-
-### Back-end
-
-While in the src/back-end directory, run `eslint src/*.js --fix` to lint your code using the project's ESLint standard presets.
