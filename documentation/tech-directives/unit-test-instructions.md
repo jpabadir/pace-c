@@ -11,7 +11,7 @@
 # Setup Jest #
   1. Install Jest: run the following command in a terminal: `npm install --save-dev jest@26.6.0`
   2. Install React test renderer: run the following command in a terminal when you are done #1: `npm install react-test-            renderer`
-  3. Start server: run `cd src/front-end/ ` and then `npm start`
+  3. Start server: run `cd src/front-end/ ` or  `cd src/back-end/ ` and then `npm start`
   4. Now check your package.json file, jest and react-test-renderer should be in dependencies.
   5. Here is an example for what you can do to create a test for a function.
      In *sum.js*:
