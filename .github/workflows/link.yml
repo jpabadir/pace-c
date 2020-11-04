@@ -34,4 +34,4 @@ jobs:
           npm install 
         
       - name: Run ESLint
-        run: eslint src/front-end/src/*.js src/back-end/src/*.js --fix
+        run: eslint src/front-end/src/*.js src/back-end/src/*.js
