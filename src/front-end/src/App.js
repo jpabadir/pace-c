@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <Button type="primary" onClick={callServer}>
-        ⏎········Call·the·server!⏎······!
+        Call the server!
       </Button>
       <MentorshipForm />
     </div>
