@@ -22,6 +22,7 @@ jobs:
         run: |
           npm install
           cd src/front-end/
+          npm start
           npm test
           
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
