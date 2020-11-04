@@ -21,7 +21,6 @@ jobs:
       - name: Run Tests
         run: |
           npm install
-          cd src/front-end/
           npm start
           npm test
           
