@@ -21,7 +21,6 @@ jobs:
       - name: Run Tests
         run: |
           npm install
-          npm start
           npm test
           
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
