@@ -9,6 +9,7 @@
   - The coverage should be **at least 80 percent** or higher.
 
 # Setup Jest #
+  ## Frontend ##
   1. Install Jest: run the following command in a terminal: 
       `npm install --save-dev jest@26.6.0`
   2. Install React test renderer: run the following command in a terminal when you are done #1: 
@@ -40,6 +41,8 @@
      PASS  ./sum.test.js
      ✓ adds 1 + 2 to equal 3 (5ms)
      ```
+  ## Backend ##
+  - (TBA on W9)
   
 ## Reference ##
 1. https://jestjs.io/docs/en/getting-started.html
