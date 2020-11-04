@@ -33,9 +33,3 @@ jobs:
         
       - name: Run ESLint
         run: eslint src/front-end/src/*.js src/back-end/src/*.js --fix
-
-
-
-
-        
-        
