@@ -30,6 +30,7 @@ jobs:
           npm install --save eslint-config-airbnb
           npm install eslint-plugin-prettier@latest --save-dev
           npm install --save-dev eslint-config-prettier
+          npm install eslint-config-standard
           npm install 
         
       - name: Run ESLint
