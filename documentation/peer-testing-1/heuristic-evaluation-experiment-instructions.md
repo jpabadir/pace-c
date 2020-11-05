@@ -22,3 +22,6 @@
 6. **Second evaluation phase.** In the second evaluation phase, the evaluators will carry out another run-through, whilst applying the chosen heuristics to the elements identified during the first phase. **The evaluators would focus on individual elements** and look at how well they fit in the overall design.
 7. **Record problems.** The evaluators must either record problems themselves or you should record them as they carry out their various tasks to track any problems they encounter. Be sure to ask the evaluators to be as detailed and specific as possible when recording problems.
 8. **Debriefing session.** The debriefing session involves collaboration between the different evaluators to collate their findings and establish a complete list of problems. They should then be encouraged to suggest potential solutions for these problems on the basis of the heuristics.
+
+# Reference #
+1. https://www.interaction-design.org/literature/article/heuristic-evaluation-how-to-conduct-a-heuristic-evaluation
