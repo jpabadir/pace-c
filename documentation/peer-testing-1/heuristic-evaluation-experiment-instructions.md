@@ -1,5 +1,5 @@
 # Heuristic evaluation experiment instructions #
-- (introduction)
+- Heuristic evaluation is a thorough assessment of a product's user interface, and its purpose is to detect usability issues that may occur when users interact with a product, and identify ways to resolve them.
 
 ## 10 User Interface Design Heuristics ##
 1. **Visibility of system status.** Users should always be informed of system operations with easy to understand and highly visible status displayed on the screen within a reasonable amount of time.
@@ -14,4 +14,11 @@
 10. **Help and documentation.** Ideally, we want users to navigate the system without having to resort to documentation. However, depending on the type of solution, documentation may be necessary. When users require help, ensure it is easily located, specific to the task at hand and worded in a way that will guide them through the necessary steps towards a solution to the issue they are facing.
 
 ## How to Conduct our Heuristic Evaluation ##
-- (TBA)
+1. **Establish an appropriate list of heuristics** according to the list above.
+2. **Select your evaluators.** Make sure to carefully choose your evaluators. Your evaluators should not be your end users. They should typically be usability experts and preferably with domain expertise in the industry type that your product is in. For example, an evaluator investigating a Point-of-Sale system for the restaurant industry should have at least a general understanding of restaurant operations.
+3. **Select your evaluators.(3-5 evaluators)** Make sure to carefully choose your evaluators. Your evaluators should not be your end users. They should typically be usability experts and preferably with domain expertise in the industry type that your product is in. For example, an evaluator investigating a Point-of-Sale system for the restaurant industry should have at least a general understanding of restaurant operations.
+4. **Brief your evaluators** so they know exactly what they are meant to do and cover during their evaluation. The briefing session should be standardized to ensure the evaluators receive the same instructions; otherwise you may bias their evaluation. Within this brief, you may wish to ask the evaluators to focus on a selection of tasks, but sometimes they may state which tasks they will cover on the basis of their experience and expertise.
+5. **First evaluation phase.** The first evaluation generally takes around two hours, depending on the nature and complexity of your product. The evaluators will use the product freely to gain a feel for the methods of interaction and the scope. **They will then identify specific elements that they want to evaluate.**
+6. **Second evaluation phase.** In the second evaluation phase, the evaluators will carry out another run-through, whilst applying the chosen heuristics to the elements identified during the first phase. **The evaluators would focus on individual elements** and look at how well they fit in the overall design.
+7. **Record problems.** The evaluators must either record problems themselves or you should record them as they carry out their various tasks to track any problems they encounter. Be sure to ask the evaluators to be as detailed and specific as possible when recording problems.
+8. **Debriefing session.** The debriefing session involves collaboration between the different evaluators to collate their findings and establish a complete list of problems. They should then be encouraged to suggest potential solutions for these problems on the basis of the heuristics.
