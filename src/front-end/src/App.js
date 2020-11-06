@@ -1,4 +1,3 @@
-// import request from 'request';
 import React from 'react';
 import { Button } from 'antd';
 import './App.css';
