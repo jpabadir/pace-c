@@ -9,10 +9,18 @@ const { RangePicker } = DatePicker;
 
 const { Option } = Select;
 
+const onFinish = (values) => {
+  console.log('Success:', values);
+};
+
+const onFinishFailed = (values) => {
+  console.log('Failed submit:', values);
+};
+
 class MentorshipForm extends Component {
   render() {
     return (
-      <Form>
+      <Form onFinish={onFinish} onFinishFailed={onFinishFailed}>
         <Form.Item
           // TEST ITEM (will be deleted):
           label="Test"
