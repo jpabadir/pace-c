@@ -40,6 +40,6 @@ jobs:
         run: |
           npm install --save-dev jest@26.6.0
           npm install react-test-renderer
-          npm install -g react-script
+          npm install
           npm test
      
