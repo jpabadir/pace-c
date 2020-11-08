@@ -1,4 +1,4 @@
-### Heuristic evaluation experiment instructions ###
+# Heuristic evaluation experiment instructions #
 - Heuristic evaluation is a efficient approach to detect the usability and efficiency of the software we are building.
 - Before viewing this instruction, Make sure you read: https://people.ok.ubc.ca/bowenhui/499/peertesting.html.
 
@@ -16,7 +16,7 @@ In short, Designers should build the system as simple as possible.
 10. **Help and documentation.** All the basic information such as the introduction and purpose of the software, FAQ section,should be displayed in an interface such as help center. The help page is neccesary even if the system is simple to understand. It helps user experience be better.
 
 ## Before entering the evaluation ##
-# Session checklist: #
+### Session checklist: ###
 - System is setup and ready to go.
 - Description of the system for participant.
 - Three lists of tasks for mentors, mentees, and Admins.
@@ -25,21 +25,21 @@ In short, Designers should build the system as simple as possible.
 - have a list of online questions ready for participants to complete by applying _Google Forms_. Questions can be usability related or open-ended. The Questionnaire should be 5-point Likert scale. 
 - I have created a google form for the questionnaire. Link:https://docs.google.com/forms/d/1K0egKKFqWlHBHL8dpMpvDg4dmS5h3WP_Hp-WnMYRE7Q/prefill.
 
-# Setup your PC: #
+### Setup your PC: ###
 - Please make sure you **install ZOOM** properly on your PC rather than on a phone or a tablet device before running the sessions. Click the following link to download: https://zoom.us/download.
 - To using remote accessing, make sure you installed the **Chrome Remote Desktop option**. When you are done installing it, a one-time code will be generated for access. You will tell the participants the code for getting access. Click the following link to download:https://remotedesktop.google.com/support/.
 
 ## Tests in process ##
 - As required by Dr. Bowen, we have two sessions for each person in the team: **one remote and one thinkalound**. In addition, all the sessions will be carried out online through ZOOM meeting and you need to record the screen and audio during these sessions. 
-# Remote session#
+### Remote session ###
 - The participant will operate test administrator's desktop by using remote access to navigate the system.
 According to Bowen, depending on which role you are: a test administrator or a participant. You will either give access to participate to join the meeting or get access to join the meeting as a test administrator. Then, participant will complete the assigned tasks and the test administrator will document observations.
-# Thinkaloud session #
+### Thinkaloud session ###
 - In a thinkaloud session, the participant should talks as much as possible and the test administrator offer help to complete the session. Then, participant will complete the assigned tasks and the test administrator will document observations.
 
 ## After testing ##
 - you will inform participants to complete the quick questionnaire you created.
-# Make an list of issues found during the evaluation. # 
+### Make an list of issues found during the evaluation. ### 
 - The list includes description of each problem
 - categorize them according to Usability Heuristics. If none of the usability heuristics fit, assign it as a defect.
 - rank them by high, medium, or low
