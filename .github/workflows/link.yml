@@ -17,12 +17,6 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: actions/checkout@v1
-      - name: Run Tests
-        run: |
-          npm install
-          npm test
-          
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
         
@@ -33,8 +27,25 @@ jobs:
       - run: | 
           npm install -g eslint
           npm install eslint-plugin-react@latest --save-dev
+          npm install --save eslint-config-airbnb
+          npm install eslint-plugin-prettier@latest --save-dev
+          npm install --save-dev eslint-config-prettier
+          npm install eslint-config-standard
+          npm install 
         
       - name: Run ESLint
-        run: eslint src/front-end/src/*.js src/back-end/src/*.js --fix
+        run: eslint src/front-end/src/*.js src/back-end/src/*.js
       
+      - run: |
+          npm install --save-dev jest@26.6.0
+          npm install react-test-renderer
+          npm install
+          cd src/front-end/
+          npm start
+          
+      - name: Run Jest
+        run: npm run test
+    
+      
+        
 
