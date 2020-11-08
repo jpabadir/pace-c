@@ -7,6 +7,8 @@
 - [aleks] What do you guys want to do about reading week, are we still going to hold a meeting?
 - [JP] Suggest we do a Saturday status check: everyone writes their progress on their tasks every Saturday so we're all in the loop. 
 - [JP] In the future, we need to make tasks way more descriptive to include very clear expected outcomes from whomever is working on them. 
+- [Katrina] During Friday's class, the instructor mentioned how Gitstats should be ran by someone in the PST timezone. That has been set up, but since there's no report due on November 11, the first trial run will be November 18th for Katrina.
+- [Katrina] Run through road blocks from obtaining user availability. 
 
 ## Detailed Notes:
 - 
