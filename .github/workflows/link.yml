@@ -32,9 +32,6 @@ jobs:
           npm install --save-dev eslint-config-prettier
           npm install eslint-config-standard
           npm install 
-        
-      - name: Run ESLint
-        run: eslint src/front-end/src/*.js src/back-end/src/*.js
       
       - run: |
           npm install --save-dev jest@26.6.0
