@@ -41,6 +41,6 @@ jobs:
           npm install react-test-renderer
           
       - name: Run Jest
-        run: 
+        run: |
           cd src/front-end/
           npm run test
