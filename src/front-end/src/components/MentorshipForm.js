@@ -10,7 +10,7 @@ const { RangePicker } = DatePicker;
 const { Option } = Select;
 
 const calendarStyle = {
-  border: 'solid 1px #777',
+  width: '100%',
 };
 
 class MentorshipForm extends Component {
@@ -95,15 +95,22 @@ class MentorshipForm extends Component {
             onChange={this.handleChange}
           />
         </Form.Item>
-        <p> Please enter your reoccuring availability:</p>
+        <p> Please enter your availability:</p>
         <iframe
-          title="avail"
-          src="https://calendar.google.com/calendar/embed?height=300&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FVancouver&amp;src=a2F0cmluYS5qb2xpLm1hcnRlbEBnbWFpbC5jb20&amp;src=ZGZ1a24wN2M4M21zaGRqNGg5NzhjZ2l0aWtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=Z29vZ2xlLmNvbV9jZ2wwNTdjNDFhYmRwMXQ5aGFlaWJmaTg2Y0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZW4uY2FuYWRpYW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23039BE5&amp;color=%23D81B60&amp;color=%2333B679&amp;color=%234285F4&amp;color=%230B8043&amp;showTitle=0&amp;showPrint=0"
-          style={{ border: 'solid 1px #777' }}
-          width="400"
-          height="300"
-          frameBorder="0"
+          // eslint-disable-next-line max-len
+          /* NOTE: The platform Sagenda is currently being used so that a calendar can be embedded for users
+          to input their availability. For a very brief, and quick overview: https://www.sagenda.com/integrate-booking-system-website/add-booking-system-website/
+          Katrina will explain this in-depth during the team meeting.
+          */
+          title="sagendaAvailabilityCalendar"
+          id="sagendaFrame"
+          src="https://sagenda.net/Frontend/Calendar/5fa77824c0374772a46452ad"
           scrolling="no"
+          height="1300"
+          style={calendarStyle}
+          frameBorder="0"
+          allowtransparency="true"
+          sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-top-navigation allow-scripts allow-forms"
         />
         <Form.Item label="Monday" name="availabilityMonday">
           <Select
