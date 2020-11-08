@@ -86,6 +86,7 @@ class MentorshipForm extends Component {
             rules={[{ required: true, message: 'This field is required' }]}
           >
             <TimezonePicker
+              className="time-zone-picker"
               // time zones:
               absolute={false}
               defaultValue="America/Los_Angeles"

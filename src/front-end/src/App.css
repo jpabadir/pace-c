@@ -24,3 +24,8 @@ a {
 .next-button {
   float: right;
 }
+
+.time-zone-picker {
+  overflow: ellipsis;
+  width: 370px;
+}
