@@ -122,6 +122,14 @@ class MentorshipForm extends Component {
             <Option value="1-2PM" label="1-2PM" />
           </Select>
         </Form.Item>
+        <Form.Item
+          label="Password"
+          name="password"
+          // must have an input:
+          rules={[{ required: true, message: 'Please input something' }]}
+        >
+          <Input.Password placeholder="password" />
+        </Form.Item>
         <Button type="primary" htmlType="submit">
           Submit
         </Button>
