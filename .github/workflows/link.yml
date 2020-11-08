@@ -36,11 +36,10 @@ jobs:
       - name: Run ESLint
         run: eslint src/front-end/src/*.js src/back-end/src/*.js
       
-      - run: |
+      - name: Run jest
+        run: |
           npm install --save-dev jest@26.6.0
           npm install react-test-renderer
-          
-      - name: Run Jest
-        run: |
           cd src/front-end/
           npm run test
+     
