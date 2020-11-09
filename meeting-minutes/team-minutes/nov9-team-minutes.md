@@ -17,9 +17,38 @@
 - [aleks] should the login button on the login page be a button that sends the data to the database?
 - [aleks] talk about how we are going to do forget password link, should it be through email?
 - [aleks] Many of the buttons from the ui pages need to be linked to other pages
+-
 
 ## Detailed Notes:
+- Meeting on the 23rd is staying on 23rd
+- Aleks will not be able to attend the meeting on 23rd due to internet issues
+- Meeting on the 30th is now on the 29th
+- Stay clear from external apis as much as possible
+- We will probably use cloud functions in our program
+- JP will lead dry runs
+- Meeting on the 16th
+- Move tasks from to-do to in progress
+- If possible give a little status report on saturday about how your tasks are going
+- Make the tasks more detailed with more information
+- Kat will run the gitstats test
+- Check with client: calendar interface, google calendar, etc.
+- Check with client: Put matching people based on availability to the side for now
+- Check with client: Focus more on input such as skills, and time zones, instead of availability
+- If client wants availability instead of the top 3 points above: 
+- Create/keep a simpler UI for the back end
+- Possible idea if client requires availability: use a time picker, such as: pick days, pick time, pick date, etc.
+- Possbile idea if client requires availability: for the time picker idea, we can have "weekly" options, or "specific" day options
+- Possible idea if client requires availability: weekly options for the time picker will be a reoccuring time every week on the same day/time
+- Possible idea if client requires availability: specific option for the time picker will be the option to add specific days of availability
+- Possible idea if client requires availability: compare different time picker options
+- Write tests for when we code (we can focus on this after the project gets more complete)
 - 
 
 ## Action Items (Due by next sprint: November 16th):
-- 
+- [aleks] Merge develop into 185 branch, update the current first page of form with the the 185 pr, then the 2nd page will be the create account page
+- [aleks] Button on the form should switch between first page and second page of create account contents and mentorshipform contents
+- [kat] re-work the report so that it counts as a pr and task
+- [kat] Client minutes need to be uploaded and completed
+- [eric] Work on showing skills based on if the user is mentor/mentee
+- [eric] Build a complete page for finish registering page
+- []
