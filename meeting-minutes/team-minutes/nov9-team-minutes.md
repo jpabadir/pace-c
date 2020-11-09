@@ -14,6 +14,7 @@
 - [aleks] mentorship form, from sign up form to create account form requries react routing to go to next page
 - [aleks] on create account form, an email needs to be passed into the "place email here" spot
 - [aleks] created a temp "create account" page on the navigation bar on the top, in order for us to view the create account page
+- [aleks] should the login button on the login page be a button that sends the data to the database?
 
 ## Detailed Notes:
 - 
