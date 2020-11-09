@@ -23,11 +23,12 @@ In short, Designers should build the system as simple as possible.
 - Duration of the tasks should be approximately 40 minutes total.
 - Be ready to document observations during the evaluations.
 - have a list of online questions ready for participants to complete by applying _Google Forms_. Questions can be usability related or open-ended. The Questionnaire should be 5-point Likert scale. 
-- I have created a google form for the questionnaire. Link:https://docs.google.com/forms/d/1K0egKKFqWlHBHL8dpMpvDg4dmS5h3WP_Hp-WnMYRE7Q/prefill.
+- I have created a google form for the questionnaire. Link: https://docs.google.com/forms/d/1K0egKKFqWlHBHL8dpMpvDg4dmS5h3WP_Hp-WnMYRE7Q/prefill.
 
 ### Setup your PC: ###
-- Please make sure you **install ZOOM** properly on your PC rather than on a phone or a tablet device before running the sessions. Click the following link to download: https://zoom.us/download.
-- To using remote accessing, make sure you installed the **Chrome Remote Desktop option**. When you are done installing it, a one-time code will be generated for access. You will tell the participants the code for getting access. Click the following link to download:https://remotedesktop.google.com/support/.
+Choose one of the following software to install for remote control:
+- Make sure you **install ZOOM** properly on your PC rather than on a phone or a tablet device before running the sessions. Click the following link to download: https://zoom.us/download.
+- Make sure you install the **Chrome Remote Desktop option**. When you are done installing it, a one-time code will be generated for access. You will tell the participants the code for getting access. Click the following link to download: https://remotedesktop.google.com/support/.
 
 ## Tests in process ##
 - As required by Dr. Bowen, we have two sessions for each person in the team: **one remote and one thinkalound**. In addition, all the sessions will be carried out online through ZOOM meeting and you need to record the screen and audio during these sessions. 
