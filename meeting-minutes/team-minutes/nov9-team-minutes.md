@@ -44,6 +44,7 @@
 - Write tests for when we code (we can focus on this after the project gets more complete)
 - We will only be able to match with one mentor at the start
 - If we need more tasks, ask for more tasks
+- Kat will have the task of playing around with availability
 - 
 
 ## Action Items (Due by next sprint: November 16th):
