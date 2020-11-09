@@ -11,6 +11,7 @@
 - [Katrina] Run through road blocks from obtaining user availability. 
 - [Eric] lists of tasks for each user group.
 - [aleks] validating email
+- [aleks] mentorship form, from sign up form to create account form requries react routing to go to next page
 
 ## Detailed Notes:
 - 
