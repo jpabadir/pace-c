@@ -12,6 +12,7 @@
 - [Eric] lists of tasks for each user group.
 - [aleks] validating email
 - [aleks] mentorship form, from sign up form to create account form requries react routing to go to next page
+- [aleks] on create account form, an email needs to be passed into the "place email here" spot
 
 ## Detailed Notes:
 - 
