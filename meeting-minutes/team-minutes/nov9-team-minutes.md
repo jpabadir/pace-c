@@ -42,7 +42,8 @@
 - Possible idea if client requires availability: specific option for the time picker will be the option to add specific days of availability
 - Possible idea if client requires availability: compare different time picker options
 - Write tests for when we code (we can focus on this after the project gets more complete)
--  
+- We will only be able to match with one mentor at the start
+- 
 
 ## Action Items (Due by next sprint: November 16th):
 - [aleks] Merge develop into 185 branch, update the current first page of form with the the 185 pr, then the 2nd page will be the create account page
@@ -51,4 +52,5 @@
 - [kat] Client minutes need to be uploaded and completed
 - [eric] Work on showing skills based on if the user is mentor/mentee
 - [eric] Build a complete page for finish registering page
-- []
+- [eric] Listing tasks
+- 
