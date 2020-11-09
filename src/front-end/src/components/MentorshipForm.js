@@ -38,6 +38,7 @@ class MentorshipForm extends Component {
         >
           <Input placeholder="please enter your name" />
         </Form.Item>
+        {/* the email validation for below is more complicated than expected */}
         <Form.Item
           label="Email"
           name="emailInput"
@@ -56,7 +57,7 @@ class MentorshipForm extends Component {
             // only one option can be selected:
             mode="single"
             style={{ width: '100%' }}
-            placeholder="select available time"
+            placeholder="select mentor or mentee"
             optionLabelProp="label"
           >
             <Option value="Mentor" label="Mentor" />
@@ -122,13 +123,69 @@ class MentorshipForm extends Component {
             <Option value="1-2PM" label="1-2PM" />
           </Select>
         </Form.Item>
-        <Button type="primary" htmlType="submit">
-          Submit
-        </Button>
+        <p> Please enter your 1st ranked skill:</p>
+        <Form.Item label="1st Ranked Skill" name="1stSkill">
+          <Select
+            // so that single option can be selected:
+            mode="single"
+            style={{ width: '100%' }}
+            placeholder="select your 1st ranked skill"
+            optionLabelProp="label"
+            // options for skills below, more skills can be added:
+          >
+            <Option value="Communication" label="Communication" />
+            <Option value="Teamwork" label="Teamwork" />
+            <Option value="Problem Solving" label="Problem Solving" />
+            <Option value="Planning" label="Planning" />
+            <Option value="Organising" label="Organising" />
+            <Option value="Technology" label="Technology" />
+            <Option value="Self-management" label="Self-management" />
+            <Option value="Learning" label="Learning" />
+          </Select>
+        </Form.Item>
+        <p> Please enter your 2nd ranked skill:</p>
+        <Form.Item label="2nd Ranked Skill" name="2ndSkill">
+          <Select
+            // so that single options can be selected:
+            mode="single"
+            style={{ width: '100%' }}
+            placeholder="select your 2nd ranked skill"
+            optionLabelProp="label"
+            // options for skills below, more skills can be added:
+          >
+            <Option value="Communication" label="Communication" />
+            <Option value="Teamwork" label="Teamwork" />
+            <Option value="Problem Solving" label="Problem Solving" />
+            <Option value="Planning" label="Planning" />
+            <Option value="Organising" label="Organising" />
+            <Option value="Technology" label="Technology" />
+            <Option value="Self-management" label="Self-management" />
+            <Option value="Learning" label="Learning" />
+          </Select>
+        </Form.Item>
+        <p> Please enter your 3rd ranked skill:</p>
+        <Form.Item label="3rd Ranked Skill" name="3rdSkill">
+          <Select
+            // so that single options can be selected:
+            mode="single"
+            style={{ width: '100%' }}
+            placeholder="select your 3rd ranked skill"
+            optionLabelProp="label"
+            // options for skills below, more skills can be added:
+          >
+            <Option value="Communication" label="Communication" />
+            <Option value="Teamwork" label="Teamwork" />
+            <Option value="Problem Solving" label="Problem Solving" />
+            <Option value="Planning" label="Planning" />
+            <Option value="Organising" label="Organising" />
+            <Option value="Technology" label="Technology" />
+            <Option value="Self-management" label="Self-management" />
+            <Option value="Learning" label="Learning" />
+          </Select>
+        </Form.Item>
         <p>{/* used to space buttons */}</p>
-        <Button type="primary" htmlType="button">
-          Back
-        </Button>
+        {/* this button should redirect the user to the createaccount page */}
+        {/* this requires react routing */}
         <Button type="primary" htmlType="button">
           Next
         </Button>
