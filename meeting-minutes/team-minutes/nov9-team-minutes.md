@@ -17,7 +17,7 @@
 - [aleks] should the login button on the login page be a button that sends the data to the database?
 - [aleks] talk about how we are going to do forget password link, should it be through email?
 - [aleks] Many of the buttons from the ui pages need to be linked to other pages
--
+- 
 
 ## Detailed Notes:
 - Meeting on the 23rd is staying on 23rd
@@ -42,7 +42,7 @@
 - Possible idea if client requires availability: specific option for the time picker will be the option to add specific days of availability
 - Possible idea if client requires availability: compare different time picker options
 - Write tests for when we code (we can focus on this after the project gets more complete)
-- 
+-  
 
 ## Action Items (Due by next sprint: November 16th):
 - [aleks] Merge develop into 185 branch, update the current first page of form with the the 185 pr, then the 2nd page will be the create account page
