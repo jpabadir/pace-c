@@ -4,15 +4,29 @@ import { Form, Button, Input, DatePicker, Tooltip, Select } from 'antd';
 import { InfoCircleOutlined, QuestionCircleOutlined } from '@ant-design/icons';
 import TimezonePicker from 'react-bootstrap-timezone-picker';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
+import firebase from '../firebase-init';
 
 const { RangePicker } = DatePicker;
 
 const { Option } = Select;
 
+const onFinish = (values) => {
+  firebase
+    .auth()
+    .createUserWithEmailAndPassword(values.emailInput, values.password)
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
+const onFinishFailed = (values) => {
+  console.log('Failed submit:', values);
+};
+
 class MentorshipForm extends Component {
   render() {
     return (
-      <Form>
+      <Form onFinish={onFinish} onFinishFailed={onFinishFailed}>
         <Form.Item
           // TEST ITEM (will be deleted):
           label="Test"
@@ -121,6 +135,14 @@ class MentorshipForm extends Component {
             <Option value="12-1PM" label="12-1PM" />
             <Option value="1-2PM" label="1-2PM" />
           </Select>
+        </Form.Item>
+        <Form.Item
+          label="Password"
+          name="password"
+          // must have an input:
+          rules={[{ required: true, message: 'Please input something' }]}
+        >
+          <Input.Password placeholder="password" />
         </Form.Item>
         <Button type="primary" htmlType="submit">
           Submit
