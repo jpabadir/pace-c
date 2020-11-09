@@ -11,6 +11,7 @@ class Login extends Component {
         <p>Welcome to MentorMatch!</p>
         <p>Login to access the mentorship portal</p>
         <Form.Item
+          type="email"
           label="Email"
           name="email"
           // must have an input:
@@ -19,6 +20,7 @@ class Login extends Component {
           <Input placeholder="please enter your email" />
         </Form.Item>
         <Form.Item
+          type="password"
           label="Password"
           name="password"
           // must have an input:
