@@ -11,7 +11,7 @@ class CreateAccount extends Component {
         {/* email from the mentorship form page should be placed below */}
         <p>Your email is: *place email here*</p>
         <Form.Item
-          // TEST ITEM (will be deleted):
+          // password fields:
           label="Password"
           name="password"
           // must have an input:
