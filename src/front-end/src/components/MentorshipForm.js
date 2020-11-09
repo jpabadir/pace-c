@@ -40,6 +40,7 @@ class MentorshipForm extends Component {
         </Form.Item>
         {/* the email validation for below is more complicated than expected */}
         <Form.Item
+          type="email"
           label="Email"
           name="emailInput"
           // must have an input:
