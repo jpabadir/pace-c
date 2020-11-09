@@ -3,7 +3,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
 
 body {
@@ -11,7 +11,44 @@ body {
   line-height: 1.4;
 }
 
-a{
+a {
   color: #333;
   text-decoration: none;
+}
+.mentorship-form {
+  border: solid black;
+  padding: 25px;
+  margin: 30px;
+}
+
+.next-button {
+  float: right;
+}
+
+.time-zone-picker {
+  overflow: auto;
+  width: 100%;
+}
+
+/*COSC360 mentioned that it's good to be aware of sizing when it comes to various devices, 
+So the following lines have been added as a protective measure */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
 }

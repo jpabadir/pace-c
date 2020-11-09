@@ -26,6 +26,8 @@ const onFinishFailed = (values) => {
 class MentorshipForm extends Component {
   render() {
     return (
+     // CSS class names follow kebab-case naming conventions
+     <div className="mentorship-form">
       <Form onFinish={onFinish} onFinishFailed={onFinishFailed}>
         <Form.Item
           // TEST ITEM (will be deleted):
@@ -73,69 +75,40 @@ class MentorshipForm extends Component {
             placeholder="select available time"
             optionLabelProp="label"
           >
-            <Option value="Mentor" label="Mentor" />
-            <Option value="Mentee" label="Mentee" />
-          </Select>
-        </Form.Item>
-        <Form.Item
-          label={
-            <span>
-              Timeframe Seeking Mentorship&nbsp;
-              <Tooltip title="Please pick an estimated duration for how long you would like to use the platform">
-                <QuestionCircleOutlined />
-              </Tooltip>
-            </span>
-          }
-          name="selectedStartDate"
-          rules={[{ required: true, message: 'This field is required' }]}
-        >
-          <RangePicker picker="month" />
-        </Form.Item>
-        <Form.Item
-          label="Please Select Your Time-zone"
-          name="timeZone"
-          // must have an input:
-          rules={[{ required: true, message: 'This field is required' }]}
-        >
-          <TimezonePicker
-            // time zones:
-            absolute={false}
-            defaultValue="America/Los_Angeles"
-            placeholder="Select timezone..."
-            onChange={this.handleChange}
-          />
-        </Form.Item>
-        <p> Please enter your reoccuring availability:</p>
-        <Form.Item label="Monday" name="availabilityMonday">
-          <Select
-            // so that multiple options can be selected:
-            mode="multiple"
-            style={{ width: '100%' }}
-            placeholder="select available time"
-            optionLabelProp="label"
+              <Option value="Mentor" label="Mentor" />
+              <Option value="Mentee" label="Mentee" />
+            </Select>
+          </Form.Item>
+          <Form.Item
+            label={
+              <span>
+                Timeframe Seeking Mentorship&nbsp;
+                <Tooltip title="Please pick an estimated duration for how long you would like to use the platform">
+                  <QuestionCircleOutlined />
+                </Tooltip>
+              </span>
+            }
+            name="selectedStartDate"
+            rules={[{ required: true, message: 'This field is required' }]}
           >
-            <Option value="9-10AM" label="9-10AM" />
-            <Option value="10-11AM" label="10-11AM" />
-            <Option value="11AM-12PM" label="11AM-12AM" />
-            <Option value="12-1PM" label="12-1PM" />
-            <Option value="1-2PM" label="1-2PM" />
-          </Select>
-        </Form.Item>
-        <Form.Item label="Tuesday" name="availabilityTuesday">
-          <Select
-            // so that multiple options can be selected:
-            mode="multiple"
-            style={{ width: '100%' }}
-            placeholder="select available time"
-            optionLabelProp="label"
+            <RangePicker picker="month" />
+          </Form.Item>
+          <Form.Item
+            label="Please Select Your Time-zone"
+            name="timeZone"
+            // must have an input:
+            rules={[{ required: true, message: 'This field is required' }]}
           >
-            <Option value="9-10AM" label="9-10AM" />
-            <Option value="10-11AM" label="10-11AM" />
-            <Option value="11AM-12PM" label="11AM-12PM" />
-            <Option value="12-1PM" label="12-1PM" />
-            <Option value="1-2PM" label="1-2PM" />
-          </Select>
-        </Form.Item>
+            <TimezonePicker
+              className="time-zone-picker"
+              // time zones:
+              absolute={false}
+              defaultValue="America/Los_Angeles"
+              placeholder="Select timezone..."
+              onChange={this.handleChange}
+            />
+          </Form.Item>
+          <p> Please enter your availability:</p>
         <Form.Item
           label="Password"
           name="password"
@@ -155,6 +128,7 @@ class MentorshipForm extends Component {
           Next
         </Button>
       </Form>
+    </div>
     );
   }
 }
