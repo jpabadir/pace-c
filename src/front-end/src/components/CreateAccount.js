@@ -12,6 +12,7 @@ class CreateAccount extends Component {
         <p>Your email is: *place email here*</p>
         <Form.Item
           // password fields:
+          type="password"
           label="Password"
           name="password"
           // must have an input:
