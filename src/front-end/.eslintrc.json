@@ -16,6 +16,7 @@
     "index.js"
   ],
   "rules": {
+    "no-console": "off", 
     "import/no-unresolved": "off",
     "jsx-a11y/href-no-hash": [
       "off"
