@@ -14,7 +14,7 @@
 
 1. Do "Stand Up" from the week.
 
-- Mention that last week's sprint consisted of working on the following tasks:
+- Mention that last week's sprint consisted of working on the following tasks (the Github Project Board will briefly be shown at this time, but running the application to visualize/demonstrate what we worked on will be the main focus):
 
   - Creating the UI for the Login Page (input fields for username and password, and buttons for "Forgot Password" and "Create Account")
   - Creating the UI for a Logged in Mentor (displaying mentees on a dashboard, having a logout button).
