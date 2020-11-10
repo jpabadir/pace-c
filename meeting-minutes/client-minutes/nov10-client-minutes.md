@@ -63,7 +63,7 @@ Once Pace B completed their stand-up, our Github Project board was displayed to 
   - **Mentor Forms**
     - Name, email, list of ranked skills, text-area to obtain a description from the user about themselves/their goals for the program, some way of obtaining the user's availability, and password for account creation.
   - NOTE: After discussing what input fields are necessary on each form, the client was contemplating whether we should be collecting the user's time-zone, or if collecting the user's location would suffice. She mentioned that the time-zone could possibly be extracted from the user's browser, but location alone might suffice.
-- A road block from this week was the complexity that matching based on common availability introduces. Is common availability **required** when it comes to making mentee and mentors matches, or can we match primarily based on skills and time-zones?
+- A road block from this week was the complexity that matching based on common availability introduces. Is common availability **required** when it comes to making mentee and mentor matches, or can we match primarily based on skills and time-zones?
   - The client recognizes the complexity that matching based on common availability might have. As such, when creating mentee and mentor matches, **common availability does not need to be considered**.
     - The client's recommended course of action: The process can be analogous to a job recruiting process (i.e The individual conducting interviews sends out a calendar to the interviewee. The interviewee receives a calendar of available time slots, and picks one). Therefore, for our project we can:
       - Obtain availability for Mentors only.
@@ -72,7 +72,7 @@ Once Pace B completed their stand-up, our Github Project board was displayed to 
 
 The client asked how our team was progressing with our use of Firebase, so the MentorshipForm.js file was shown since authentication was worked on over the last sprint. The client recommended also initializing Firebase within App.js as well (so that all the components being called from App.js have access to the information in the database).
 
-The client also mentioned that we should keep in mind that the Mentor form will be embedded onto a public website, so we should consider how it will be turned into an iFrame tag.
+The client also mentioned that we should keep in mind that the **Mentee** form will be embedded onto a public website, so we should consider how it will be turned into an iFrame tag.
 
 ### ACTION ITEMS
 
