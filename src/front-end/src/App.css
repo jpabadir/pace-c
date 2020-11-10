@@ -22,6 +22,26 @@ a {
   margin: 30px;
 }
 
+.MentorForm {
+  border: solid black;
+  padding: 25px;
+  margin: 30px;
+}
+
+.NextButton-InMentor{
+  float: right;
+}
+
+.MenteeForm{
+  border: solid black;
+  padding: 25px;
+  margin: 30px;
+}
+
+.NextButton-InMentee{
+  float: right;
+}
+
 .next-button {
   float: right;
 }
@@ -53,3 +73,4 @@ So the following lines have been added as a protective measure */
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 }
+
