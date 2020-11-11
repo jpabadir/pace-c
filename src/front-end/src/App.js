@@ -5,6 +5,7 @@ import { NavLink, Switch, Route } from 'react-router-dom';
 import MentorForm from './components/MentorForm';
 import Login from './components/Login';
 import MenteeForm from './components/MenteeForm';
+import MentorHome from './components/MentorHome';
 
 const { Header, Content, Footer } = Layout;
 
