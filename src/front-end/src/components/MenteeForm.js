@@ -49,13 +49,6 @@ class MenteeForm extends Component {
         <Button type="primary" htmlType="submit">
           Submit
         </Button>
-        <p>{/* used to space buttons */}</p>
-        <Button className ="BackButton-InMentee"type="primary" htmlType="button">
-          Back
-        </Button>
-        <Button className ="NextButton-InMentee"type="primary" htmlType="button">
-          Next
-        </Button>
       </Form>
       </div> 
     );
