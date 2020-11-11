@@ -23,7 +23,7 @@ class MentorForm extends Component {
           rules={[{ required: true, message: 'Please input something' }]}
         >
           <Input
-            placeholder="Please enter your organization"
+            placeholder="Please type the organization that you're planning to be a Mentor with"
             prefix={
               // tooltip test:
               <Tooltip title="Organization">
