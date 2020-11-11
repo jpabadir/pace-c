@@ -32,20 +32,6 @@ class MenteeForm extends Component {
           <Input placeholder="please enter your email" />
         </Form.Item>
         <Form.Item
-          label={
-            <span>
-              Timeframe Seeking Mentorship&nbsp;
-              <Tooltip title="Please pick an estimated duration for how long you would like to use the platform">
-                <QuestionCircleOutlined />
-              </Tooltip>
-            </span>
-          }
-          name="selectedStartDate"
-          rules={[{ required: true, message: 'This field is required' }]}
-        >
-          <RangePicker picker="month" />
-        </Form.Item>
-        <Form.Item
           label="Please Select Your Time-zone"
           name="timeZone"
           // must have an input:
