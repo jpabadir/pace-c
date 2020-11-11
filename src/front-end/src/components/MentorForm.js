@@ -43,6 +43,7 @@ class MentorForm extends Component {
         <Form.Item
           label="Email"
           name="emailInput"
+          type = "email"
           // must have an input:
           rules={[{ required: true, message: 'Please input something' }]}
         >
