@@ -10,9 +10,9 @@ Consider youself as **a mentor** in the system.
 7. Sign in with your account.
 8. Switch to the main page of mentor function. In order to test functionality, there are some requests added to the 'Mentee requests' list and the 'recently viewed' list should be empty. Try to view requests and approve some of them.
 9. Find your 'My account'.
-10.Find 'help' page and try to click on whatever is clickable. Find buttons or function that you expect to find in the page.
-11.Try to log out and then log in again with your account. Check if the 'recently Viewed' list is not empty now.
-12.Finish
+10. Find 'help' page and try to click on whatever is clickable. Find buttons or function that you expect to find in the page.
+11. Try to log out and then log in again with your account. Check if the 'recently Viewed' list is not empty now.
+12. Finish
 ## Tasks of mentee
 Consider youself as a mentee in the system.
 1.
