@@ -66,13 +66,6 @@ class MentorForm extends Component {
         <Button type="primary" htmlType="submit">
           Submit
         </Button>
-        <p>{/* used to space buttons */}</p>
-        <Button className ="BackButton-InMentor"type="primary" htmlType="button">
-          Back
-        </Button>
-        <Button className ="NextButton-InMentor"type="primary" htmlType="button">
-          Next
-        </Button>
       </Form>
       </div> 
     );
