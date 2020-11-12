@@ -1,0 +1,46 @@
+{
+  "users": {
+    "-MLy_owaAaZSNtIanUi6": {
+      "email": "elsie.volkert@gmail.com",
+      "name": "Elsie Volkert",
+      "rankedSkills": [
+        "Creativity",
+        "Interpersonal Communication",
+        "Critical Thinking"
+      ],
+      "time-zone": "UTC+5",
+      "user-type": "mentor",
+      "suggestedMentees": ["MLy_owDS4aZSNtIanUi6"]
+    },
+    "-MLy_owaAfgdfsdIaUi6": {
+      "email": "nicolas.selders@gmail.com",
+      "name": "Nicolas Selders",
+      "rankedSkills": [
+        "Problem Solving",
+        "Public Speaking",
+        "Customer Service"
+      ],
+      "time-zone": "UTC+1",
+      "user-type": "mentor",
+      "suggestedMentees": ["MLy_owaDSQSNtIanUi6", "MLy_owDfdsfsZSNtIanUi6"]
+    },
+    "-MLy_owaDSQSNtIanUi6": {
+      "email": "shana.kroon@hotmail.de",
+      "name": "Shana Kroon",
+      "time-zone": "UTC+5",
+      "userType": "mentee"
+    },
+    "-MLy_owDS4aZSNtIanUi6": {
+      "email": "leonora.reitz@gmail.com",
+      "name": "Leonora Reitz",
+      "time-zone": "UTC-2",
+      "userType": "mentee"
+    },
+    "-MLy_owDfdsfsZSNtIanUi6": {
+      "email": "mohammed.delany@yahoo.com",
+      "name": "Mohammed Delany",
+      "time-zone": "UTC+5",
+      "userType": "mentee"
+    }
+  }
+}
