@@ -29,7 +29,6 @@ class MentorForm extends Component {
   }
 
   onFinishFailed(values) {
-    this.setState({ isSubmitted: false });
     console.log('Failed submit:', values);
   }
 
