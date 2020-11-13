@@ -95,7 +95,7 @@ class MentorForm extends Component {
               rules={[{ required: true, message: 'Please input something' }]}
             >
               <Input
-                type ="password"
+                type="password"
                 placeholder="Please enter your password"
                 prefix={
                   // tooltip test:
