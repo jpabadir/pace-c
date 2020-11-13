@@ -38,6 +38,7 @@ class MenteeForm extends Component {
       return (
         <div className="MenteeForm">
           <Form onFinish={this.onFinish} onFinishFailed={this.onFinishFailed}>
+            <h1>Sign up as a mentee</h1>
             <Form.Item
               label="Name"
               name="nameInput"

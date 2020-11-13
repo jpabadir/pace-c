@@ -3,7 +3,7 @@ import React from 'react';
 export default () => (
   <div className="MentorCompletion">
     <p>
-      Congradulations! You have successfully created your own account. Please
+      Congratulations! You have successfully created your account. Please
       activate your account through the email we just sent and click&nbsp;
       <a
         className="loginlink"
