@@ -33,7 +33,7 @@ class MenteeForm extends Component {
   render() {
     if (this.state.isSubmitted) {
       return <MenteeCompletion />;
-    } 
+    }
     if (!this.state.isSubmitted) {
       return (
         <div className="MenteeForm">
