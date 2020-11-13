@@ -3,8 +3,8 @@ import React from 'react';
 export default () => (
   <div className="MenteeCompletion">
     <p>
-      Congradulations! You have successfully submitted your request for
-      mentorship. Approved requests will notice through your email.
+      Congratulations! You have successfully submitted your request for
+      mentorship. We&apos;ll send you an email once we match you with a mentor!
     </p>
   </div>
 );
