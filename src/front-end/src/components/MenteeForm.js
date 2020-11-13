@@ -8,6 +8,7 @@ class MenteeForm extends Component {
     return (
       <div className="MenteeForm">
         <Form>
+          <h1>Sign up as a mentee</h1>
           <Form.Item
             label="Name"
             name="nameInput"
