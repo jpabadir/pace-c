@@ -51,6 +51,22 @@ a {
   width: 100%;
 }
 
+.loginlink{
+  color: blue;
+}
+
+.MentorCompletion{
+  border: solid black;
+  padding: 25px;
+  margin: 30px;
+}
+
+.MenteeCompletion{
+  border: solid black;
+  padding: 25px;
+  margin: 30px;
+}
+
 /*COSC360 mentioned that it's good to be aware of sizing when it comes to various devices, 
 So the following lines have been added as a protective measure */
 
