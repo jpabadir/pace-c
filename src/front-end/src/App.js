@@ -15,6 +15,9 @@ function App() {
       <Layout className="layout">
         <Header>
           <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
+            <Menu.Item key="1">
+              <NavLink to="/MentorHome">MentorHome</NavLink>
+            </Menu.Item>
             <Menu.Item key="2">
               <NavLink to="/login">Login</NavLink>
             </Menu.Item>
@@ -28,6 +31,7 @@ function App() {
         </Header>
         <Content style={{ padding: '0 50px' }}>
           <Switch>
+            <Route exact path="/MentorHome" component={MentorHome} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/MentorForm" component={MentorForm} />
             <Route exact path="/MenteeForm" component={MenteeForm} />
