@@ -34,7 +34,7 @@ jobs:
           npm install 
         
       - name: Run ESLint
-        run: eslint src/front-end/src/*.js src/back-end/src/*.js
+        run: eslint src/front-end/src/**/*.js src/back-end/src/**/*.js
       
       - name: Run jest
         run: |
