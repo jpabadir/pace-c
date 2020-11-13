@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { Component } from 'react';
 import { Form, Button, Input, Tooltip } from 'antd';
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -7,10 +6,6 @@ import TimezonePicker from 'react-bootstrap-timezone-picker';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import firebase from '../firebase-init';
 import MentorCompletion from './MentorCompletion';
-
-//  const { RangePicker } = DatePicker;
-
-//  const { Option } = Select;
 
 class MentorForm extends Component {
   constructor(props) {
@@ -40,9 +35,9 @@ class MentorForm extends Component {
 
   render() {
     if (this.state.isSubmitted) {
-      return <MentorCompletion />;
+      <MentorCompletion />;
     }
-    if (!this.state.isSubmitted) {
+    else if (!this.state.isSubmitted) {
       return (
         <div className="MentorForm">
           <Form onFinish={this.onFinish} onFinishFailed={this.onFinishFailed}>
