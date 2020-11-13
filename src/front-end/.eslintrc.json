@@ -16,6 +16,9 @@
     "index.js"
   ],
   "rules": {
+    "class-methods-use-this": [
+      "off"
+    ],
     "react/destructuring-assignment": [
       "off"
     ],

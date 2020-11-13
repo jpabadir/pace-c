@@ -29,7 +29,7 @@ class MentorForm extends Component {
   }
 
   onFinishFailed(values) {
-    this.console.log('Failed submit:', values);
+    console.log('Failed submit:', values);
   }
 
   render() {
