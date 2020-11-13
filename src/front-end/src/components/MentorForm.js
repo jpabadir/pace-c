@@ -29,14 +29,14 @@ class MentorForm extends Component {
   }
 
   onFinishFailed(values) {
-    console.log('Failed submit:', values);
+    this.console.log('Failed submit:', values);
   }
 
   render() {
     if (this.state.isSubmitted) {
-      <MentorCompletion />;
+      return <MentorCompletion />;
     }
-    else if (!this.state.isSubmitted) {
+    if (!this.state.isSubmitted) {
       return (
         <div className="MentorForm">
           <Form onFinish={this.onFinish} onFinishFailed={this.onFinishFailed}>
