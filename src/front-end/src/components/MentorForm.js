@@ -74,6 +74,9 @@ class MentorForm extends Component {
               }
             />
           </Form.Item>
+          <Form.Item name={['user', 'introduction']} label="Description">
+            <Input.TextArea placeholder="Tell us a bit about yourself" />
+          </Form.Item>
           <Button type="primary" htmlType="submit">
             Submit
           </Button>
