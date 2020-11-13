@@ -3,10 +3,6 @@ import { Form, Button, Input } from 'antd';
 import TimezonePicker from 'react-bootstrap-timezone-picker';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 
-// const { RangePicker } = DatePicker;
-
-// const { Option } = Select;
-
 class MenteeForm extends Component {
   render() {
     return (
