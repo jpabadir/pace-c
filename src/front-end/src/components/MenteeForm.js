@@ -27,13 +27,14 @@ class MenteeForm extends Component {
   }
 
   onFinishFailed(values) {
-    console.log('Failed submit:', values);
+    this.console.log('Failed submit:', values);
   }
 
   render() {
     if (this.state.isSubmitted) {
-      <MenteeCompletion />;
-    } else if (!this.state.isSubmitted) {
+      return <MenteeCompletion />;
+    } 
+    if (!this.state.isSubmitted) {
       return (
         <div className="MenteeForm">
           <Form onFinish={this.onFinish} onFinishFailed={this.onFinishFailed}>
