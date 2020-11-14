@@ -5,7 +5,7 @@ import { InfoCircleOutlined } from '@ant-design/icons';
 import TimezonePicker from 'react-bootstrap-timezone-picker';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import MentorCompletion from './MentorCompletion';
-import createUser from '../helper-methods';
+import { saveToDB, createUserInFirebase } from '../helper-methods';
 
 class MentorForm extends Component {
   constructor(props) {
@@ -19,7 +19,15 @@ class MentorForm extends Component {
 
   onFinish(values) {
     this.setState({ isSubmitted: true });
-    createUser(values.emailInput, values.password);
+
+    createUserInFirebase(values.emailInput, values.password);
+
+    const marshalledUserInfo = {
+      organization: values.organization,
+      nameInput: values.nameInput,
+      emailInput: values.emailInput,
+    };
+    saveToDB('users', marshalledUserInfo);
   }
 
   onFinishFailed(values) {
@@ -37,7 +45,7 @@ class MentorForm extends Component {
             <h1>Sign up as a mentor</h1>
             <Form.Item
               label="Organization"
-              name="Organization"
+              name="organization"
               // must have an input:
               rules={[{ required: true, message: 'Please input something' }]}
             >

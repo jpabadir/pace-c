@@ -1,6 +1,6 @@
 import firebase from './firebase-init';
 
-const createUser = (email, password) => {
+export function createUserInFirebase(email, password) {
   firebase
     .auth()
     .createUserWithEmailAndPassword(email, password)
@@ -17,6 +17,8 @@ const createUser = (email, password) => {
     .catch((error) => {
       console.log(error);
     });
-};
+}
 
-export default createUser;
+export function saveToDB(reference, objectToSave) {
+  firebase.database().ref(reference).push().set(objectToSave);
+}
