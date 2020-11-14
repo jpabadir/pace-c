@@ -1,5 +1,7 @@
 import firebase from './firebase-init';
 
+const auth = firebase.auth();
+
 function mySendEmailVerification(user) {
   user
     .sendEmailVerification()
@@ -51,4 +53,15 @@ export function marshallMenteeInfo(mentorFormValues) {
     timeZone: mentorFormValues.timeZone,
     userType: 'mentee',
   };
+}
+
+export function resetPassword(emailAddress) {
+  auth
+    .sendPasswordResetEmail(emailAddress)
+    .then(() => {
+      console.log('Email sent');
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 }

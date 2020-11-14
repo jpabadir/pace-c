@@ -2,9 +2,29 @@ import React, { Component } from 'react';
 import { Form, Button, Input } from 'antd';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
+import { resetPassword } from '../helper-methods';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: '',
+    };
+
+    this.localResetPassword = this.localResetPassword.bind(this);
+    this.handleEmailChange = this.handleEmailChange.bind(this);
+  }
+
+  handleEmailChange(event) {
+    this.setState({ email: event.target.value });
+  }
+
+  localResetPassword() {
+    // TODO: implement some validation here
+    resetPassword(this.state.email);
+  }
+
   render() {
     return (
       <Form>
@@ -17,7 +37,11 @@ class Login extends Component {
           // must have an input:
           rules={[{ required: true, message: 'Please input something' }]}
         >
-          <Input placeholder="please enter your email" />
+          <Input
+            placeholder="please enter your email"
+            value={this.state.email}
+            onChange={this.handleEmailChange}
+          />
         </Form.Item>
         <Form.Item
           type="password"
@@ -35,7 +59,10 @@ class Login extends Component {
           Login
         </Button>
         {/* link below should allow the user to reset password: */}
-        <p>Forgot your password? Click here!</p>
+        <p>
+          Forgot your password? Enter your email above and click&nbsp;
+          <Button onClick={this.localResetPassword}>here!</Button>
+        </p>
         {/* below is used as a space between the two links */}
         &nbsp;
         <p>Don&apos;t have an account yet?</p>
