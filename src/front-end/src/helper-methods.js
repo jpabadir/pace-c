@@ -30,6 +30,10 @@ export function setInDB(reference, child, objectToSave) {
   firebase.database().ref(reference).child(child).set(objectToSave);
 }
 
+export function pushToDB(reference, objectToSave) {
+  firebase.database().ref(reference).push(objectToSave);
+}
+
 export function marshallMentorInfo(mentorFormValues) {
   return {
     organization: mentorFormValues.organization,
@@ -37,5 +41,14 @@ export function marshallMentorInfo(mentorFormValues) {
     name: mentorFormValues.nameInput,
     timeZone: mentorFormValues.timeZone,
     userType: 'mentor',
+  };
+}
+
+export function marshallMenteeInfo(mentorFormValues) {
+  return {
+    email: mentorFormValues.emailInput,
+    name: mentorFormValues.nameInput,
+    timeZone: mentorFormValues.timeZone,
+    userType: 'mentee',
   };
 }
