@@ -10,26 +10,32 @@ const { Option } = Select;
 class MentorHome extends Component {
   render() {
     return (
-      <Form>
-        <h1>
-          <center>Welcome back, Mentor!</center>
-        </h1>
-        <Form.Item label="Your current mentees" name="userMentees">
-          <Select
-            // so that single options can be selected:
-            mode="single"
-            style={{ width: '100%' }}
-            placeholder="select a mentee"
-            optionLabelProp="label"
-          >
-            {/* the amount of options should be the amount of mentees */}
-            <Option value="Mentee1" label="Mentee1" />
-            <Option value="Mentee2" label="Mentee2" />
-            <Option value="Mentee3" label="Mentee3" />
-          </Select>
-        </Form.Item>
+      <>
+        <Button type="primary" htmlType="button" id="logout">
+          Logout
+        </Button>
+        <Form>
+          <h1>
+            <center>Welcome back, [Mentor Name from DB]</center>
+          </h1>
+          <Form.Item label="Your current mentees" name="userMentees">
+            <Select
+              // so that single options can be selected:
+              mode="single"
+              style={{ width: '100%' }}
+              placeholder="select a mentee"
+              optionLabelProp="label"
+            >
+              {/* the amount of options should be the amount of mentees */}
+              <Option value="Mentee1" label="Mentee1" />
+              <Option value="Mentee2" label="Mentee2" />
+              <Option value="Mentee3" label="Mentee3" />
+            </Select>
+          </Form.Item>
+        </Form>
         {/* the form below should change the information depeding on: */}
         {/* the mentee selected */}
+        {/* button below should link to an appropriate page, once logged out */}
         <div className="mentee-requests">
           <h2> Pending Mentee Requests</h2>
           <p>
@@ -41,7 +47,7 @@ class MentorHome extends Component {
               <tr>
                 <th>
                   <UserOutlined className="user-icon" />
-                  Name
+                  [Name from DB]
                   <Button type="text" onClick={this.handleButtonClick}>
                     <CheckOutlined className="check" id="accept" />{' '}
                   </Button>
@@ -65,11 +71,7 @@ class MentorHome extends Component {
             </table>
           </div>
         </div>
-        {/* button below should link to an appropriate page, once logged out */}
-        <Button type="primary" htmlType="button">
-          Logout
-        </Button>
-      </Form>
+      </>
     );
   }
 }

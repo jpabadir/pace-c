@@ -76,6 +76,13 @@ th {
   text-align: center;
 }
 
+td {
+  padding-left: 20px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-right: 20px;
+}
+
 .check {
   color: #52c41a;
 }
@@ -87,6 +94,10 @@ th {
 .user-icon {
   font-size: 30px;
   padding: 10px;
+}
+
+.mentee-requests {
+  float: left;
 }
 
 /*COSC360 mentioned that it's good to be aware of sizing when it comes to various devices, 
