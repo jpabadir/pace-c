@@ -100,6 +100,11 @@ td {
   float: left;
 }
 
+table {
+  table-layout: auto;
+  width: 325px;
+}
+
 /*COSC360 mentioned that it's good to be aware of sizing when it comes to various devices, 
 So the following lines have been added as a protective measure */
 

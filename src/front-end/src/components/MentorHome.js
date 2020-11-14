@@ -60,16 +60,20 @@ class MentorHome extends Component {
                 </th>
               </tr>
               <tr>
-                <td> Email: [Email from Database]</td>
-              </tr>
-              <tr>
                 <td>
-                  {' '}
-                  Skills Seeking Mentorship: [Skills Array From Database]{' '}
+                  <strong> Email: </strong> [Email from Database]
                 </td>
               </tr>
               <tr>
-                <td> Description: [Description From Database] </td>
+                <td>
+                  <strong> Skills Seeking Mentorship: </strong> [Skills Array
+                  From Database]
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong> Description: </strong> [Description From Database]{' '}
+                </td>
               </tr>
             </table>
           </div>
