@@ -1,14 +1,9 @@
-/* eslint-disable */
 import React, { Component } from 'react';
 import { Form, Button, Input } from 'antd';
 import TimezonePicker from 'react-bootstrap-timezone-picker';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import firebase from '../firebase-init';
 import MenteeCompletion from './MenteeCompletion';
-
-// const { RangePicker } = DatePicker;
-
-// const { Option } = Select;
 
 class MenteeForm extends Component {
   constructor(props) {
@@ -32,7 +27,6 @@ class MenteeForm extends Component {
   }
 
   onFinishFailed(values) {
-    this.setState({ isSubmitted: false });
     console.log('Failed submit:', values);
   }
 
@@ -44,6 +38,7 @@ class MenteeForm extends Component {
       return (
         <div className="MenteeForm">
           <Form onFinish={this.onFinish} onFinishFailed={this.onFinishFailed}>
+            <h1>Sign up as a mentee</h1>
             <Form.Item
               label="Name"
               name="nameInput"

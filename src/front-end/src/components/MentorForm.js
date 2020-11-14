@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { Component } from 'react';
 import { Form, Button, Input, Tooltip } from 'antd';
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -7,10 +6,6 @@ import TimezonePicker from 'react-bootstrap-timezone-picker';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import firebase from '../firebase-init';
 import MentorCompletion from './MentorCompletion';
-
-//  const { RangePicker } = DatePicker;
-
-//  const { Option } = Select;
 
 class MentorForm extends Component {
   constructor(props) {
@@ -34,7 +29,6 @@ class MentorForm extends Component {
   }
 
   onFinishFailed(values) {
-    this.setState({ isSubmitted: false });
     console.log('Failed submit:', values);
   }
 
@@ -101,7 +95,7 @@ class MentorForm extends Component {
               rules={[{ required: true, message: 'Please input something' }]}
             >
               <Input
-                type ="password"
+                type="password"
                 placeholder="Please enter your password"
                 prefix={
                   // tooltip test:
