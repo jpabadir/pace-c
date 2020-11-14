@@ -70,7 +70,10 @@ a {
 table,
 th {
   border: 1px solid black;
-  align-content: center;
+}
+
+th {
+  text-align: center;
 }
 
 .check {
