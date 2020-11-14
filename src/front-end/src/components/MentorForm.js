@@ -4,8 +4,8 @@ import { Form, Button, Input, Tooltip } from 'antd';
 import { InfoCircleOutlined } from '@ant-design/icons';
 import TimezonePicker from 'react-bootstrap-timezone-picker';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
-import firebase from '../firebase-init';
 import MentorCompletion from './MentorCompletion';
+import createUser from '../helper-methods';
 
 class MentorForm extends Component {
   constructor(props) {
@@ -19,13 +19,7 @@ class MentorForm extends Component {
 
   onFinish(values) {
     this.setState({ isSubmitted: true });
-
-    firebase
-      .auth()
-      .createUserWithEmailAndPassword(values.emailInput, values.password)
-      .catch((error) => {
-        console.log(error);
-      });
+    createUser(values.emailInput, values.password);
   }
 
   onFinishFailed(values) {
@@ -42,7 +36,6 @@ class MentorForm extends Component {
           <Form onFinish={this.onFinish} onFinishFailed={this.onFinishFailed}>
             <h1>Sign up as a mentor</h1>
             <Form.Item
-              // TEST ITEM (will be deleted):
               label="Organization"
               name="Organization"
               // must have an input:
@@ -51,7 +44,6 @@ class MentorForm extends Component {
               <Input
                 placeholder="Please enter your Organization"
                 prefix={
-                  // tooltip test:
                   <Tooltip title="Organization you're planning to be a Mentor with">
                     <InfoCircleOutlined style={{ color: 'rgba(0,0,0,.45)' }} />
                   </Tooltip>
@@ -98,7 +90,6 @@ class MentorForm extends Component {
                 type="password"
                 placeholder="Please enter your password"
                 prefix={
-                  // tooltip test:
                   <Tooltip title="Password should be at least 8 characters.">
                     <InfoCircleOutlined style={{ color: 'rgba(0,0,0,.45)' }} />
                   </Tooltip>
