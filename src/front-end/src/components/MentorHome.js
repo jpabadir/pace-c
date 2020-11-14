@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Form, Button, Select } from 'antd';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
+import { UserOutlined, CheckOutlined, CloseOutlined } from '@ant-design/icons';
 
 const { Option } = Select;
 
@@ -27,18 +28,43 @@ class MentorHome extends Component {
             <Option value="Mentee3" label="Mentee3" />
           </Select>
         </Form.Item>
-        <h2> Information about &quot;insert selected mentee name&quot;</h2>
         {/* the form below should change the information depeding on: */}
         {/* the mentee selected */}
-        <p>
-          Information 1: &quot;insert information1 about selected mentee&quot;
-        </p>
-        <p>
-          Information 2: &quot;insert information2 about selected mentee&quot;
-        </p>
-        <p>
-          Information 3: &quot;insert information3 about selected mentee&quot;
-        </p>
+        <div className="mentee-requests">
+          <h2> Pending Mentee Requests</h2>
+          <p>
+            Click <CheckOutlined className="check" /> to accept a Mentee&apos;s
+            request or <CloseOutlined className="close" /> to decline.
+          </p>
+          <div className="individual-mentee">
+            <table>
+              <tr>
+                <th>
+                  <UserOutlined className="user-icon" />
+                  Name
+                  <Button type="text" onClick={this.handleButtonClick}>
+                    <CheckOutlined className="check" id="accept" />{' '}
+                  </Button>
+                  <Button type="text" onClick={this.handleButtonClick}>
+                    <CloseOutlined className="close" id="decline" />{' '}
+                  </Button>
+                </th>
+              </tr>
+              <tr>
+                <td> Email: [Email from Database]</td>
+              </tr>
+              <tr>
+                <td>
+                  {' '}
+                  Skills Seeking Mentorship: [Skills Array From Database]{' '}
+                </td>
+              </tr>
+              <tr>
+                <td> Description: [Description From Database] </td>
+              </tr>
+            </table>
+          </div>
+        </div>
         {/* button below should link to an appropriate page, once logged out */}
         <Button type="primary" htmlType="button">
           Logout

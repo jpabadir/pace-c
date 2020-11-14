@@ -28,17 +28,17 @@ a {
   margin: 30px;
 }
 
-.NextButton-InMentor{
+.NextButton-InMentor {
   float: right;
 }
 
-.MenteeForm{
+.MenteeForm {
   border: solid black;
   padding: 25px;
   margin: 30px;
 }
 
-.NextButton-InMentee{
+.NextButton-InMentee {
   float: right;
 }
 
@@ -51,20 +51,39 @@ a {
   width: 100%;
 }
 
-.loginlink{
+.loginlink {
   color: blue;
 }
 
-.MentorCompletion{
+.MentorCompletion {
   border: solid black;
   padding: 25px;
   margin: 30px;
 }
 
-.MenteeCompletion{
+.MenteeCompletion {
   border: solid black;
   padding: 25px;
   margin: 30px;
+}
+
+table,
+th {
+  border: 1px solid black;
+  align-content: center;
+}
+
+.check {
+  color: #52c41a;
+}
+
+.close {
+  color: #ff3333;
+}
+
+.user-icon {
+  font-size: 30px;
+  padding: 10px;
 }
 
 /*COSC360 mentioned that it's good to be aware of sizing when it comes to various devices, 
@@ -89,4 +108,3 @@ So the following lines have been added as a protective measure */
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 }
-
