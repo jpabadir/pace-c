@@ -5,7 +5,11 @@ import { InfoCircleOutlined } from '@ant-design/icons';
 import TimezonePicker from 'react-bootstrap-timezone-picker';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import MentorCompletion from './MentorCompletion';
-import { saveToDB, createUserInFirebase } from '../helper-methods';
+import {
+  setInDB,
+  createUserInFirebase,
+  marshallMentorInfo,
+} from '../helper-methods';
 
 class MentorForm extends Component {
   constructor(props) {
@@ -20,14 +24,11 @@ class MentorForm extends Component {
   onFinish(values) {
     this.setState({ isSubmitted: true });
 
-    createUserInFirebase(values.emailInput, values.password);
-
-    const marshalledUserInfo = {
-      organization: values.organization,
-      nameInput: values.nameInput,
-      emailInput: values.emailInput,
-    };
-    saveToDB('users', marshalledUserInfo);
+    createUserInFirebase(values.emailInput, values.password).then(
+      (createdUser) => {
+        setInDB('users', createdUser.uid, marshallMentorInfo(values));
+      },
+    );
   }
 
   onFinishFailed(values) {
