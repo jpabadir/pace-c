@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { Component } from 'react';
 import { Form, Button, Input } from 'antd';
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -9,26 +8,25 @@ import fire from '../firebase-init';
 class Login extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      email:"",
-      password:""
-    }
     this.Login = this.Login.bind(this);
     this.Change = this.Change.bind(this);
   }
 
-  Login(values) {
-    values.preventDefault();
-    fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
-    }).catch((error)=>{
-      console.log(error);
-    });
+  Login() {
+    const userEmail = document.getElementById('useremail').value;
+    const userPassword = document.getElementById('userpassword').value;
+    fire
+      .auth()
+      .signInWithEmailAndPassword(userEmail, userPassword)
+      .catch((error) => {
+        const errorMessage = error.message;
+        window.alert(errorMessage.trim());
+      });
   }
 
   Change(values) {
-    this.setState({[values.target.name]: values.target.value});
+    this.setState({ [values.target.name]: values.target.value });
   }
-
 
   render() {
     return (
@@ -42,7 +40,12 @@ class Login extends Component {
           // must have an input:
           rules={[{ required: true, message: 'Please input something' }]}
         >
-          <Input type ="email" placeholder="please enter your email" value={this.state.email} onChange={this.Change}/>
+          <Input
+            type="email"
+            placeholder="please enter your email"
+            id="useremail"
+            onChange={this.Change}
+          />
         </Form.Item>
         <Form.Item
           type="password"
@@ -51,7 +54,12 @@ class Login extends Component {
           // must have an input:
           rules={[{ required: true, message: 'Please input something' }]}
         >
-          <Input type="password" placeholder="please enter your password" value={this.state.password} onChange={this.Change}/>
+          <Input
+            type="password"
+            placeholder="please enter your password"
+            id="userpassword"
+            onChange={this.Change}
+          />
         </Form.Item>
         <p>{/* used to space buttons */}</p>
         {/* button below should send the information from the page: */}
