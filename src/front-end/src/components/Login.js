@@ -1,10 +1,35 @@
+/* eslint-disable */
 import React, { Component } from 'react';
 import { Form, Button, Input } from 'antd';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
+import fire from '../firebase-init';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email:"",
+      password:""
+    }
+    this.Login = this.Login.bind(this);
+    this.Change = this.Change.bind(this);
+  }
+
+  Login(values) {
+    values.preventDefault();
+    fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
+    }).catch((error)=>{
+      console.log(error);
+    });
+  }
+
+  Change(values) {
+    this.setState({[values.target.name]: values.target.value});
+  }
+
+
   render() {
     return (
       <Form>
@@ -17,7 +42,7 @@ class Login extends Component {
           // must have an input:
           rules={[{ required: true, message: 'Please input something' }]}
         >
-          <Input placeholder="please enter your email" />
+          <Input type ="email" placeholder="please enter your email" value={this.state.email} onChange={this.Change}/>
         </Form.Item>
         <Form.Item
           type="password"
@@ -26,12 +51,12 @@ class Login extends Component {
           // must have an input:
           rules={[{ required: true, message: 'Please input something' }]}
         >
-          <Input placeholder="please enter your password" />
+          <Input type="password" placeholder="please enter your password" value={this.state.password} onChange={this.Change}/>
         </Form.Item>
         <p>{/* used to space buttons */}</p>
         {/* button below should send the information from the page: */}
         {/* login to the database. To verify the account password/email */}
-        <Button type="primary" htmlType="submit">
+        <Button type="primary" htmlType="submit" onClick={this.Login}>
           Login
         </Button>
         {/* link below should allow the user to reset password: */}
