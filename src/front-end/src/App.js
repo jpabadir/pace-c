@@ -3,9 +3,8 @@ import { Layout, Menu } from 'antd';
 import './App.css';
 import { NavLink, Switch, Route } from 'react-router-dom';
 import MentorForm from './components/MentorForm';
-import Login from './components/Login';
+import Auth from './components/Auth';
 import MenteeForm from './components/MenteeForm';
-import MentorHome from './components/MentorHome';
 
 const { Header, Content, Footer } = Layout;
 
@@ -15,11 +14,8 @@ function App() {
       <Layout className="layout">
         <Header>
           <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-            <Menu.Item key="1">
-              <NavLink to="/MentorHome">MentorHome</NavLink>
-            </Menu.Item>
             <Menu.Item key="2">
-              <NavLink to="/login">Login</NavLink>
+              <NavLink to="/Auth">Login</NavLink>
             </Menu.Item>
             <Menu.Item key="3">
               <NavLink to="/MentorForm">MentorForm</NavLink>
@@ -31,8 +27,7 @@ function App() {
         </Header>
         <Content style={{ padding: '0 50px' }}>
           <Switch>
-            <Route exact path="/MentorHome" component={MentorHome} />
-            <Route exact path="/login" component={Login} />
+            <Route exact path="/Auth" component={Auth} />
             <Route exact path="/MentorForm" component={MentorForm} />
             <Route exact path="/MenteeForm" component={MenteeForm} />
           </Switch>
