@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Form, Button, Input } from 'antd';
 import TimezonePicker from 'react-bootstrap-timezone-picker';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
-import firebase from '../firebase-init';
+import { marshallMenteeInfo, pushToDB } from '../helper-methods';
 import MenteeCompletion from './MenteeCompletion';
 
 class MenteeForm extends Component {
@@ -18,12 +18,7 @@ class MenteeForm extends Component {
   onFinish(values) {
     this.setState({ isSubmitted: true });
 
-    firebase
-      .auth()
-      .createUserWithEmailAndPassword(values.emailInput, values.password)
-      .catch((error) => {
-        console.log(error);
-      });
+    pushToDB('users', marshallMenteeInfo(values));
   }
 
   onFinishFailed(values) {
