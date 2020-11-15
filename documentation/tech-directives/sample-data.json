@@ -11,7 +11,8 @@
       ],
       "time-zone": "UTC+5",
       "user-type": "mentor",
-      "suggestedMentees": ["MLy_owDS4aZSNtIanUi6"]
+      "suggestedMentees": ["MLy_owDS4aZSNtIanUi6"],
+      "acceptedMentees": ["MLy_owDfdsfsZSNtIanUi6"]
     },
     "-MLy_owaAfgdfsdIaUi6": {
       "email": "nicolas.selders@gmail.com",
@@ -24,7 +25,8 @@
       ],
       "time-zone": "UTC+1",
       "user-type": "mentor",
-      "suggestedMentees": ["MLy_owaDSQSNtIanUi6", "MLy_owDfdsfsZSNtIanUi6"]
+      "suggestedMentees": ["MLy_owaDSQSNtIanUi6"],
+      "acceptedMentees": []
     },
     "-MLy_owaDSQSNtIanUi6": {
       "email": "shana.kroon@hotmail.de",
