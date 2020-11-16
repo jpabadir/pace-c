@@ -44,7 +44,7 @@
 - aleks will style the buttons so that we have (tutorial, accepted, suggested) and then the logout button
 - aleks explains tabs in tutorial tab
 - get tasks done by friday 7pm (this means it should be merged by this time)
-- eric fill out peer testing sign up sheet
+- eric fill out peer testing sign up sheet (already done)
 - 
 
 
