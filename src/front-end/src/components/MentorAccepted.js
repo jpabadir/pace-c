@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button } from 'antd';
+import { Form } from 'antd';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import { UserOutlined } from '@ant-design/icons';
 
@@ -13,21 +13,6 @@ class MentorAccepted extends Component {
       // What looks like an empty tag (<>) is known as a Fragment
       // Fragments are needed to turn HTML into JSX
       <>
-        <Button type="primary" htmlType="button" id="mentorHome">
-          Mentor Home
-        </Button>
-        <Button type="primary" htmlType="button" id="suggestedMentees">
-          Suggested Mentees
-        </Button>
-        <Button type="primary" htmlType="button" id="pendingMentees">
-          Pending Mentees
-        </Button>
-        <Button type="primary" htmlType="button" id="acceptedMentees">
-          Accepted Mentees
-        </Button>
-        <Button type="primary" htmlType="button" id="logout">
-          Logout
-        </Button>
         <Form>
           <h1>
             <center>These are your accepted mentees:</center>

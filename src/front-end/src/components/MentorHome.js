@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import MentorSuggested from './MentorSuggested';
 import MentorPending from './MentorPending';
+import MentorAccepted from './MentorAccepted';
 
 // NOTE: Fields surrounded by square brackets []
 // denote fields that are required to be filled-in from the database
@@ -16,7 +17,12 @@ class MentorHome extends Component {
       // Fragments are needed to turn HTML into JSX
       <>
         {/* button below Redirects to MentorHome.js page: */}
-        <Button type="primary" htmlType="button" id="mentorHome">
+        <Button
+          type="primary"
+          htmlType="button"
+          id="mentorHome"
+          href="/MentorHome/MentorHome"
+        >
           Mentor Home
         </Button>
         {/* button below Redirects to MentorSuggested.js page: */}
@@ -38,19 +44,31 @@ class MentorHome extends Component {
           Pending Mentees
         </Button>
         {/* button below Redirects to MentorAccepted.js page: */}
-        <Button type="primary" htmlType="button" id="acceptedMentees">
+        <Button
+          type="primary"
+          htmlType="button"
+          id="acceptedMentees"
+          href="/MentorHome/MentorAccepted"
+        >
           Accepted Mentees
         </Button>
+        {/* TODO: create login page */}
         {/* button below Redirects to an appropriate logout page: */}
         <Button type="primary" htmlType="button" id="logout">
           Logout
         </Button>
+        {/* button routes: */}
         <Route
           path="/MentorHome/SuggestedMentees"
           component={MentorSuggested}
         />
         <Route path="/MentorHome/PendingMentees" component={MentorPending} />
-        {/* <Form>
+        <Route path="/MentorHome/MentorAccepted" component={MentorAccepted} />
+        {/* 
+        
+        Could be used as a start to the UI of this page
+
+        <Form>
           <h1>
             <center>Welcome back, [Mentor Name from DB]</center>
           </h1>

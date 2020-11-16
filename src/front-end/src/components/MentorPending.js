@@ -13,24 +13,9 @@ class MentorPending extends Component {
       // What looks like an empty tag (<>) is known as a Fragment
       // Fragments are needed to turn HTML into JSX
       <>
-        {/* <Button type="primary" htmlType="button" id="mentorHome">
-          Mentor Home
-        </Button>
-        <Button type="primary" htmlType="button" id="suggestedMentees">
-          Suggested Mentees
-        </Button>
-        <Button type="primary" htmlType="button" id="pendingMentees">
-          Pending Mentees
-        </Button>
-        <Button type="primary" htmlType="button" id="acceptedMentees">
-          Accepted Mentees
-        </Button>
-        <Button type="primary" htmlType="button" id="logout">
-          Logout
-        </Button> */}
         <Form>
           <h1>
-            <center>These are your pending mentee requests:</center>
+            <center>These are your pending mentees:</center>
           </h1>
         </Form>
         {/* replace what's in square brackets [] w/ info from DB */}
