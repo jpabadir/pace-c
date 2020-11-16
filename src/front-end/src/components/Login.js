@@ -22,11 +22,6 @@ class Login extends Component {
     this.setState({ email: event.target.value });
   }
 
-  localResetPassword() {
-    // TODO: implement some validation here
-    resetPassword(this.state.email);
-  }
-
   onChange(values) {
     this.setState({ [values.target.name]: values.target.value });
   }
@@ -41,6 +36,11 @@ class Login extends Component {
         const errorMessage = error.message;
         window.alert(errorMessage.trim());
       });
+  }
+  
+    localResetPassword() {
+    // TODO: implement some validation here
+    resetPassword(this.state.email);
   }
 
   render() {
