@@ -8,7 +8,7 @@
 - [Katrina] As a team, it might be useful to walk through how to [Sign Up for peer testing](https://docs.google.com/spreadsheets/d/1hl-bVGtlN1JMaNCbpx4tqgj7R5T_lkqo-KdooR9Aevk/edit#gid=245939495) 
 - [Katrina] Does anyone know what the 'Video Demo' due on the 25th is referring to? At first, I assumed that it meant the recordings that we capture when we conduct peer testing, but that seems to be blocked off for later that week. 
 - [Katrina] Can we schedule a time this week to conduct a test run for the peer testing to make sure the software is working and that we're following a similar methodology?
-- [Katrina] Get clarification from Eric on if the [questionnaire linked in heuristic-evaluation-experiment-instructions.md] (https://docs.google.com/forms/d/1K0egKKFqWlHBHL8dpMpvDg4dmS5h3WP_Hp-WnMYRE7Q/prefill) is the same as what the [instructor linked to](https://docs.google.com/forms/d/e/1FAIpQLSc8ruVs9LssMNB9NCcXvgANTe7sL_qppknM35Kkuhwnz3Y3TQ/viewform),and if it can be opened for public access (it's currently only available via email request)
+- [Katrina] Get clarification from Eric on if the [questionnaire linked in heuristic-evaluation-experiment-instructions.md](https://docs.google.com/forms/d/1K0egKKFqWlHBHL8dpMpvDg4dmS5h3WP_Hp-WnMYRE7Q/prefill) is the same as what the [instructor linked to](https://docs.google.com/forms/d/e/1FAIpQLSc8ruVs9LssMNB9NCcXvgANTe7sL_qppknM35Kkuhwnz3Y3TQ/viewform),and if it can be opened for public access (it's currently only available via email request)
 ## Detailed Notes:
 - 
 
