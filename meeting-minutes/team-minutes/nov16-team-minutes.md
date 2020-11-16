@@ -22,7 +22,14 @@
 - Be careful when you are going through DB. try not to delete it, etc.
 - Passwords are not stored in DB
 - Authentication and real time are not linked (only if someone manually links them through code)
-- Creates user in firebase by passing in email/password to firebase, 
+- Creates user in firebase by passing in email/password to firebase, but does not store password
+- Kat will be the "leader" for peer testing
+- re-work the refine UI issue (#246)
+- 
 
 ## Action Items (Due by next sprint: November 23rd):
+- Ask more about video demo that is due on 25th, get more information maybe email prof if needed
+- Kat will be the "leader" for peer testing, she will give us roles/what to do/give us more information about peer testing
+- delete suggested tab
+- only keep mentorhome, accepted, and pending tab
 - 
