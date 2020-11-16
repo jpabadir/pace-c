@@ -44,7 +44,7 @@ class Login extends Component {
             type="email"
             placeholder="please enter your email"
             id="useremail"
-            onChange={this.Change}
+            onInput={this.Change}
           />
         </Form.Item>
         <Form.Item
@@ -58,7 +58,7 @@ class Login extends Component {
             type="password"
             placeholder="please enter your password"
             id="userpassword"
-            onChange={this.Change}
+            onInput={this.Change}
           />
         </Form.Item>
         <p>{/* used to space buttons */}</p>
