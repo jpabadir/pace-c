@@ -10,10 +10,10 @@ const { Option } = Select;
 class MentorHome extends Component {
   constructor(props) {
     super(props);
-    this.Logout = this.Logout.bind(this);
+    this.onLogout = this.onLogout.bind(this);
   }
 
-  Logout() {
+  onLogout() {
     fire.auth().signOut();
   }
 
@@ -50,7 +50,7 @@ class MentorHome extends Component {
           Information 3: &quot;insert information3 about selected mentee&quot;
         </p>
         {/* button below should link to an appropriate page, once logged out */}
-        <Button onClick={this.Logout} type="primary" htmlType="button">
+        <Button onClick={this.onLogout} type="primary" htmlType="button">
           Logout
         </Button>
       </Form>
