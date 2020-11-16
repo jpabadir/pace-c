@@ -18,10 +18,6 @@ class Login extends Component {
     this.onChange = this.onChange.bind(this);
   }
 
-  handleEmailChange(event) {
-    this.setState({ email: event.target.value });
-  }
-
   onChange(values) {
     this.setState({ [values.target.name]: values.target.value });
   }
@@ -34,8 +30,13 @@ class Login extends Component {
       .signInWithEmailAndPassword(userEmail, userPassword)
       .catch((error) => {
         const errorMessage = error.message;
+        // eslint-disable-next-line
         window.alert(errorMessage.trim());
       });
+  }
+
+  handleEmailChange(event) {
+    this.setState({ email: event.target.value });
   }
 
   localResetPassword() {
