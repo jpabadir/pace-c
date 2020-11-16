@@ -44,13 +44,12 @@ class Login extends Component {
             />
           </Form.Item>
           <Form.Item
-            type="password"
             label="Password"
             name="password"
             // must have an input:
             rules={[{ required: true, message: 'Please input something' }]}
           >
-            <Input placeholder="please enter your password" />
+            <Input placeholder="please enter your password" type="password" />
           </Form.Item>
           <p>{/* used to space buttons */}</p>
           {/* button below should send the information from the page: */}
