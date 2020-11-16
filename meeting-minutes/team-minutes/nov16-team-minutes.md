@@ -25,11 +25,21 @@
 - Creates user in firebase by passing in email/password to firebase, but does not store password
 - Kat will be the "leader" for peer testing
 - re-work the refine UI issue (#246)
+- team meeting on the 18th at 7am PST
 - 
 
 ## Action Items (Due by next sprint: November 23rd):
 - Ask more about video demo that is due on 25th, get more information maybe email prof if needed
 - Kat will be the "leader" for peer testing, she will give us roles/what to do/give us more information about peer testing
-- delete suggested tab
-- only keep mentorhome, accepted, and pending tab
+- delete pending tab
+- only keep mentorhome, accepted, and suggested tab
+- kat will do the issue 269, description + menotr and mentee forms and skills fiels to mentors form
+- jp will add logic to mentor ui
+- eric will add email sending to mentee form
+- team meeting on the 18th at 7am PST
+- kat will make card component for mentor home page
+- jp/kat will make for loop for filling in the information for the mentor home page that uses kat's card component
+- aleks will fix pr with only buttons (more info below)
+- change task so that we only have buttons and no cards
+- aleks will style the buttons so that we have (tutorial, accepted, suggested) and then the logout button
 - 
