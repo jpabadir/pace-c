@@ -6,7 +6,6 @@ import MentorForm from './components/MentorForm';
 import Login from './components/Login';
 import MenteeForm from './components/MenteeForm';
 import MentorHome from './components/MentorHome';
-import MentorPending from './components/MentorPending';
 
 const { Header, Content, Footer } = Layout;
 
@@ -28,18 +27,14 @@ function App() {
             <Menu.Item key="4">
               <NavLink to="/MenteeForm">MenteeForm</NavLink>
             </Menu.Item>
-            <Menu.Item key="5">
-              <NavLink to="/MentorPending">MentorPending</NavLink>
-            </Menu.Item>
           </Menu>
         </Header>
         <Content style={{ padding: '0 50px' }}>
           <Switch>
-            <Route exact path="/MentorHome" component={MentorHome} />
+            <Route path="/MentorHome" component={MentorHome} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/MentorForm" component={MentorForm} />
             <Route exact path="/MenteeForm" component={MenteeForm} />
-            <Route exact path="/MenteePending" component={MentorPending} />
           </Switch>
         </Content>
         <Footer style={{ textAlign: 'center' }}>
