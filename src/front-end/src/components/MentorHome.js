@@ -52,7 +52,7 @@ class MentorHome extends Component {
         >
           Accepted Mentees
         </Button>
-        {/* TODO: create login page */}
+        {/* TODO: create logout page */}
         {/* button below Redirects to an appropriate logout page: */}
         <Button type="primary" htmlType="button" id="logout">
           Logout
