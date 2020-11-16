@@ -32,7 +32,8 @@ class Login extends Component {
 
   Change(values) {
     this.setState({ [values.target.name]: values.target.value });
-
+  }
+  
   handleEmailChange(event) {
     this.setState({ email: event.target.value });
   }
