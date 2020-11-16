@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Form, Button, Input } from 'antd';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
+import fire from '../firebase-init';
 import { resetPassword } from '../helper-methods';
 
 // eslint-disable-next-line react/prefer-stateless-function
@@ -11,9 +12,27 @@ class Login extends Component {
     this.state = {
       email: '',
     };
-
     this.localResetPassword = this.localResetPassword.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
+    this.onLogin = this.onLogin.bind(this);
+    this.onChange = this.onChange.bind(this);
+  }
+
+  onChange(values) {
+    this.setState({ [values.target.name]: values.target.value });
+  }
+
+  onLogin() {
+    const userEmail = document.getElementById('useremail').value;
+    const userPassword = document.getElementById('userpassword').value;
+    fire
+      .auth()
+      .signInWithEmailAndPassword(userEmail, userPassword)
+      .catch((error) => {
+        const errorMessage = error.message;
+        // eslint-disable-next-line
+        window.alert(errorMessage.trim());
+      });
   }
 
   handleEmailChange(event) {
