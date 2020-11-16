@@ -15,10 +15,14 @@
 - 「Aleks」Do we want to create a logout page for the website?
 - 「Aleks」When selecting different buttons from mentor home the top bar switched to log in, not sure how to fix this.
 - 「Aleks」We can add a task to create the UI for the mentor home page (right now it is empty and only used for buttons) 
-
+- 
 
 ## Detailed Notes:
-- 
+- Everyone now has access to DB
+- Be careful when you are going through DB. try not to delete it, etc.
+- Passwords are not stored in DB
+- Authentication and real time are not linked (only if someone manually links them through code)
+- Creates user in firebase by passing in email/password to firebase, 
 
 ## Action Items (Due by next sprint: November 23rd):
 - 
