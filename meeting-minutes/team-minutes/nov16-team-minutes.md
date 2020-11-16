@@ -13,6 +13,9 @@
 - 「Aleks」I set up buttons for the react routing UI for the mentor UI and tried to implement react routing but i can not figure out how to make it work in my case
 - 「Aleks」Do we want to create a home page for the website?
 - 「Aleks」Do we want to create a logout page for the website?
+- 「Aleks」When selecting different buttons from mentor home the top bar switched to log in, not sure how to fix this.
+- 「Aleks」We can add a task to create the UI for the mentor home page (right now it is empty and only used for buttons) 
+
 
 ## Detailed Notes:
 - 
