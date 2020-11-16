@@ -7,7 +7,7 @@
 - [Katrina] Are Mentor's passwords currently being stored in the DB? When I look at PR #259, it wasn't a field in the JSON file, but it might have been added since.
 - [Katrina] As a team, it might be useful to walk through how to [Sign Up for peer testing](https://docs.google.com/spreadsheets/d/1hl-bVGtlN1JMaNCbpx4tqgj7R5T_lkqo-KdooR9Aevk/edit#gid=245939495) 
 - [Katrina] Does anyone know what the 'Video Demo' due on the 25th is referring to? At first, I assumed that it meant the recordings that we capture when we conduct peer testing, but that seems to be blocked off for later that week. 
-- [Katrina] Can we schedule a time this week to conduct a test run for the peer testing to make sure the software is working and that we're following the same tasks?
+- [Katrina] Can we schedule a time this week to conduct a test run for the peer testing to make sure the software is working and that we're following a similar methodology?
 ## Detailed Notes:
 - 
 
