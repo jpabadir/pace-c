@@ -14,8 +14,8 @@ class Login extends Component {
     };
     this.localResetPassword = this.localResetPassword.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
-    this.Login = this.Login.bind(this);
-    this.Change = this.Change.bind(this);
+    this.onLogin = this.onLogin.bind(this);
+    this.onChange = this.onChange.bind(this);
   }
 
   handleEmailChange(event) {
@@ -27,11 +27,11 @@ class Login extends Component {
     resetPassword(this.state.email);
   }
 
-  Change(values) {
+  onChange(values) {
     this.setState({ [values.target.name]: values.target.value });
   }
 
-  Login() {
+  onLogin() {
     const userEmail = document.getElementById('useremail').value;
     const userPassword = document.getElementById('userpassword').value;
     fire
@@ -59,7 +59,7 @@ class Login extends Component {
             type="email"
             placeholder="please enter your email"
             id="useremail"
-            onInput={this.Change}
+            onInput={this.onChange}
             value={this.state.email}
             onChange={this.handleEmailChange}
           />
@@ -75,13 +75,13 @@ class Login extends Component {
             type="password"
             placeholder="please enter your password"
             id="userpassword"
-            onInput={this.Change}
+            onInput={this.onChange}
           />
         </Form.Item>
         <p>{/* used to space buttons */}</p>
         {/* button below should send the information from the page: */}
         {/* login to the database. To verify the account password/email */}
-        <Button type="primary" htmlType="submit" onClick={this.Login}>
+        <Button type="primary" htmlType="submit" onClick={this.onLogin}>
           Login
         </Button>
         {/* link below should allow the user to reset password: */}
