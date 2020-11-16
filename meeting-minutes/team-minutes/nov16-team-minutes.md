@@ -12,6 +12,7 @@
 - 「Aleks」Check over the Mentor Home UI for issue 246 (I added 3 new tabs to the mentor home, to re-design the ui in order to make it more clean and easy to use), also I think this will help when the information from the database is pulled to the cards so that the mentor can have a clear/seprate view of what mentees are (accepted, suggested, and pending)
 - 「Aleks」I set up buttons for the react routing UI for the mentor UI and tried to implement react routing but i can not figure out how to make it work in my case
 - 「Aleks」Do we want to create a home page for the website?
+- 「Aleks」Do we want to create a logout page for the website?
 
 ## Detailed Notes:
 - 
