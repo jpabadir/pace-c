@@ -3,7 +3,6 @@ import { Button } from 'antd';
 import { Route } from 'react-router-dom';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import MentorSuggested from './MentorSuggested';
-import MentorPending from './MentorPending';
 import MentorAccepted from './MentorAccepted';
 
 // NOTE: Fields surrounded by square brackets []
@@ -34,15 +33,6 @@ class MentorHome extends Component {
         >
           Suggested Mentees
         </Button>
-        {/* button below Redirects to MentorPending.js page: */}
-        <Button
-          type="primary"
-          htmlType="button"
-          id="pendingMentees"
-          href="/MentorHome/PendingMentees"
-        >
-          Pending Mentees
-        </Button>
         {/* button below Redirects to MentorAccepted.js page: */}
         <Button
           type="primary"
@@ -62,7 +52,6 @@ class MentorHome extends Component {
           path="/MentorHome/SuggestedMentees"
           component={MentorSuggested}
         />
-        <Route path="/MentorHome/PendingMentees" component={MentorPending} />
         <Route path="/MentorHome/MentorAccepted" component={MentorAccepted} />
         {/* 
         
