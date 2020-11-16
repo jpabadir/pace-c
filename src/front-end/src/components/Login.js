@@ -84,7 +84,7 @@ class Login extends Component {
           {/* below is used as a space between the two links */}
           &nbsp;
           <p>Don&apos;t have an account yet?</p>
-          {/* button below should link to the createaccount page: */}
+          {/* button below should link to the createaccount page:  */}
           <Button type="primary" htmlType="button">
             Create Account
           </Button>
