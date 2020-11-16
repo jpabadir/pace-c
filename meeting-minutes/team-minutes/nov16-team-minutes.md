@@ -25,7 +25,7 @@
 - Creates user in firebase by passing in email/password to firebase, but does not store password
 - Kat will be the "leader" for peer testing
 - re-work the refine UI issue (#246)
-- team meeting on the 18th at 7am PST
+- team meeting on the 18th at 7am PST (one hour long)
 - 
 
 ## Action Items (Due by next sprint: November 23rd):
@@ -42,4 +42,9 @@
 - aleks will fix pr with only buttons (more info below)
 - change task so that we only have buttons and no cards
 - aleks will style the buttons so that we have (tutorial, accepted, suggested) and then the logout button
+- aleks explains tabs in tutorial tab
+- get tasks done by friday 7pm (this means it should be merged by this time)
+- eric fill out peer testing sign up sheet
 - 
+
+
