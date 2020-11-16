@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Form, Button, Select } from 'antd';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import { UserOutlined, CheckOutlined, CloseOutlined } from '@ant-design/icons';
+import fire from '../firebase-init';
 
 const { Option } = Select;
 
@@ -10,6 +11,15 @@ const { Option } = Select;
 
 // eslint-disable-next-line react/prefer-stateless-function
 class MentorHome extends Component {
+  constructor(props) {
+    super(props);
+    this.onLogout = this.onLogout.bind(this);
+  }
+
+  onLogout() {
+    fire.auth().signOut();
+  }
+
   render() {
     return (
       // What looks like an empty tag (<>) is known as a Fragment
@@ -77,6 +87,9 @@ class MentorHome extends Component {
               </tr>
             </table>
           </div>
+          <Button onClick={this.onLogout} type="primary" htmlType="button">
+            Logout
+          </Button>
         </div>
       </>
     );
