@@ -18,6 +18,19 @@ class Login extends Component {
     this.Change = this.Change.bind(this);
   }
 
+  Change(values) {
+    this.setState({ [values.target.name]: values.target.value });
+  }
+
+  handleEmailChange(event) {
+    this.setState({ email: event.target.value });
+  }
+
+  localResetPassword() {
+    // TODO: implement some validation here
+    resetPassword(this.state.email);
+  }
+  
   Login() {
     const userEmail = document.getElementById('useremail').value;
     const userPassword = document.getElementById('userpassword').value;
@@ -28,20 +41,6 @@ class Login extends Component {
         const errorMessage = error.message;
         window.alert(errorMessage.trim());
       });
-  }
-
-  Change(values) {
-    this.setState({ [values.target.name]: values.target.value });
-  }
-  
-  handleEmailChange(event) {
-    this.setState({ email: event.target.value });
-  }
-
-  localResetPassword() {
-    // TODO: implement some validation here
-    resetPassword(this.state.email);
-
   }
 
   render() {
