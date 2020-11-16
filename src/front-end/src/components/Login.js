@@ -3,11 +3,17 @@ import { Form, Button, Input } from 'antd';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import fire from '../firebase-init';
+import { resetPassword } from '../helper-methods';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class Login extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      email: '',
+    };
+    this.localResetPassword = this.localResetPassword.bind(this);
+    this.handleEmailChange = this.handleEmailChange.bind(this);
     this.Login = this.Login.bind(this);
     this.Change = this.Change.bind(this);
   }
@@ -26,6 +32,15 @@ class Login extends Component {
 
   Change(values) {
     this.setState({ [values.target.name]: values.target.value });
+
+  handleEmailChange(event) {
+    this.setState({ email: event.target.value });
+  }
+
+  localResetPassword() {
+    // TODO: implement some validation here
+    resetPassword(this.state.email);
+
   }
 
   render() {
@@ -45,6 +60,8 @@ class Login extends Component {
             placeholder="please enter your email"
             id="useremail"
             onInput={this.Change}
+            value={this.state.email}
+            onChange={this.handleEmailChange}
           />
         </Form.Item>
         <Form.Item
@@ -68,7 +85,10 @@ class Login extends Component {
           Login
         </Button>
         {/* link below should allow the user to reset password: */}
-        <p>Forgot your password? Click here!</p>
+        <p>
+          Forgot your password? Enter your email above and click&nbsp;
+          <Button onClick={this.localResetPassword}>here!</Button>
+        </p>
         {/* below is used as a space between the two links */}
         &nbsp;
         <p>Don&apos;t have an account yet?</p>
