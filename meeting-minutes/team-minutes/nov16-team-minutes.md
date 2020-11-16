@@ -10,7 +10,7 @@
 - [Katrina] Can we schedule a time this week to conduct a test run for the peer testing to make sure the software is working and that we're following a similar methodology?
 - [Katrina] Get clarification from Eric on if the [questionnaire linked in heuristic-evaluation-experiment-instructions.md](https://docs.google.com/forms/d/1K0egKKFqWlHBHL8dpMpvDg4dmS5h3WP_Hp-WnMYRE7Q/prefill) is the same as what the [instructor linked to](https://docs.google.com/forms/d/e/1FAIpQLSc8ruVs9LssMNB9NCcXvgANTe7sL_qppknM35Kkuhwnz3Y3TQ/viewform),and if it can be opened for public access (it's currently only available via email request)
 - 「Aleks」Check over the Mentor Home UI for issue 246 (I added 3 new tabs to the mentor home, to re-design the ui in order to make it more clean and easy to use), also I think this will help when the information from the database is pulled to the cards so that the mentor can have a clear/seprate view of what mentees are (accepted, suggested, and pending)
-- 「Aleks」I set up buttons for the react routing UI for the mentor UI
+- 「Aleks」I set up buttons for the react routing UI for the mentor UI and tried to implement react routing but i can not figure out how to make it work in my case
 
 ## Detailed Notes:
 - 
