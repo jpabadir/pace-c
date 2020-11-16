@@ -37,8 +37,8 @@ class Login extends Component {
         window.alert(errorMessage.trim());
       });
   }
-  
-    localResetPassword() {
+
+  localResetPassword() {
     // TODO: implement some validation here
     resetPassword(this.state.email);
   }
