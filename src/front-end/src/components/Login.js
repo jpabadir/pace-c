@@ -18,6 +18,10 @@ class Login extends Component {
     this.onChange = this.onChange.bind(this);
   }
 
+  handleEmailChange(event) {
+    this.setState({ email: event.target.value });
+  }
+  
   onLogin() {
     const userEmail = document.getElementById('useremail').value;
     const userPassword = document.getElementById('userpassword').value;
@@ -29,10 +33,6 @@ class Login extends Component {
         // eslint-disable-next-line
         window.alert(errorMessage.trim());
       });
-  }
-
-  handleEmailChange(event) {
-    this.setState({ email: event.target.value });
   }
 
   onChange(values) {
