@@ -5,6 +5,7 @@ import { NavLink, Switch, Route } from 'react-router-dom';
 import MentorForm from './components/MentorForm';
 import Auth from './components/Auth';
 import MenteeForm from './components/MenteeForm';
+// import MentorHome from './components/MentorHome';
 
 const { Header, Content, Footer } = Layout;
 
@@ -27,7 +28,8 @@ function App() {
         </Header>
         <Content style={{ padding: '0 50px' }}>
           <Switch>
-            <Route exact path="/Auth" component={Auth} />
+            <Route path="/Auth" component={Auth} />
+            {/* <Route path="/MentorHome" component={MentorHome} /> */}
             <Route exact path="/MentorForm" component={MentorForm} />
             <Route exact path="/MenteeForm" component={MenteeForm} />
           </Switch>
@@ -39,5 +41,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
