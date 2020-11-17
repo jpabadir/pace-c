@@ -22,7 +22,7 @@ In total, \_\_\_ individuals took part in our peer testing sessions. The members
 
 ## User Groups and List of Tasks that Participants Completed
 
-[Potentially, if everyone agrees with the task breakdown from deadlines-for-peer-testing-milestone.md, we could insert that table here]
+[Will most likely insert what Eric identified within list-of-tasks.md Potentially, we could also include the task breakdown table from deadlines-for-peer-testing-milestone.md as well]
 
 ## List of Issues Discovered and Their Priority
 
@@ -43,4 +43,4 @@ In total, \_\_\_ individuals took part in our peer testing sessions. The members
 [This would most likely come from the Google Forms which outlines the 10 point heuristics. I think Eric set this up - but we'll need to confirm]
 
 ### Testimonials from the Participants to Explain the Graph
-[Placeholder. Quotes from the use's experience will be placed here]
+[Placeholder. Quotes from the user's experience will be placed here]
