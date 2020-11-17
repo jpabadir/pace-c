@@ -15,10 +15,36 @@
 - 「Aleks」Do we want to create a logout page for the website?
 - 「Aleks」When selecting different buttons from mentor home the top bar switched to log in, not sure how to fix this.
 - 「Aleks」We can add a task to create the UI for the mentor home page (right now it is empty and only used for buttons) 
-
+- 
 
 ## Detailed Notes:
+- Everyone now has access to DB
+- Be careful when you are going through DB. try not to delete it, etc.
+- Passwords are not stored in DB
+- Authentication and real time are not linked (only if someone manually links them through code)
+- Creates user in firebase by passing in email/password to firebase, but does not store password
+- Kat will be the "leader" for peer testing
+- re-work the refine UI issue (#246)
+- team meeting on the 18th at 7am PST (one hour long)
 - 
 
 ## Action Items (Due by next sprint: November 23rd):
+- Ask more about video demo that is due on 25th, get more information maybe email prof if needed
+- Kat will be the "leader" for peer testing, she will give us roles/what to do/give us more information about peer testing
+- delete pending tab
+- only keep mentorhome, accepted, and suggested tab
+- eric will do the issue 269, description + mentor and mentee forms and skills fields to mentors form
+- jp will add logic to mentor ui
+- eric will add email sending to mentee form
+- team meeting on the 18th at 7am PST
+- kat will make card component for mentor home page
+- jp/kat will make for loop for filling in the information for the mentor home page that uses kat's card component
+- aleks will fix pr with only buttons (more info below)
+- change task so that we only have buttons and no cards
+- aleks will style the buttons so that we have (tutorial, accepted, suggested) and then the logout button
+- aleks explains tabs in tutorial tab
+- get tasks done by friday 7pm (this means it should be merged by this time)
+- eric fill out peer testing sign up sheet (already done)
 - 
+
+
