@@ -33,13 +33,14 @@
 
 - According to the course website: Each session should last 50 minutes in total (where 40 of those minutes are used for the participant to complete tasks)
   - Ensure that Zoom has been installed, and that users are able to connect remotely.
-  - Run our application.
+  - Run our application as if you are conducting a peer evaluation (ideally, this should be done before conducting peer testing to find and resolve any bugs).
+    - Ensure the app is running before the participant attends the session.
   - Due to the remote session, users won’t be able to access their email’s inbox from their own laptop (unless they log into their account via your device). As such, each team member should communicate with the participant beforehand to ensure that they will have access to their email address via their phone during the session so that they can view the confirmation email(s).
-    - On Mac, Screenshots can be dragged and dropped into the browser. Have the screenshots seen below open in a tab. This can be opened once the user is checking their phone, so that you can confirm that they received the same email as presented in the screenshot.
+    - On Mac, Screenshots can be dragged and dropped into the browser. Have the screenshot (an example of this will be in the comment of the PR. I haven't been able to upload a screenshot to this document directly) in a tab. This can be opened once the user is checking their phone, so that you can confirm that they received the same email as presented in the screenshot.
 
 ## Estimated Task Breakdown for Peer Evaluations:
 
-- Reminder: The tasks participants are to complete are the same for a remote vs thinkaloud experiment.
+- Reminder: The tasks participants are to complete are the same for a remote vs thinkaloud experiment. The current task allocation in the table below equates to 50 minutes.
 
 | Estimated Time | Task                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | :------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
