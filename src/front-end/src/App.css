@@ -22,6 +22,12 @@ a {
   margin: 30px;
 }
 
+.Login {
+  border: solid black;
+  padding: 25px;
+  margin: 30px;
+}
+
 .MentorForm {
   border: solid black;
   padding: 25px;
