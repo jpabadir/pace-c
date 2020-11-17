@@ -2,34 +2,44 @@ import React, { Component } from 'react';
 import { Button } from 'antd';
 import { Route } from 'react-router-dom';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
+import fire from '../firebase-init';
 import MentorSuggested from './MentorSuggested';
 import MentorAccepted from './MentorAccepted';
+import MentorTutorial from './MentorTutorial';
 
 // NOTE: Fields surrounded by square brackets []
 // denote fields that are required to be filled-in from the database
 
 // eslint-disable-next-line react/prefer-stateless-function
 class MentorHome extends Component {
+  constructor(props) {
+    super(props);
+    this.onLogout = this.onLogout.bind(this);
+  }
+
+  onLogout() {
+    fire.auth().signOut();
+  }
+
   render() {
     return (
       // What looks like an empty tag (<>) is known as a Fragment
       // Fragments are needed to turn HTML into JSX
       <>
-        {/* button below Redirects to MentorHome.js page: */}
         <Button
           type="primary"
           htmlType="button"
           id="mentorHome"
-          href="/MentorHome/MentorHome"
+          href="/Auth/MentorTutorial"
         >
-          Mentor Home
+          Mentor Tutorial
         </Button>
         {/* button below Redirects to MentorSuggested.js page: */}
         <Button
           type="primary"
           htmlType="button"
           id="suggestedMentees"
-          href="/MentorHome/SuggestedMentees"
+          href="/Auth/SuggestedMentees"
         >
           Suggested Mentees
         </Button>
@@ -38,34 +48,18 @@ class MentorHome extends Component {
           type="primary"
           htmlType="button"
           id="acceptedMentees"
-          href="/MentorHome/MentorAccepted"
+          href="/Auth/MentorAccepted"
         >
           Accepted Mentees
         </Button>
-        {/* TODO: create logout page */}
-        {/* button below Redirects to an appropriate logout page: */}
-        <Button type="primary" htmlType="button" id="logout">
+        <Route path="/Auth/SuggestedMentees" component={MentorSuggested} />
+        <Route path="/Auth/MentorAccepted" component={MentorAccepted} />
+        <Route path="/Auth/MentorTutorial" component={MentorTutorial} />
+
+        {/* replace what's in square brackets [] w/ info from DB */}
+        <Button onClick={this.onLogout} type="primary" htmlType="button">
           Logout
         </Button>
-        {/* button routes: */}
-        <Route
-          path="/MentorHome/SuggestedMentees"
-          component={MentorSuggested}
-        />
-        <Route path="/MentorHome/MentorAccepted" component={MentorAccepted} />
-        {/* 
-        
-        Could be used as a start to the UI of this page
-
-        <Form>
-          <h1>
-            <center>Welcome back, [Mentor Name from DB]</center>
-          </h1>
-          <h2>
-            <center>This part is open to ideas maybe a mentor calendar</center>
-            <center>that shows appointments with</center>
-          </h2>
-        </Form> */}
       </>
     );
   }
