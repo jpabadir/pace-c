@@ -1,19 +1,17 @@
-# Comprehensive list of the code standards the team follows
-## When possible, IDE code-linting rule files will be made and shared with the team to facilitate code standardizing. 
+# Rules, code style standards, and naming conventions the team follows
 
-## General: 
-- Add inline comments before the code they document:<br>
-// Place comment here<br>
-computeResult();<br>
-computeResult(); // Not here
-- Only add comments where they are required to understand the code. There is, generally speaking, no need for a comment before a unit test, or a variable assignment, for instance. 
-- Name methods with a verb, not an adjective:<br>
-// Like so: getDouble();<br>
-// Not like so: doubled();<br>
-- Use tabs, not spaces.<br>
-- Put a space after a word:<br>
-// Incorrect: if(true){<br>
-// Correct: if (true) {
+## Front-end code style
+We use the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript), which is enforced by ESLint in continuous integration. 
+
+## Back-end code style
+We use the [JavaScript Standard Style Guide](https://standardjs.com/), which is enforced by ESLint in continuous integration. 
 
 ## File naming
-In general, prefer kebab-case-for-file-naming. 
+Prefer kebab-case-for-file-naming. 
+
+## Branches best practices and naming
+### Git flow
+When fixing a specific issue, make a new branch based on the develop branch, work in that branch, submit a PR, merge the PR, and then delete the branch you made once the PR is merged. 
+
+### Naming
+When fixing a specific issue, name the branch issue#-the-title-of-the-issue. For instance, if fixing issue #254 "Add linting to repo", name the branch 254-add-linting-to-repo. 

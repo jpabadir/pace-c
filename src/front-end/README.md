@@ -2,6 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## To run the front-end as of November 1st, 2020
+In the terminal, navigate to the front-end src folder (`cd pace-c/src/front-end`)
+
+Install Ant Design by typing `npm install antd` into the terminal
+
+Install the bootstrap time-zone picker by entering the following command into the terminal: `npm install react-bootstrap-timezone-picker`
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -68,3 +75,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+

@@ -19,20 +19,27 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-          
-      # Runs a single command using the runners shell
-      - name: eslint + fix
-        uses: getsentry/action-eslint-fix@main
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with: 
+          node-version: '15.x'
+      - run: | 
+          npm install -g eslint
+          npm install eslint-plugin-react@latest --save-dev
+          npm install --save eslint-config-airbnb
+          npm install eslint-plugin-prettier@latest --save-dev
+          npm install --save-dev eslint-config-prettier
+          npm install eslint-config-standard
+          npm install 
+        
+      - name: Run ESLint
+        run: eslint src/front-end/src/**/*.js src/back-end/src/**/*.js
       
+      - name: Run jest
+        run: |
+          npm install --save-dev jest@26.6.0
+          npm install react-test-renderer
+          npm install
+          cd src/front-end/
+          npm test

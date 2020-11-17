@@ -1,38 +1,129 @@
-.App {
+/* boiler plate css */
+@import '~antd/dist/antd.css';
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+.mentorship-form {
+  border: solid black;
+  padding: 25px;
+  margin: 30px;
+}
+
+.MentorForm {
+  border: solid black;
+  padding: 25px;
+  margin: 30px;
+}
+
+.NextButton-InMentor {
+  float: right;
+}
+
+.MenteeForm {
+  border: solid black;
+  padding: 25px;
+  margin: 30px;
+}
+
+.NextButton-InMentee {
+  float: right;
+}
+
+.next-button {
+  float: right;
+}
+
+.time-zone-picker {
+  overflow: auto;
+  width: 100%;
+}
+
+.loginlink {
+  color: blue;
+}
+
+.MentorCompletion {
+  border: solid black;
+  padding: 25px;
+  margin: 30px;
+}
+
+.MenteeCompletion {
+  border: solid black;
+  padding: 25px;
+  margin: 30px;
+}
+
+table,
+th {
+  border: 1px solid black;
+}
+
+th {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+td {
+  padding-left: 20px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-right: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.check {
+  color: #52c41a;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.close {
+  color: #ff3333;
 }
 
-.App-link {
-  color: #61dafb;
+.user-icon {
+  font-size: 30px;
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mentee-requests {
+  float: left;
+}
+
+table {
+  table-layout: auto;
+  width: 325px;
+}
+
+/*COSC360 mentioned that it's good to be aware of sizing when it comes to various devices, 
+So the following lines have been added as a protective measure */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
 }
