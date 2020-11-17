@@ -33,7 +33,7 @@
 - Kat will be the "leader" for peer testing, she will give us roles/what to do/give us more information about peer testing
 - delete pending tab
 - only keep mentorhome, accepted, and suggested tab
-- kat will do the issue 269, description + menotr and mentee forms and skills fiels to mentors form
+- eric will do the issue 269, description + mentor and mentee forms and skills fields to mentors form
 - jp will add logic to mentor ui
 - eric will add email sending to mentee form
 - team meeting on the 18th at 7am PST
