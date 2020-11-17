@@ -16,9 +16,6 @@
     "index.js"
   ],
   "rules": {
-    "react/sort-comp": [
-      "off"
-    ],
     "class-methods-use-this": [
       "off"
     ],
