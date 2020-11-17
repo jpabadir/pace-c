@@ -21,6 +21,7 @@ class Login extends Component {
   handleEmailChange(event) {
     this.setState({ email: event.target.value });
   }
+
   onLogin() {
     const userEmail = document.getElementById('useremail').value;
     const userPassword = document.getElementById('userpassword').value;
@@ -37,6 +38,7 @@ class Login extends Component {
   onChange(values) {
     this.setState({ [values.target.name]: values.target.value });
   }
+
   localResetPassword() {
     // TODO: implement some validation here
     resetPassword(this.state.email);
