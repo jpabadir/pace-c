@@ -21,7 +21,7 @@
 **November 30th:**
 
 - Once the peer testing sessions have been completed, each team member needs to compile the results of their testing into a report. For the sake of simplicity, Katrina will upload a markdown file to Github so that the file is formatted [per the Peer Testing Report Expectations](https://people.ok.ubc.ca/bowenhui/499/peertesting.html) criteria.
-- To ensure each member’s work has been reviewed, a separate branch can be created to upload the findings from the peer testing sessions onto the initial formatted document [i.e Merge from Develop, create a branch to work off of, upload the findings from both peer testing sessions onto ____, create a PR when done].
+- To ensure each member’s work has been reviewed, a separate branch can be created to upload the findings from the peer testing sessions onto the initial formatted document [i.e Merge from Develop, create a branch to work off of, upload the findings from both peer testing sessions onto peer-testing-report.md, create a PR when done].
   - It is up to each team member’s discretion whether an item is ranked as high, medium, or low priority. However, this might be modified after being reviewed.
 
 **December 1st:**
