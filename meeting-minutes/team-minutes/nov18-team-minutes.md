@@ -15,13 +15,19 @@
 - Record your zoom session
 - Zoom is 40min max
 - aleks will do video
-- create branch, fill in your information, then make a pr (for the peer testing form)
+- create branch, fill in your information, then make a pr (for the peer testing report.md)
 - fixing forgot password form will be done by eric
+- we can use erics email for sending welcome emails (temporary)
+- put who we signed up for in the first page of sign up for peer testing form (maybe)
+- put your name for on the second page of sign up for peer testing form
 - 
 
 ## Action Items:
 - [aleks] create video
 - [jp] Provide brief overview of deadlines-for-peer-testing-milestone.md
-- eric will do fixing issues that client said
-- eric will do forgot the login page
+- [eric] will do fixing issues that client said
+- [eric] will do forgot the login page
+- sign up for 2 projects (per person)
+- put who we signed up for in the first page of sign up for peer testing form (maybe)
+- put your name for on the second page of sign up for peer testing form
 - 
