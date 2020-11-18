@@ -38,18 +38,22 @@ class MenteeForm extends Component {
               label="Name"
               name="nameInput"
               // must have an input:
-              rules={[{ required: true, message: 'Please input something' }]}
+              rules={[{ required: true, message: 'Please enter your name' }]}
             >
-              <Input placeholder="please enter your name" />
+              <Input placeholder="First name Last name" />
             </Form.Item>
             <Form.Item
               label="Email"
               name="emailInput"
-              type="email"
               // must have an input:
-              rules={[{ required: true, message: 'Please input something' }]}
+              rules={[
+                {
+                  required: true,
+                  message: 'Please enter your email in a proper format',
+                },
+              ]}
             >
-              <Input placeholder="please enter your email" />
+              <Input placeholder="name@example.com" />
             </Form.Item>
             <Form.Item
               label="Please Select Your Time-zone"
