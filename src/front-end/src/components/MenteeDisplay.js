@@ -2,8 +2,15 @@ import React, { Component } from 'react';
 import { Button } from 'antd';
 import { UserOutlined, CheckOutlined, CloseOutlined } from '@ant-design/icons';
 
+type Props = {
+  name: String,
+  email: String,
+  skills: String,
+  description: String,
+  request: Boolean,
+};
 // eslint-disable-next-line react/prefer-stateless-function
-class MenteeDisplay extends Component {
+class MenteeDisplay extends Component<Props> {
   render() {
     return (
       <div className="mentee-requests">
@@ -17,27 +24,28 @@ class MenteeDisplay extends Component {
             <tr>
               <th>
                 <UserOutlined className="user-icon" />
-                [Name from DB]
+                {this.props.name}
               </th>
             </tr>
             <tr>
               <td>
-                <strong> Email: </strong> [Email from Database]
+                <strong> Email: </strong> {this.props.email}
               </td>
             </tr>
             <tr>
               <td>
-                <strong> Skills Seeking Mentorship: </strong> [Skills Array From
-                Database]
+                <strong> Skills Seeking Mentorship: </strong>
+                {this.props.skills}
               </td>
             </tr>
             <tr>
               <td>
-                <strong> Description: </strong> [Description From Database]{' '}
+                <strong> Description: </strong> {this.props.description}{' '}
               </td>
             </tr>
             <tr>
               <td>
+                {this.props.request}
                 <Button type="text" onClick={this.handleButtonClick}>
                   Accept
                   <CheckOutlined className="check" id="accept" />{' '}

@@ -17,7 +17,12 @@ class MentorAccepted extends Component {
           <h1>
             <center>These are your accepted mentees:</center>
           </h1>
-          <MenteeDisplay />
+          <MenteeDisplay
+            name="Name from DB"
+            email="Email from DB"
+            skills="Skills from DB"
+            description="Description from DB"
+          />
         </Form>
         {/* insert mentee card/for loop here */}
       </>

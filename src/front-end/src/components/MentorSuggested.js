@@ -2,11 +2,6 @@ import React, { Component } from 'react';
 import { Form } from 'antd';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import MenteeDisplay from './MenteeDisplay';
-// will need below when cards are implemented:
-// import { UserOutlined, CheckOutlined, CloseOutlined }from'@ant-design/icons';
-
-// NOTE: Fields surrounded by square brackets []
-// denote fields that are required to be filled-in from the database
 
 // eslint-disable-next-line react/prefer-stateless-function
 class MentorSuggested extends Component {
@@ -19,7 +14,12 @@ class MentorSuggested extends Component {
           <h1>
             <center>These are your suggested mentees:</center>
           </h1>
-          <MenteeDisplay />
+          <MenteeDisplay
+            name="Name from DB"
+            email="Email from DB"
+            skills="Skills from DB"
+            description="Description from DB"
+          />
         </Form>
         {/* insert mentee card/for loop here */}
       </>
