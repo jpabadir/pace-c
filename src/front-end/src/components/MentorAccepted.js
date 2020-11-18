@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Form } from 'antd';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
+import MenteeDisplay from './MenteeDisplay';
 
 // NOTE: Fields surrounded by square brackets []
 // denote fields that are required to be filled-in from the database
@@ -16,6 +17,7 @@ class MentorAccepted extends Component {
           <h1>
             <center>These are your accepted mentees:</center>
           </h1>
+          <MenteeDisplay />
         </Form>
         {/* insert mentee card/for loop here */}
       </>

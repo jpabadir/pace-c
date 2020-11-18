@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Form } from 'antd';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
+import MenteeDisplay from './MenteeDisplay';
 // will need below when cards are implemented:
 // import { UserOutlined, CheckOutlined, CloseOutlined }from'@ant-design/icons';
 
@@ -18,6 +19,7 @@ class MentorSuggested extends Component {
           <h1>
             <center>These are your suggested mentees:</center>
           </h1>
+          <MenteeDisplay />
         </Form>
         {/* insert mentee card/for loop here */}
       </>
