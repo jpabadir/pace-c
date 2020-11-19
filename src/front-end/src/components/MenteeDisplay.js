@@ -10,50 +10,52 @@ class MenteeDisplay extends Component {
       <div className="mentee-requests">
         <div className="individual-mentee">
           <table>
-            <tr>
-              <th>
-                <UserOutlined className="user-icon" />
-                {this.props.name}
-              </th>
-            </tr>
-            <tr>
-              <td>
-                <strong> Email: </strong>
-                {this.props.email}
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <strong> Skills Seeking Mentorship: </strong>
-                {this.props.skills}
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <strong> Description: </strong> {this.props.description}
-              </td>
-            </tr>
-            <tr>
-              <td>
-                {this.props.request}
-                <Button
-                  type="text"
-                  onClick={this.handleButtonClick}
-                  id="accept"
-                >
-                  Accept
-                  <CheckOutlined className="check" />{' '}
-                </Button>
-                <Button
-                  type="text"
-                  onClick={this.handleButtonClick}
-                  id="decline"
-                >
-                  Decline
-                  <CloseOutlined className="close" />{' '}
-                </Button>
-              </td>
-            </tr>
+            <tbody>
+              <tr>
+                <th>
+                  <UserOutlined className="user-icon" />
+                  {this.props.name}
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <strong> Email: </strong>
+                  {this.props.email}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong> Skills Seeking Mentorship: </strong>
+                  {this.props.skills}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong> Description: </strong> {this.props.description}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {this.props.request}
+                  <Button
+                    type="text"
+                    onClick={this.handleButtonClick}
+                    id="accept"
+                  >
+                    Accept
+                    <CheckOutlined className="check" />{' '}
+                  </Button>
+                  <Button
+                    type="text"
+                    onClick={this.handleButtonClick}
+                    id="decline"
+                  >
+                    Decline
+                    <CloseOutlined className="close" />{' '}
+                  </Button>
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>
