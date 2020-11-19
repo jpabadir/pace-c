@@ -16,6 +16,9 @@
     "index.js"
   ],
   "rules": {
+    "prefer-template": [
+      "off"
+    ],
     "react/sort-comp": [
       "off"
     ],
