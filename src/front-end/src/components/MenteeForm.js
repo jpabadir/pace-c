@@ -3,7 +3,6 @@ import { Form, Button, Input } from 'antd';
 import TimezonePicker from 'react-bootstrap-timezone-picker';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import emailjs from 'emailjs-com';
-// import { marshallMenteeInfo, pushToDB } from '../helper-methods';
 import MenteeCompletion from './MenteeCompletion';
 
 class MenteeForm extends Component {
