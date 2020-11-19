@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
 import { Button } from 'antd';
 import { UserOutlined, CheckOutlined, CloseOutlined } from '@ant-design/icons';
+import PropTypes from 'prop-types';
 
-type Props = {
-  name: String,
-  email: String,
-  skills: String,
-  description: String,
-  request: Boolean,
-};
 // eslint-disable-next-line react/prefer-stateless-function
-class MenteeDisplay extends Component<Props> {
+class MenteeDisplay extends Component {
   render() {
     return (
       <div className="mentee-requests">
@@ -29,7 +23,8 @@ class MenteeDisplay extends Component<Props> {
             </tr>
             <tr>
               <td>
-                <strong> Email: </strong> {this.props.email}
+                <strong> Email: </strong>
+                {this.props.email}
               </td>
             </tr>
             <tr>
@@ -40,7 +35,7 @@ class MenteeDisplay extends Component<Props> {
             </tr>
             <tr>
               <td>
-                <strong> Description: </strong> {this.props.description}{' '}
+                <strong> Description: </strong> {this.props.description}
               </td>
             </tr>
             <tr>
@@ -62,5 +57,12 @@ class MenteeDisplay extends Component<Props> {
     );
   }
 }
+MenteeDisplay.propTypes = {
+  name: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  skills: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  request: PropTypes.bool.isRequired,
+};
 
 export default MenteeDisplay;
