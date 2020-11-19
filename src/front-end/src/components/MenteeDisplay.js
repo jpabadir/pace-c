@@ -8,11 +8,6 @@ class MenteeDisplay extends Component {
   render() {
     return (
       <div className="mentee-requests">
-        <h2> Pending Mentee Requests</h2>
-        <p>
-          Click <CheckOutlined className="check" /> to accept a Mentee&apos;s
-          request or <CloseOutlined className="close" /> to decline.
-        </p>
         <div className="individual-mentee">
           <table>
             <tr>

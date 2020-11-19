@@ -110,6 +110,7 @@ tr:last-child {
 
 .mentee-requests {
   float: left;
+  margin-bottom: 15px;
 }
 
 table {
