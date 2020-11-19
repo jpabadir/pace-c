@@ -41,13 +41,21 @@ class MenteeDisplay extends Component {
             <tr>
               <td>
                 {this.props.request}
-                <Button type="text" onClick={this.handleButtonClick}>
+                <Button
+                  type="text"
+                  onClick={this.handleButtonClick}
+                  id="accept"
+                >
                   Accept
-                  <CheckOutlined className="check" id="accept" />{' '}
+                  <CheckOutlined className="check" />{' '}
                 </Button>
-                <Button type="text" onClick={this.handleButtonClick}>
+                <Button
+                  type="text"
+                  onClick={this.handleButtonClick}
+                  id="decline"
+                >
                   Decline
-                  <CloseOutlined className="close" id="decline" />{' '}
+                  <CloseOutlined className="close" />{' '}
                 </Button>
               </td>
             </tr>

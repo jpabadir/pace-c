@@ -117,6 +117,14 @@ table {
   width: 350px;
 }
 
+#accept {
+  border: 1px solid grey;
+}
+#decline {
+  border: 1px solid grey;
+  margin-left: 25px;
+}
+
 /*COSC360 mentioned that it's good to be aware of sizing when it comes to various devices, 
 So the following lines have been added as a protective measure */
 
