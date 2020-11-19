@@ -59,13 +59,6 @@ class MentorSuggested extends Component {
           <h1>
             <center>These are your suggested mentees:</center>
           </h1>
-          <p>
-            <center>
-              Click <CheckOutlined className="check" /> to accept a
-              Mentee&apos;s request or <CloseOutlined className="close" /> to
-              decline.
-            </center>
-          </p>
         </Form>
         <br />
         {this.state.suggestedMentees.map((mentee) => {
