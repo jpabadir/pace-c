@@ -1,10 +1,8 @@
+/* eslint-disable */
 import React, { Component } from 'react';
 import { Form } from 'antd';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import MenteeDisplay from './MenteeDisplay';
-
-// NOTE: Fields surrounded by square brackets []
-// denote fields that are required to be filled-in from the database
 
 // eslint-disable-next-line react/prefer-stateless-function
 class MentorAccepted extends Component {

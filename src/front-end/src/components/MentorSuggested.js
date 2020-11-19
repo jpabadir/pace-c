@@ -4,10 +4,7 @@ import { Form } from 'antd';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import MenteeDisplay from './MenteeDisplay';
 import fire from '../firebase-init';
-import { CheckOutlined, CloseOutlined } from '@ant-design/icons';
-
-// NOTE: Fields surrounded by square brackets []
-// denote fields that are required to be filled-in from the database
+import { fetchSuggestedMenteesIDs } from '../helper-methods';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class MentorSuggested extends Component {
@@ -18,12 +15,6 @@ class MentorSuggested extends Component {
     };
   }
 
-  componentDidMount() {
-    this.authListener().then((uid) => {
-      this.fetchSuggestedMenteesIDs(uid);
-    });
-  }
-
   authListener() {
     return new Promise((resolve) => {
       fire.auth().onAuthStateChanged((user) => {
@@ -32,10 +23,11 @@ class MentorSuggested extends Component {
     });
   }
 
-  fetchSuggestedMenteesIDs(loggedUserUid) {
-    const userRef = fire.database().ref('users/' + loggedUserUid);
-    userRef.on('value', (snapshot) => {
-      this.fetchSuggestedMenteesFullInfo(snapshot.val().suggestedMentees);
+  componentDidMount() {
+    this.authListener().then((uid) => {
+      fetchSuggestedMenteesIDs(uid).then((suggestedMentees) => {
+        this.fetchSuggestedMenteesFullInfo(suggestedMentees);
+      });
     });
   }
 

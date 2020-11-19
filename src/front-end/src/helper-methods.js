@@ -65,3 +65,12 @@ export function resetPassword(emailAddress) {
       console.log(error);
     });
 }
+
+export function fetchSuggestedMenteesIDs(loggedUserUid) {
+  return new Promise((resolve) => {
+    const userRef = firebase.database().ref('users/' + loggedUserUid);
+    userRef.on('value', (snapshot) => {
+      resolve(snapshot.val().suggestedMentees);
+    });
+  });
+}
