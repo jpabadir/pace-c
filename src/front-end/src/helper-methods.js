@@ -80,12 +80,14 @@ export function fetchMenteesIDs(loggedUserUid, typeOfMentee) {
 }
 
 export function fetchMenteesFullInfo(menteesIDs, context) {
-  menteesIDs.forEach((menteeId) => {
-    const menteeRef = firebase.database().ref('users/' + menteeId);
-    menteeRef.on('value', (snapshot) => {
-      context.setState((prevState) => ({
-        mentees: prevState.mentees.concat(snapshot.val()),
-      }));
+  if (menteesIDs) {
+    menteesIDs.forEach((menteeId) => {
+      const menteeRef = firebase.database().ref('users/' + menteeId);
+      menteeRef.on('value', (snapshot) => {
+        context.setState((prevState) => ({
+          mentees: prevState.mentees.concat(snapshot.val()),
+        }));
+      });
     });
-  });
+  }
 }

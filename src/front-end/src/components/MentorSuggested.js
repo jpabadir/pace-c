@@ -24,8 +24,8 @@ class MentorSuggested extends Component {
 
   componentDidMount() {
     this.authListener().then((uid) => {
-      fetchMenteesIDs(uid, 'suggested').then((suggestedMenteesID) => {
-        fetchMenteesFullInfo(suggestedMenteesID, this);
+      fetchMenteesIDs(uid, 'suggested').then((menteesIDs) => {
+        fetchMenteesFullInfo(menteesIDs, this);
       });
     });
   }
