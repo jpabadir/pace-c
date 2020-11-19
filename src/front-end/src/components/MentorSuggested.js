@@ -1,17 +1,16 @@
-/* eslint-disable */
 import React, { Component } from 'react';
 import { Form } from 'antd';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import MenteeDisplay from './MenteeDisplay';
 import fire from '../firebase-init';
-import { fetchSuggestedMenteesIDs } from '../helper-methods';
+import { fetchMenteesIDs, fetchMenteesFullInfo } from '../helper-methods';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class MentorSuggested extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      suggestedMentees: [],
+      mentees: [],
     };
   }
 
@@ -25,27 +24,14 @@ class MentorSuggested extends Component {
 
   componentDidMount() {
     this.authListener().then((uid) => {
-      fetchSuggestedMenteesIDs(uid).then((suggestedMentees) => {
-        this.fetchSuggestedMenteesFullInfo(suggestedMentees);
-      });
-    });
-  }
-
-  fetchSuggestedMenteesFullInfo(suggestedMenteesIDs) {
-    suggestedMenteesIDs.forEach((menteeId) => {
-      const menteeRef = fire.database().ref('users/' + menteeId);
-      menteeRef.on('value', (snapshot) => {
-        this.setState({
-          suggestedMentees: this.state.suggestedMentees.concat(snapshot.val()),
-        });
+      fetchMenteesIDs(uid, 'suggested').then((suggestedMenteesID) => {
+        fetchMenteesFullInfo(suggestedMenteesID, this);
       });
     });
   }
 
   render() {
     return (
-      // What looks like an empty tag (<>) is known as a Fragment
-      // Fragments are needed to turn HTML into JSX
       <>
         <Form>
           <h1>
@@ -53,7 +39,7 @@ class MentorSuggested extends Component {
           </h1>
         </Form>
         <br />
-        {this.state.suggestedMentees.map((mentee) => {
+        {this.state.mentees.map((mentee) => {
           return (
             <MenteeDisplay
               name={mentee.name}

@@ -66,11 +66,26 @@ export function resetPassword(emailAddress) {
     });
 }
 
-export function fetchSuggestedMenteesIDs(loggedUserUid) {
+export function fetchMenteesIDs(loggedUserUid, typeOfMentee) {
   return new Promise((resolve) => {
     const userRef = firebase.database().ref('users/' + loggedUserUid);
     userRef.on('value', (snapshot) => {
-      resolve(snapshot.val().suggestedMentees);
+      const result =
+        typeOfMentee === 'suggested'
+          ? snapshot.val().suggestedMentees
+          : snapshot.val().acceptedMentees;
+      resolve(result);
+    });
+  });
+}
+
+export function fetchMenteesFullInfo(menteesIDs, context) {
+  menteesIDs.forEach((menteeId) => {
+    const menteeRef = firebase.database().ref('users/' + menteeId);
+    menteeRef.on('value', (snapshot) => {
+      context.setState((prevState) => ({
+        mentees: prevState.mentees.concat(snapshot.val()),
+      }));
     });
   });
 }
