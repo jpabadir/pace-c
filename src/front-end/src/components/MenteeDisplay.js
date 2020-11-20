@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { Component } from 'react';
 import { Button } from 'antd';
 import { UserOutlined, CheckOutlined, CloseOutlined } from '@ant-design/icons';
@@ -5,6 +6,22 @@ import PropTypes from 'prop-types';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class MenteeDisplay extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+
+    this.handleAcceptClick = this.handleAcceptClick.bind(this);
+    this.handleDeclineClick = this.handleDeclineClick.bind(this);
+  }
+
+  handleAcceptClick() {
+    this.props.acceptMentee(this.props.menteeUid);
+  }
+
+  handleDeclineClick() {
+    this.props.declineMentee(this.props.menteeUid);
+  }
+
   render() {
     return (
       <div className="mentee-requests">
@@ -39,7 +56,7 @@ class MenteeDisplay extends Component {
                   {this.props.request}
                   <Button
                     type="text"
-                    onClick={this.handleButtonClick}
+                    onClick={this.handleAcceptClick}
                     id="accept"
                   >
                     Accept
@@ -47,7 +64,7 @@ class MenteeDisplay extends Component {
                   </Button>
                   <Button
                     type="text"
-                    onClick={this.handleButtonClick}
+                    onClick={this.handleDeclineClick}
                     id="decline"
                   >
                     Decline
@@ -62,12 +79,16 @@ class MenteeDisplay extends Component {
     );
   }
 }
+
 MenteeDisplay.propTypes = {
+  menteeUid: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   skills: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   request: PropTypes.bool.isRequired,
+  acceptMentee: PropTypes.func.isRequired,
+  declineMentee: PropTypes.func.isRequired,
 };
 
 export default MenteeDisplay;

@@ -11,12 +11,59 @@ class MentorSuggested extends Component {
     super(props);
     this.state = {
       mentees: [],
+      loggedUid: null,
     };
+
+    this.acceptMentee = this.acceptMentee.bind(this);
+    this.declineMentee = this.declineMentee.bind(this);
+    this.loadSuggestedMentees = this.loadSuggestedMentees.bind(this);
+  }
+
+  loadSuggestedMentees() {
+    const userRef = fire.database().ref('users/' + this.state.loggedUid);
+    const myMentees = ['-MLy_owDfdsfsZSNtIanUi6', '-MLy_owDS4aZSNtIanUi6'];
+    userRef.child('suggestedMentees').set(myMentees);
+    // eslint-disable-next-line
+    location.reload();
+  }
+
+  acceptMentee(menteeUid) {
+    const userRef = fire.database().ref('users/' + this.state.loggedUid);
+    userRef.once('value', (snapshot) => {
+      // Build updated accepted and suggested mentee arrays
+      const acceptedMentees = snapshot.val().acceptedMentees
+        ? snapshot.val().acceptedMentees
+        : [];
+      acceptedMentees.push(menteeUid);
+      const suggestedMentees = snapshot.val().suggestedMentees;
+      suggestedMentees.splice(suggestedMentees.indexOf(menteeUid), 1);
+
+      // Update the accepted and suggested mentees in DB
+      userRef.child('acceptedMentees').set(acceptedMentees);
+      userRef.child('suggestedMentees').set(suggestedMentees);
+
+      // Update the state to reflect the DB changes
+      const currentMentees = this.state.mentees;
+      const newMentees = currentMentees.filter((mentee) => {
+        return mentee.id !== menteeUid;
+      });
+      this.setState({
+        mentees: newMentees,
+      });
+
+      // Confirm with the user that this was succesful
+      alert('Mentee request accepted!');
+    });
+  }
+
+  declineMentee(menteeUid) {
+    alert(menteeUid);
   }
 
   authListener() {
     return new Promise((resolve) => {
       fire.auth().onAuthStateChanged((user) => {
+        this.setState({ loggedUid: user.uid });
         resolve(user.uid);
       });
     });
@@ -33,6 +80,9 @@ class MentorSuggested extends Component {
   render() {
     return (
       <>
+        <button type="button" onClick={this.loadSuggestedMentees}>
+          load
+        </button>
         <Form>
           <h1>
             <center>These are your suggested mentees:</center>
@@ -47,6 +97,9 @@ class MentorSuggested extends Component {
               skills={mentee.rankedSkills.join(', ')}
               description={mentee.description}
               request
+              acceptMentee={this.acceptMentee}
+              declineMentee={this.declineMentee}
+              menteeUid={mentee.id}
             />
           );
         })}
