@@ -95,8 +95,6 @@ class Login extends Component {
               Forgot your password?&nbsp;
             </a>
           </p>
-          {/*             Enter your email above and click&nbsp;
-            <Button onClick={this.localResetPassword}>here!</Button>}
           {/* below is used as a space between the two links */}
           &nbsp;
           <p>Don&apos;t have an account yet?</p>
