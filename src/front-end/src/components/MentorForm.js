@@ -158,8 +158,12 @@ class MentorForm extends Component {
               rules={[
                 { required: true, message: 'Please choose your best skill' },
               ]}
+              tooltip="What skill can you help people learn?"
             >
               <select id="best">
+                <option value="" disable selected>
+                  Select your option
+                </option>
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -172,8 +176,12 @@ class MentorForm extends Component {
               rules={[
                 { required: true, message: 'Please choose your best skill' },
               ]}
+              tooltip="What skill can you help people learn?"
             >
               <select id="second">
+                <option value="" disable selected>
+                  Select your option
+                </option>
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -186,8 +194,12 @@ class MentorForm extends Component {
               rules={[
                 { required: true, message: 'Please choose your best skill' },
               ]}
+              tooltip="What skill can you help people learn?"
             >
               <select id="third">
+                <option value="" disable selected>
+                  Select your option
+                </option>
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
