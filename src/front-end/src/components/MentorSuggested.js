@@ -16,15 +16,6 @@ class MentorSuggested extends Component {
 
     this.acceptMentee = this.acceptMentee.bind(this);
     this.declineMentee = this.declineMentee.bind(this);
-    this.loadSuggestedMentees = this.loadSuggestedMentees.bind(this);
-  }
-
-  loadSuggestedMentees() {
-    const userRef = fire.database().ref('users/' + this.state.loggedUid);
-    const myMentees = ['-MLy_owDfdsfsZSNtIanUi6', '-MLy_owDS4aZSNtIanUi6'];
-    userRef.child('suggestedMentees').set(myMentees);
-    // eslint-disable-next-line
-    location.reload();
   }
 
   acceptMentee(menteeUid) {
@@ -105,9 +96,6 @@ class MentorSuggested extends Component {
   render() {
     return (
       <>
-        <button type="button" onClick={this.loadSuggestedMentees}>
-          load
-        </button>
         <Form>
           <h1>
             <center>These are your suggested mentees:</center>

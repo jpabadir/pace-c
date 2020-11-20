@@ -51,27 +51,28 @@ class MenteeDisplay extends Component {
                   <strong> Description: </strong> {this.props.description}
                 </td>
               </tr>
-              <tr>
-                <td>
-                  {this.props.request}
-                  <Button
-                    type="text"
-                    onClick={this.handleAcceptClick}
-                    id="accept"
-                  >
-                    Accept
-                    <CheckOutlined className="check" />{' '}
-                  </Button>
-                  <Button
-                    type="text"
-                    onClick={this.handleDeclineClick}
-                    id="decline"
-                  >
-                    Decline
-                    <CloseOutlined className="close" />{' '}
-                  </Button>
-                </td>
-              </tr>
+              {this.props.request && (
+                <tr>
+                  <td>
+                    <Button
+                      type="text"
+                      onClick={this.handleAcceptClick}
+                      id="accept"
+                    >
+                      Accept
+                      <CheckOutlined className="check" />{' '}
+                    </Button>
+                    <Button
+                      type="text"
+                      onClick={this.handleDeclineClick}
+                      id="decline"
+                    >
+                      Decline
+                      <CloseOutlined className="close" />{' '}
+                    </Button>
+                  </td>
+                </tr>
+              )}
             </tbody>
           </table>
         </div>

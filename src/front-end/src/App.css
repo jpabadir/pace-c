@@ -111,6 +111,8 @@ tr:last-child {
 .mentee-requests {
   float: left;
   margin-bottom: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 table {
