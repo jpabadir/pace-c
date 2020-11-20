@@ -106,13 +106,16 @@ class MenteeForm extends Component {
               />
             </Form.Item>
             <Form.Item
-              label="Best skill"
-              name="Best skill"
+              label="The skill you seek for the most"
+              name="Sought skill1"
               rules={[
                 { required: true, message: 'Please choose your best skill' },
               ]}
             >
               <select>
+                <option value="" disable selected>
+                  Select your option
+                </option>
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -120,13 +123,16 @@ class MenteeForm extends Component {
               </select>
             </Form.Item>
             <Form.Item
-              label="Second best skill"
-              name="Second best skill"
+              label="The skill you seek for the second most"
+              name="Sought skill2"
               rules={[
                 { required: true, message: 'Please choose your best skill' },
               ]}
             >
               <select>
+                <option value="" disable selected>
+                  Select your option
+                </option>
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -134,13 +140,16 @@ class MenteeForm extends Component {
               </select>
             </Form.Item>
             <Form.Item
-              label="Third best skill"
-              name="Third best skill"
+              label="The skill you seek for the third most"
+              name="Sought skill3"
               rules={[
                 { required: true, message: 'Please choose your best skill' },
               ]}
             >
               <select>
+                <option value="" disable selected>
+                  Select your option
+                </option>
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
