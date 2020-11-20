@@ -43,6 +43,12 @@ export function marshallMentorInfo(mentorFormValues) {
     name: mentorFormValues.nameInput,
     timeZone: mentorFormValues.timeZone,
     userType: 'mentor',
+    Skills: [
+      mentorFormValues.best,
+      mentorFormValues.second,
+      mentorFormValues.third,
+    ],
+    description: mentorFormValues.description,
   };
 }
 
