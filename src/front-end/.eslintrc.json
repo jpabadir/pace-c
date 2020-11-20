@@ -25,6 +25,9 @@
     "class-methods-use-this": [
       "off"
     ],
+    "prefer-destructuring": [
+      "off"
+    ],
     "react/destructuring-assignment": [
       "off"
     ],
