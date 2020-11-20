@@ -89,6 +89,12 @@ td {
   padding-right: 20px;
 }
 
+tr:last-child {
+  border: solid;
+  border-width: 1px 0;
+  text-align: center;
+}
+
 .check {
   color: #52c41a;
 }
@@ -99,16 +105,25 @@ td {
 
 .user-icon {
   font-size: 30px;
-  padding: 10px;
+  padding: 8px;
 }
 
 .mentee-requests {
   float: left;
+  margin-bottom: 15px;
 }
 
 table {
   table-layout: auto;
-  width: 325px;
+  width: 350px;
+}
+
+#accept {
+  border: 1px solid grey;
+}
+#decline {
+  border: 1px solid grey;
+  margin-left: 25px;
 }
 
 /*COSC360 mentioned that it's good to be aware of sizing when it comes to various devices, 
