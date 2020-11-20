@@ -105,6 +105,51 @@ class MenteeForm extends Component {
                 onChange={this.handleChange}
               />
             </Form.Item>
+            <Form.Item
+              label="Best skill"
+              name="Best skill"
+              rules={[
+                { required: true, message: 'Please choose your best skill' },
+              ]}
+            >
+              <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </Form.Item>
+            <Form.Item
+              label="Second best skill"
+              name="Second best skill"
+              rules={[
+                { required: true, message: 'Please choose your best skill' },
+              ]}
+            >
+              <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </Form.Item>
+            <Form.Item
+              label="Third best skill"
+              name="Third best skill"
+              rules={[
+                { required: true, message: 'Please choose your best skill' },
+              ]}
+            >
+              <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </Form.Item>
+            <Form.Item name={['user', 'introduction']} label="Description">
+              <Input.TextArea placeholder="Tell us a bit about yourself" />
+            </Form.Item>
             <Button type="submit" value="send" htmlType="submit">
               Submit
             </Button>
