@@ -106,11 +106,12 @@ class MenteeForm extends Component {
               />
             </Form.Item>
             <Form.Item
-              label="The skill you seek for the most"
+              label="Top 3 skills you seek for"
               name="Sought skill1"
               rules={[
                 { required: true, message: 'Please choose your best skill' },
               ]}
+              tooltip="Choose the three you require most"
             >
               <select>
                 <option value="" disable selected>
@@ -121,14 +122,7 @@ class MenteeForm extends Component {
                 <option>3</option>
                 <option>4</option>
               </select>
-            </Form.Item>
-            <Form.Item
-              label="The skill you seek for the second most"
-              name="Sought skill2"
-              rules={[
-                { required: true, message: 'Please choose your best skill' },
-              ]}
-            >
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <select>
                 <option value="" disable selected>
                   Select your option
@@ -138,14 +132,7 @@ class MenteeForm extends Component {
                 <option>3</option>
                 <option>4</option>
               </select>
-            </Form.Item>
-            <Form.Item
-              label="The skill you seek for the third most"
-              name="Sought skill3"
-              rules={[
-                { required: true, message: 'Please choose your best skill' },
-              ]}
-            >
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <select>
                 <option value="" disable selected>
                   Select your option
