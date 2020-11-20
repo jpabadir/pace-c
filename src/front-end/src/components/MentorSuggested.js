@@ -35,7 +35,15 @@ class MentorSuggested extends Component {
       <>
         <Form>
           <h1>
-            <center>These are your suggested mentees:</center>
+            <center>Suggested Mentees:</center>
+            <p3>
+              <center>
+                <i>
+                  After a mentee is accepted, you can view your accepted mentee
+                  on the accepted mentees page
+                </i>
+              </center>
+            </p3>
           </h1>
         </Form>
         <br />

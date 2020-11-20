@@ -35,6 +35,7 @@ class MenteeForm extends Component {
       nameInput: name,
       emailInput: email,
     };
+
     emailjs.send(
       'gmail',
       'template_kfjkdm4',
