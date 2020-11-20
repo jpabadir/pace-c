@@ -78,7 +78,7 @@ class MentorForm extends Component {
                 },
               ]}
             >
-              <Input placeholder="name@example.com" />
+              <Input type="email" placeholder="name@example.com" />
             </Form.Item>
             <Form.Item
               label="Time-zone"
@@ -100,7 +100,7 @@ class MentorForm extends Component {
               />
             </Form.Item>
             <Form.Item
-              label="Your password"
+              label="password"
               name="password"
               rules={[
                 {
