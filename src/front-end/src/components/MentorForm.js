@@ -153,8 +153,8 @@ class MentorForm extends Component {
               />
             </Form.Item>
             <Form.Item
-              label="Best skill"
-              name="Best"
+              label="Top 3 skills"
+              name="skill list"
               rules={[
                 { required: true, message: 'Please choose your best skill' },
               ]}
@@ -169,15 +169,7 @@ class MentorForm extends Component {
                 <option>3</option>
                 <option>4</option>
               </select>
-            </Form.Item>
-            <Form.Item
-              label="Second best skill"
-              name="Second"
-              rules={[
-                { required: true, message: 'Please choose your best skill' },
-              ]}
-              tooltip="What skill can you help people learn?"
-            >
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <select id="second">
                 <option value="" disable selected>
                   Select your option
@@ -187,15 +179,7 @@ class MentorForm extends Component {
                 <option>3</option>
                 <option>4</option>
               </select>
-            </Form.Item>
-            <Form.Item
-              label="Third best skill"
-              name="Third"
-              rules={[
-                { required: true, message: 'Please choose your best skill' },
-              ]}
-              tooltip="What skill can you help people learn?"
-            >
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <select id="third">
                 <option value="" disable selected>
                   Select your option
