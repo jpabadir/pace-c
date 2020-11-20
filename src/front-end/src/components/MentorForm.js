@@ -5,6 +5,7 @@ import { InfoCircleOutlined } from '@ant-design/icons';
 import TimezonePicker from 'react-bootstrap-timezone-picker';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import MentorCompletion from './MentorCompletion';
+import firebase from '../firebase-init';
 import {
   setInDB,
   createUserInFirebase,
@@ -22,6 +23,28 @@ class MentorForm extends Component {
   }
 
   onFinish(values) {
+    // put selected values in an array
+    const best = document.getElementById('best').value;
+    const second = document.getElementById('second').value;
+    const third = document.getElementById('third').value;
+    // values in the form
+    const organization = document.getElementById('organization').value;
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const timezone = document.getElementById('timezone').value;
+    const arr = [best, second, third];
+    const description = document.getElementById('description').value;
+    // pushes
+    this.saveMessage(
+      organization,
+      email,
+      name,
+      timezone,
+      'Mentor',
+      arr,
+      description,
+    );
+    // set submit to true
     this.setState({ isSubmitted: true });
 
     createUserInFirebase(values.emailInput, values.password).then(
@@ -33,6 +56,28 @@ class MentorForm extends Component {
 
   onFinishFailed(values) {
     console.log('Failed submit:', values);
+  }
+
+  saveMessage(
+    organization,
+    email,
+    name,
+    timezone,
+    userType,
+    skills,
+    description,
+  ) {
+    const messageRef = firebase.database().ref('users');
+    const newMessageRef = messageRef.push();
+    newMessageRef.set({
+      organization,
+      email,
+      name,
+      timezone,
+      userType,
+      Skills: [skills[0], skills[1], skills[2]],
+      description,
+    });
   }
 
   render() {
@@ -52,6 +97,7 @@ class MentorForm extends Component {
             >
               <Input
                 placeholder="Please enter your Organization"
+                id="organization"
                 prefix={
                   <Tooltip title="Organization you're planning to be a Mentor with">
                     <InfoCircleOutlined style={{ color: 'rgba(0,0,0,.45)' }} />
@@ -65,7 +111,7 @@ class MentorForm extends Component {
               // must have an input:
               rules={[{ required: true, message: 'Please input something' }]}
             >
-              <Input placeholder="please enter your name" />
+              <Input id="name" placeholder="please enter your name" />
             </Form.Item>
             <Form.Item
               label="Email"
@@ -74,7 +120,7 @@ class MentorForm extends Component {
               // must have an input:
               rules={[{ required: true, message: 'Please input something' }]}
             >
-              <Input placeholder="please enter your email" />
+              <Input id="email" placeholder="please enter your email" />
             </Form.Item>
             <Form.Item
               label="Please Select Your Time-zone"
@@ -84,6 +130,7 @@ class MentorForm extends Component {
             >
               <TimezonePicker
                 // time zones:
+                id="timezone"
                 absolute={false}
                 defaultValue="America/Los_Angeles"
                 placeholder="Select timezone..."
@@ -103,6 +150,54 @@ class MentorForm extends Component {
                     <InfoCircleOutlined style={{ color: 'rgba(0,0,0,.45)' }} />
                   </Tooltip>
                 }
+              />
+            </Form.Item>
+            <Form.Item
+              label="Best skill"
+              name="Best"
+              rules={[
+                { required: true, message: 'Please choose your best skill' },
+              ]}
+            >
+              <select id="best">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </Form.Item>
+            <Form.Item
+              label="Second best skill"
+              name="Second"
+              rules={[
+                { required: true, message: 'Please choose your best skill' },
+              ]}
+            >
+              <select id="second">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </Form.Item>
+            <Form.Item
+              label="Third best skill"
+              name="Third"
+              rules={[
+                { required: true, message: 'Please choose your best skill' },
+              ]}
+            >
+              <select id="third">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </Form.Item>
+            <Form.Item name="description" label="Description">
+              <Input.TextArea
+                id="description"
+                placeholder="Tell us a bit about yourself"
               />
             </Form.Item>
             <Button type="primary" htmlType="submit">
