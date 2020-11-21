@@ -52,6 +52,7 @@ class MentorHome extends Component {
           type="primary"
           htmlType="button"
           id="logout_button"
+          onClick={this.onLogout}
           // href="[insert logout page path here]"
         >
           logout
