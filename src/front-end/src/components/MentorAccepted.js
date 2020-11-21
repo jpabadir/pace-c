@@ -46,7 +46,8 @@ class MentorAccepted extends Component {
               email={mentee.email}
               skills={mentee.rankedSkills.join(', ')}
               description={mentee.description}
-              request
+              request={false}
+              menteeUid={mentee.id}
             />
           );
         })}

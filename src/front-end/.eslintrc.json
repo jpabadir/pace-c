@@ -16,6 +16,9 @@
     "index.js"
   ],
   "rules": {
+    "no-alert": [
+      "off"
+    ],
     "prefer-template": [
       "off"
     ],

@@ -84,8 +84,10 @@ export function fetchMenteesFullInfo(menteesIDs, context) {
     menteesIDs.forEach((menteeId) => {
       const menteeRef = firebase.database().ref('users/' + menteeId);
       menteeRef.on('value', (snapshot) => {
+        const menteeWithID = snapshot.val();
+        menteeWithID.id = menteeId;
         context.setState((prevState) => ({
-          mentees: prevState.mentees.concat(snapshot.val()),
+          mentees: prevState.mentees.concat(menteeWithID),
         }));
       });
     });
