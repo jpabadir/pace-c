@@ -31,7 +31,7 @@ class MentorTutorial extends Component {
             </h3>
             <p1>
               The suggested mentees tab is located on the top of the page. On
-              the suggested mentee page you will be able to view all of you
+              the suggested mentee page you will be able to view all of your
               suggested mentees and details about each mentee. To accept a
               mentee click on the green check mark button below the
               mentee&apos;s information. To decline a mentee click on the red X
