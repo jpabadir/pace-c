@@ -4,6 +4,7 @@ import TimezonePicker from 'react-bootstrap-timezone-picker';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import emailjs from 'emailjs-com';
 import MenteeCompletion from './MenteeCompletion';
+import { marshallMenteeInfo, pushToDB } from '../helper-methods';
 
 class MenteeForm extends Component {
   constructor(props) {
@@ -45,6 +46,21 @@ class MenteeForm extends Component {
   }
 
   onFinish(values) {
+    // put selected values in an array
+    const best = document.getElementById('best').value;
+    const second = document.getElementById('second').value;
+    const third = document.getElementById('third').value;
+    // values in the form
+    const arr = [best, second, third];
+    const description = document.getElementById('description').value;
+    // pushes
+    pushToDB(
+      'users',
+      marshallMenteeInfo({
+        arr,
+        description,
+      }),
+    );
     this.setState({ isSubmitted: true });
 
     this.sendEmail(values);
@@ -113,40 +129,49 @@ class MenteeForm extends Component {
               ]}
               tooltip="Choose the three you require most"
             >
-              <select>
+              <select id="best">
                 <option value="" disable selected>
                   Select your option
                 </option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
+                <option>Time management</option>
+                <option>LearderShip</option>
+                <option>Interpersonal Communication</option>
+                <option>Problem solving</option>
               </select>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <select>
+              <select id="second">
                 <option value="" disable selected>
                   Select your option
                 </option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
+                <option>Time management</option>
+                <option>LearderShip</option>
+                <option>Interpersonal Communication</option>
+                <option>Problem solving</option>
               </select>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <select>
+              <select id="third">
                 <option value="" disable selected>
                   Select your option
                 </option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
+                <option>Time management</option>
+                <option>LearderShip</option>
+                <option>Interpersonal Communication</option>
+                <option>Problem solving</option>
               </select>
             </Form.Item>
-            <Form.Item name={['user', 'introduction']} label="Description">
+            <Form.Item
+              name={['user', 'introduction']}
+              label="Description"
+              rules={[
+                {
+                  required: true,
+                  message: 'Please introduce yourself to us.',
+                },
+              ]}
+            >
               <Input.TextArea placeholder="Tell us a bit about yourself" />
             </Form.Item>
-            <Button type="submit" value="send" htmlType="submit">
+            <Button type="primary" htmlType="submit">
               Submit
             </Button>
           </Form>
