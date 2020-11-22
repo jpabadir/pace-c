@@ -87,8 +87,13 @@ class Login extends Component {
           </Button>
           {/* link below should allow the user to reset password: */}
           <p>
-            Forgot your password? Enter your email above and click&nbsp;
-            <Button onClick={this.localResetPassword}>here!</Button>
+            <a
+              className="loginlink"
+              href="http://localhost:3000/ForgotPassword
+              "
+            >
+              Forgot your password?&nbsp;
+            </a>
           </p>
           {/* below is used as a space between the two links */}
           &nbsp;

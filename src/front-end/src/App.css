@@ -73,6 +73,12 @@ a {
   margin: 30px;
 }
 
+.ForgotPassword {
+  border: solid black;
+  padding: 25px;
+  margin: 30px;
+}
+
 table,
 th {
   border: 1px solid black;
