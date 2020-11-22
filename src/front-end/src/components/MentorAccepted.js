@@ -35,7 +35,12 @@ class MentorAccepted extends Component {
       <>
         <Form>
           <h1>
-            <center>These are your accepted mentees:</center>
+            <center>Accepted Mentees:</center>
+            <p4>
+              <center>
+                <i>Below you can view details about each accepted mentee</i>
+              </center>
+            </p4>
           </h1>
         </Form>
         <br />

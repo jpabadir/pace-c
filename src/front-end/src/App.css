@@ -16,6 +16,14 @@ a {
   text-decoration: none;
 }
 
+p1 {
+  font-size: 1.15em;
+}
+
+p3 {
+  font-size: 0.75em;
+}
+
 .mentorship-form {
   border: solid black;
   padding: 25px;
@@ -28,10 +36,41 @@ a {
   margin: 30px;
 }
 
+.MentorSuggested {
+  border: solid black;
+  padding: 25px;
+  margin: 30px;
+}
+
+.MentorAccepted {
+  border: solid black;
+  padding: 25px;
+  margin: 30px;
+}
+
+.MentorTutorial {
+  border: solid black;
+  padding: 25px;
+  margin: 30px;
+}
+
+#logout_button {
+  position:absolute;
+  right:0;
+}
+
 .MentorForm {
   border: solid black;
   padding: 25px;
   margin: 30px;
+}
+
+p2 {
+  font-size: 1.15em;
+}
+
+p4 {
+  font-size: 0.75em;
 }
 
 .NextButton-InMentor {
