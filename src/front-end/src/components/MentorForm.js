@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button, Input, Tooltip } from 'antd';
+import { Form, Button, Input, Tooltip, Select } from 'antd';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { InfoCircleOutlined } from '@ant-design/icons';
 import TimezonePicker from 'react-bootstrap-timezone-picker';
@@ -9,21 +9,34 @@ import {
   setInDB,
   createUserInFirebase,
   marshallMentorInfo,
+  getCamelCase,
 } from '../helper-methods';
 
+const { Option } = Select;
+
+/* TODO: reduce redundancy by putting skills array in another file 
+and importing it both here and in mentee form */
 class MentorForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isSubmitted: false,
+      teachableSkills: [
+        'Time management',
+        'Leadership',
+        'Interpersonal Communication',
+        'Problem solving',
+      ],
     };
     this.onFinish = this.onFinish.bind(this);
     this.onFinishFailed = this.onFinishFailed.bind(this);
   }
 
   onFinish(values) {
+    // Set submit to true
     this.setState({ isSubmitted: true });
 
+    // Create user and store user's form info
     createUserInFirebase(values.emailInput, values.password).then(
       (createdUser) => {
         setInDB('users', createdUser.uid, marshallMentorInfo(values));
@@ -119,6 +132,68 @@ class MentorForm extends Component {
                   </Tooltip>
                 }
               />
+            </Form.Item>
+            <Form.Item
+              label="Top 3 skills"
+              tooltip="What skills can you help people learn?"
+            >
+              <Form.Item
+                name="skill1"
+                rules={[
+                  {
+                    required: true,
+                    message: 'Please choose your best skill',
+                  },
+                ]}
+              >
+                <Select>
+                  {this.state.teachableSkills.map((skill) => {
+                    return <Option value={getCamelCase(skill)}>{skill}</Option>;
+                  })}
+                </Select>
+              </Form.Item>
+              <Form.Item
+                name="skill2"
+                rules={[
+                  {
+                    required: true,
+                    message: 'Please choose your second best skill',
+                  },
+                ]}
+              >
+                <Select>
+                  {this.state.teachableSkills.map((skill) => {
+                    return <Option value={getCamelCase(skill)}>{skill}</Option>;
+                  })}
+                </Select>
+              </Form.Item>
+              <Form.Item
+                name="skill3"
+                rules={[
+                  {
+                    required: true,
+                    message: 'Please choose your third best skill',
+                  },
+                ]}
+              >
+                <Select>
+                  {this.state.teachableSkills.map((skill) => {
+                    return <Option value={getCamelCase(skill)}>{skill}</Option>;
+                  })}
+                </Select>
+              </Form.Item>
+            </Form.Item>
+            <Form.Item
+              name="description"
+              label="Description"
+              rules={[
+                {
+                  required: true,
+                  message: 'Please introduce yourself to us.',
+                },
+              ]}
+            >
+              <Input.TextArea placeholder="Tell us a bit about yourself" />
             </Form.Item>
             <Button type="primary" htmlType="submit">
               Submit

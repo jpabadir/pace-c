@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import { Form, Button, Input } from 'antd';
+import { Form, Button, Input, Select } from 'antd';
 import TimezonePicker from 'react-bootstrap-timezone-picker';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import emailjs from 'emailjs-com';
 import MenteeCompletion from './MenteeCompletion';
+import { marshallMenteeInfo, pushToDB, getCamelCase } from '../helper-methods';
+
+const { Option } = Select;
 
 class MenteeForm extends Component {
   constructor(props) {
@@ -12,6 +15,12 @@ class MenteeForm extends Component {
       isSubmitted: false,
       email: '',
       name: '',
+      learnableSkills: [
+        'Time management',
+        'Leadership',
+        'Interpersonal Communication',
+        'Problem solving',
+      ],
     };
     this.onFinish = this.onFinish.bind(this);
     this.onFinishFailed = this.onFinishFailed.bind(this);
@@ -49,7 +58,8 @@ class MenteeForm extends Component {
     this.setState({ isSubmitted: true });
 
     this.sendEmail(values);
-    /// pushToDB('users', marshallMenteeInfo(values));
+
+    pushToDB('users', marshallMenteeInfo(values));
   }
 
   onFinishFailed(values) {
@@ -68,20 +78,21 @@ class MenteeForm extends Component {
             <Form.Item
               label="Name"
               id="nameInput"
+              name="nameInput"
               // must have an input:
               rules={[{ required: true, message: 'Please enter your name' }]}
             >
               <Input
                 onInput={this.handleNameChange}
                 id="nameid"
-                name="nameInput"
-                placeholder="First name Last name"
+                placeholder="please enter your name"
               />
             </Form.Item>
             <Form.Item
               label="Email"
               id="emailInput"
               type="email"
+              name="emailInput"
               // must have an input:
               rules={[
                 {
@@ -93,7 +104,6 @@ class MenteeForm extends Component {
               <Input
                 onInput={this.handleEmailChange}
                 id="emailid"
-                name="emailInput"
                 placeholder="name@example.com"
               />
             </Form.Item>
@@ -111,7 +121,69 @@ class MenteeForm extends Component {
                 onChange={this.handleChange}
               />
             </Form.Item>
-            <Button type="submit" value="send" htmlType="submit">
+            <Form.Item
+              label="Top 3 skills"
+              tooltip="What skills are you looking to learn?"
+            >
+              <Form.Item
+                name="skill1"
+                rules={[
+                  {
+                    required: true,
+                    message: 'What do you most want to learn?',
+                  },
+                ]}
+              >
+                <Select>
+                  {this.state.learnableSkills.map((skill) => {
+                    return <Option value={getCamelCase(skill)}>{skill}</Option>;
+                  })}
+                </Select>
+              </Form.Item>
+              <Form.Item
+                name="skill2"
+                rules={[
+                  {
+                    required: true,
+                    message: "What's something else you want to learn?",
+                  },
+                ]}
+              >
+                <Select>
+                  {this.state.learnableSkills.map((skill) => {
+                    return <Option value={getCamelCase(skill)}>{skill}</Option>;
+                  })}
+                </Select>
+              </Form.Item>
+              <Form.Item
+                name="skill3"
+                rules={[
+                  {
+                    required: true,
+                    message: 'what is the last skill you want to learn?',
+                  },
+                ]}
+              >
+                <Select>
+                  {this.state.learnableSkills.map((skill) => {
+                    return <Option value={getCamelCase(skill)}>{skill}</Option>;
+                  })}
+                </Select>
+              </Form.Item>
+            </Form.Item>
+            <Form.Item
+              name="description"
+              label="Description"
+              rules={[
+                {
+                  required: true,
+                  message: 'Please introduce yourself to us.',
+                },
+              ]}
+            >
+              <Input.TextArea placeholder="Tell us a bit about yourself" />
+            </Form.Item>
+            <Button type="primary" htmlType="submit">
               Submit
             </Button>
           </Form>

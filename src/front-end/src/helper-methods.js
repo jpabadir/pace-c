@@ -36,6 +36,8 @@ export function pushToDB(reference, objectToSave) {
   firebase.database().ref(reference).push(objectToSave);
 }
 
+/* TODO: reduce redundancy between two below methods 
+with a third method for the attributes in common */
 export function marshallMentorInfo(mentorFormValues) {
   return {
     organization: mentorFormValues.organization,
@@ -43,15 +45,27 @@ export function marshallMentorInfo(mentorFormValues) {
     name: mentorFormValues.nameInput,
     timeZone: mentorFormValues.timeZone,
     userType: 'mentor',
+    rankedSkills: [
+      mentorFormValues.skill1,
+      mentorFormValues.skill2,
+      mentorFormValues.skill3,
+    ],
+    description: mentorFormValues.description,
   };
 }
 
-export function marshallMenteeInfo(mentorFormValues) {
+export function marshallMenteeInfo(menteeFormValues) {
   return {
-    email: mentorFormValues.emailInput,
-    name: mentorFormValues.nameInput,
-    timeZone: mentorFormValues.timeZone,
+    email: menteeFormValues.emailInput,
+    name: menteeFormValues.nameInput,
+    timeZone: menteeFormValues.timeZone,
     userType: 'mentee',
+    rankedSkills: [
+      menteeFormValues.skill1,
+      menteeFormValues.skill2,
+      menteeFormValues.skill3,
+    ],
+    description: menteeFormValues.description,
   };
 }
 
@@ -92,4 +106,13 @@ export function fetchMenteesFullInfo(menteesIDs, context) {
       });
     });
   }
+}
+
+// This function was copied directly from: https://stackoverflow.com/questions/2970525/converting-any-string-into-camel-case.
+export function getCamelCase(inputString) {
+  return inputString
+    .replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => {
+      return index === 0 ? word.toLowerCase() : word.toUpperCase();
+    })
+    .replace(/\s+/g, '');
 }
