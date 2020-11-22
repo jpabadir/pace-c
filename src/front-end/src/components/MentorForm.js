@@ -5,11 +5,11 @@ import { InfoCircleOutlined } from '@ant-design/icons';
 import TimezonePicker from 'react-bootstrap-timezone-picker';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import MentorCompletion from './MentorCompletion';
-import firebase from '../firebase-init';
 import {
   setInDB,
   createUserInFirebase,
   marshallMentorInfo,
+  pushToDB,
 } from '../helper-methods';
 
 class MentorForm extends Component {
@@ -28,21 +28,15 @@ class MentorForm extends Component {
     const second = document.getElementById('second').value;
     const third = document.getElementById('third').value;
     // values in the form
-    const organization = document.getElementById('organization').value;
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const timezone = document.getElementById('timezone').value;
     const arr = [best, second, third];
     const description = document.getElementById('description').value;
     // pushes
-    this.saveMessage(
-      organization,
-      email,
-      name,
-      timezone,
-      'Mentor',
-      arr,
-      description,
+    pushToDB(
+      'users',
+      marshallMentorInfo({
+        arr,
+        description,
+      }),
     );
     // set submit to true
     this.setState({ isSubmitted: true });
@@ -56,28 +50,6 @@ class MentorForm extends Component {
 
   onFinishFailed(values) {
     console.log('Failed submit:', values);
-  }
-
-  saveMessage(
-    organization,
-    email,
-    name,
-    timezone,
-    userType,
-    skills,
-    description,
-  ) {
-    const messageRef = firebase.database().ref('users');
-    const newMessageRef = messageRef.push();
-    newMessageRef.set({
-      organization,
-      email,
-      name,
-      timezone,
-      userType,
-      Skills: [skills[0], skills[1], skills[2]],
-      description,
-    });
   }
 
   render() {
@@ -111,7 +83,7 @@ class MentorForm extends Component {
               // must have an input:
               rules={[{ required: true, message: 'Please input something' }]}
             >
-              <Input id="name" placeholder="please enter your name" />
+              <Input placeholder="please enter your name" />
             </Form.Item>
             <Form.Item
               label="Email"
@@ -120,7 +92,7 @@ class MentorForm extends Component {
               // must have an input:
               rules={[{ required: true, message: 'Please input something' }]}
             >
-              <Input id="email" placeholder="please enter your email" />
+              <Input placeholder="please enter your email" />
             </Form.Item>
             <Form.Item
               label="Please Select Your Time-zone"
@@ -164,33 +136,42 @@ class MentorForm extends Component {
                 <option value="" disable selected>
                   Select your option
                 </option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
+                <option>Time management</option>
+                <option>LearderShip</option>
+                <option>Interpersonal Communication</option>
+                <option>Problem solving</option>
               </select>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <select id="second">
                 <option value="" disable selected>
                   Select your option
                 </option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
+                <option>Time management</option>
+                <option>LearderShip</option>
+                <option>Interpersonal Communication</option>
+                <option>Problem solving</option>
               </select>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <select id="third">
                 <option value="" disable selected>
                   Select your option
                 </option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
+                <option>Time management</option>
+                <option>LearderShip</option>
+                <option>Interpersonal Communication</option>
+                <option>Problem solving</option>
               </select>
             </Form.Item>
-            <Form.Item name="description" label="Description">
+            <Form.Item
+              name="description"
+              label="Description"
+              rules={[
+                {
+                  required: true,
+                  message: 'Please introduce yourself to us.',
+                },
+              ]}
+            >
               <Input.TextArea
                 id="description"
                 placeholder="Tell us a bit about yourself"
