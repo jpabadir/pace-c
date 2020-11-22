@@ -1,23 +1,55 @@
 import React, { Component } from 'react';
 import { Form } from 'antd';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
-
-// NOTE: Fields surrounded by square brackets []
-// denote fields that are required to be filled-in from the database
+import MenteeDisplay from './MenteeDisplay';
+import fire from '../firebase-init';
+import { fetchMenteesIDs, fetchMenteesFullInfo } from '../helper-methods';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class MentorAccepted extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      mentees: [],
+    };
+  }
+
+  authListener() {
+    return new Promise((resolve) => {
+      fire.auth().onAuthStateChanged((user) => {
+        resolve(user.uid);
+      });
+    });
+  }
+
+  componentDidMount() {
+    this.authListener().then((uid) => {
+      fetchMenteesIDs(uid, 'accepted').then((menteesIDs) => {
+        fetchMenteesFullInfo(menteesIDs, this);
+      });
+    });
+  }
+
   render() {
     return (
-      // What looks like an empty tag (<>) is known as a Fragment
-      // Fragments are needed to turn HTML into JSX
       <>
         <Form>
           <h1>
             <center>These are your accepted mentees:</center>
           </h1>
         </Form>
-        {/* insert mentee card/for loop here */}
+        <br />
+        {this.state.mentees.map((mentee) => {
+          return (
+            <MenteeDisplay
+              name={mentee.name}
+              email={mentee.email}
+              skills={mentee.rankedSkills.join(', ')}
+              description={mentee.description}
+              request
+            />
+          );
+        })}
       </>
     );
   }
