@@ -44,6 +44,7 @@ class MenteeForm extends Component {
       nameInput: name,
       emailInput: email,
     };
+
     emailjs.send(
       'gmail',
       'template_kfjkdm4',
@@ -79,7 +80,7 @@ class MenteeForm extends Component {
               id="nameInput"
               name="nameInput"
               // must have an input:
-              rules={[{ required: true, message: 'Please input something' }]}
+              rules={[{ required: true, message: 'Please enter your name' }]}
             >
               <Input
                 onInput={this.handleNameChange}
@@ -93,12 +94,17 @@ class MenteeForm extends Component {
               type="email"
               name="emailInput"
               // must have an input:
-              rules={[{ required: true, message: 'Please input something' }]}
+              rules={[
+                {
+                  required: true,
+                  message: 'Please enter your email in a proper format',
+                },
+              ]}
             >
               <Input
                 onInput={this.handleEmailChange}
                 id="emailid"
-                placeholder="please enter your email"
+                placeholder="name@example.com"
               />
             </Form.Item>
             <Form.Item

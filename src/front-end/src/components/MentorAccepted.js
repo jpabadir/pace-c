@@ -35,7 +35,12 @@ class MentorAccepted extends Component {
       <>
         <Form>
           <h1>
-            <center>These are your accepted mentees:</center>
+            <center>Accepted Mentees:</center>
+            <p4>
+              <center>
+                <i>Below you can view details about each accepted mentee</i>
+              </center>
+            </p4>
           </h1>
         </Form>
         <br />
@@ -46,7 +51,8 @@ class MentorAccepted extends Component {
               email={mentee.email}
               skills={mentee.rankedSkills.join(', ')}
               description={mentee.description}
-              request
+              request={false}
+              menteeUid={mentee.id}
             />
           );
         })}

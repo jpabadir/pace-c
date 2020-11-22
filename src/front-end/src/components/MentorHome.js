@@ -47,14 +47,20 @@ class MentorHome extends Component {
         >
           Accepted Mentees
         </Button>
+        {/* replace what's in square brackets [] w/ info from DB */}
+        <Button
+          type="primary"
+          htmlType="button"
+          id="logout_button"
+          onClick={this.onLogout}
+          // href="[insert logout page path here]"
+        >
+          logout
+        </Button>
+
         <Route path="/Auth/SuggestedMentees" component={MentorSuggested} />
         <Route path="/Auth/MentorAccepted" component={MentorAccepted} />
         <Route path="/Auth/MentorTutorial" component={MentorTutorial} />
-
-        {/* replace what's in square brackets [] w/ info from DB */}
-        <Button onClick={this.onLogout} type="primary" htmlType="button">
-          Logout
-        </Button>
       </>
     );
   }

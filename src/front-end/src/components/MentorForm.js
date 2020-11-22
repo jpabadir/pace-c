@@ -76,24 +76,33 @@ class MentorForm extends Component {
               label="Name"
               name="nameInput"
               // must have an input:
-              rules={[{ required: true, message: 'Please input something' }]}
+              rules={[{ required: true, message: 'Please enter your name' }]}
             >
-              <Input placeholder="please enter your name" />
+              <Input placeholder="First name Last name" />
             </Form.Item>
             <Form.Item
               label="Email"
               name="emailInput"
-              type="email"
               // must have an input:
-              rules={[{ required: true, message: 'Please input something' }]}
+              rules={[
+                {
+                  required: true,
+                  message: 'Please enter your email in a proper format',
+                },
+              ]}
             >
-              <Input placeholder="please enter your email" />
+              <Input type="email" placeholder="name@example.com" />
             </Form.Item>
             <Form.Item
-              label="Please Select Your Time-zone"
+              label="Time-zone"
               name="timeZone"
               // must have an input:
-              rules={[{ required: true, message: 'This field is required' }]}
+              rules={[
+                {
+                  required: true,
+                  message: 'Please select your Time-zone',
+                },
+              ]}
             >
               <TimezonePicker
                 // time zones:
@@ -104,13 +113,19 @@ class MentorForm extends Component {
               />
             </Form.Item>
             <Form.Item
-              label="Please enter your password"
+              label="password"
               name="password"
-              rules={[{ required: true, message: 'Please input something' }]}
+              rules={[
+                {
+                  required: true,
+                  message: 'Please enter your password for your new account',
+                },
+              ]}
             >
               <Input
                 type="password"
-                placeholder="Please enter your password"
+                placeholder="Password"
+                minlength="8"
                 prefix={
                   <Tooltip title="Password should be at least 8 characters.">
                     <InfoCircleOutlined style={{ color: 'rgba(0,0,0,.45)' }} />
