@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button, Input, Tooltip } from 'antd';
+import { Form, Button, Input, Tooltip, Select } from 'antd';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { InfoCircleOutlined } from '@ant-design/icons';
 import TimezonePicker from 'react-bootstrap-timezone-picker';
@@ -9,38 +9,34 @@ import {
   setInDB,
   createUserInFirebase,
   marshallMentorInfo,
-  pushToDB,
+  getCamelCase,
 } from '../helper-methods';
 
+const { Option } = Select;
+
+/* TODO: reduce redundancy by putting skills array in another file 
+and importing it both here and in mentee form */
 class MentorForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isSubmitted: false,
+      teachableSkills: [
+        'Time management',
+        'Leadership',
+        'Interpersonal Communication',
+        'Problem solving',
+      ],
     };
     this.onFinish = this.onFinish.bind(this);
     this.onFinishFailed = this.onFinishFailed.bind(this);
   }
 
   onFinish(values) {
-    // put selected values in an array
-    const best = document.getElementById('best').value;
-    const second = document.getElementById('second').value;
-    const third = document.getElementById('third').value;
-    // values in the form
-    const arr = [best, second, third];
-    const description = document.getElementById('description').value;
-    // pushes
-    pushToDB(
-      'users',
-      marshallMentorInfo({
-        arr,
-        description,
-      }),
-    );
-    // set submit to true
+    // Set submit to true
     this.setState({ isSubmitted: true });
 
+    // Create user and store user's form info
     createUserInFirebase(values.emailInput, values.password).then(
       (createdUser) => {
         setInDB('users', createdUser.uid, marshallMentorInfo(values));
@@ -69,7 +65,6 @@ class MentorForm extends Component {
             >
               <Input
                 placeholder="Please enter your Organization"
-                id="organization"
                 prefix={
                   <Tooltip title="Organization you're planning to be a Mentor with">
                     <InfoCircleOutlined style={{ color: 'rgba(0,0,0,.45)' }} />
@@ -102,7 +97,6 @@ class MentorForm extends Component {
             >
               <TimezonePicker
                 // time zones:
-                id="timezone"
                 absolute={false}
                 defaultValue="America/Los_Angeles"
                 placeholder="Select timezone..."
@@ -126,41 +120,53 @@ class MentorForm extends Component {
             </Form.Item>
             <Form.Item
               label="Top 3 skills"
-              name="skill list"
-              rules={[
-                { required: true, message: 'Please choose your best skill' },
-              ]}
-              tooltip="What skill can you help people learn?"
+              tooltip="What skills can you help people learn?"
             >
-              <select id="best">
-                <option value="" disable selected>
-                  Select your option
-                </option>
-                <option>Time management</option>
-                <option>LearderShip</option>
-                <option>Interpersonal Communication</option>
-                <option>Problem solving</option>
-              </select>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <select id="second">
-                <option value="" disable selected>
-                  Select your option
-                </option>
-                <option>Time management</option>
-                <option>LearderShip</option>
-                <option>Interpersonal Communication</option>
-                <option>Problem solving</option>
-              </select>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <select id="third">
-                <option value="" disable selected>
-                  Select your option
-                </option>
-                <option>Time management</option>
-                <option>LearderShip</option>
-                <option>Interpersonal Communication</option>
-                <option>Problem solving</option>
-              </select>
+              <Form.Item
+                name="skill1"
+                rules={[
+                  {
+                    required: true,
+                    message: 'Please choose your best skill',
+                  },
+                ]}
+              >
+                <Select>
+                  {this.state.teachableSkills.map((skill) => {
+                    return <Option value={getCamelCase(skill)}>{skill}</Option>;
+                  })}
+                </Select>
+              </Form.Item>
+              <Form.Item
+                name="skill2"
+                rules={[
+                  {
+                    required: true,
+                    message: 'Please choose your second best skill',
+                  },
+                ]}
+              >
+                <Select>
+                  {this.state.teachableSkills.map((skill) => {
+                    return <Option value={getCamelCase(skill)}>{skill}</Option>;
+                  })}
+                </Select>
+              </Form.Item>
+              <Form.Item
+                name="skill3"
+                rules={[
+                  {
+                    required: true,
+                    message: 'Please choose your third best skill',
+                  },
+                ]}
+              >
+                <Select>
+                  {this.state.teachableSkills.map((skill) => {
+                    return <Option value={getCamelCase(skill)}>{skill}</Option>;
+                  })}
+                </Select>
+              </Form.Item>
             </Form.Item>
             <Form.Item
               name="description"
@@ -172,10 +178,7 @@ class MentorForm extends Component {
                 },
               ]}
             >
-              <Input.TextArea
-                id="description"
-                placeholder="Tell us a bit about yourself"
-              />
+              <Input.TextArea placeholder="Tell us a bit about yourself" />
             </Form.Item>
             <Button type="primary" htmlType="submit">
               Submit
