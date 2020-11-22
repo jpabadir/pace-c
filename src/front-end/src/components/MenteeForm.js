@@ -47,11 +47,10 @@ class MenteeForm extends Component {
 
   onFinish(values) {
     // put selected values in an array
-    const best = document.getElementById('best').value;
     const second = document.getElementById('second').value;
     const third = document.getElementById('third').value;
     // values in the form
-    const arr = [best, second, third];
+    const arr = [second, third];
     const description = document.getElementById('description').value;
     // pushes
     pushToDB(
