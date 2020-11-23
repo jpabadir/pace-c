@@ -108,7 +108,7 @@ class MenteeForm extends Component {
               />
             </Form.Item>
             <Form.Item
-              label="Please Select Your Time-zone"
+              label="Time-zone"
               name="timeZone"
               // must have an input:
               rules={[{ required: true, message: 'This field is required' }]}
