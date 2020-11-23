@@ -97,9 +97,13 @@ class Login extends Component {
           </p>
           {/* below is used as a space between the two links */}
           &nbsp;
-          <p>Don&apos;t have an account yet?</p>
+          <p>Don&apos;t have a mentor account yet?</p>
           {/* button below should link to the createaccount page: */}
-          <Button type="primary" htmlType="button">
+          <Button
+            type="primary"
+            htmlType="button"
+            href="http://localhost:3000/MentorForm"
+          >
             Create Account
           </Button>
         </Form>
