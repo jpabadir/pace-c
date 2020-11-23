@@ -99,11 +99,7 @@ class Login extends Component {
           &nbsp;
           <p>Don&apos;t have a mentor account yet?</p>
           {/* button below should link to the createaccount page: */}
-          <Button
-            type="primary"
-            htmlType="button"
-            href="http://localhost:3000/MentorForm"
-          >
+          <Button type="primary" htmlType="button" href="/MentorForm">
             Create Account
           </Button>
         </Form>
