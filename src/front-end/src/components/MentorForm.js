@@ -113,7 +113,7 @@ class MentorForm extends Component {
               />
             </Form.Item>
             <Form.Item
-              label="password"
+              label="Password"
               name="password"
               rules={[
                 {
