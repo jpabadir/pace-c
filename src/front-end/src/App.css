@@ -24,31 +24,14 @@ p3 {
   font-size: 0.75em;
 }
 
-.mentorship-form {
-  border: solid black;
-  padding: 25px;
-  margin: 30px;
-}
-
-.Login {
-  border: solid black;
-  padding: 25px;
-  margin: 30px;
-}
-
-.MentorSuggested {
-  border: solid black;
-  padding: 25px;
-  margin: 30px;
-}
-
-.MentorAccepted {
-  border: solid black;
-  padding: 25px;
-  margin: 30px;
-}
-
-.MentorTutorial {
+.mentorship-form,
+.Login,
+.MentorTutorial,
+.MentorForm,
+.MenteeForm,
+.MentorCompletion,
+.MenteeCompletion,
+.ForgotPassword {
   border: solid black;
   padding: 25px;
   margin: 30px;
@@ -57,12 +40,6 @@ p3 {
 #logout_button {
   position: absolute;
   right: 0;
-}
-
-.MentorForm {
-  border: solid black;
-  padding: 25px;
-  margin: 30px;
 }
 
 p2 {
@@ -75,12 +52,6 @@ p4 {
 
 .NextButton-InMentor {
   float: right;
-}
-
-.MenteeForm {
-  border: solid black;
-  padding: 25px;
-  margin: 30px;
 }
 
 .NextButton-InMentee {
@@ -98,24 +69,6 @@ p4 {
 
 .loginlink {
   color: blue;
-}
-
-.MentorCompletion {
-  border: solid black;
-  padding: 25px;
-  margin: 30px;
-}
-
-.MenteeCompletion {
-  border: solid black;
-  padding: 25px;
-  margin: 30px;
-}
-
-.ForgotPassword {
-  border: solid black;
-  padding: 25px;
-  margin: 30px;
 }
 
 table,
