@@ -51,6 +51,7 @@ export function marshallMentorInfo(mentorFormValues) {
       mentorFormValues.skill3,
     ],
     description: mentorFormValues.description,
+    suggestedMentees: ['-MLy_owDfdsfsZSNtIanUi6', '-MLy_owDS4aZSNtIanUi6'],
   };
 }
 

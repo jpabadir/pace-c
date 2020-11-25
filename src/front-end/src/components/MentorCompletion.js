@@ -12,7 +12,7 @@ export default () => (
       >
         here&nbsp;
       </a>
-      to login!
+      to access your account!
     </p>
   </div>
 );
