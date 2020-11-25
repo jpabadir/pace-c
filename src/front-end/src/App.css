@@ -24,7 +24,6 @@ p3 {
   font-size: 0.75em;
 }
 
-.mentorship-form,
 .Login,
 .MentorTutorial,
 .MentorForm,
@@ -48,18 +47,6 @@ p2 {
 
 p4 {
   font-size: 0.75em;
-}
-
-.NextButton-InMentor {
-  float: right;
-}
-
-.NextButton-InMentee {
-  float: right;
-}
-
-.next-button {
-  float: right;
 }
 
 .time-zone-picker {

@@ -120,6 +120,7 @@ class MenteeForm extends Component {
                 defaultValue="America/Los_Angeles"
                 placeholder="Select timezone..."
                 onChange={this.handleChange}
+                className="time-zone-picker"
               />
             </Form.Item>
             <Form.Item
