@@ -105,6 +105,7 @@ class MenteeForm extends Component {
                 onInput={this.handleEmailChange}
                 id="emailid"
                 placeholder="name@example.com"
+                type="email"
               />
             </Form.Item>
             <Form.Item

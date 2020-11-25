@@ -55,7 +55,7 @@ class MentorHome extends Component {
           onClick={this.onLogout}
           // href="[insert logout page path here]"
         >
-          logout
+          Logout
         </Button>
 
         <Route path="/Auth/SuggestedMentees" component={MentorSuggested} />
