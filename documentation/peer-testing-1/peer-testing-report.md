@@ -16,7 +16,7 @@ In total, \_\_\_ individuals took part in our peer testing sessions. The members
 | Katrina | | |
 | Aleks | | |
 | Aleks | | |
-| Eric | | |
+| Eric |Shawn Zhao |completed. |
 | Eric | | |
 
 ## User Groups and List of Tasks that Participants Completed
