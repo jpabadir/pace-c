@@ -117,7 +117,7 @@ class MenteeForm extends Component {
               <TimezonePicker
                 // time zones:
                 absolute={false}
-                defaultValue="America/Los_Angeles"
+                defaultValue=""
                 placeholder="Select timezone..."
                 onChange={this.handleChange}
                 style={{ width: '380px' }}

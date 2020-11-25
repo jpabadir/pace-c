@@ -106,7 +106,7 @@ class MentorForm extends Component {
             >
               <TimezonePicker
                 absolute={false}
-                defaultValue="America/Los_Angeles"
+                defaultValue=""
                 placeholder="Select timezone..."
                 onChange={this.handleChange}
                 style={{ width: '380px' }}
