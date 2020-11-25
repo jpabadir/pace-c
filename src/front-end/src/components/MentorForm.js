@@ -55,7 +55,11 @@ class MentorForm extends Component {
     if (!this.state.isSubmitted) {
       return (
         <div className="MentorForm">
-          <Form onFinish={this.onFinish} onFinishFailed={this.onFinishFailed}>
+          <Form
+            onFinish={this.onFinish}
+            onFinishFailed={this.onFinishFailed}
+            autocomplete="off"
+          >
             <h1>Sign up as a mentor</h1>
             <Form.Item
               label="Organization"
