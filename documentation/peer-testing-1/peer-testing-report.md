@@ -17,7 +17,7 @@ In total, \_\_\_ individuals took part in our peer testing sessions. The members
 | Aleks | | |
 | Aleks | | |
 | Eric |Shawn Zhao |completed. https://drive.google.com/file/d/1ShiqTAuYx-A4fGYGX3kxUzmvrkmj7XxW/view?usp=sharing|
-| Eric | | |
+| Eric |Henter Yang|completed. https://drive.google.com/file/d/1BUfx8tWtxhA7n3y22yBHnbYKdaHj22cf/view?usp=sharing|
 
 ## User Groups and List of Tasks that Participants Completed
 
