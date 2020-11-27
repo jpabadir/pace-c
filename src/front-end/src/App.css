@@ -24,45 +24,21 @@ p3 {
   font-size: 0.75em;
 }
 
-.mentorship-form {
-  border: solid black;
-  padding: 25px;
-  margin: 30px;
-}
-
-.Login {
-  border: solid black;
-  padding: 25px;
-  margin: 30px;
-}
-
-.MentorSuggested {
-  border: solid black;
-  padding: 25px;
-  margin: 30px;
-}
-
-.MentorAccepted {
-  border: solid black;
-  padding: 25px;
-  margin: 30px;
-}
-
-.MentorTutorial {
+.Login,
+.MentorTutorial,
+.MentorForm,
+.MenteeForm,
+.MentorCompletion,
+.MenteeCompletion,
+.ForgotPassword {
   border: solid black;
   padding: 25px;
   margin: 30px;
 }
 
 #logout_button {
-  position:absolute;
-  right:0;
-}
-
-.MentorForm {
-  border: solid black;
-  padding: 25px;
-  margin: 30px;
+  position: absolute;
+  right: 0;
 }
 
 p2 {
@@ -71,24 +47,6 @@ p2 {
 
 p4 {
   font-size: 0.75em;
-}
-
-.NextButton-InMentor {
-  float: right;
-}
-
-.MenteeForm {
-  border: solid black;
-  padding: 25px;
-  margin: 30px;
-}
-
-.NextButton-InMentee {
-  float: right;
-}
-
-.next-button {
-  float: right;
 }
 
 .time-zone-picker {
@@ -100,27 +58,10 @@ p4 {
   color: blue;
 }
 
-.MentorCompletion {
-  border: solid black;
-  padding: 25px;
-  margin: 30px;
-}
-
-.MenteeCompletion {
-  border: solid black;
-  padding: 25px;
-  margin: 30px;
-}
-
-.ForgotPassword {
-  border: solid black;
-  padding: 25px;
-  margin: 30px;
-}
-
 table,
 th {
-  border: 1px solid black;
+  border: 1px solid rgb(112, 111, 111);
+  background-color: rgb(239, 247, 247);
 }
 
 th {
@@ -134,7 +75,7 @@ td {
   padding-right: 20px;
 }
 
-tr:last-child {
+#request-row {
   border: solid;
   border-width: 1px 0;
   text-align: center;
