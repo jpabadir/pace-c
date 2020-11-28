@@ -27,11 +27,11 @@ In total, \_\_\_ individuals took part in our peer testing sessions. The members
 
 #### High
 
-- Timezone field does not "glow" red if the user did not enter anything, it only shows the text "please select your time-zone"
-- When signing in, if the user does not enter anything for email and password, it just says "please input something" for both fields, and then a pop-up that says "the email address is badly formatted" however both fields are blank.
-- From the above point, we should change "please input something" to "please input password" or "please input email", for the red text that pops up if the user does not enter an email address in the login page.
-- If the user enters incorrect username and password, the website creates a popup that is "wordy" and maybe difficult to understand.
-- We should make different messages depending on of if the user did not enter any information in login screen (password/email) or if the user entered information but the information is wrong/does not have an account.
+- Timezone field does not "glow" red if the user did not enter anything, it only shows the text "please select your time-zone" (mentor and mentee form)
+- When signing in, if the user does not enter anything for email and password, it just says "please input something" for both fields, and then a pop-up that says "the email address is badly formatted" however both fields are blank. (login page)
+- From the above point, we should change "please input something" to "please input password" or "please input email", for the red text that pops up if the user does not enter an email address in the login page. (login page)
+- If the user enters incorrect username and password, the website creates a popup that is "wordy" and maybe difficult to understand. (login page)
+- We should make different messages depending on of if the user did not enter any information in login screen (password/email) or if the user entered information but the information is wrong/does not have an account. (login page)
 
 #### Medium
 
