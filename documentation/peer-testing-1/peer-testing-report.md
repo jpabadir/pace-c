@@ -44,6 +44,8 @@ In total, \_\_\_ individuals took part in our peer testing sessions. The members
 
 ### Testimonials from the Participants to Explain the Graph - ((indivial - unassigned))
 - To show that the signup and login pages work together and show the user the correct order to fill out the forms:
-  - Everything works smoothly and follows a flow. (while going through
-- 
-  - Great website, hard to find something to change. (While user was filling out the survery questions)
+  - Everything works smoothly and follows a flow. (while going through survey)
+- To show that the website right now is similar to other popular websites:
+  - Great website, hard to find something to change. (while user was filling out the survery questions)
+- To show that website has a simple design, but may need more images/graphics:
+  - Clean website. Easy to use. (while user was filling out the mentor form)
