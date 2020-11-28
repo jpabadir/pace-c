@@ -27,7 +27,7 @@ In total, \_\_\_ individuals took part in our peer testing sessions. The members
 
 #### High
 
--
+- Timezone field does not "glow" read if the user did not enter anything, it only shows the text "please select your time-zone"
 
 #### Medium
 
