@@ -27,22 +27,24 @@ In total, \_\_\_ individuals took part in our peer testing sessions. The members
 
 #### High
 
-- Timezone field does not "glow" red if the user did not enter anything, it only shows the text "please select your time-zone" (mentor and mentee form)
+- Timezone field does not "glow" red if the user did not enter anything, it only shows the text "please select your time-zone". (mentor and mentee form)
 - When signing in, if the user does not enter anything for email and password, it just says "please input something" for both fields, and then a pop-up that says "the email address is badly formatted" however both fields are blank. (login page)
-- From the above point, we should change "please input something" to "please input password" or "please input email", for the red text that pops up if the user does not enter an email address in the login page. (login page)
-- If the user enters incorrect username and password, the website creates a popup that is "wordy" and maybe difficult to understand. (login page)
+- From the above point, we should change "please input something" to "please input password" or "please input email", for the red text that pops up at the bottom of the field if the user does not enter an email address in the login page. (login page)
+- If the user enters a incorrect username and password, the website creates a popup that is "wordy" and maybe difficult to understand. (login page)
 - We should make different messages depending on of if the user did not enter any information in login screen (password/email) or if the user entered information but the information is wrong/does not have an account. (login page)
+- From above points, change the login pop up messages depending on what is and is not filled in. Change the red text that popups at the bottom of the field depending on what is and is not filled in. (login page)
 
 #### Medium
 
-- If user did not enter something for organization, it says "please input something", we should change to this to something like "please enter your organization"
-- Show more information on what "organization" is supposed to be (add more onto the tooltip)
-- Add images/graphics
+- If user did not enter something for organization, it says "please input something", we should change to this to something like "please enter your organization". (metnor form)
+- Show more information on what "organization" is supposed to be (add more onto the tooltip). (mentor form)
+- Add images/graphics. (mentor and mentee form, and login page)
 
 #### Low
 
-- Add more skills to "Top 3 skills"
-- Change "Please enter your email in a proper format" to "Please enter a valid email", this is used more often in popular websites
+- Add more skills to "Top 3 skills". (mentor and mentee form)
+- Change "Please enter your email in a proper format" to "Please enter a valid email", this is used more often in popular websites. (mentor and mentee form)
+- If user did not select a time zone, the error message has a capital "T" in time zone, this should be changed to a lower case "t". (mentor and mentee form)
 
 ## Quantitative Data - ((common - unassigned))
 [This would most likely come from the Google Forms which outlines the 10 point heuristics. I think Eric set this up - but we'll need to confirm]
