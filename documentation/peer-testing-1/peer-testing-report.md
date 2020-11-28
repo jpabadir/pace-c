@@ -14,7 +14,7 @@ In total, \_\_\_ individuals took part in our peer testing sessions. The members
 | JP | | |
 | Katrina | | |
 | Katrina | | |
-| Aleks |  Aaron Mahnic  | https://drive.google.com/file/d/1uXFvFiiN1yc6-SzBoKF5isCCfTlds3us/view?usp=sharing |
+| Aleks | Aaron Mahnic | https://drive.google.com/file/d/1uXFvFiiN1yc6-SzBoKF5isCCfTlds3us/view?usp=sharing |
 | Aleks | | |
 | Eric | | |
 | Eric | | |
