@@ -38,6 +38,7 @@ In total, \_\_\_ individuals took part in our peer testing sessions. The members
 #### Low
 
 - Add more skills to "Top 3 skills"
+- Change "Please enter your email in a proper format" to "Please enter a valid email", this is used more often in popular websites
 
 ## Quantitative Data - ((common - unassigned))
 [This would most likely come from the Google Forms which outlines the 10 point heuristics. I think Eric set this up - but we'll need to confirm]
