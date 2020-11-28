@@ -36,6 +36,7 @@ In total, \_\_\_ individuals took part in our peer testing sessions. The members
 
 #### Medium
 
+- Make the "organization" field not mandatory. This way, people without an organziation can sign up.
 - If user did not enter something for organization, it says "please input something", we should change to this to something like "please enter your organization". (metnor form)
 - Show more information on what "organization" is supposed to be (add more onto the tooltip). (mentor form)
 - Add images/graphics. (mentor and mentee form, and login page)
@@ -56,3 +57,7 @@ In total, \_\_\_ individuals took part in our peer testing sessions. The members
   - Great website, hard to find something to change. (while user was filling out the survery questions)
 - To show that website has a simple design, but may need more images/graphics:
   - Clean website. Easy to use. (while user was filling out the mentor form)
+- To show that both mentor and mentee signup forms are easy to navigate and complete:
+  - Simple website, easy to read and fill out forms. (while filling in mentor and mentee forms)
+- Showing that the mentor login screen is clean but not much functionality for the mentor/mentee matching:
+  - Simple UI for mentor home but not much functionality for the mentor/mentee matching system right now. (while looking at suggested and accepted mentees)
