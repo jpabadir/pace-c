@@ -27,7 +27,7 @@ In total, \_\_\_ individuals took part in our peer testing sessions. The members
 
 #### High
 
-- Timezone field does not "glow" read if the user did not enter anything, it only shows the text "please select your time-zone"
+- Timezone field does not "glow" red if the user did not enter anything, it only shows the text "please select your time-zone"
 - When signing in, if the user does not enter anything for email and password, it just says "please input something" for both fields, and then a pop-up that says "the email address is badly formatted" however both fields are blank.
 - From the above point, we should change "please input something" to "please input password" or "please input email", for the red text that pops up if the user does not enter an email address in the login page.
 - If the user enters incorrect username and password, the website creates a popup that is "wordy" and maybe difficult to understand.
