@@ -31,14 +31,19 @@ In total, \_\_\_ individuals took part in our peer testing sessions. The members
 
 #### Medium
 
--
+- If user did not enter something for organization, it says "please input something", we should change to this to something like "please enter your organization"
+- Show more information on what "organization" is supposed to be (add more onto the tooltip)
+- Add images/graphics
 
 #### Low
 
--
+- Add more skills to "Top 3 skills"
 
 ## Quantitative Data - ((common - unassigned))
 [This would most likely come from the Google Forms which outlines the 10 point heuristics. I think Eric set this up - but we'll need to confirm]
 
 ### Testimonials from the Participants to Explain the Graph - ((indivial - unassigned))
-[Placeholder. Quotes from the user's experience will be placed here]
+- To show that the signup and login pages work together and show the user the correct order to fill out the forms:
+  - Everything works smoothly and follows a flow. (while going through
+- 
+  - Great website, hard to find something to change. (While user was filling out the survery questions)
