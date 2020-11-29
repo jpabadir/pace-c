@@ -33,7 +33,6 @@ In total, \_\_\_ individuals took part in our peer testing sessions. The members
 - If the user enters a incorrect username and password, the website creates a popup that is "wordy" and maybe difficult to understand. (login page)
 - We should make different messages depending on of if the user did not enter any information in login screen (password/email) or if the user entered information but the information is wrong/does not have an account. (login page)
 - From above points, change the login pop up messages depending on what is and is not filled in. Change the red text that popups at the bottom of the field depending on what is and is not filled in. (login page)
-- Make the "organization" field not mandatory. This way, people without an organziation can sign up.
 
 #### Medium
 
