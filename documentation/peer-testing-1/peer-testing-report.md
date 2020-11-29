@@ -45,6 +45,7 @@ In total, \_\_\_ individuals took part in our peer testing sessions. The members
 - Add more skills to "Top 3 skills". (mentor and mentee form)
 - Change "Please enter your email in a proper format" to "Please enter a valid email", this is used more often in popular websites. (mentor and mentee form)
 - If user did not select a time zone, the error message has a capital "T" in time zone, this should be changed to a lower case "t". (mentor and mentee form)
+- User was not sure to enter first and last name into the name field or just their first name. (mentor and mentee form)
 
 ## Quantitative Data - ((common - unassigned))
 [This would most likely come from the Google Forms which outlines the 10 point heuristics. I think Eric set this up - but we'll need to confirm]
