@@ -10,7 +10,20 @@
 - [Katrina] Propose that we have our last team meeting on either Wednesday or Friday of this week for closure/last remarks before finals start.
 
 ## Detailed Notes:
-- 
+- We will make tasks for the break but not assigned to anyone.
+- Finish your part of the report by tomorrow (30th)
+- Eric will clear duplicates
+- JP and Kat will work on the peer report
+- JP will compile the report
+- Make sure to do peer evaluations (due on 2nd)
+- Potential tasks:
+  - Confirm Password
+  - 
 
 ## Action Items (Due by next sprint: ??):
+- Finish your part of the report by tomorrow (30th)
+- Eric will clear duplicates
+- JP and Kat will work on the peer report
+- JP will compile the report
+- Make sure to do peer evaluations (due on 2nd)
 - 
