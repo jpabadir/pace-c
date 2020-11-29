@@ -4,7 +4,7 @@
 [Placeholder until a description has been created] - ((common - JP))
 
 ## Current Set of Features Available in the System
-[Placeholder until we identify the features] - ((common - JP))
+[Placeholder until we identify the features] - ((common - Katrina))
 
 ## Number of Participants  - ((individual))
 In total, \_\_\_ individuals took part in our peer testing sessions. The members in the table are labelled according to how they were entered in the [sign-up document](https://docs.google.com/spreadsheets/d/1hl-bVGtlN1JMaNCbpx4tqgj7R5T_lkqo-KdooR9Aevk/edit#gid=1784474127). A table of this can be seen below:
