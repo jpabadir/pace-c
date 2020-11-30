@@ -1,7 +1,8 @@
 # Pace C Peer Testing Milestone #1
 
 ## Brief Description of The System
-[Placeholder until a description has been created] - ((common - JP))
+Our system, MentorMatch, allows people to sign up to be matched with a mentor, who can teach them skills they are interested in. In its current iteration, the system supports two types of users. First, there are mentors. They can fill out a form, where they will enter the skills they are able to teach people, the organization they belong to (this is because MentorMatch aims at eventually being used by organizations which can customize the platform to their needs), and some basic information about themselves. Then, there are mentees. Mentees can also sign up on the platform, and they also enter the skills they want to be taught and some basic information. Based on this information, MentorMatch will suggest mentees to mentors, which they can choose to accept or reject. If a mentee is accepted by a mentor, they receive an email to let them know and put them in touch with the mentor. 
+Note: the matching algorithm and the sending of an email to a mentee once they are accepted by a mentor are still to be implemented. 
 
 ## Current Set of Features Available in the System
 [Placeholder until we identify the features] - ((common - JP))
