@@ -52,7 +52,7 @@ class MenteeDisplay extends Component {
                 </td>
               </tr>
               {this.props.request && (
-                <tr>
+                <tr id="request-row">
                   <td>
                     <Button
                       type="text"
