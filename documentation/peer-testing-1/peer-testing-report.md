@@ -5,7 +5,7 @@ Our system, MentorMatch, allows people to sign up to be matched with a mentor, w
 Note: the matching algorithm and the sending of an email to a mentee once they are accepted by a mentor are still to be implemented. 
 
 ## Current Set of Features Available in the System
-[Placeholder until we identify the features] - ((common - JP))
+[Placeholder until we identify the features] - ((common - Katrina))
 
 ## Number of Participants  - ((individual))
 In total, \_\_\_ individuals took part in our peer testing sessions. The members in the table are labelled according to how they were entered in the [sign-up document](https://docs.google.com/spreadsheets/d/1hl-bVGtlN1JMaNCbpx4tqgj7R5T_lkqo-KdooR9Aevk/edit#gid=1784474127). A table of this can be seen below:
@@ -22,7 +22,7 @@ In total, \_\_\_ individuals took part in our peer testing sessions. The members
 
 ## User Groups and List of Tasks that Participants Completed
 
-[Will most likely insert what Eric identified within list-of-tasks.md Potentially, we could also include the task breakdown table from deadlines-for-peer-testing-milestone.md as well] - ((common - unassigned))
+[Will most likely insert what Eric identified within list-of-tasks.md Potentially, we could also include the task breakdown table from deadlines-for-peer-testing-milestone.md as well] - ((common - Katrina))
 
 ## List of Issues Discovered and Their Priority - ((individual))
 
