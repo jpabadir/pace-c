@@ -35,7 +35,7 @@ function App() {
           </Switch>
         </Content>
         <Footer style={{ textAlign: 'center' }}>
-          MentorMatch ©2020 Created by UBCO students
+          MentorMatch ©2020 Created by UBCO Students - Pace C
         </Footer>
       </Layout>
     </div>

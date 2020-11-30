@@ -6,7 +6,7 @@
 
 ## Current Set of Features Available in the System
 
-[Placeholder until we identify the features] - ((common - JP))
+[Placeholder until we identify the features] - ((common - Katrina))
 
 ## Number of Participants - ((individual))
 
@@ -24,7 +24,7 @@ In total, \_\_\_ individuals took part in our peer testing sessions. The members
 
 ## User Groups and List of Tasks that Participants Completed
 
-[Will most likely insert what Eric identified within list-of-tasks.md Potentially, we could also include the task breakdown table from deadlines-for-peer-testing-milestone.md as well] - ((common - unassigned))
+[Will most likely insert what Eric identified within list-of-tasks.md Potentially, we could also include the task breakdown table from deadlines-for-peer-testing-milestone.md as well] - ((common - Katrina))
 
 ## List of Issues Discovered and Their Priority - ((individual))
 
@@ -41,7 +41,7 @@ In total, \_\_\_ individuals took part in our peer testing sessions. The members
 
 - Have the time-zone field be highlighted in red since it's a required field, and the other required fields are also highlighted in red if a value is missing.
 
-## Quantitative Data - ((common - unassigned))
+## Quantitative Data - ((common - JP))
 
 [This would most likely come from the Google Forms which outlines the 10 point heuristics.]
 
