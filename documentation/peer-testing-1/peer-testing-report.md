@@ -37,8 +37,8 @@ In total, \_\_\_ individuals took part in our peer testing sessions. The members
 
 -
 
-## Quantitative Data - ((common - unassigned))
+## Quantitative Data - ((common - JP))
 [This would most likely come from the Google Forms which outlines the 10 point heuristics. I think Eric set this up - but we'll need to confirm]
 
-### Testimonials from the Participants to Explain the Graph - ((indivial - unassigned))
+### Testimonials from the Participants to Explain the Graph - ((indivial))
 [Placeholder. Quotes from the user's experience will be placed here]
