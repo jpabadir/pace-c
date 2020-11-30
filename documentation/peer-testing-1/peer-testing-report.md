@@ -11,7 +11,7 @@ In total, \_\_\_ individuals took part in our peer testing sessions. The members
 | Pace C Team Member Conducting the Session | Participant's Name | Completed? [Link to video if yes, if partially complete state why, or if the session wasn't conducted say no] |
 |-------------------------------------------|--------------------|---------------------------------------------------------------------------------------------------------------|
 | JP | Andrew Dai | https://youtu.be/kXaaTNM4xDw A small part of the video was cut out because I had to stop another app running on my machine. |
-| JP | | |
+| JP | Jaden Balogh | https://youtu.be/gE7sHhqmTF8 |
 | Katrina | | |
 | Katrina | | |
 | Aleks | | |
