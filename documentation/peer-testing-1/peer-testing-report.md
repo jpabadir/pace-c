@@ -27,18 +27,28 @@ In total, \_\_\_ individuals took part in our peer testing sessions. The members
 
 #### High
 
--
+- The default option of timezone field cannot be selected.
+- There should be a confirm message at each important button-clicking like clicking on submit buttons.
+- In the list of mentor's task, there is one that asks participants to find help page. A help page or FAQ should be built.
 
 #### Medium
 
--
+- The suggested and accepted mentee pages take some time to load, a loading message should display.
+- There is no double-check when reseting password.
+- participant took longer time to find logout button than expected.
+- participants always took longer time to find out what to do next. Probably need a tutorial for beginners.
 
 #### Low
 
--
+- The skill field is required but there is not red star beside its label.
+- The instruction page right after logging in should be displayed. 
+
 
 ## Quantitative Data - ((common - unassigned))
 [This would most likely come from the Google Forms which outlines the 10 point heuristics. I think Eric set this up - but we'll need to confirm]
 
 ### Testimonials from the Participants to Explain the Graph - ((indivial - unassigned))
-[Placeholder. Quotes from the user's experience will be placed here]
+- "what is the organization?" my participant asked when he was confused about what the organization field was for.
+- "what should I do?" or "what is this?" when he logged in and don't know what to do next.
+- My participant tried to directly click on here to login rather than check their emails first.
+- "This field is required but there is no red star deside it." my participant mentioned when he was inputting skill field.
