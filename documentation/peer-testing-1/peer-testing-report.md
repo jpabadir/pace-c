@@ -28,18 +28,31 @@ In total, \_\_\_ individuals took part in our peer testing sessions. The members
 
 #### High
 
--
+- When resetting the password using the forgot password feature, we do not enforce password constraints (we have a minimum length rule that is enforced on the sign up form)
+- The password constraints should be displayed without having to hover over the information icon
+- The form can be blocked from being submitted with an error showing on the timezone, even though the user has filled the timezone field. 
+- People are confused by the skills field, they often think they can type in there, while, in fact, it is a dropdown menu. 
 
 #### Medium
 
--
+- It is not natural to still be able to see the word "login" after the user is already logged in. 
+- It is confusing for mentors whether they are accepting / rejecting requests that mentees put in manually to them, or whether they are accepting suggestions from our algorithm. 
+- There is an extra horizontal line which appears above the description field in the mentee cards when viewing accepted mentees. 
 
 #### Low
 
--
+- The popup should be changed to a toast message that doesn't block user flow 
+- Allow more freedom in the way timezones are entered: my participant tried to type "PST" in the timezone field, and nothing came up (because we need "PST")
 
 ## Quantitative Data - ((common - unassigned))
 [This would most likely come from the Google Forms which outlines the 10 point heuristics. I think Eric set this up - but we'll need to confirm]
 
 ### Testimonials from the Participants to Explain the Graph - ((indivial - unassigned))
-[Placeholder. Quotes from the user's experience will be placed here]
+- "Can you try to type?" (my participant was making me try to type in the skills field, meaning it is not immediately obvious that it is a dropdown)
+- "Oh, you have a popup!" (my participant was confused about the password requirements and only noticed when I activated it that we have a popup which details them)
+- "The popup [alert] is a bit annoying, maybe center it because otherwise the user has to move their eyes away"
+- "Middle and top is the right place for me [to view a popup]"
+- "Oh, this is what I'm teaching people?" (my participant said this after filling in the skills and hovering over the information icon, presumably out of curiosity)
+- "I feel like I don't really know the context of this mentoring" (my participant was a bit confused about what exactly it entails to be a mentor on this platform)
+- "If I'm declining a mentee, are they actually making a request to me, like what am I declining?"
+- "Can I just type? Oh no, it's just a dropdown menu"
