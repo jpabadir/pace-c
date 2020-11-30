@@ -44,8 +44,8 @@ In total, \_\_\_ individuals took part in our peer testing sessions. The members
 - The popup should be changed to a toast message that doesn't block user flow 
 - Allow more freedom in the way timezones are entered: my participant tried to type "PST" in the timezone field, and nothing came up (because we need "PST")
 
-## Quantitative Data - ((common - unassigned))
-[This would most likely come from the Google Forms which outlines the 10 point heuristics. I think Eric set this up - but we'll need to confirm]
+## Quantitative Data - ((common - JP))
+See the attached chart which shows the average score given to us by our participants for several evaluated heuristic, on a scale from 1 to 5. 
 
 ### Testimonials from the Participants to Explain the Graph - ((indivial - unassigned))
 - "Can you try to type?" (my participant was making me try to type in the skills field, meaning it is not immediately obvious that it is a dropdown)
