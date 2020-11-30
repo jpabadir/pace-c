@@ -10,7 +10,7 @@
 In total, \_\_\_ individuals took part in our peer testing sessions. The members in the table are labelled according to how they were entered in the [sign-up document](https://docs.google.com/spreadsheets/d/1hl-bVGtlN1JMaNCbpx4tqgj7R5T_lkqo-KdooR9Aevk/edit#gid=1784474127). A table of this can be seen below:
 | Pace C Team Member Conducting the Session | Participant's Name | Completed? [Link to video if yes, if partially complete state why, or if the session wasn't conducted say no] |
 |-------------------------------------------|--------------------|---------------------------------------------------------------------------------------------------------------|
-| JP | | |
+| JP | Andrew Dai | https://youtu.be/kXaaTNM4xDw A small part of the video was cut out because I had to stop another app running on my machine. |
 | JP | | |
 | Katrina | | |
 | Katrina | | |
