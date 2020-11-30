@@ -44,7 +44,7 @@ In total, \_\_\_ individuals took part in our peer testing sessions. The members
 - The popup should be changed to a toast message that doesn't block user flow 
 - Allow more freedom in the way timezones are entered: my participant tried to type "PST" in the timezone field, and nothing came up (because we need "PST")
 
-## Quantitative Data - ((common - unassigned))
+## Quantitative Data - ((common - JP))
 [This would most likely come from the Google Forms which outlines the 10 point heuristics. I think Eric set this up - but we'll need to confirm]
 
 ### Testimonials from the Participants to Explain the Graph - ((indivial - unassigned))
