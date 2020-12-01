@@ -66,8 +66,8 @@ In total, \_\_\_ individuals took part in our peer testing sessions. The members
 | Katrina | Matthew Currie | https://1drv.ms/v/s!AkdNuTe3o4iRjSarlnj12ptd4UVU |
 | Aleks | Aaron Mahnic | https://drive.google.com/file/d/1uXFvFiiN1yc6-SzBoKF5isCCfTlds3us/view?usp=sharing |
 | Aleks | Taha Ilyas | https://drive.google.com/file/d/1Yzp2Yam7Fi3GFtrNtAnT3c7f9rWOQf8S/view?usp=sharing |
-| Eric | | |
-| Eric | | |
+| Eric |Shawn Zhao |completed. https://drive.google.com/file/d/1ShiqTAuYx-A4fGYGX3kxUzmvrkmj7XxW/view?usp=sharing|
+| Eric |Henter Yang|completed. https://drive.google.com/file/d/1BUfx8tWtxhA7n3y22yBHnbYKdaHj22cf/view?usp=sharing|
 
 ## User Groups and List of Tasks that Participants Completed
 
@@ -98,8 +98,10 @@ The two user groups within our system are Mentors and Mentees. The list of tasks
 
 #### High
 
-- Include a red asterisk beside the input for the 'Top 3 skills' label.
+- The default option of timezone field cannot be recognized when selected.
 - Timezone field does not "glow" red if the user did not enter anything, it only shows the text "please select your time-zone". (mentor and mentee form)
+- There should be a confirm message at each important button-clicking like clicking on submit buttons.
+- A help page or a FAQ page should be built.
 - When signing in, if the user does not enter anything for email and password, it just says "please input something" for both fields, and then a pop-up that says "the email address is badly formatted" however both fields are blank. (login page)
 - From the above point, we should change "please input something" to "please input password" or "please input email", for the red text that pops up at the bottom of the field if the user does not enter an email address in the login page. (login page)
 - If the user enters a incorrect username and password, the website creates a popup that is "wordy" and maybe difficult to understand. (login page)
@@ -107,28 +109,32 @@ The two user groups within our system are Mentors and Mentees. The list of tasks
 - From above points, change the login pop up messages depending on what is and is not filled in. Change the red text that popups at the bottom of the field depending on what is and is not filled in. (login page)
 - When resetting the password using the forgot password feature, we do not enforce password constraints (we have a minimum length rule that is enforced on the sign up form)
 - The password constraints should be displayed without having to hover over the information icon
-- The form can be blocked from being submitted with an error showing on the timezone, even though the user has filled the timezone field.
+- The form can be blocked frm being submitted with an error showing on the timezone, even though the user has filled the timezone field.
 - People are confused by the skills field, they often think they can type in there, while, in fact, it is a dropdown menu.
 
 #### Medium
 
+- The suggested and accepted mentee pages take some time to load, a loading message should display.
+- participant took longer time to find logout button than expected.
+- participants always took longer time to find out what to do next. Probably need a tutorial for beginners.
+- It is not natural to still be able to see the word "login" after the user is already logged in. 
+- It is confusing for mentors whether they are accepting / rejecting requests that mentees put in manually to them, or whether they are accepting suggestions from our algorithm. 
 - Add styling (such as bolded words) to draw the user's attention to important information on the 'congratulations' screens (such as to check their email).
 - Add more colour to the website.
 - If user did not enter something for organization, it says "please input something", we should change to this to something like "please enter your organization". (metnor form)
 - Show more information on what "organization" is supposed to be (add more onto the tooltip). (mentor form)
 - Add images/graphics. (mentor and mentee form, and login page)
-- It is not natural to still be able to see the word "login" after the user is already logged in.
-- It is confusing for mentors whether they are accepting / rejecting requests that mentees put in manually to them, or whether they are accepting suggestions from our algorithm.
 - There is an extra horizontal line which appears above the description field in the mentee cards when viewing accepted mentees.
 
 #### Low
 
+- The instruction page right after logging in should be displayed. 
+- The popup should be changed to a toast message that doesn't block user flow 
 - Have the time-zone field be highlighted in red since it's a required field, and the other required fields are also highlighted in red if a value is missing.
 - Add more skills to "Top 3 skills". (mentor and mentee form)
 - Change "Please enter your email in a proper format" to "Please enter a valid email", this is used more often in popular websites. (mentor and mentee form)
 - If user did not select a time zone, the error message has a capital "T" in time zone, this should be changed to a lower case "t". (mentor and mentee form)
 - User was not sure to enter first and last name into the name field or just their first name. (mentor and mentee form)
-- The popup should be changed to a toast message that doesn't block user flow
 - Allow more freedom in the way timezones are entered: my participant tried to type "PST" in the timezone field, and nothing came up (because we need "PST")
 
 ## Quantitative Data - ((common - JP))
@@ -137,6 +143,11 @@ See the attached chart which shows the average score given to us by our particip
 
 ### Testimonials from the Participants to Explain the Graph - ((indivial - unassigned))
 
+- "what is the organization?" my participant asked when he was confused about what the organization field was for.
+- "what should I do?" or "what is this?" when he logged in and don't know what to do next.
+- My participant tried to directly click on here to login rather than check their emails first.
+- "This field is required but there is no red star deside it." my participant mentioned when he was inputting skill field.
+- "Can you try to type?" (my participant was making me try to type in the skills field, meaning it is not immediately obvious that it is a dropdown)
 - To demonstrate how the system has mechanisms to help users against making mistakes, users said the following:
   - "Oh cool! It [the input fields] does the error highlighting [when required fields are left blank]!"
   - "I liked the simplicity of the system. I was able to make mistakes without the system breaking or throwing unexpected errors."
