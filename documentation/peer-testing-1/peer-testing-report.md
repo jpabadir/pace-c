@@ -109,7 +109,6 @@ The two user groups within our system are Mentors and Mentees. The list of tasks
 - From above points, change the login pop up messages depending on what is and is not filled in. Change the red text that popups at the bottom of the field depending on what is and is not filled in. (login page)
 - When resetting the password using the forgot password feature, we do not enforce password constraints (we have a minimum length rule that is enforced on the sign up form)
 - The password constraints should be displayed without having to hover over the information icon
-- The form can be blocked frm being submitted with an error showing on the timezone, even though the user has filled the timezone field.
 - People are confused by the skills field, they often think they can type in there, while, in fact, it is a dropdown menu.
 
 #### Medium
