@@ -60,14 +60,14 @@ The list of features which were tested within our system during the peer testing
 In total, \_\_\_ individuals took part in our peer testing sessions. The members in the table are labelled according to how they were entered in the [sign-up document](https://docs.google.com/spreadsheets/d/1hl-bVGtlN1JMaNCbpx4tqgj7R5T_lkqo-KdooR9Aevk/edit#gid=1784474127). A table of this can be seen below:
 | Pace C Team Member Conducting the Session | Participant's Name | Completed? [Link to video if yes, if partially complete state why, or if the session wasn't conducted say no] |
 |-------------------------------------------|--------------------|---------------------------------------------------------------------------------------------------------------|
-| JP | Andrew Dai | https://youtu.be/kXaaTNM4xDw A small part of the video was cut out because I had to stop another app running on my machine. |
-| JP | Jaden Balogh | https://youtu.be/gE7sHhqmTF8 |
-| Katrina | Jeff Hatton | https://1drv.ms/v/s!AkdNuTe3o4iRjSWDMI7EZIhrg-0- |
-| Katrina | Matthew Currie | https://1drv.ms/v/s!AkdNuTe3o4iRjSarlnj12ptd4UVU |
-| Aleks | Aaron Mahnic | https://drive.google.com/file/d/1uXFvFiiN1yc6-SzBoKF5isCCfTlds3us/view?usp=sharing |
-| Aleks | Taha Ilyas | https://drive.google.com/file/d/1Yzp2Yam7Fi3GFtrNtAnT3c7f9rWOQf8S/view?usp=sharing |
-| Eric |Shawn Zhao |completed. https://drive.google.com/file/d/1ShiqTAuYx-A4fGYGX3kxUzmvrkmj7XxW/view?usp=sharing|
-| Eric |Henter Yang|completed. https://drive.google.com/file/d/1BUfx8tWtxhA7n3y22yBHnbYKdaHj22cf/view?usp=sharing|
+| JP | Andrew Dai | Thinkaloud session, completed <br> https://youtu.be/kXaaTNM4xDw <br>(A small part of the video was cut out because I had to stop another app running on my machine.) |
+| JP | Jaden Balogh | Remote session, completed <br> https://youtu.be/gE7sHhqmTF8 |
+| Katrina | Jeff Hatton | Thinkaloud session, completed <br> https://1drv.ms/v/s!AkdNuTe3o4iRjSWDMI7EZIhrg-0- |
+| Katrina | Matthew Currie | Remote session, completed - https://1drv.ms/v/s!AkdNuTe3o4iRjSarlnj12ptd4UVU |
+| Aleks | Aaron Mahnic | Thinkaloud session, completed <br> https://drive.google.com/file/d/1uXFvFiiN1yc6-SzBoKF5isCCfTlds3us/view?usp=sharing |
+| Aleks | Taha Ilyas | Thinkaloud session, completed <br> https://drive.google.com/file/d/1Yzp2Yam7Fi3GFtrNtAnT3c7f9rWOQf8S/view?usp=sharing |
+| Eric |Shawn Zhao | Remote session, completed <br> https://drive.google.com/file/d/1ShiqTAuYx-A4fGYGX3kxUzmvrkmj7XxW/view?usp=sharing|
+| Eric |Henter Yang| Thinkaloud session, completed <br> https://drive.google.com/file/d/1BUfx8tWtxhA7n3y22yBHnbYKdaHj22cf/view?usp=sharing|
 
 ## User Groups and List of Tasks that Participants Completed
 
@@ -117,8 +117,8 @@ The two user groups within our system are Mentors and Mentees. The list of tasks
 - The suggested and accepted mentee pages take some time to load, a loading message should display.
 - participant took longer time to find logout button than expected.
 - participants always took longer time to find out what to do next. Probably need a tutorial for beginners.
-- It is not natural to still be able to see the word "login" after the user is already logged in. 
-- It is confusing for mentors whether they are accepting / rejecting requests that mentees put in manually to them, or whether they are accepting suggestions from our algorithm. 
+- It is not natural to still be able to see the word "login" after the user is already logged in.
+- It is confusing for mentors whether they are accepting / rejecting requests that mentees put in manually to them, or whether they are accepting suggestions from our algorithm.
 - Add styling (such as bolded words) to draw the user's attention to important information on the 'congratulations' screens (such as to check their email).
 - Add more colour to the website.
 - If user did not enter something for organization, it says "please input something", we should change to this to something like "please enter your organization". (metnor form)
@@ -128,8 +128,8 @@ The two user groups within our system are Mentors and Mentees. The list of tasks
 
 #### Low
 
-- The instruction page right after logging in should be displayed. 
-- The popup should be changed to a toast message that doesn't block user flow 
+- The instruction page right after logging in should be displayed.
+- The popup should be changed to a toast message that doesn't block user flow
 - Have the time-zone field be highlighted in red since it's a required field, and the other required fields are also highlighted in red if a value is missing.
 - Add more skills to "Top 3 skills". (mentor and mentee form)
 - Change "Please enter your email in a proper format" to "Please enter a valid email", this is used more often in popular websites. (mentor and mentee form)
