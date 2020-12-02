@@ -75,9 +75,9 @@ The two user groups within our system are Mentors and Mentees. The list of tasks
 
 ## Tasks as a Mentor
 
-1. A Mentor is required to fill in the Mentor Form to provide information about themself and to create an account. From the Login page (which the running application currently displays), navigate to the Mentor Form.
+1. A Mentor is required to fill in the Mentor Form to provide information about themselves and to create an account. From the Login page (which the running application currently displays), navigate to the Mentor Form.
 2. By looking at the form, understand what content is required to be filled in.
-3. Leave some required fields blank while filling out others. Try to submit. Do the displayed errors make sense? Do displayed errors by leaving required fields blank provide sufficient information to make the correction of these errros simple to fix?
+3. Leave some required fields blank while filling out others. Try to submit. Do the displayed errors make sense? Do displayed errors by leaving required fields blank provide sufficient information to make the correction of these errors simple to fix?
 4. View the 'congratulations' screen after successfully submitting the mentor form. Follow the prompts to complete your registration (i.e check your email for the verification email to verify your account, follow the hyperlink on the word 'here').
 5. Mentors are automatically logged in after form submission. Explore what a logged-in mentor can do by navigating through the various tabs.
 6. Confirm that the 'Accepted Mentees' tab does not display any mentees.
@@ -105,23 +105,23 @@ The two user groups within our system are Mentors and Mentees. The list of tasks
 - When signing in, if the user does not enter anything for email and password, it just says "please input something" for both fields, and then a pop-up that says "the email address is badly formatted" however both fields are blank. (login page)
 - From the above point, we should change "please input something" to "please input password" or "please input email", for the red text that pops up at the bottom of the field if the user does not enter an email address in the login page. (login page)
 - If the user enters a incorrect username and password, the website creates a popup that is "wordy" and maybe difficult to understand. (login page)
-- We should make different messages depending on of if the user did not enter any information in login screen (password/email) or if the user entered information but the information is wrong/does not have an account. (login page)
+- We should make different messages depending on whether the user did not enter any information in login screen (password/email) or if the user entered information but the information is wrong/does not have an account. (login page)
 - From above points, change the login pop up messages depending on what is and is not filled in. Change the red text that popups at the bottom of the field depending on what is and is not filled in. (login page)
 - When resetting the password using the forgot password feature, we do not enforce password constraints (we have a minimum length rule that is enforced on the sign up form)
 - The password constraints should be displayed without having to hover over the information icon
-- The form can be blocked frm being submitted with an error showing on the timezone, even though the user has filled the timezone field.
-- People are confused by the skills field, they often think they can type in there, while, in fact, it is a dropdown menu.
+- The form can be blocked frm being submitted with an error showing on the timezone, even though the user has filled the timezone field
+- People are confused by the skills field, they often think they can type in there, while, in fact, it is a dropdown menu
 
 #### Medium
 
 - The suggested and accepted mentee pages take some time to load, a loading message should display.
-- participant took longer time to find logout button than expected.
-- participants always took longer time to find out what to do next. Probably need a tutorial for beginners.
+- Participants took a long time to find logout button than expected.
+- Participants always took a long time to find out what to do next. Probably need a tutorial for beginners.
 - It is not natural to still be able to see the word "login" after the user is already logged in.
 - It is confusing for mentors whether they are accepting / rejecting requests that mentees put in manually to them, or whether they are accepting suggestions from our algorithm.
 - Add styling (such as bolded words) to draw the user's attention to important information on the 'congratulations' screens (such as to check their email).
 - Add more colour to the website.
-- If user did not enter something for organization, it says "please input something", we should change to this to something like "please enter your organization". (metnor form)
+- If user did not enter something for organization, it says "please input something", we should change this to something like "please enter your organization". (mentor form)
 - Show more information on what "organization" is supposed to be (add more onto the tooltip). (mentor form)
 - Add images/graphics. (mentor and mentee form, and login page)
 - There is an extra horizontal line which appears above the description field in the mentee cards when viewing accepted mentees.
