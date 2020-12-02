@@ -139,7 +139,7 @@ The two user groups within our system are Mentors and Mentees. The list of tasks
 
 ## Quantitative Data
 
-See the attached chart which shows the average score given to us by our participants for several evaluated heuristic, on a scale from 1 to 5.
+See the attached chart which shows the average score given to us by our participants for several evaluated heuristics, on a scale from 1 to 5.
 
 ### Testimonials from the Participants to Explain the Graph
 
