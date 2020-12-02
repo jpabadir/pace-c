@@ -7,14 +7,14 @@ Note: the matching algorithm and the sending of an email to a mentee once they a
 
 ## Current Set of Features Available in the System
 
-The list of features which were tested within our system during the peer testing sessions are as follows:
+The list of features which were tested within our system during the peer testing sessions is as follows:
 
 1. **Sign-up as a Mentor**
 
 - The 'Mentor Form' tab routes to a static form which requires users to input their organization, name, email, time-zone, password, top 3 skills, and a description.
-- If the form is submitted without input, red error messages are displayed to bring the user's attention on how to remediate the error.
+- If the form is submitted without certain fields being filled, red error messages are displayed to bring the user's attention on how to remediate the error.
 - Tool tips are utilized on the Organization, Password, and Skill selection fields to provide the user with additional information about those fields.
-- The email and password fields must follow a specific format in order for the form to be submitted.
+- The email and password fields must follow a specific format in order for the form to be successfully submitted.
 - Upon successfully filling out the form, a new Mentor user is created in our database.
 
 2. **Verify Mentor Email**
