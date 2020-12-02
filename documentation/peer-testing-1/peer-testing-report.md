@@ -38,7 +38,7 @@ The list of features which were tested within our system during the peer testing
 5. **Interact with the Mentor UI and Accept or Decline Mentee Requests**
 
 - Logged in Mentors can view the 'Mentor Tutorial' tab which provides a brief description of how to interact with the system.
-- The 'Suggested Mentee' tab displays mentee requests. If the user declines a request, the mentee is removed from the display. If the user accepts the mentee request, they can view that mentee in the 'Accepted Mentee tab'.
+- The 'Suggested Mentee' tab displays mentee requests. If the user declines a request, the mentee is removed from the display. If the user accepts the mentee request, they can view that mentee in the 'Accepted Mentee' tab.
 
 6. **Logout**
 
