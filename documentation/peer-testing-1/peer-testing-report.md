@@ -32,7 +32,7 @@ The list of features which were tested within our system during the peer testing
 4. **Forgotten Password**
 
 - The 'Login' page has an option for users to reset their password. If an email correlating to an existing user is entered, the user is notified through a pop-up to check their email address to reset their password.
-- Upon opening the link within the password reset email, the user is redirected to a new tab to fill in a password field. This password follows the same convention as the Mentor Form (i.e a password must be greater than 8 characters).
+- Upon opening the link within the password reset email, the user is redirected to a new tab to fill in a password field.
 - Once reset, the Mentor user can login with their new password.
 
 5. **Interact with the Mentor UI and Accept or Decline Mentee Requests**
