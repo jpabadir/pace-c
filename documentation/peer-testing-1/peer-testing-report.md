@@ -55,7 +55,7 @@ The list of features which were tested within our system during the peer testing
 
 - Mentees receive an email welcoming them to the program after filling out the mentee form.
 
-## Number of Participants - ((individual))
+## Number of Participants
 
 In total, \_\_\_ individuals took part in our peer testing sessions. The members in the table are labelled according to how they were entered in the [sign-up document](https://docs.google.com/spreadsheets/d/1hl-bVGtlN1JMaNCbpx4tqgj7R5T_lkqo-KdooR9Aevk/edit#gid=1784474127). A table of this can be seen below:
 | Pace C Team Member Conducting the Session | Participant's Name | Completed? [Link to video if yes, if partially complete state why, or if the session wasn't conducted say no] |
@@ -94,7 +94,7 @@ The two user groups within our system are Mentors and Mentees. The list of tasks
 2. Leave some required fields blank while filling out others. Try to submit. Fix any errors from incorrectly formatted fields.
 3. Follow the instructions on the 'Congratulations' page after successfully submitting the form (i.e check your email to confirm that you've received a welcome email).
 
-## List of Issues Discovered and Their Priority - ((individual))
+## List of Issues Discovered and Their Priority
 
 #### High
 
@@ -137,11 +137,11 @@ The two user groups within our system are Mentors and Mentees. The list of tasks
 - User was not sure to enter first and last name into the name field or just their first name. (mentor and mentee form)
 - Allow more freedom in the way timezones are entered: my participant tried to type "PST" in the timezone field, and nothing came up (because we need "PST")
 
-## Quantitative Data - ((common - JP))
+## Quantitative Data
 
 See the attached chart which shows the average score given to us by our participants for several evaluated heuristic, on a scale from 1 to 5.
 
-### Testimonials from the Participants to Explain the Graph - ((indivial - unassigned))
+### Testimonials from the Participants to Explain the Graph
 
 - "what is the organization?" my participant asked when he was confused about what the organization field was for.
 - "what should I do?" or "what is this?" when he logged in and don't know what to do next.
