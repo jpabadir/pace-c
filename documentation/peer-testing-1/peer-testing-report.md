@@ -139,10 +139,10 @@ The two user groups within our system are Mentors and Mentees. The list of tasks
 
 ## Quantitative Data
 
-See the attached chart which shows the average score given to us by our participants for several evaluated heuristics, on a scale from 1 to 5.
-- On this graph, we can see that the lowest score our team received is for the heuristic of having multiple ways of completing the same task. This makes sense, since we only have one way of completing every task. 
-- Our team scored quite high on the 5th heuristic, about not making mistakes, which is consistent with, for instance, this comment we received: "I liked the simplicity of the system. I was able to make mistakes without the system breaking or throwing unexpected errors." 
-- Our score for the first heuristic is not amongst our highest scores, which is consistent with the following high-severity issue we noted down: "When signing in, if the user does not enter anything for email and password, it just says "please input something" for both fields, and then a pop-up that says "the email address is badly formatted" however both fields are blank. (login page)", and is also consistent with this comment we got: "Oh, you have a popup!", uttered by a participant who did not, at first, noticed about the popup. 
+See the attached chart which shows the average score given to us by our participants for several evaluated heuristics, on a scale from 1 to 5.  
+- On this graph, we can see that the lowest score our team received is for the heuristic of having multiple ways of completing the same task. This makes sense, since we only have one way of completing every task.  
+- Our team scored quite high on the 5th heuristic, about not making mistakes, which is consistent with, for instance, this comment we received: "I liked the simplicity of the system. I was able to make mistakes without the system breaking or throwing unexpected errors."  
+- Our score for the first heuristic is not amongst our highest scores, which is consistent with the following high-severity issue we noted down: "When signing in, if the user does not enter anything for email and password, it just says "please input something" for both fields, and then a pop-up that says "the email address is badly formatted" however both fields are blank. (login page)", and is also consistent with this comment we got: "Oh, you have a popup!", uttered by a participant who did not, at first, noticed about the popup.   
 - One of the issues we noted above was that "A help page or a FAQ page should be built.", which is consistent with the score we received on the last heuristic, which relates to the presence of documentation in the website. This is also consistent with the participant who asked "what is the organization?". 
 
 ### Testimonials from the Participants to Explain the Graph
