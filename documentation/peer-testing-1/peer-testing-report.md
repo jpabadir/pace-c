@@ -71,7 +71,7 @@ In total, 8 individuals took part in our peer testing sessions. The members in t
 
 ## User Groups and List of Tasks that Participants Completed
 
-The two user groups within our system are Mentors and Mentees. The list of tasks participants completed according to each user group were as follows:
+The two user groups within our system are Mentors and Mentees. The list of tasks participants completed according to each user group was as follows:
 
 ## Tasks as a Mentor
 
