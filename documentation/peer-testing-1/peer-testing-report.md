@@ -12,7 +12,7 @@ The list of features which were tested within our system during the peer testing
 1. **Sign-up as a Mentor**
 
 - The 'Mentor Form' tab routes to a static form which requires users to input their organization, name, email, time-zone, password, top 3 skills, and a description.
-- If the form is submitted without certain fields being filled, red error messages are displayed to bring the user's attention on how to remediate the error.
+- If the form is submitted without some of its fields being filled, red error messages are displayed to bring the user's attention on how to remediate the error.
 - Tool tips are utilized on the Organization, Password, and Skill selection fields to provide the user with additional information about those fields.
 - The email and password fields must follow a specific format in order for the form to be successfully submitted.
 - Upon successfully filling out the form, a new Mentor user is created in our database.
@@ -47,7 +47,7 @@ The list of features which were tested within our system during the peer testing
 7. **Register as a Mentee**
 
 - The 'Mentee Form' tab routes to a static form which requires users to input their name, email, time-zone, top 3 skills, and a description.
-- If the form is submitted without input, red error messages are displayed to bring the user's attention on how to remediate the error.
+- If the form is submitted without some of its fields being filled, red error messages are displayed to bring the user's attention on how to remediate the error.
 - The email field must follow a specific format in order for the form to be submitted.
 - Once filled out correctly, a new Mentee user is created in our database.
 
@@ -57,7 +57,7 @@ The list of features which were tested within our system during the peer testing
 
 ## Number of Participants
 
-In total, \_\_\_ individuals took part in our peer testing sessions. The members in the table are labelled according to how they were entered in the [sign-up document](https://docs.google.com/spreadsheets/d/1hl-bVGtlN1JMaNCbpx4tqgj7R5T_lkqo-KdooR9Aevk/edit#gid=1784474127). A table of this can be seen below:
+In total, 8 individuals took part in our peer testing sessions. The members in the table are labelled according to how they were entered in the [sign-up document](https://docs.google.com/spreadsheets/d/1hl-bVGtlN1JMaNCbpx4tqgj7R5T_lkqo-KdooR9Aevk/edit#gid=1784474127). A table of this can be seen below:
 | Pace C Team Member Conducting the Session | Participant's Name | Completed? [Link to video if yes, if partially complete state why, or if the session wasn't conducted say no] |
 |-------------------------------------------|--------------------|---------------------------------------------------------------------------------------------------------------|
 | JP | Andrew Dai | Thinkaloud session, completed <br> https://youtu.be/kXaaTNM4xDw <br>(A small part of the video was cut out because I had to stop another app running on my machine.) |
