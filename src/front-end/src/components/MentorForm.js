@@ -64,7 +64,7 @@ class MentorForm extends Component {
             layout="horizontal"
             labelAlign="left"
           >
-            <h1>Sign up as a mentor</h1>
+            <h1>Sign up as a Mentor</h1>
             <Form.Item
               label="Organization"
               name="organization"
@@ -203,7 +203,12 @@ class MentorForm extends Component {
             >
               <Input.TextArea placeholder="Tell us a bit about yourself" />
             </Form.Item>
-            <Button type="primary" htmlType="submit">
+            <Button
+              type="primary"
+              htmlType="submit"
+              className="formSubmitButton"
+              size="large"
+            >
               Submit
             </Button>
           </Form>
