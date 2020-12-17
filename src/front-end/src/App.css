@@ -27,14 +27,21 @@ p3 {
 
 .Login,
 .MentorTutorial,
-.MentorForm,
-.MenteeForm,
 .MentorCompletion,
 .MenteeCompletion,
 .ForgotPassword {
   border: solid black;
   padding: 25px;
   margin: 30px;
+}
+
+.MenteeForm,
+.MentorForm {
+  margin: 30px;
+  padding: 10px;
+  padding-left: 100px;
+  text-align: center;
+  border: solid black;
 }
 
 #logout_button {

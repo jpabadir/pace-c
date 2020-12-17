@@ -52,7 +52,7 @@ function App() {
         <Footer
           style={{
             textAlign: 'center',
-            position: 'fixed',
+            position: 'static',
             bottom: 0,
             width: '100%',
             overflow: 'flex',

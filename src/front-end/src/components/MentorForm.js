@@ -59,6 +59,10 @@ class MentorForm extends Component {
             onFinish={this.onFinish}
             onFinishFailed={this.onFinishFailed}
             autocomplete="off"
+            labelCol={{ span: 3 }}
+            wrapperCol={{ span: 16 }}
+            layout="horizontal"
+            labelAlign="left"
           >
             <h1>Sign up as a mentor</h1>
             <Form.Item

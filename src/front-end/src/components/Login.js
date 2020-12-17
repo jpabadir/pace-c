@@ -47,7 +47,15 @@ class Login extends Component {
   render() {
     return (
       <div className="Login">
-        <Form>
+        <Form
+          onFinish={this.onFinish}
+          onFinishFailed={this.onFinishFailed}
+          autocomplete="off"
+          labelCol={{ span: 2 }}
+          wrapperCol={{ span: 16 }}
+          layout="horizontal"
+          labelAlign="left"
+        >
           <h1>Login to access the mentorship portal</h1>
           <Form.Item
             type="email"
