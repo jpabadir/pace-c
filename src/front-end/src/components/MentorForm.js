@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Form, Button, Input, Tooltip, Select } from 'antd';
+import { Form, Button, Input, Select } from 'antd';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { InfoCircleOutlined } from '@ant-design/icons';
 import TimezonePicker from 'react-bootstrap-timezone-picker';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import MentorCompletion from './MentorCompletion';
@@ -68,17 +67,11 @@ class MentorForm extends Component {
             <Form.Item
               label="Organization"
               name="organization"
+              tooltip="The organization you're planning to be a Mentor with"
               // must have an input:
               rules={[{ required: true, message: 'Please input something' }]}
             >
-              <Input
-                placeholder="Please enter your Organization"
-                prefix={
-                  <Tooltip title="Organization you're planning to be a Mentor with">
-                    <InfoCircleOutlined style={{ color: 'rgba(0,0,0,.45)' }} />
-                  </Tooltip>
-                }
-              />
+              <Input placeholder="Please enter your Organization" />
             </Form.Item>
             <Form.Item
               label="Name"
@@ -123,6 +116,7 @@ class MentorForm extends Component {
             <Form.Item
               label="Password"
               name="password"
+              tooltip="Password should be at least 8 characters."
               rules={[
                 {
                   required: true,
@@ -130,16 +124,7 @@ class MentorForm extends Component {
                 },
               ]}
             >
-              <Input
-                type="password"
-                placeholder="Password"
-                minlength="8"
-                prefix={
-                  <Tooltip title="Password should be at least 8 characters.">
-                    <InfoCircleOutlined style={{ color: 'rgba(0,0,0,.45)' }} />
-                  </Tooltip>
-                }
-              />
+              <Input type="password" placeholder="Password" minlength="8" />
             </Form.Item>
             <Form.Item
               label="Top 3 skills"
