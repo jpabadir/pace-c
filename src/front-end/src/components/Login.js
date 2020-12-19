@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Form, Button, Input } from 'antd';
+import { Form, Button, Input, Card } from 'antd';
+import { MailTwoTone, LockTwoTone } from '@ant-design/icons';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import fire from '../firebase-init';
@@ -47,70 +48,82 @@ class Login extends Component {
   render() {
     return (
       <div className="Login">
-        <Form
-          onFinish={this.onFinish}
-          onFinishFailed={this.onFinishFailed}
-          autocomplete="off"
-          labelCol={{ span: 2 }}
-          wrapperCol={{ span: 16 }}
-          layout="horizontal"
-          labelAlign="left"
+        <Card
+          id="login-card"
+          bordered
+          hoverable
+          bodyStyle={{
+            backgroundColor: '#F0F2F5',
+            border: '#001529',
+          }}
         >
-          <h1>Login to access the mentorship portal</h1>
-          <Form.Item
-            type="email"
-            label="Email"
-            name="email"
-            // must have an input:
-            rules={[{ required: true, message: 'Please input something' }]}
+          <h1>Login to access the Mentorship Portal</h1>
+          <Form
+            onFinish={this.onFinish}
+            onFinishFailed={this.onFinishFailed}
+            autocomplete="off"
+            labelCol={{ span: 5 }}
+            wrapperCol={{ span: 14 }}
+            layout="horizontal"
+            labelAlign="left"
           >
-            <Input
+            <Form.Item
               type="email"
-              placeholder="please enter your email"
-              id="useremail"
-              onInput={this.onChange}
-              value={this.state.email}
-              onChange={this.handleEmailChange}
-            />
-          </Form.Item>
-          <Form.Item
-            type="password"
-            label="Password"
-            name="password"
-            // must have an input:
-            rules={[{ required: true, message: 'Please input something' }]}
-          >
-            <Input
-              type="password"
-              placeholder="please enter your password"
-              id="userpassword"
-              onInput={this.onChange}
-            />
-          </Form.Item>
-          <p>{/* used to space buttons */}</p>
-          {/* button below should send the information from the page: */}
-          {/* login to the database. To verify the account password/email */}
-          <Button type="primary" htmlType="submit" onClick={this.onLogin}>
-            Login
-          </Button>
-          {/* link below should allow the user to reset password: */}
-          <p>
-            <a
-              className="loginlink"
-              href="http://localhost:3000/ForgotPassword
-              "
+              label="Email"
+              name="email"
+              // must have an input:
+              rules={[{ required: true, message: 'Please input something' }]}
             >
-              Forgot your password?&nbsp;
-            </a>
-          </p>
-          {/* below is used as a space between the two links */}
-          &nbsp;
-          <p>Don&apos;t have a mentor account yet?</p>
-          {/* button below should link to the createaccount page: */}
-          <Button type="primary" htmlType="button" href="/MentorForm">
-            Create Account
-          </Button>
-        </Form>
+              <Input
+                type="email"
+                placeholder=" please enter your email"
+                id="useremail"
+                onInput={this.onChange}
+                value={this.state.email}
+                onChange={this.handleEmailChange}
+                prefix={<MailTwoTone twoToneColor="#adc6ff" />}
+              />
+            </Form.Item>
+            <Form.Item
+              type="password"
+              label="Password"
+              name="password"
+              // must have an input:
+              rules={[{ required: true, message: 'Please input something' }]}
+            >
+              <Input
+                type="password"
+                placeholder=" please enter your password"
+                id="userpassword"
+                onInput={this.onChange}
+                prefix={<LockTwoTone twoToneColor="#adc6ff" />}
+              />
+            </Form.Item>
+            <p>{/* used to space buttons */}</p>
+            {/* button below should send the information from the page: */}
+            {/* login to the database. To verify the account password/email */}
+            <Button type="primary" htmlType="submit" onClick={this.onLogin}>
+              Login
+            </Button>
+            {/* link below should allow the user to reset password: */}
+            <p>
+              <a
+                className="loginlink"
+                href="http://localhost:3000/ForgotPassword
+              "
+              >
+                Forgot your password?&nbsp;
+              </a>
+            </p>
+            {/* below is used as a space between the two links */}
+            &nbsp;
+            <p>Don&apos;t have a mentor account yet?</p>
+            {/* button below should link to the createaccount page: */}
+            <Button type="primary" htmlType="button" href="/MentorForm">
+              Create Account
+            </Button>
+          </Form>
+        </Card>
       </div>
     );
   }

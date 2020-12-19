@@ -25,7 +25,6 @@ p3 {
   font-size: 0.75em;
 }
 
-.Login,
 .MentorTutorial,
 .MentorCompletion,
 .MenteeCompletion,
@@ -35,6 +34,12 @@ p3 {
   margin: 30px;
 }
 
+.Login {
+  width: 500px;
+  border: solid #001529;
+  margin-top: 150px;
+  margin-left: 380px;
+}
 .MenteeForm,
 .MentorForm {
   margin: 30px;
