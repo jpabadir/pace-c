@@ -3,9 +3,6 @@ import React, { Component } from 'react';
 import { Button, Card } from 'antd';
 import { UserOutlined, CheckOutlined, CloseOutlined } from '@ant-design/icons';
 import PropTypes from 'prop-types';
-import Avatar from 'antd/lib/avatar/avatar';
-
-const { Meta } = Card;
 
 // eslint-disable-next-line react/prefer-stateless-function
 class MenteeDisplay extends Component {
