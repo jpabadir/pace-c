@@ -138,6 +138,33 @@ class MentorForm extends Component {
               />
             </Form.Item>
             <Form.Item
+              name="confirmPassword"
+              label="Confirm Password"
+              dependencies={['password']}
+              rules={[
+                {
+                  required: true,
+                  message: 'Please confirm your password',
+                },
+                ({ getFieldValue }) => ({
+                  validator(rule, value) {
+                    if (!value || getFieldValue('password') === value) {
+                      return Promise.resolve();
+                    }
+                    return Promise.reject(
+                      new Error('The password fields do not match'),
+                    );
+                  },
+                }),
+              ]}
+            >
+              <Input
+                type="password"
+                placeholder="Confirm your password"
+                minlength="8"
+              />
+            </Form.Item>
+            <Form.Item
               label="Top 3 skills"
               tooltip="What skills can you help people learn?"
             >
