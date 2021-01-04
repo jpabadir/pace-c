@@ -49,11 +49,6 @@ p4 {
   font-size: 0.75em;
 }
 
-.time-zone-picker {
-  overflow: auto;
-  width: 100%;
-}
-
 .loginlink {
   color: blue;
 }

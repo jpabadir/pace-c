@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import { Form, Button, Input, Tooltip, Select } from 'antd';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { InfoCircleOutlined } from '@ant-design/icons';
-import TimezonePicker from 'react-bootstrap-timezone-picker';
-import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import MentorCompletion from './MentorCompletion';
+import timeZones from '../timeZones.json';
 import {
   setInDB,
   createUserInFirebase,
@@ -108,13 +107,15 @@ class MentorForm extends Component {
                 },
               ]}
             >
-              <TimezonePicker
-                absolute={false}
-                defaultValue=""
-                placeholder="Select timezone..."
-                onChange={this.handleChange}
-                className="time-zone-picker"
-              />
+              <Select placeholder="Select timezone.." showSearch>
+                {timeZones.map((zone) => {
+                  return (
+                    <Option key={zone.id} value={getCamelCase(zone.id)}>
+                      {[zone.id, ' ', zone.area]}
+                    </Option>
+                  );
+                })}
+              </Select>
             </Form.Item>
             <Form.Item
               label="Password"
