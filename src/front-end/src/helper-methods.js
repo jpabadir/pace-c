@@ -61,11 +61,7 @@ export function marshallMenteeInfo(menteeFormValues) {
     name: menteeFormValues.nameInput,
     timeZone: menteeFormValues.timeZone,
     userType: 'mentee',
-    rankedSkills: [
-      menteeFormValues.skill1,
-      menteeFormValues.skill2,
-      menteeFormValues.skill3,
-    ],
+    rankedSkills: menteeFormValues.skillset,
     description: menteeFormValues.description,
   };
 }
