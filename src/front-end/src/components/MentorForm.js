@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Form, Button, Input, Select } from 'antd';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import TimezonePicker from 'react-bootstrap-timezone-picker';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import MentorCompletion from './MentorCompletion';
