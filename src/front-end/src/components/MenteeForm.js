@@ -40,7 +40,7 @@ class MenteeForm extends Component {
   }
 
   handleSkillsChange(event) {
-    this.setState({ selectedItems: event.target.value });
+    this.setState({ selectedItems: event });
   }
 
   sendEmail() {
@@ -153,7 +153,7 @@ class MenteeForm extends Component {
               <Select
                 mode="multiple"
                 value={selectedItems}
-                onInput={this.handleSkillsChange}
+                onChange={this.handleSkillsChange}
                 maxTagCount={3}
               >
                 {filteredOptions.map((item) => (
