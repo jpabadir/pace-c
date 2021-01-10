@@ -7,14 +7,14 @@ Note: the matching algorithm and the sending of an email to a mentee once they a
 
 ## Current Set of Features Available in the System
 
-The list of features which were tested within our system during the peer testing sessions are as follows:
+The list of features which were tested within our system during the peer testing sessions is as follows:
 
 1. **Sign-up as a Mentor**
 
 - The 'Mentor Form' tab routes to a static form which requires users to input their organization, name, email, time-zone, password, top 3 skills, and a description.
-- If the form is submitted without input, red error messages are displayed to bring the user's attention on how to remediate the error.
+- If the form is submitted without some of its fields being filled, red error messages are displayed to bring the user's attention on how to remediate the error.
 - Tool tips are utilized on the Organization, Password, and Skill selection fields to provide the user with additional information about those fields.
-- The email and password fields must follow a specific format in order for the form to be submitted.
+- The email and password fields must follow a specific format in order for the form to be successfully submitted.
 - Upon successfully filling out the form, a new Mentor user is created in our database.
 
 2. **Verify Mentor Email**
@@ -32,13 +32,13 @@ The list of features which were tested within our system during the peer testing
 4. **Forgotten Password**
 
 - The 'Login' page has an option for users to reset their password. If an email correlating to an existing user is entered, the user is notified through a pop-up to check their email address to reset their password.
-- Upon opening the link within the password reset email, the user is redirected to a new tab to fill in a password field. This password follows the same convention as the Mentor Form (i.e a password must be greater than 8 characters).
+- Upon opening the link within the password reset email, the user is redirected to a new tab to fill in a password field.
 - Once reset, the Mentor user can login with their new password.
 
 5. **Interact with the Mentor UI and Accept or Decline Mentee Requests**
 
 - Logged in Mentors can view the 'Mentor Tutorial' tab which provides a brief description of how to interact with the system.
-- The 'Suggested Mentee' tab displays mentee requests. If the user declines a request, the mentee is removed from the display. If the user accepts the mentee request, they can view that mentee in the 'Accepted Mentee tab'.
+- The 'Suggested Mentee' tab displays mentee requests. If the user declines a request, the mentee is removed from the display. If the user accepts the mentee request, they can view that mentee in the 'Accepted Mentee' tab.
 
 6. **Logout**
 
@@ -47,7 +47,7 @@ The list of features which were tested within our system during the peer testing
 7. **Register as a Mentee**
 
 - The 'Mentee Form' tab routes to a static form which requires users to input their name, email, time-zone, top 3 skills, and a description.
-- If the form is submitted without input, red error messages are displayed to bring the user's attention on how to remediate the error.
+- If the form is submitted without some of its fields being filled, red error messages are displayed to bring the user's attention on how to remediate the error.
 - The email field must follow a specific format in order for the form to be submitted.
 - Once filled out correctly, a new Mentee user is created in our database.
 
@@ -55,29 +55,29 @@ The list of features which were tested within our system during the peer testing
 
 - Mentees receive an email welcoming them to the program after filling out the mentee form.
 
-## Number of Participants - ((individual))
+## Number of Participants
 
-In total, \_\_\_ individuals took part in our peer testing sessions. The members in the table are labelled according to how they were entered in the [sign-up document](https://docs.google.com/spreadsheets/d/1hl-bVGtlN1JMaNCbpx4tqgj7R5T_lkqo-KdooR9Aevk/edit#gid=1784474127). A table of this can be seen below:
-| Pace C Team Member Conducting the Session | Participant's Name | Completed? [Link to video if yes, if partially complete state why, or if the session wasn't conducted say no] |
+In total, 8 individuals took part in our peer testing sessions. The members in the table are labelled according to how they were entered in the [sign-up document](https://docs.google.com/spreadsheets/d/1hl-bVGtlN1JMaNCbpx4tqgj7R5T_lkqo-KdooR9Aevk/edit#gid=1784474127). A table of this can be seen below:
+| Pace C Team Member Conducting the Session | Participant's Name | Completion status and video link |
 |-------------------------------------------|--------------------|---------------------------------------------------------------------------------------------------------------|
-| JP | Andrew Dai | https://youtu.be/kXaaTNM4xDw A small part of the video was cut out because I had to stop another app running on my machine. |
-| JP | Jaden Balogh | https://youtu.be/gE7sHhqmTF8 |
-| Katrina | Jeff Hatton | https://1drv.ms/v/s!AkdNuTe3o4iRjSWDMI7EZIhrg-0- |
-| Katrina | Matthew Currie | https://1drv.ms/v/s!AkdNuTe3o4iRjSarlnj12ptd4UVU |
-| Aleks | Aaron Mahnic | https://drive.google.com/file/d/1uXFvFiiN1yc6-SzBoKF5isCCfTlds3us/view?usp=sharing |
-| Aleks | Taha Ilyas | https://drive.google.com/file/d/1Yzp2Yam7Fi3GFtrNtAnT3c7f9rWOQf8S/view?usp=sharing |
-| Eric |Shawn Zhao |completed. https://drive.google.com/file/d/1ShiqTAuYx-A4fGYGX3kxUzmvrkmj7XxW/view?usp=sharing|
-| Eric |Henter Yang|completed. https://drive.google.com/file/d/1BUfx8tWtxhA7n3y22yBHnbYKdaHj22cf/view?usp=sharing|
+| JP | Andrew Dai | Thinkaloud session, completed <br> https://youtu.be/kXaaTNM4xDw <br>(A small part of the video was cut out because I had to stop another app running on my machine.) |
+| JP | Jaden Balogh | Remote session, completed <br> https://youtu.be/gE7sHhqmTF8 |
+| Katrina | Jeff Hatton | Thinkaloud session, completed <br> https://1drv.ms/v/s!AkdNuTe3o4iRjSWDMI7EZIhrg-0- |
+| Katrina | Matthew Currie | Remote session, completed - https://1drv.ms/v/s!AkdNuTe3o4iRjSarlnj12ptd4UVU |
+| Aleks | Aaron Mahnic | Thinkaloud session, completed <br> https://drive.google.com/file/d/1uXFvFiiN1yc6-SzBoKF5isCCfTlds3us/view?usp=sharing |
+| Aleks | Taha Ilyas | Thinkaloud session, completed <br> https://drive.google.com/file/d/1Yzp2Yam7Fi3GFtrNtAnT3c7f9rWOQf8S/view?usp=sharing |
+| Eric |Shawn Zhao | Remote session, completed <br> https://drive.google.com/file/d/1ShiqTAuYx-A4fGYGX3kxUzmvrkmj7XxW/view?usp=sharing|
+| Eric |Henter Yang| Thinkaloud session, completed <br> https://drive.google.com/file/d/1BUfx8tWtxhA7n3y22yBHnbYKdaHj22cf/view?usp=sharing|
 
 ## User Groups and List of Tasks that Participants Completed
 
-The two user groups within our system are Mentors and Mentees. The list of tasks participants completed according to each user group were as follows:
+The two user groups within our system are Mentors and Mentees. The list of tasks participants completed according to each user group was as follows:
 
 ## Tasks as a Mentor
 
-1. A Mentor is required to fill in the Mentor Form to provide information about themself and to create an account. From the Login page (which the running application currently displays), navigate to the Mentor Form.
+1. A Mentor is required to fill in the Mentor Form to provide information about themselves and to create an account. From the Login page (which the running application currently displays), navigate to the Mentor Form.
 2. By looking at the form, understand what content is required to be filled in.
-3. Leave some required fields blank while filling out others. Try to submit. Do the displayed errors make sense? Do displayed errors by leaving required fields blank provide sufficient information to make the correction of these errros simple to fix?
+3. Leave some required fields blank while filling out others. Try to submit. Do the displayed errors make sense? Do displayed errors by leaving required fields blank provide sufficient information to make the correction of these errors simple to fix?
 4. View the 'congratulations' screen after successfully submitting the mentor form. Follow the prompts to complete your registration (i.e check your email for the verification email to verify your account, follow the hyperlink on the word 'here').
 5. Mentors are automatically logged in after form submission. Explore what a logged-in mentor can do by navigating through the various tabs.
 6. Confirm that the 'Accepted Mentees' tab does not display any mentees.
@@ -94,7 +94,7 @@ The two user groups within our system are Mentors and Mentees. The list of tasks
 2. Leave some required fields blank while filling out others. Try to submit. Fix any errors from incorrectly formatted fields.
 3. Follow the instructions on the 'Congratulations' page after successfully submitting the form (i.e check your email to confirm that you've received a welcome email).
 
-## List of Issues Discovered and Their Priority - ((individual))
+## List of Issues Discovered and Their Priority
 
 #### High
 
@@ -105,30 +105,31 @@ The two user groups within our system are Mentors and Mentees. The list of tasks
 - When signing in, if the user does not enter anything for email and password, it just says "please input something" for both fields, and then a pop-up that says "the email address is badly formatted" however both fields are blank. (login page)
 - From the above point, we should change "please input something" to "please input password" or "please input email", for the red text that pops up at the bottom of the field if the user does not enter an email address in the login page. (login page)
 - If the user enters a incorrect username and password, the website creates a popup that is "wordy" and maybe difficult to understand. (login page)
-- We should make different messages depending on of if the user did not enter any information in login screen (password/email) or if the user entered information but the information is wrong/does not have an account. (login page)
+- We should make different messages depending on whether the user did not enter any information in login screen (password/email) or if the user entered information but the information is wrong/does not have an account. (login page)
 - From above points, change the login pop up messages depending on what is and is not filled in. Change the red text that popups at the bottom of the field depending on what is and is not filled in. (login page)
 - When resetting the password using the forgot password feature, we do not enforce password constraints (we have a minimum length rule that is enforced on the sign up form)
 - The password constraints should be displayed without having to hover over the information icon
-- People are confused by the skills field, they often think they can type in there, while, in fact, it is a dropdown menu.
+- The form can be blocked frm being submitted with an error showing on the timezone, even though the user has filled the timezone field
+- People are confused by the skills field, they often think they can type in there, while, in fact, it is a dropdown menu
 
 #### Medium
 
 - The suggested and accepted mentee pages take some time to load, a loading message should display.
-- participant took longer time to find logout button than expected.
-- participants always took longer time to find out what to do next. Probably need a tutorial for beginners.
-- It is not natural to still be able to see the word "login" after the user is already logged in. 
-- It is confusing for mentors whether they are accepting / rejecting requests that mentees put in manually to them, or whether they are accepting suggestions from our algorithm. 
+- Participants took a long time to find logout button than expected.
+- Participants always took a long time to find out what to do next. Probably need a tutorial for beginners.
+- It is not natural to still be able to see the word "login" after the user is already logged in.
+- It is confusing for mentors whether they are accepting / rejecting requests that mentees put in manually to them, or whether they are accepting suggestions from our algorithm.
 - Add styling (such as bolded words) to draw the user's attention to important information on the 'congratulations' screens (such as to check their email).
 - Add more colour to the website.
-- If user did not enter something for organization, it says "please input something", we should change to this to something like "please enter your organization". (metnor form)
+- If user did not enter something for organization, it says "please input something", we should change this to something like "please enter your organization". (mentor form)
 - Show more information on what "organization" is supposed to be (add more onto the tooltip). (mentor form)
 - Add images/graphics. (mentor and mentee form, and login page)
 - There is an extra horizontal line which appears above the description field in the mentee cards when viewing accepted mentees.
 
 #### Low
 
-- The instruction page right after logging in should be displayed. 
-- The popup should be changed to a toast message that doesn't block user flow 
+- The instruction page right after logging in should be displayed.
+- The popup should be changed to a toast message that doesn't block user flow
 - Have the time-zone field be highlighted in red since it's a required field, and the other required fields are also highlighted in red if a value is missing.
 - Add more skills to "Top 3 skills". (mentor and mentee form)
 - Change "Please enter your email in a proper format" to "Please enter a valid email", this is used more often in popular websites. (mentor and mentee form)
@@ -136,16 +137,20 @@ The two user groups within our system are Mentors and Mentees. The list of tasks
 - User was not sure to enter first and last name into the name field or just their first name. (mentor and mentee form)
 - Allow more freedom in the way timezones are entered: my participant tried to type "PST" in the timezone field, and nothing came up (because we need "PST")
 
-## Quantitative Data - ((common - JP))
+## Quantitative Data
 
-See the attached chart which shows the average score given to us by our participants for several evaluated heuristic, on a scale from 1 to 5.
+See the attached chart which shows the average score given to us by our participants for several evaluated heuristics, on a scale from 1 to 5.  
+- On this graph, we can see that the lowest score our team received is for the heuristic of having multiple ways of completing the same task. This makes sense, since we only have one way of completing every task.  
+- Our team scored quite high on the 5th heuristic, about not making mistakes, which is consistent with, for instance, this comment we received: "I liked the simplicity of the system. I was able to make mistakes without the system breaking or throwing unexpected errors."  
+- Our score for the first heuristic is not amongst our highest scores, which is consistent with the following high-severity issue we noted down: "When signing in, if the user does not enter anything for email and password, it just says "please input something" for both fields, and then a pop-up that says "the email address is badly formatted" however both fields are blank. (login page)", and is also consistent with this comment we got: "Oh, you have a popup!", uttered by a participant who did not, at first, noticed about the popup.   
+- One of the issues we noted above was that "A help page or a FAQ page should be built.", which is consistent with the score we received on the last heuristic, which relates to the presence of documentation in the website. This is also consistent with the participant who asked "what is the organization?". 
 
-### Testimonials from the Participants to Explain the Graph - ((indivial - unassigned))
+### Testimonials from the Participants to Explain the Graph
 
 - "what is the organization?" my participant asked when he was confused about what the organization field was for.
-- "what should I do?" or "what is this?" when he logged in and don't know what to do next.
+- "what should I do?" or "what is this?" when he logged in and didn't know what to do next.
 - My participant tried to directly click on here to login rather than check their emails first.
-- "This field is required but there is no red star deside it." my participant mentioned when he was inputting skill field.
+- "This field is required but there is no red star beside it." my participant mentioned when he was inputting skill field.
 - "Can you try to type?" (my participant was making me try to type in the skills field, meaning it is not immediately obvious that it is a dropdown)
 - To demonstrate how the system has mechanisms to help users against making mistakes, users said the following:
   - "Oh cool! It [the input fields] does the error highlighting [when required fields are left blank]!"
