@@ -74,9 +74,6 @@ class MenteeForm extends Component {
 
   render() {
     const { selectedItems } = this.state;
-    const filteredOptions = learnableSkills.filter(
-      (o) => !selectedItems.includes(o),
-    );
 
     if (this.state.isSubmitted) {
       return <MenteeCompletion />;
@@ -154,10 +151,16 @@ class MenteeForm extends Component {
                 mode="multiple"
                 value={selectedItems}
                 onChange={this.handleSkillsChange}
-                maxTagCount={3}
               >
-                {filteredOptions.map((item) => (
-                  <Option key={item} value={getCamelCase(item)}>
+                {learnableSkills.map((item) => (
+                  <Option
+                    key={item}
+                    value={getCamelCase(item)}
+                    disabled={
+                      selectedItems.length >= 3 &&
+                      !selectedItems.includes(getCamelCase(item))
+                    }
+                  >
                     {item}
                   </Option>
                 ))}
