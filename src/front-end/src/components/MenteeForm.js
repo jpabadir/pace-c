@@ -40,7 +40,7 @@ class MenteeForm extends Component {
   }
 
   handleSkillsChange(event) {
-    this.setState({ selectedItems: event.target.value });
+    this.setState({ selectedItems: event });
   }
 
   sendEmail() {
@@ -74,9 +74,6 @@ class MenteeForm extends Component {
 
   render() {
     const { selectedItems } = this.state;
-    const filteredOptions = learnableSkills.filter(
-      (o) => !selectedItems.includes(o),
-    );
 
     if (this.state.isSubmitted) {
       return <MenteeCompletion />;
@@ -153,11 +150,17 @@ class MenteeForm extends Component {
               <Select
                 mode="multiple"
                 value={selectedItems}
-                onInput={this.handleSkillsChange}
-                maxTagCount={3}
+                onChange={this.handleSkillsChange}
               >
-                {filteredOptions.map((item) => (
-                  <Option key={item} value={getCamelCase(item)}>
+                {learnableSkills.map((item) => (
+                  <Option
+                    key={item}
+                    value={getCamelCase(item)}
+                    disabled={
+                      selectedItems.length >= 3 &&
+                      !selectedItems.includes(getCamelCase(item))
+                    }
+                  >
                     {item}
                   </Option>
                 ))}
