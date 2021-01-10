@@ -7,6 +7,8 @@
 
 ## Agenda Items:
 - [aleks] agree on a weekly meeting time
+- [jp] Start sprint planning
+- [jp] Start/Figure out how to do unit testing
 - 
 
 ## Detailed Notes:
