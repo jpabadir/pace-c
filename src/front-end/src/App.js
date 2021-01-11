@@ -27,18 +27,10 @@ function App() {
           </Menu>
         </Header>
         <Content
-          /* PLEASE READ!
-        Temporary comment for the sake of review: 
-        'minWidth' and 'minHeight' are required so that the footer
-        doesn't cut information off when the browser size is 
-        decreased significantly (i.e the browser is anything but full screen)
-        Disclaimer: minimum sizes are based off of dimensions from 
-        'Extra small devices (portrait phones, less than 576px)'. 
-        */
           style={{
             padding: '0 50px',
             minWidth: '575px',
-            minHeight: '575px',
+            minHeight: '1080px',
             overflow: 'auto',
           }}
         >
