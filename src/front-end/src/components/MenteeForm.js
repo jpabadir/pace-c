@@ -5,6 +5,7 @@ import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min
 import emailjs from 'emailjs-com';
 import MenteeCompletion from './MenteeCompletion';
 import { marshallMenteeInfo, pushToDB, getCamelCase } from '../helper-methods';
+import firebase from '../firebase-init';
 
 const { Option } = Select;
 
@@ -55,11 +56,27 @@ class MenteeForm extends Component {
   }
 
   onFinish(values) {
-    this.setState({ isSubmitted: true });
-
-    this.sendEmail(values);
-
-    pushToDB('users', marshallMenteeInfo(values));
+    firebase
+      .database()
+      .ref()
+      .child('users')
+      .orderByChild('email')
+      .equalTo(values.emailInput)
+      .once('value')
+      .then((snapshot) => {
+        // if exists, alert.
+        if (snapshot.exists()) {
+          // probably alerts in other form of message.
+          window.alert('mail already exists.');
+          this.setState({ isSubmitted: false });
+          // if not exists, create new account and jump to completion page.
+        } else {
+          console.log('not found');
+          this.sendEmail(values);
+          pushToDB('users', marshallMenteeInfo(values));
+          this.setState({ isSubmitted: true });
+        }
+      });
   }
 
   onFinishFailed(values) {
