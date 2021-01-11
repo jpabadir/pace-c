@@ -12,7 +12,7 @@
 - [Katrina] Provide the team with a refresher on what the client mentioned to prioritize from the Dec. 1st client meeting (First, implementing the calendar availability, and then converting the mentee form to an embedded iFrame)
 -	[Katrina] After reviewing the course website, it doesn’t seem like there’s many linked items in the ‘resource’ column (which makes sense since the peer testing and video demos are things we’ve already done, so I’d assume the criteria is the same). However, during the final exam period, a ‘Final report’ is listed. I’m planning on asking the instructor about what’s expected from this, just to keep it in mind for the future and be able to chip away at if possible.
 -	[Katrina] Minor health update (not a priority item, just an FYI but I don't want to forget to mention)
-
+-	
 
 ## Detailed Notes:
 - 
