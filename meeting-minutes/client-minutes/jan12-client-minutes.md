@@ -2,7 +2,11 @@
 
 # TWELFTH CLIENT MEETING 01/12
 
-## 12 JANUARY 2021 / 9:00AM / VIA GOOGLE MEETS
+## 12 JANUARY 2021 / 9:00AM - 9:56AM/ VIA GOOGLE MEETS
+
+### ATTENDEES
+
+Katrina M., Philip O.
 
 ### AGENDA
 
@@ -28,3 +32,12 @@
 - Reading Break is Feb. 15 - 19.
 - Peer Testing sessions will occur Feb 22-26, so development might slow during that week.
 - April 9 is our last day of the term.
+
+### NOTES
+
+Katrina and Philip were the only two attendees at the meeting. The client had responded to an email on January 10th to confirm the meeting (Meetings from Dec 8 - Jan 5 had been cancelled, but the Google Meets for Jan 12 was still booked). Katrina emailed the client at 9:17AM to see if the meeting was still happening, but received no response. Hopefully the client is doing well.
+
+### ACTION ITEMS
+
+- 1/12-01. Katrina will update via Discord on the state of future meetings.
+- 12/1-02. The agenda planned for today's meeting (and any updates) will be carried over to next week.
