@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Button, Input, Select } from 'antd';
-import TimezonePicker from 'react-bootstrap-timezone-picker';
-import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import MentorCompletion from './MentorCompletion';
+import timeZones from '../timeZones.json';
 import {
   setInDB,
   createUserInFirebase,
@@ -104,13 +103,15 @@ class MentorForm extends Component {
                 },
               ]}
             >
-              <TimezonePicker
-                absolute={false}
-                defaultValue=""
-                placeholder="Select timezone..."
-                onChange={this.handleChange}
-                className="time-zone-picker"
-              />
+              <Select placeholder="Select timezone.." showSearch>
+                {timeZones.map((zone) => {
+                  return (
+                    <Option key={zone.id} value={getCamelCase(zone.id)}>
+                      {[zone.id, ' ', zone.area]}
+                    </Option>
+                  );
+                })}
+              </Select>
             </Form.Item>
             <Form.Item
               label="Password"
@@ -124,6 +125,33 @@ class MentorForm extends Component {
               ]}
             >
               <Input type="password" placeholder="Password" minlength="8" />
+            </Form.Item>
+            <Form.Item
+              name="confirmPassword"
+              label="Confirm Password"
+              dependencies={['password']}
+              rules={[
+                {
+                  required: true,
+                  message: 'Please confirm your password',
+                },
+                ({ getFieldValue }) => ({
+                  validator(rule, value) {
+                    if (!value || getFieldValue('password') === value) {
+                      return Promise.resolve();
+                    }
+                    return Promise.reject(
+                      new Error('The password fields do not match'),
+                    );
+                  },
+                }),
+              ]}
+            >
+              <Input
+                type="password"
+                placeholder="Confirm your password"
+                minlength="8"
+              />
             </Form.Item>
             <Form.Item
               label="Top 3 skills"

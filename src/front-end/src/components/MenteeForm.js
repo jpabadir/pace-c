@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Form, Button, Input, Select } from 'antd';
-import TimezonePicker from 'react-bootstrap-timezone-picker';
-import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import emailjs from 'emailjs-com';
 import MenteeCompletion from './MenteeCompletion';
 import { marshallMenteeInfo, pushToDB, getCamelCase } from '../helper-methods';
+import timeZones from '../timeZones.json';
 
 const { Option } = Select;
 
@@ -123,14 +122,15 @@ class MenteeForm extends Component {
               // must have an input:
               rules={[{ required: true, message: 'This field is required' }]}
             >
-              <TimezonePicker
-                // time zones:
-                absolute={false}
-                defaultValue=""
-                placeholder="Select timezone..."
-                onChange={this.handleChange}
-                className="time-zone-picker"
-              />
+              <Select placeholder="Select timezone.." showSearch>
+                {timeZones.map((zone) => {
+                  return (
+                    <Option key={zone.id} value={getCamelCase(zone.id)}>
+                      {[zone.id, ' ', zone.area]}
+                    </Option>
+                  );
+                })}
+              </Select>
             </Form.Item>
             <Form.Item
               label="Top 3 skills"
