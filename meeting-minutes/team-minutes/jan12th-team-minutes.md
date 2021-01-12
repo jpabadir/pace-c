@@ -34,3 +34,8 @@ MentorForm.js - Eric
 MentorHome.js - Aleks  
 MentorSuggested.js - Aleks  
 MentorTutorial.js - Alek
+
+To complete the task, I suggest the following resources: 
+- [Jest documentation](https://jestjs.io/docs/en/getting-started)
+- [React testing library documentation](https://testing-library.com/docs/react-testing-library/intro/)
+- [A helpful video I found](https://www.youtube.com/watch?v=3e1GHCA3GP0)
