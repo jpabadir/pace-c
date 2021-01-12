@@ -5,7 +5,7 @@ import { InfoCircleOutlined } from '@ant-design/icons';
 import TimezonePicker from 'react-bootstrap-timezone-picker';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import MentorCompletion from './MentorCompletion';
-import firebase from '../firebase-init';
+// import firebase from '../firebase-init';
 import {
   setInDB,
   createUserInFirebase,
@@ -34,31 +34,16 @@ class MentorForm extends Component {
   }
 
   onFinish(values) {
-    // Set submit to true
-    firebase
-      .database()
-      .ref()
-      .child('users')
-      .orderByChild('email')
-      .equalTo(values.emailInput)
-      .once('value')
-      .then((snapshot) => {
-        // if exists, alert.
-        if (snapshot.exists()) {
-          // probably alerts in other form of message.
+    createUserInFirebase(values.emailInput, values.password).then(
+      (createUserAttempt) => {
+        if (createUserAttempt.code === 'auth/email-already-in-use') {
           window.alert('mail already exists.');
-          this.setState({ isSubmitted: false });
-          // if not exists, create new account and jump to completion page.
         } else {
-          console.log('not found');
-          createUserInFirebase(values.emailInput, values.password).then(
-            (createdUser) => {
-              setInDB('users', createdUser.uid, marshallMentorInfo(values));
-            },
-          );
+          setInDB('users', createUserAttempt.uid, marshallMentorInfo(values));
           this.setState({ isSubmitted: true });
         }
-      });
+      },
+    );
   }
 
   onFinishFailed(values) {
