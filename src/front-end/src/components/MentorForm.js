@@ -5,7 +5,6 @@ import { InfoCircleOutlined } from '@ant-design/icons';
 import TimezonePicker from 'react-bootstrap-timezone-picker';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import MentorCompletion from './MentorCompletion';
-// import firebase from '../firebase-init';
 import {
   setInDB,
   createUserInFirebase,
