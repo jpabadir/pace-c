@@ -20,7 +20,7 @@
 
 ## Testing plan: 
 - We'll start with catching up on unit testing our whole codebase. The aim is to have this done in 5 to 7 days.
-- We'll share the work as follows. Each person is responsible for adding the tesing to 3 files. JP will get one file done ASAP and others can follow the example. Note that the implementation and the testing files should be moved to a new folder under the components containing both, as per JP's example. 
+- We'll share the work as follows. Each person is responsible for adding the tesing to 3 files. JP will get one file done ASAP and others can follow the example. Note that the source code and the testing files should be moved to a new folder under the components containing both, as per JP's example. 
 ### Testing responsibilities breakdown:
 Auth.js - JP  
 ForgotPassword.js - JP  
