@@ -5,7 +5,7 @@ import { NavLink, Switch, Route } from 'react-router-dom';
 import MentorForm from './components/MentorForm';
 import Auth from './components/Auth/Auth';
 import MenteeForm from './components/MenteeForm';
-import ForgotPassword from './components/ForgotPassword';
+import ForgotPassword from './components/ForgotPassword/ForgotPassword';
 
 const { Header, Content, Footer } = Layout;
 
