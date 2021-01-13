@@ -26,23 +26,25 @@ class Login extends Component {
   onLogin() {
     const userEmail = document.getElementById('useremail').value;
     const userPassword = document.getElementById('userpassword').value;
-    fire
-      .auth()
-      .signInWithEmailAndPassword(userEmail, userPassword)
-      .catch((error) => {
-        switch (error.code) {
-          case 'auth/invalid-email':
-            break;
-          case 'auth/wrong-password':
-            window.alert('Your password is incorrect.');
-            break;
-          case 'auth/user-not-found':
-            window.alert('Username does not exist.');
-            break;
-          default:
-            break;
-        }
-      });
+    if (userEmail && userPassword) {
+      fire
+        .auth()
+        .signInWithEmailAndPassword(userEmail, userPassword)
+        .catch((error) => {
+          switch (error.code) {
+            case 'auth/invalid-email':
+              break;
+            case 'auth/wrong-password':
+              window.alert('Your password is incorrect.');
+              break;
+            case 'auth/user-not-found':
+              window.alert('Username does not exist.');
+              break;
+            default:
+              break;
+          }
+        });
+    }
   }
 
   handleEmailChange(event) {
