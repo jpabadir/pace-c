@@ -71,7 +71,6 @@ class MenteeForm extends Component {
           this.setState({ isSubmitted: false });
           // if not exists, create new account and jump to completion page.
         } else {
-          console.log('not found');
           this.sendEmail(values);
           pushToDB('users', marshallMenteeInfo(values));
           this.setState({ isSubmitted: true });
