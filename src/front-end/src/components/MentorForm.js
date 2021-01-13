@@ -28,16 +28,14 @@ class MentorForm extends Component {
     this.onFinish = this.onFinish.bind(this);
     this.onFinishFailed = this.onFinishFailed.bind(this);
   }
-
   onFinish(values) {
+    // Set submit to true
+    this.setState({ isSubmitted: true });
+
+    // Create user and store user's form info
     createUserInFirebase(values.emailInput, values.password).then(
-      (createUserAttempt) => {
-        if (createUserAttempt.code === 'auth/email-already-in-use') {
-          window.alert('mail already exists.');
-        } else {
-          setInDB('users', createUserAttempt.uid, marshallMentorInfo(values));
-          this.setState({ isSubmitted: true });
-        }
+      (createdUser) => {
+        setInDB('users', createdUser.uid, marshallMentorInfo(values));
       },
     );
   }
