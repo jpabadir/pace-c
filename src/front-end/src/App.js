@@ -26,7 +26,14 @@ function App() {
             </Menu.Item>
           </Menu>
         </Header>
-        <Content style={{ padding: '0 50px' }}>
+        <Content
+          style={{
+            padding: '0 50px',
+            minWidth: '575px',
+            minHeight: '864px',
+            overflow: 'auto',
+          }}
+        >
           <Switch>
             <Route path="/ForgotPassword" component={ForgotPassword} />
             <Route path="/Auth" component={Auth} />
@@ -34,7 +41,17 @@ function App() {
             <Route exact path="/MenteeForm" component={MenteeForm} />
           </Switch>
         </Content>
-        <Footer style={{ textAlign: 'center' }}>
+        <Footer
+          style={{
+            textAlign: 'center',
+            position: 'fixed',
+            bottom: 0,
+            width: '100%',
+            overflow: 'flex',
+            backgroundColor: '#001529',
+            color: '#A6ADB4',
+          }}
+        >
           MentorMatch ©2020 Created by UBCO Students - Pace C
         </Footer>
       </Layout>

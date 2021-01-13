@@ -76,8 +76,13 @@ class MenteeForm extends Component {
             onFinish={this.onFinish}
             onFinishFailed={this.onFinishFailed}
             autocomplete="off"
+            labelCol={{ span: 3 }}
+            wrapperCol={{ span: 16 }}
+            layout="horizontal"
+            labelAlign="left"
           >
-            <h1>Sign up as a mentee</h1>
+            <h1>Sign up as a Mentee</h1>
+
             <Form.Item
               label="Name"
               id="nameInput"
@@ -189,7 +194,12 @@ class MenteeForm extends Component {
             >
               <Input.TextArea placeholder="Tell us a bit about yourself" />
             </Form.Item>
-            <Button type="primary" htmlType="submit">
+            <Button
+              type="primary"
+              htmlType="submit"
+              className="formSubmitButton"
+              size="large"
+            >
               Submit
             </Button>
           </Form>
