@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import { Form, Button, Input, Tooltip, Select } from 'antd';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { InfoCircleOutlined } from '@ant-design/icons';
-import TimezonePicker from 'react-bootstrap-timezone-picker';
-import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
+import { Form, Button, Input, Select } from 'antd';
 import MentorCompletion from './MentorCompletion';
+import timeZones from '../timeZones.json';
 import {
   setInDB,
   createUserInFirebase,
@@ -60,22 +57,20 @@ class MentorForm extends Component {
             onFinish={this.onFinish}
             onFinishFailed={this.onFinishFailed}
             autocomplete="off"
+            labelCol={{ span: 3 }}
+            wrapperCol={{ span: 16 }}
+            layout="horizontal"
+            labelAlign="left"
           >
-            <h1>Sign up as a mentor</h1>
+            <h1>Sign up as a Mentor</h1>
             <Form.Item
               label="Organization"
               name="organization"
+              tooltip="The organization you're planning to be a Mentor with"
               // must have an input:
               rules={[{ required: true, message: 'Please input something' }]}
             >
-              <Input
-                placeholder="Please enter your Organization"
-                prefix={
-                  <Tooltip title="Organization you're planning to be a Mentor with">
-                    <InfoCircleOutlined style={{ color: 'rgba(0,0,0,.45)' }} />
-                  </Tooltip>
-                }
-              />
+              <Input placeholder="Please enter your Organization" />
             </Form.Item>
             <Form.Item
               label="Name"
@@ -109,17 +104,20 @@ class MentorForm extends Component {
                 },
               ]}
             >
-              <TimezonePicker
-                absolute={false}
-                defaultValue=""
-                placeholder="Select timezone..."
-                onChange={this.handleChange}
-                className="time-zone-picker"
-              />
+              <Select placeholder="Select timezone.." showSearch>
+                {timeZones.map((zone) => {
+                  return (
+                    <Option key={zone.id} value={getCamelCase(zone.id)}>
+                      {[zone.id, ' ', zone.area]}
+                    </Option>
+                  );
+                })}
+              </Select>
             </Form.Item>
             <Form.Item
               label="Password"
               name="password"
+              tooltip="Password should be at least 8 characters."
               rules={[
                 {
                   required: true,
@@ -127,15 +125,33 @@ class MentorForm extends Component {
                 },
               ]}
             >
+              <Input type="password" placeholder="Password" minlength="8" />
+            </Form.Item>
+            <Form.Item
+              name="confirmPassword"
+              label="Confirm Password"
+              dependencies={['password']}
+              rules={[
+                {
+                  required: true,
+                  message: 'Please confirm your password',
+                },
+                ({ getFieldValue }) => ({
+                  validator(rule, value) {
+                    if (!value || getFieldValue('password') === value) {
+                      return Promise.resolve();
+                    }
+                    return Promise.reject(
+                      new Error('The password fields do not match'),
+                    );
+                  },
+                }),
+              ]}
+            >
               <Input
                 type="password"
-                placeholder="Password"
+                placeholder="Confirm your password"
                 minlength="8"
-                prefix={
-                  <Tooltip title="Password should be at least 8 characters.">
-                    <InfoCircleOutlined style={{ color: 'rgba(0,0,0,.45)' }} />
-                  </Tooltip>
-                }
               />
             </Form.Item>
             <Form.Item
@@ -200,7 +216,12 @@ class MentorForm extends Component {
             >
               <Input.TextArea placeholder="Tell us a bit about yourself" />
             </Form.Item>
-            <Button type="primary" htmlType="submit">
+            <Button
+              type="primary"
+              htmlType="submit"
+              className="formSubmitButton"
+              size="large"
+            >
               Submit
             </Button>
           </Form>
