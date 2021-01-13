@@ -55,9 +55,26 @@ class MenteeForm extends Component {
   }
 
   onFinish(values) {
-    this.sendEmail(values);
-    pushToDB('users', marshallMenteeInfo(values));
-    this.setState({ isSubmitted: true });
+    firebase
+      .database()
+      .ref()
+      .child('users')
+      .orderByChild('email')
+      .equalTo(values.emailInput)
+      .once('value')
+      .then((snapshot) => {
+        // if exists, alert.
+        if (snapshot.exists()) {
+          // probably alerts in other form of message.
+          window.alert('mail already exists.');
+          this.setState({ isSubmitted: false });
+          // if not exists, create new account and jump to completion page.
+        } else {
+          this.sendEmail(values);
+          pushToDB('users', marshallMenteeInfo(values));
+          this.setState({ isSubmitted: true });
+        }
+      });
   }
 
   onFinishFailed(values) {
