@@ -28,6 +28,7 @@ class MentorForm extends Component {
     this.onFinish = this.onFinish.bind(this);
     this.onFinishFailed = this.onFinishFailed.bind(this);
   }
+
   onFinish(values) {
     // Set submit to true
     this.setState({ isSubmitted: true });
