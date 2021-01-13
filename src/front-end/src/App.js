@@ -30,7 +30,7 @@ function App() {
           style={{
             padding: '0 50px',
             minWidth: '575px',
-            minHeight: '1080px',
+            minHeight: '864px',
             overflow: 'auto',
           }}
         >
