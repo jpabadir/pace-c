@@ -1,4 +1,3 @@
-import { Input } from 'antd';
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { mockWindowMatchMedia } from '../../helper-methods';
