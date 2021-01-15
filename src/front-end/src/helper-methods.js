@@ -45,11 +45,7 @@ export function marshallMentorInfo(mentorFormValues) {
     name: mentorFormValues.nameInput,
     timeZone: mentorFormValues.timeZone,
     userType: 'mentor',
-    rankedSkills: [
-      mentorFormValues.skill1,
-      mentorFormValues.skill2,
-      mentorFormValues.skill3,
-    ],
+    rankedSkills: mentorFormValues.teachables,
     description: mentorFormValues.description,
     suggestedMentees: ['MLy_owDfdsfsZSNtIanUi6', 'MLy_owDS4aZSNtIanUi6'],
   };
@@ -61,11 +57,7 @@ export function marshallMenteeInfo(menteeFormValues) {
     name: menteeFormValues.nameInput,
     timeZone: menteeFormValues.timeZone,
     userType: 'mentee',
-    rankedSkills: [
-      menteeFormValues.skill1,
-      menteeFormValues.skill2,
-      menteeFormValues.skill3,
-    ],
+    rankedSkills: menteeFormValues.skillset,
     description: menteeFormValues.description,
   };
 }
