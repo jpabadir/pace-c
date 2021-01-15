@@ -46,13 +46,9 @@ export function marshallMentorInfo(mentorFormValues) {
     name: mentorFormValues.nameInput,
     timeZone: mentorFormValues.timeZone,
     userType: 'mentor',
-    rankedSkills: [
-      mentorFormValues.skill1,
-      mentorFormValues.skill2,
-      mentorFormValues.skill3,
-    ],
+    rankedSkills: mentorFormValues.teachables,
     description: mentorFormValues.description,
-    suggestedMentees: ['-MLy_owDfdsfsZSNtIanUi6', '-MLy_owDS4aZSNtIanUi6'],
+    suggestedMentees: ['MLy_owDfdsfsZSNtIanUi6', 'MLy_owDS4aZSNtIanUi6'],
   };
 }
 
@@ -62,11 +58,7 @@ export function marshallMenteeInfo(menteeFormValues) {
     name: menteeFormValues.nameInput,
     timeZone: menteeFormValues.timeZone,
     userType: 'mentee',
-    rankedSkills: [
-      menteeFormValues.skill1,
-      menteeFormValues.skill2,
-      menteeFormValues.skill3,
-    ],
+    rankedSkills: menteeFormValues.skillset,
     description: menteeFormValues.description,
   };
 }
@@ -86,11 +78,15 @@ export function fetchMenteesIDs(loggedUserUid, typeOfMentee) {
   return new Promise((resolve) => {
     const userRef = firebase.database().ref('users/' + loggedUserUid);
     userRef.on('value', (snapshot) => {
-      const result =
-        typeOfMentee === 'suggested'
-          ? snapshot.val().suggestedMentees
-          : snapshot.val().acceptedMentees;
-      resolve(result);
+      if (snapshot.val() != null) {
+        const result =
+          typeOfMentee === 'suggested'
+            ? snapshot.val().suggestedMentees
+            : snapshot.val().acceptedMentees;
+        resolve(result);
+      } else {
+        resolve([]);
+      }
     });
   });
 }
@@ -117,4 +113,20 @@ export function getCamelCase(inputString) {
       return index === 0 ? word.toLowerCase() : word.toUpperCase();
     })
     .replace(/\s+/g, '');
+}
+
+export function mockWindowMatchMedia() {
+  Object.defineProperty(window, 'matchMedia', {
+    writable: true,
+    value: jest.fn().mockImplementation((query) => ({
+      matches: false,
+      media: query,
+      onchange: null,
+      addListener: jest.fn(), // deprecated
+      removeListener: jest.fn(), // deprecated
+      addEventListener: jest.fn(),
+      removeEventListener: jest.fn(),
+      dispatchEvent: jest.fn(),
+    })),
+  });
 }

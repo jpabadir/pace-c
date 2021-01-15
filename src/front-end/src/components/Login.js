@@ -26,14 +26,25 @@ class Login extends Component {
   onLogin() {
     const userEmail = document.getElementById('useremail').value;
     const userPassword = document.getElementById('userpassword').value;
-    fire
-      .auth()
-      .signInWithEmailAndPassword(userEmail, userPassword)
-      .catch((error) => {
-        const errorMessage = error.message;
-        // eslint-disable-next-line
-        window.alert(errorMessage.trim());
-      });
+    if (userEmail && userPassword) {
+      fire
+        .auth()
+        .signInWithEmailAndPassword(userEmail, userPassword)
+        .catch((error) => {
+          switch (error.code) {
+            case 'auth/invalid-email':
+              break;
+            case 'auth/wrong-password':
+              window.alert('Your password is incorrect.');
+              break;
+            case 'auth/user-not-found':
+              window.alert('Username does not exist.');
+              break;
+            default:
+              break;
+          }
+        });
+    }
   }
 
   handleEmailChange(event) {
@@ -72,7 +83,9 @@ class Login extends Component {
               label="Email"
               name="email"
               // must have an input:
-              rules={[{ required: true, message: 'Please input something' }]}
+              rules={[
+                { required: true, message: 'Please enter your email address' },
+              ]}
             >
               <Input
                 type="email"
@@ -89,7 +102,9 @@ class Login extends Component {
               label="Password"
               name="password"
               // must have an input:
-              rules={[{ required: true, message: 'Please input something' }]}
+              rules={[
+                { required: true, message: 'Please enter your password' },
+              ]}
             >
               <Input
                 type="password"

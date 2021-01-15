@@ -7,6 +7,12 @@ import firebase from '../firebase-init';
 import timeZones from '../timeZones.json';
 
 const { Option } = Select;
+const learnableSkills = [
+  'Time management',
+  'Leadership',
+  'Interpersonal Communication',
+  'Problem solving',
+];
 
 class MenteeForm extends Component {
   constructor(props) {
@@ -15,18 +21,14 @@ class MenteeForm extends Component {
       isSubmitted: false,
       email: '',
       name: '',
-      learnableSkills: [
-        'Time management',
-        'Leadership',
-        'Interpersonal Communication',
-        'Problem solving',
-      ],
+      selectedItems: [],
     };
     this.onFinish = this.onFinish.bind(this);
     this.onFinishFailed = this.onFinishFailed.bind(this);
     this.sendEmail = this.sendEmail.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handleNameChange = this.handleNameChange.bind(this);
+    this.handleSkillsChange = this.handleSkillsChange.bind(this);
   }
 
   handleEmailChange(event) {
@@ -35,6 +37,10 @@ class MenteeForm extends Component {
 
   handleNameChange(event) {
     this.setState({ name: event.target.value });
+  }
+
+  handleSkillsChange(event) {
+    this.setState({ selectedItems: event });
   }
 
   sendEmail() {
@@ -82,6 +88,8 @@ class MenteeForm extends Component {
   }
 
   render() {
+    const { selectedItems } = this.state;
+
     if (this.state.isSubmitted) {
       return <MenteeCompletion />;
     }
@@ -109,7 +117,7 @@ class MenteeForm extends Component {
               <Input
                 onInput={this.handleNameChange}
                 id="nameid"
-                placeholder="please enter your name"
+                placeholder="First name Last name"
               />
             </Form.Item>
             <Form.Item
@@ -149,54 +157,35 @@ class MenteeForm extends Component {
               </Select>
             </Form.Item>
             <Form.Item
+              name="skillset"
               label="Top 3 skills"
               tooltip="What skills are you looking to learn?"
+              rules={[
+                {
+                  required: true,
+                  message:
+                    'Please tell us the skills you are seeking mentorship in',
+                },
+              ]}
             >
-              <Form.Item
-                name="skill1"
-                rules={[
-                  {
-                    required: true,
-                    message: 'What do you most want to learn?',
-                  },
-                ]}
+              <Select
+                mode="multiple"
+                value={selectedItems}
+                onChange={this.handleSkillsChange}
               >
-                <Select>
-                  {this.state.learnableSkills.map((skill) => {
-                    return <Option value={getCamelCase(skill)}>{skill}</Option>;
-                  })}
-                </Select>
-              </Form.Item>
-              <Form.Item
-                name="skill2"
-                rules={[
-                  {
-                    required: true,
-                    message: "What's something else you want to learn?",
-                  },
-                ]}
-              >
-                <Select>
-                  {this.state.learnableSkills.map((skill) => {
-                    return <Option value={getCamelCase(skill)}>{skill}</Option>;
-                  })}
-                </Select>
-              </Form.Item>
-              <Form.Item
-                name="skill3"
-                rules={[
-                  {
-                    required: true,
-                    message: 'what is the last skill you want to learn?',
-                  },
-                ]}
-              >
-                <Select>
-                  {this.state.learnableSkills.map((skill) => {
-                    return <Option value={getCamelCase(skill)}>{skill}</Option>;
-                  })}
-                </Select>
-              </Form.Item>
+                {learnableSkills.map((item) => (
+                  <Option
+                    key={item}
+                    value={getCamelCase(item)}
+                    disabled={
+                      selectedItems.length >= 3 &&
+                      !selectedItems.includes(getCamelCase(item))
+                    }
+                  >
+                    {item}
+                  </Option>
+                ))}
+              </Select>
             </Form.Item>
             <Form.Item
               name="description"
