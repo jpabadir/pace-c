@@ -10,6 +10,12 @@ import {
 } from '../helper-methods';
 
 const { Option } = Select;
+const teachableSkills = [
+  'Time management',
+  'Leadership',
+  'Interpersonal Communication',
+  'Problem solving',
+];
 
 /* TODO: reduce redundancy by putting skills array in another file 
 and importing it both here and in mentee form */
@@ -18,15 +24,11 @@ class MentorForm extends Component {
     super(props);
     this.state = {
       isSubmitted: false,
-      teachableSkills: [
-        'Time management',
-        'Leadership',
-        'Interpersonal Communication',
-        'Problem solving',
-      ],
+      selectedItems: [],
     };
     this.onFinish = this.onFinish.bind(this);
     this.onFinishFailed = this.onFinishFailed.bind(this);
+    this.handleSkillsChange = this.handleSkillsChange.bind(this);
   }
 
   onFinish(values) {
@@ -45,7 +47,12 @@ class MentorForm extends Component {
     console.log('Failed submit:', values);
   }
 
+  handleSkillsChange(event) {
+    this.setState({ selectedItems: event });
+  }
+
   render() {
+    const { selectedItems } = this.state;
     if (this.state.isSubmitted) {
       return <MentorCompletion />;
     }
@@ -154,54 +161,35 @@ class MentorForm extends Component {
               />
             </Form.Item>
             <Form.Item
+              name="teachables"
               label="Top 3 skills"
               tooltip="What skills can you help people learn?"
+              rules={[
+                {
+                  required: true,
+                  message:
+                    'Please tell us the skills that you can provide mentorship in',
+                },
+              ]}
             >
-              <Form.Item
-                name="skill1"
-                rules={[
-                  {
-                    required: true,
-                    message: 'Please choose your best skill',
-                  },
-                ]}
+              <Select
+                mode="multiple"
+                value={selectedItems}
+                onChange={this.handleSkillsChange}
               >
-                <Select>
-                  {this.state.teachableSkills.map((skill) => {
-                    return <Option value={getCamelCase(skill)}>{skill}</Option>;
-                  })}
-                </Select>
-              </Form.Item>
-              <Form.Item
-                name="skill2"
-                rules={[
-                  {
-                    required: true,
-                    message: 'Please choose your second best skill',
-                  },
-                ]}
-              >
-                <Select>
-                  {this.state.teachableSkills.map((skill) => {
-                    return <Option value={getCamelCase(skill)}>{skill}</Option>;
-                  })}
-                </Select>
-              </Form.Item>
-              <Form.Item
-                name="skill3"
-                rules={[
-                  {
-                    required: true,
-                    message: 'Please choose your third best skill',
-                  },
-                ]}
-              >
-                <Select>
-                  {this.state.teachableSkills.map((skill) => {
-                    return <Option value={getCamelCase(skill)}>{skill}</Option>;
-                  })}
-                </Select>
-              </Form.Item>
+                {teachableSkills.map((item) => (
+                  <Option
+                    key={item}
+                    value={getCamelCase(item)}
+                    disabled={
+                      selectedItems.length >= 3 &&
+                      !selectedItems.includes(getCamelCase(item))
+                    }
+                  >
+                    {item}
+                  </Option>
+                ))}
+              </Select>
             </Form.Item>
             <Form.Item
               name="description"

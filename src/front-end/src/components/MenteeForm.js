@@ -101,7 +101,7 @@ class MenteeForm extends Component {
               <Input
                 onInput={this.handleNameChange}
                 id="nameid"
-                placeholder="please enter your name"
+                placeholder="First name Last name"
               />
             </Form.Item>
             <Form.Item
