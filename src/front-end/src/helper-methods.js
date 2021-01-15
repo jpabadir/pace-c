@@ -51,7 +51,7 @@ export function marshallMentorInfo(mentorFormValues) {
       mentorFormValues.skill3,
     ],
     description: mentorFormValues.description,
-    suggestedMentees: ['-MLy_owDfdsfsZSNtIanUi6', '-MLy_owDS4aZSNtIanUi6'],
+    suggestedMentees: ['MLy_owDfdsfsZSNtIanUi6', 'MLy_owDS4aZSNtIanUi6'],
   };
 }
 
@@ -81,11 +81,15 @@ export function fetchMenteesIDs(loggedUserUid, typeOfMentee) {
   return new Promise((resolve) => {
     const userRef = firebase.database().ref('users/' + loggedUserUid);
     userRef.on('value', (snapshot) => {
-      const result =
-        typeOfMentee === 'suggested'
-          ? snapshot.val().suggestedMentees
-          : snapshot.val().acceptedMentees;
-      resolve(result);
+      if (snapshot.val() != null) {
+        const result =
+          typeOfMentee === 'suggested'
+            ? snapshot.val().suggestedMentees
+            : snapshot.val().acceptedMentees;
+        resolve(result);
+      } else {
+        resolve([]);
+      }
     });
   });
 }
