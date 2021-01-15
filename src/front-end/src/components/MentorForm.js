@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import { Form, Button, Input, Tooltip, Select } from 'antd';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { InfoCircleOutlined } from '@ant-design/icons';
-import TimezonePicker from 'react-bootstrap-timezone-picker';
-import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
+import { Form, Button, Input, Select } from 'antd';
 import MentorCompletion from './MentorCompletion';
+import timeZones from '../timeZones.json';
 import {
   setInDB,
   createUserInFirebase,
@@ -38,7 +35,9 @@ class MentorForm extends Component {
     createUserInFirebase(values.emailInput, values.password).then(
       (createUserAttempt) => {
         if (createUserAttempt.code === 'auth/email-already-in-use') {
-          window.alert('mail already exists.');
+          window.alert(
+            'The email address that you entered is already associated with an email address in our system. Please login to access your account.',
+          );
         } else {
           setInDB('users', createUserAttempt.uid, marshallMentorInfo(values));
           this.setState({ isSubmitted: true });
@@ -67,27 +66,23 @@ class MentorForm extends Component {
             onFinish={this.onFinish}
             onFinishFailed={this.onFinishFailed}
             autocomplete="off"
+            labelCol={{ span: 3 }}
+            wrapperCol={{ span: 16 }}
+            layout="horizontal"
+            labelAlign="left"
           >
-            <h1>Sign up as a mentor</h1>
+            <h1>Sign up as a Mentor</h1>
             <Form.Item
               label="Organization"
               name="organization"
-              // must have an input:
+              tooltip="The organization you're planning to be a Mentor with"
               rules={[{ required: true, message: 'Please input something' }]}
             >
-              <Input
-                placeholder="Please enter your Organization"
-                prefix={
-                  <Tooltip title="Organization you're planning to be a Mentor with">
-                    <InfoCircleOutlined style={{ color: 'rgba(0,0,0,.45)' }} />
-                  </Tooltip>
-                }
-              />
+              <Input placeholder="Please enter your Organization" />
             </Form.Item>
             <Form.Item
               label="Name"
               name="nameInput"
-              // must have an input:
               rules={[{ required: true, message: 'Please enter your name' }]}
             >
               <Input placeholder="First name Last name" />
@@ -116,17 +111,20 @@ class MentorForm extends Component {
                 },
               ]}
             >
-              <TimezonePicker
-                absolute={false}
-                defaultValue=""
-                placeholder="Select timezone..."
-                onChange={this.handleChange}
-                className="time-zone-picker"
-              />
+              <Select placeholder="Select timezone.." showSearch>
+                {timeZones.map((zone) => {
+                  return (
+                    <Option key={zone.id} value={getCamelCase(zone.id)}>
+                      {[zone.id, ' ', zone.area]}
+                    </Option>
+                  );
+                })}
+              </Select>
             </Form.Item>
             <Form.Item
               label="Password"
               name="password"
+              tooltip="Password should be at least 8 characters."
               rules={[
                 {
                   required: true,
@@ -134,16 +132,7 @@ class MentorForm extends Component {
                 },
               ]}
             >
-              <Input
-                type="password"
-                placeholder="Password"
-                minlength="8"
-                prefix={
-                  <Tooltip title="Password should be at least 8 characters.">
-                    <InfoCircleOutlined style={{ color: 'rgba(0,0,0,.45)' }} />
-                  </Tooltip>
-                }
-              />
+              <Input type="password" placeholder="Password" minlength="8" />
             </Form.Item>
             <Form.Item
               name="confirmPassword"
@@ -215,7 +204,12 @@ class MentorForm extends Component {
             >
               <Input.TextArea placeholder="Tell us a bit about yourself" />
             </Form.Item>
-            <Button type="primary" htmlType="submit">
+            <Button
+              type="primary"
+              htmlType="submit"
+              className="formSubmitButton"
+              size="large"
+            >
               Submit
             </Button>
           </Form>

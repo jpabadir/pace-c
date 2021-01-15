@@ -72,7 +72,9 @@ class MenteeForm extends Component {
         // if exists, alert.
         if (snapshot.exists()) {
           // probably alerts in other form of message.
-          window.alert('mail already exists.');
+          window.alert(
+            'The email address that you entered is already associated with an email address in our system.',
+          );
           this.setState({ isSubmitted: false });
           // if not exists, create new account and jump to completion page.
         } else {
