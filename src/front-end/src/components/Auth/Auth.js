@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import fire from '../firebase-init';
-import Login from './Login';
-import MentorHome from './MentorHome';
+import fire from '../../firebase-init';
+import Login from '../Login';
+import MentorHome from '../MentorHome';
 
 class Auth extends Component {
   constructor(props) {
