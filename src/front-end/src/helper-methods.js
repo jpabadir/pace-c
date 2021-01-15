@@ -85,11 +85,15 @@ export function fetchMenteesIDs(loggedUserUid, typeOfMentee) {
   return new Promise((resolve) => {
     const userRef = firebase.database().ref('users/' + loggedUserUid);
     userRef.on('value', (snapshot) => {
-      const result =
-        typeOfMentee === 'suggested'
-          ? snapshot.val().suggestedMentees
-          : snapshot.val().acceptedMentees;
-      resolve(result);
+      if (snapshot.val() != null) {
+        const result =
+          typeOfMentee === 'suggested'
+            ? snapshot.val().suggestedMentees
+            : snapshot.val().acceptedMentees;
+        resolve(result);
+      } else {
+        resolve([]);
+      }
     });
   });
 }
