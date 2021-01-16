@@ -83,7 +83,7 @@ class MenteeForm extends Component {
           <Form
             onFinish={this.onFinish}
             onFinishFailed={this.onFinishFailed}
-            autocomplete="off"
+            autoComplete="off"
             labelCol={{ span: 3 }}
             wrapperCol={{ span: 16 }}
             layout="horizontal"
