@@ -23,7 +23,7 @@ afterEach(() => {
 test('render without crashing', () => {
   render(<MentorForm />, container);
   expect(container.textContent).toBe(
-    'Sign up as a MentorOrganizationNameEmailTime-zoneSelect timezone..PasswordConfirm PasswordTop 3 skills DescriptionSubmit',
+    'Sign up as a MentorOrganizationNameEmailTime-zoneSelect timezone..PasswordConfirm PasswordTop 3 skills\xa0DescriptionSubmit',
   );
 });
 
