@@ -72,7 +72,7 @@ class Login extends Component {
           <Form
             onFinish={this.onFinish}
             onFinishFailed={this.onFinishFailed}
-            autocomplete="off"
+            autoComplete="off"
             labelCol={{ span: 5 }}
             wrapperCol={{ span: 14 }}
             layout="horizontal"
