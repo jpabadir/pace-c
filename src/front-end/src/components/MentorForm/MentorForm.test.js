@@ -23,14 +23,14 @@ afterEach(() => {
 test('render without crashing', () => {
   render(<MentorForm />, container);
   expect(container.textContent).toBe(
-    "Sign up as a MentorOrganizationNameEmailTime-zoneSelect timezone..PasswordConfirm PasswordTop 3 skills DescriptionSubmit",
-    );
+    'Sign up as a MentorOrganizationNameEmailTime-zoneSelect timezone..PasswordConfirm PasswordTop 3 skills DescriptionSubmit',
+  );
 });
 
 test('Every text field has its input field except', () => {
   render(<MentorForm />, container);
   const input = document.getElementsByTagName('input');
-  const tarea = document.getElementsByTagName('textArea')
+  const tarea = document.getElementsByTagName('textArea');
   // organization
   expect(container.contains(input[0])).toBe(true);
   // name
@@ -48,4 +48,3 @@ test('Every text field has its input field except', () => {
   // description
   expect(container.contains(tarea[0])).toBe(true);
 });
-
