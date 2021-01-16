@@ -33,6 +33,7 @@ test('Every text field has its input field except', () => {
   const tarea = document.getElementsByTagName('textArea');
   // organization
   expect(container.contains(input[0])).toBe(true);
+  expect(input[0].labels[0].textContent).toBe('Organization');
   // name
   expect(container.contains(input[1])).toBe(true);
   // email
