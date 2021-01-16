@@ -6,6 +6,18 @@ import MenteeDisplay from './MenteeDisplay';
 
 let container = null;
 
+const mockFunction = jest.fn();
+const props = {
+  menteeUid: '',
+  name: '',
+  email: '',
+  skills: '',
+  description: '',
+  request: false,
+  acceptMentee: mockFunction,
+  declineMentee: mockFunction,
+};
+
 mockWindowMatchMedia();
 
 beforeEach(() => {
@@ -21,7 +33,8 @@ afterEach(() => {
 });
 
 test('render the body of the card correctly', () => {
-  render(<MenteeDisplay />, container);
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  render(<MenteeDisplay {...props} />, container);
   const p = document.getElementsByTagName('p');
   let i = 0;
   while (i < p.length) {
