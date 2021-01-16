@@ -25,7 +25,7 @@ it('renders without crashing', () => {
   expect(container.textContent).toBe('Reset your passwordEmailConfirm');
 });
 
-it('has a text input', () => {
+it('has a text input test', () => {
   render(<ForgotPassword />, container);
   const input = document.getElementsByTagName('input')[0];
   expect(container.contains(input)).toBe(true);
