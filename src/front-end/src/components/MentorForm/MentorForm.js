@@ -62,7 +62,7 @@ class MentorForm extends Component {
           <Form
             onFinish={this.onFinish}
             onFinishFailed={this.onFinishFailed}
-            autocomplete="off"
+            autoComplete="off"
             labelCol={{ span: 3 }}
             wrapperCol={{ span: 16 }}
             layout="horizontal"
@@ -131,7 +131,7 @@ class MentorForm extends Component {
                 },
               ]}
             >
-              <Input type="password" placeholder="Password" minlength="8" />
+              <Input type="password" placeholder="Password" minLength="8" />
             </Form.Item>
             <Form.Item
               name="confirmPassword"
@@ -157,7 +157,7 @@ class MentorForm extends Component {
               <Input
                 type="password"
                 placeholder="Confirm your password"
-                minlength="8"
+                minLength="8"
               />
             </Form.Item>
             <Form.Item
