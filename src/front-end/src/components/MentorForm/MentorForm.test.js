@@ -1,5 +1,7 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
+import userEvent from '@testing-library/user-event';
+import { act } from 'react-dom/test-utils';
 import { mockWindowMatchMedia } from '../../helper-methods';
 
 import MentorForm from './MentorForm';
@@ -72,9 +74,12 @@ test('render header correctly', () => {
   expect(header[0].isEqualNode(h1)).toBe(true);
 });
 
-test('render time-zone with correct options', () => {
+test('timezone select options are updating properly', async () => {
   render(<MentorForm />, container);
-  const options = document.getElementsByTagName('Option');
-  expect(options.length).toBe(9);
-  expect(options[0].nodeValue).toBe('Time management')
+  expect(document.getElementById('timeZone_list')).toBe(null);
+  const tzi = document.getElementById('timeZone');
+  await act(async () => userEvent.click(tzi));
+  const timeZoneList = document.getElementById('timeZone_list').children;
+  expect(timeZoneList[0].textContent).toBe('(GMT-11:00)PagoPago');
+  expect(timeZoneList[1].textContent).toBe('(GMT-10:00)HawaiiTime');
 });
