@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Button, Input, Select } from 'antd';
-import MentorCompletion from './MentorCompletion';
+import MentorCompletion from './MentorCompletion/MentorCompletion';
 import timeZones from '../timeZones.json';
 import {
   setInDB,

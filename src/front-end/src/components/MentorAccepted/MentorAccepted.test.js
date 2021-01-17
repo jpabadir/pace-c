@@ -22,7 +22,8 @@ afterEach(() => {
 
 test('renders without crashing', () => {
   render(<MentorAccepted />, container);
-  expect(container.textContent).toBe('Accepted Mentees:Below you can view details about each accepted mentee',
+  expect(container.textContent).toBe(
+    'Accepted Mentees:Below you can view details about each accepted mentee',
   );
 });
 

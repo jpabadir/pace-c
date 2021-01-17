@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import fire from '../firebase-init';
 import MentorSuggested from './MentorSuggested';
-import MentorAccepted from './MentorAccepted';
+import MentorAccepted from './MentorAccepted/MentorAccepted';
 import MentorTutorial from './MentorTutorial';
 
 // eslint-disable-next-line react/prefer-stateless-function
