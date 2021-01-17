@@ -46,6 +46,19 @@ it('has logout button', () => {
   expect(logoutButton.textContent).toBe('Logout');
 });
 
+it('has 3 properly-labelled links', () => {
+  render(
+    <Router>
+      <Auth />
+    </Router>,
+    container,
+  );
+  const links = document.getElementsByTagName('a');
+  expect(links[0].textContent).toBe('Mentor Tutorial');
+  expect(links[1].textContent).toBe('Suggested Mentees');
+  expect(links[2].textContent).toBe('Accepted Mentees');
+});
+
 it('logs out properly', async () => {
   render(
     <Router>
