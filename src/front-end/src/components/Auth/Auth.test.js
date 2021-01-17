@@ -59,6 +59,20 @@ it('has 3 properly-labelled links', () => {
   expect(links[2].textContent).toBe('Accepted Mentees');
 });
 
+it('has 3 links and one button', () => {
+  render(
+    <Router>
+      <Auth />
+    </Router>,
+    container,
+  );
+  const links = document.getElementsByTagName('a');
+  expect(links.length).toBe(3);
+
+  const buttons = document.getElementsByTagName('button');
+  expect(buttons.length).toBe(1);
+});
+
 it('logs out properly', async () => {
   render(
     <Router>
@@ -72,20 +86,6 @@ it('logs out properly', async () => {
   expect(container.textContent).toBe(
     "Login to access the Mentorship PortalEmailPasswordLoginForgot your password?  Don't have a mentor account yet?Create Account",
   );
-});
-
-it('has 3 links and one button', async () => {
-  render(
-    <Router>
-      <Auth />
-    </Router>,
-    container,
-  );
-  const links = document.getElementsByTagName('a');
-  expect(links.length).toBe(3);
-
-  const buttons = document.getElementsByTagName('button');
-  expect(buttons.length).toBe(1);
 });
 
 it('after logout - has 2 links and one button', async () => {
