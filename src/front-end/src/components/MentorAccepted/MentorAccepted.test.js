@@ -20,6 +20,11 @@ afterEach(() => {
   container = null;
 });
 
+/* 
+Rendering mentorAccept page need to be authorized by FB 
+as logged-in status, but this cannot be implemented within 
+tests, which probably caused the current error.
+*/
 test('renders without crashing', () => {
   render(<MentorAccepted />, container);
   expect(container.textContent).toBe(
