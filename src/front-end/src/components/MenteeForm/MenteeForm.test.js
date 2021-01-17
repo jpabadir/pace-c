@@ -1,5 +1,7 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
+import userEvent from '@testing-library/user-event';
+import { act } from 'react-dom/test-utils';
 import { mockWindowMatchMedia } from '../../helper-methods';
 
 import MenteeForm from './MenteeForm';
@@ -65,4 +67,14 @@ test('renders the submit button correctly', () => {
     'ant-btn ant-btn-primary ant-btn-lg formSubmitButton',
   );
   expect(submitButton[0].textContent).toBe('Submit');
+});
+
+test('timezone select options are updating properly', async () => {
+  render(<MenteeForm />, container);
+  expect(document.getElementById('timeZone_list')).toBe(null);
+  const tzi = document.getElementById('timeZone');
+  await act(async () => userEvent.click(tzi));
+  const timeZoneList = document.getElementById('timeZone_list').children;
+  expect(timeZoneList[0].textContent).toBe('(GMT-11:00)PagoPago');
+  expect(timeZoneList[1].textContent).toBe('(GMT-10:00)HawaiiTime');
 });
