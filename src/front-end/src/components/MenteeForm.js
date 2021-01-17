@@ -3,6 +3,7 @@ import { Form, Button, Input, Select } from 'antd';
 import emailjs from 'emailjs-com';
 import MenteeCompletion from './MenteeCompletion';
 import { marshallMenteeInfo, pushToDB, getCamelCase } from '../helper-methods';
+import firebase from '../firebase-init';
 import timeZones from '../timeZones.json';
 
 const { Option } = Select;
@@ -60,11 +61,28 @@ class MenteeForm extends Component {
   }
 
   onFinish(values) {
-    this.setState({ isSubmitted: true });
-
-    this.sendEmail(values);
-
-    pushToDB('users', marshallMenteeInfo(values));
+    firebase
+      .database()
+      .ref()
+      .child('users')
+      .orderByChild('email')
+      .equalTo(values.emailInput)
+      .once('value')
+      .then((snapshot) => {
+        // if exists, alert.
+        if (snapshot.exists()) {
+          // probably alerts in other form of message.
+          window.alert(
+            'The email address that you entered is already associated with an email address in our system.',
+          );
+          this.setState({ isSubmitted: false });
+          // if not exists, create new account and jump to completion page.
+        } else {
+          this.sendEmail(values);
+          pushToDB('users', marshallMenteeInfo(values));
+          this.setState({ isSubmitted: true });
+        }
+      });
   }
 
   onFinishFailed(values) {
@@ -83,7 +101,7 @@ class MenteeForm extends Component {
           <Form
             onFinish={this.onFinish}
             onFinishFailed={this.onFinishFailed}
-            autocomplete="off"
+            autoComplete="off"
             labelCol={{ span: 3 }}
             wrapperCol={{ span: 16 }}
             layout="horizontal"
