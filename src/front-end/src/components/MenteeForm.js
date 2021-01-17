@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Button, Input, Select } from 'antd';
 import emailjs from 'emailjs-com';
-import MenteeCompletion from './MenteeCompletion';
+import MenteeCompletion from './MenteeCompletion/MenteeCompletion';
 import { marshallMenteeInfo, pushToDB, getCamelCase } from '../helper-methods';
 import firebase from '../firebase-init';
 import timeZones from '../timeZones.json';
