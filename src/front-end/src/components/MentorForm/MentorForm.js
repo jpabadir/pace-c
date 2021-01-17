@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Form, Button, Input, Select } from 'antd';
-import MentorCompletion from './MentorCompletion';
-import timeZones from '../timeZones.json';
+import MentorCompletion from '../MentorCompletion';
+import timeZones from '../../timeZones.json';
 import {
   setInDB,
   createUserInFirebase,
   marshallMentorInfo,
   getCamelCase,
-} from '../helper-methods';
+} from '../../helper-methods';
 
 const { Option } = Select;
 const teachableSkills = [
