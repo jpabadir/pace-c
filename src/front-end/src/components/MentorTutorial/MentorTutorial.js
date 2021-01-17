@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import { CheckOutlined, CloseOutlined } from '@ant-design/icons';
 
 // eslint-disable-next-line react/prefer-stateless-function
