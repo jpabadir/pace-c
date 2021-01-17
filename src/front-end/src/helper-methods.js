@@ -24,6 +24,7 @@ export function createUserInFirebase(email, password) {
       })
       .catch((error) => {
         console.log(error);
+        resolve(error);
       });
   });
 }
