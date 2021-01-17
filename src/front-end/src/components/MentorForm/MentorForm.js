@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Form, Button, Input, Select } from 'antd';
-import MentorCompletion from './MentorCompletion';
-import timeZones from '../timeZones.json';
+import MentorCompletion from '../MentorCompletion';
+import timeZones from '../../timeZones.json';
 import {
   setInDB,
   createUserInFirebase,
   marshallMentorInfo,
   getCamelCase,
-} from '../helper-methods';
+} from '../../helper-methods';
 
 const { Option } = Select;
 const teachableSkills = [
@@ -32,13 +32,16 @@ class MentorForm extends Component {
   }
 
   onFinish(values) {
-    // Set submit to true
-    this.setState({ isSubmitted: true });
-
-    // Create user and store user's form info
     createUserInFirebase(values.emailInput, values.password).then(
-      (createdUser) => {
-        setInDB('users', createdUser.uid, marshallMentorInfo(values));
+      (createUserAttempt) => {
+        if (createUserAttempt.code === 'auth/email-already-in-use') {
+          window.alert(
+            'The email address that you entered is already associated with an email address in our system. Please login to access your account.',
+          );
+        } else {
+          setInDB('users', createUserAttempt.uid, marshallMentorInfo(values));
+          this.setState({ isSubmitted: true });
+        }
       },
     );
   }
@@ -73,7 +76,6 @@ class MentorForm extends Component {
               label="Organization"
               name="organization"
               tooltip="The organization you're planning to be a Mentor with"
-              // must have an input:
               rules={[{ required: true, message: 'Please input something' }]}
             >
               <Input placeholder="Please enter your Organization" />
@@ -81,7 +83,6 @@ class MentorForm extends Component {
             <Form.Item
               label="Name"
               name="nameInput"
-              // must have an input:
               rules={[{ required: true, message: 'Please enter your name' }]}
             >
               <Input placeholder="First name Last name" />
