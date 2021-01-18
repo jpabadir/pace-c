@@ -32,4 +32,3 @@ test('MentorDisplay page is connected to this page', () => {
   const dis = document.createElement('MentorDisplay');
   expect(container.contains(dis)).toBe(true);
 });
-// check which account I'm using to push 7
