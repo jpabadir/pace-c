@@ -19,7 +19,6 @@ afterEach(() => {
   container = null;
 });
 
-// method tests to see if the text on the mentor tutorial renders correctly
 it('renders without crashing', () => {
   render(<MentorTutorial />, container);
   expect(container.textContent).toBe(
