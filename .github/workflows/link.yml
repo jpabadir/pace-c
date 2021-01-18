@@ -43,6 +43,7 @@ jobs:
           npm install babel-preset-react-app
           npm install react-dom
           npm install react-router-dom
+          npm install @testing-library/user-event @testing-library/dom --save-dev
           npm install
           cd src/front-end/
           npm run test
