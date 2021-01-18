@@ -37,7 +37,7 @@ test('renders the correct header text', () => {
 
 test('renders the correct input labels', () => {
   render(<MenteeForm />, container);
-  const getLabels = document.getElementsByTagName('label');
+  const renderedLabels = document.getElementsByTagName('label');
   const correctLabels = [
     'Name',
     'Email',
@@ -45,10 +45,8 @@ test('renders the correct input labels', () => {
     'Top 3 skills',
     'Description',
   ];
-  let i = 0;
-  while (i < getLabels.length) {
-    expect(getLabels[i].textContent).toBe(correctLabels[i]);
-    i += 1;
+  for (let i = 0; i < renderedLabels.length; i += 1) {
+    expect(renderedLabels[i].textContent).toBe(correctLabels[i]);
   }
 });
 
