@@ -31,7 +31,7 @@ it('renders without crashing', () => {
     container,
   );
   expect(container.textContent).toBe(
-    'Mentor TutorialSuggested MenteesAccepted MenteesLogoutREMOVEME',
+    'Mentor TutorialSuggested MenteesAccepted MenteesLogout',
   );
 });
 
