@@ -39,7 +39,7 @@ jobs:
       - name: Run jest
         run: |
           pwd
-          npm install
+          cd src/front-end/; ls; npm install
           # npm install --save-dev jest@26.6.0
           # npm install react-test-renderer
           # npm install babel-preset-react-app
@@ -47,4 +47,3 @@ jobs:
           # npm install react-router-dom
           # npm install @testing-library/user-event @testing-library/dom --save-dev
           # npm install firebase
-          cd src/front-end/; npm run test
