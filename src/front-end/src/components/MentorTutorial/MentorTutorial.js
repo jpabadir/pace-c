@@ -28,7 +28,7 @@ class MentorTutorial extends Component {
           <h3>
             <b>Suggested Mentees:</b>
           </h3>
-          <p1>
+          <p>
             The suggested mentees tab is located on the top of the page. On the
             suggested mentee page you will be able to view all of your suggested
             mentees and details about each mentee. To accept a mentee click on
@@ -37,18 +37,18 @@ class MentorTutorial extends Component {
             mentee click on the &apos;Decline
             <CloseOutlined className="close" />
             &apos; button below the mentee&apos;s information.
-          </p1>
+          </p>
           {/* eslint-disable-next-line react/self-closing-comp */}
           <p></p>
           <h3>
             <b>Accepted Mentees:</b>
           </h3>
-          <p2>
+          <p>
             The accepted mentees tab is also located on the top of the page next
             to the suggested mentee tab. On the accepted mentees tab you can
             view the information of all mentees that have been accepted from the
             suggested mentees tab.
-          </p2>
+          </p>
         </div>
       </>
     );
