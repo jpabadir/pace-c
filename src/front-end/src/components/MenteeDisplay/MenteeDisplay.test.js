@@ -42,10 +42,8 @@ test('render the head of the card correctly', () => {
 test('render the body of the card correctly', () => {
   render(<MenteeDisplay {...props} />, container);
   const p = document.getElementsByTagName('p');
-  let i = 0;
-  while (i < p.length) {
+  for (let i = 0; i < p.length; i += 1) {
     expect(container.contains(p[i])).toBe(true);
-    i += 1;
   }
   expect(p[0].textContent).toBe(' Email: ');
   expect(p[1].textContent).toBe(' Skills Seeking Mentorship: ');
