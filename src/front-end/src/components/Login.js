@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Form, Button, Input, Card } from 'antd';
 import { MailTwoTone, LockTwoTone } from '@ant-design/icons';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import fire from '../firebase-init';
 import { resetPassword } from '../helper-methods';
 

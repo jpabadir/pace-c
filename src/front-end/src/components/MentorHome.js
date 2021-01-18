@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from 'antd';
 import { Route } from 'react-router-dom';
-import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import fire from '../firebase-init';
 import MentorSuggested from './MentorSuggested';
 import MentorAccepted from './MentorAccepted';

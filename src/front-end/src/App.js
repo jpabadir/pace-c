@@ -2,7 +2,7 @@ import React from 'react';
 import { Layout, Menu } from 'antd';
 import './App.css';
 import { NavLink, Switch, Route } from 'react-router-dom';
-import MentorForm from './components/MentorForm';
+import MentorForm from './components/MentorForm/MentorForm';
 import Auth from './components/Auth/Auth';
 import MenteeForm from './components/MenteeForm';
 import ForgotPassword from './components/ForgotPassword/ForgotPassword';
