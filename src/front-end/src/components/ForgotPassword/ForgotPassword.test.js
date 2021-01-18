@@ -30,3 +30,10 @@ it('has a text input', () => {
   const input = document.getElementsByTagName('input')[0];
   expect(container.contains(input)).toBe(true);
 });
+
+it('has a confirm button', () => {
+  render(<ForgotPassword />, container);
+  const button = document.getElementsByTagName('button')[0];
+  expect(container.contains(button)).toBe(true);
+  expect(button.textContent).toBe('Confirm');
+});
