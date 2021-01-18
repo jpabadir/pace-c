@@ -38,8 +38,8 @@ jobs:
 
       - name: Run jest
         run: |
-          pwd
-          cd src/front-end/; ls; npm install
+          cd src/front-end/; npm install
+          npm run test
           # npm install --save-dev jest@26.6.0
           # npm install react-test-renderer
           # npm install babel-preset-react-app
