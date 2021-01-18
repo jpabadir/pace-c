@@ -44,4 +44,4 @@ jobs:
           npm install react-dom
           npm install
           cd src/front-end/
-          npm test
+          npm run test
