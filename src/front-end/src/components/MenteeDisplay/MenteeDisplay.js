@@ -30,7 +30,13 @@ class MenteeDisplay extends Component {
             <Card
               hoverable
               style={{ width: '350px' }}
-              title={[<UserOutlined className="user-icon" />, this.props.name]}
+              title={[
+                <UserOutlined
+                  className="user-icon"
+                  key={this.props.menteeUid}
+                />,
+                this.props.name,
+              ]}
               actions={[
                 this.props.request && (
                   <tr id="request-row">
