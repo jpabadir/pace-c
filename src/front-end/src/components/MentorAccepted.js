@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Form } from 'antd';
-
-import MenteeDisplay from './MenteeDisplay';
+import MenteeDisplay from './MenteeDisplay/MenteeDisplay';
 import fire from '../firebase-init';
 import { fetchMenteesIDs, fetchMenteesFullInfo } from '../helper-methods';
 
