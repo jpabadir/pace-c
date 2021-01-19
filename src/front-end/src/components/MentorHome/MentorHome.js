@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Button } from 'antd';
 import { Route } from 'react-router-dom';
 import fire from '../../firebase-init';
-import MentorSuggested from '../MentorSuggested';
+import MentorSuggested from '../MentorSuggested/MentorSuggested';
 import MentorAccepted from '../MentorAccepted';
 import MentorTutorial from '../MentorTutorial';
 
