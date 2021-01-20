@@ -1,5 +1,5 @@
 # Error screenshot
-![](test errors screenshot.png)
+![](test-errors-screenshot.png)
 # Why the error occurred
 Rendering mentorAccept page need to be authorized by FB as logged-in status, but this cannot be implemented within tests, which probably caused the current error. MentorAccepted.js is relatively complex than we expected.
 # Testing code
