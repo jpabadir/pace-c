@@ -16,24 +16,51 @@
   -	 Block user login until they have verified their account.
   Note: We will also have to keep the admin functionality in mind, but this should be fairly simple for a task later on, since it would entail creating an admin user. Their purpose would be to invite future Mentor users to access the Mentor form via email. I would therefore argue that we focus as much as possible on tackling the remaining larger functionalities of the project to ensure we meet the requirements for the minimum viable product.
 - [Katrina] Can I continue making the client meetings a task?
-
+- 
 
 ## Detailed Notes:
 ### General Notes:
+- Midpoint feedback had a communication errror (currently waiting for a reply from the client)
+- Small bugs on mentor tutorial have been fixed
+- Blank page when you log in is not a bug, but in the future we will fix it (when we get closer to the finished project)
+- Erics bug is reviewed (sometimes emails will take some time to come)
+- It's okay to make client meetings a task
+- Focus on working on bigger tasks such as converting to iFrame
+- Working more on functionality rather than testing from this week onwards
 - 
 
-### Task Priority:
+### Current Week Tasks:
+- Resolving the unit tests
+- Explore and start availability implementation
+- Block users login until the verified their account
+- Explore how to convert to iFrame
+- Make routing and navbar make sense
+- Implement matching mentee algorithm
+- Send mentee emails when they are accepted by a mentor
+- Create why aleks and eric's test failed
+- Midpoint feedback problem
 - 
 
-## Action Items (Due by next sprint: January ##th):
+## Action Items (Due by next sprint: January 27th):
 ### JP
+- Take care of the midpoint feedback problem
+- Will work on the pr 347 and pr 344
+- Explore and start availability implementation
+- Make routing and navbar make sense
 - 
 
 ### Katrina
-- 
+- Explore how to convert mentee form to iFrame
+-
 
 ### Eric
-- 
+- Send mentee emails when they are accepted by a mentor
+- Implement matching mentee algorithm
+- Create why tests failed documentation
+-
 
 ### Aleks
+- Block users login until the verified their account
+- Research blocked users information
+- Create why tests failed documentation
 - 
