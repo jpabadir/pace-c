@@ -1,5 +1,5 @@
 # Screenshot of errors:
-![code error](/mentorsuggested-mentorhome-errors.png)
+![](mentorsuggested-mentorhome-errors.png)
 
 # Testing Code:
 ## Testing Code For MentorHome.test.js:
