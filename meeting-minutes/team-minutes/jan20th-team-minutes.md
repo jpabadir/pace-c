@@ -34,8 +34,10 @@
 - Explore and start availability implementation
 - Block users login until the verified their account
 - Explore how to convert to iFrame
+- Make routing and navbar make sense
 - Implement matching mentee algorithm
 - Send mentee emails when they are accepted by a mentor
+- Create why aleks and eric's test failed
 - Midpoint feedback problem
 - 
 
@@ -44,18 +46,21 @@
 - Take care of the midpoint feedback problem
 - Will work on the pr 347 and pr 344
 - Explore and start availability implementation
--
+- Make routing and navbar make sense
+- 
 
 ### Katrina
-- Explore how to convert to iFrame
+- Explore how to convert mentee form to iFrame
 -
 
 ### Eric
 - Send mentee emails when they are accepted by a mentor
 - Implement matching mentee algorithm
-- 
+- Create why tests failed documentation
+-
 
 ### Aleks
 - Block users login until the verified their account
 - Research blocked users information
+- Create why tests failed documentation
 - 
