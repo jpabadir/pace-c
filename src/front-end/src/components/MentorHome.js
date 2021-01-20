@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 import fire from '../firebase-init';
 import MentorSuggested from './MentorSuggested';
 import MentorAccepted from './MentorAccepted';
-import MentorTutorial from './MentorTutorial';
+import MentorTutorial from './MentorTutorial/MentorTutorial';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class MentorHome extends Component {
