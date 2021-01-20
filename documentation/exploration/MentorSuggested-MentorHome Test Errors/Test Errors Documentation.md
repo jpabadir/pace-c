@@ -1,3 +1,9 @@
+# Why this issue is more complex than originally thought:
+The tests that were attempted in both the MentorHome.test.js and the MentorSuggested.test.js file will need more time than originally thought.
+This is because in order to properly test these components, we will need to able to mock a firebase user logging in. 
+Mocking a firebase user is a more complex task than we have originally thought.
+Therefore, we have converted this task into an exploration issue to allow more time to work on the task.
+
 # Screenshot of errors:
 ![](mentorsuggested-mentorhome-errors.png)
 
