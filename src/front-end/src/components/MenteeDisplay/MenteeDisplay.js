@@ -1,6 +1,8 @@
 /* eslint-disable */
 import React, { Component } from 'react';
 import { Button, Card } from 'antd';
+import emailjs from 'emailjs-com';
+import fire from '../../firebase-init';
 import { UserOutlined, CheckOutlined, CloseOutlined } from '@ant-design/icons';
 import PropTypes from 'prop-types';
 
@@ -16,6 +18,47 @@ class MenteeDisplay extends Component {
 
   handleAcceptClick() {
     this.props.acceptMentee(this.props.menteeUid);
+    // send email to accepted mentee
+    const menteeRef = fire
+      .database()
+      .ref('users/' + this.props.menteeUid)
+      .child('email');
+    const menteeNameRef = fire
+      .database()
+      .ref('user/' + this.props.menteeUid)
+      .child('name');
+    const loggedRef = fire
+      .database()
+      .ref('users/' + this.props.loggedUid)
+      .child('email');
+    const loggedNameRef = fire
+      .database()
+      .ref('users/' + this.props.loggedUid)
+      .child('name');
+    const templateParams = {
+      loggedName: '',
+      loggedEmail: '',
+      menteeName: '',
+      menteeEmail: '',
+    };
+    menteeRef.on('value', (snapshot) => {
+      templateParams.menteeEmail = snapshot.val();
+    });
+    menteeNameRef.on('value', (snapshot) => {
+      templateParams.menteeName = snapshot.val();
+    });
+    loggedRef.on('value', (snapshot) => {
+      templateParams.loggedEmail = snapshot.val();
+    });
+    loggedNameRef.on('value', (snapshot) => {
+      templateParams.loggedName = snapshot.val();
+    });
+    emailjs.send(
+      'gmail',
+      'template_bbajqvj',
+      templateParams,
+      'user_2x3ekfRvEqEttZg87VyrZ',
+    );
   }
 
   handleDeclineClick() {

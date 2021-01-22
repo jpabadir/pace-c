@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Form } from 'antd';
-import emailjs from 'emailjs-com';
 import MenteeDisplay from './MenteeDisplay/MenteeDisplay';
 import fire from '../firebase-init';
 import { fetchMenteesIDs, fetchMenteesFullInfo } from '../helper-methods';
@@ -45,47 +44,6 @@ class MentorSuggested extends Component {
       // Confirm with the user that this was succesful
       alert('Mentee request accepted!');
     });
-    // send email to accepted mentee
-    const menteeRef = fire
-      .database()
-      .ref('users/' + menteeUid)
-      .child('email');
-    const menteeNameRef = fire
-      .database()
-      .ref('user/' + menteeUid)
-      .child('name');
-    const loggedRef = fire
-      .datebase()
-      .ref('users/' + this.loggedUid)
-      .child('email');
-    const loggedNameRef = fire
-      .datebase()
-      .ref('users/' + this.loggedUid)
-      .child('name');
-    const templateParams = {
-      loggedName: '',
-      loggedEmail: '',
-      menteeName: '',
-      menteeEmail: '',
-    };
-    menteeRef.on('value', (snapshot) => {
-      templateParams.menteeEmail = snapshot.val();
-    });
-    menteeNameRef.on('value', (snapshot) => {
-      templateParams.menteeName = snapshot.val();
-    });
-    loggedRef.on('value', (snapshot) => {
-      templateParams.loggedEmail = snapshot.val();
-    });
-    loggedNameRef.on('value', (snapshot) => {
-      templateParams.loggedName = snapshot.val();
-    });
-    emailjs.send(
-      'gmail',
-      '"template_bbajqvj"',
-      templateParams,
-      'user_2x3ekfRvEqEttZg87VyrZ',
-    );
   }
 
   declineMentee(menteeUid) {
