@@ -18,47 +18,42 @@ class MenteeDisplay extends Component {
 
   handleAcceptClick() {
     this.props.acceptMentee(this.props.menteeUid);
-    // send email to accepted mentee
-    const menteeRef = fire
+
+    // Prepare parameters to send mentee acceptance email
+    const templateParams = {
+      mentorEmail: '',
+      mentorName: '',
+      menteeEmail: '',
+      menteeName: '',
+    };
+
+    // Set mentor email and name
+    templateParams.mentorEmail = fire.auth().currentUser.email;
+    const mentorPromise = fire
+      .database()
+      .ref('users/' + fire.auth().currentUser.uid)
+      .on('value', (snapshot) => {
+        templateParams.mentorName = snapshot.val().name;
+      });
+
+    // Set mentee email and name
+    const menteePromise = fire
       .database()
       .ref('users/' + this.props.menteeUid)
-      .child('email');
-    const menteeNameRef = fire
-      .database()
-      .ref('user/' + this.props.menteeUid)
-      .child('name');
-    const loggedRef = fire
-      .database()
-      .ref('users/' + this.props.loggedUid)
-      .child('email');
-    const loggedNameRef = fire
-      .database()
-      .ref('users/' + this.props.loggedUid)
-      .child('name');
-    const templateParams = {
-      loggedName: '',
-      loggedEmail: '',
-      menteeName: '',
-      menteeEmail: '',
-    };
-    menteeRef.on('value', (snapshot) => {
-      templateParams.menteeEmail = snapshot.val();
+      .on('value', (snapshot) => {
+        templateParams.menteeEmail = snapshot.val().email;
+        templateParams.menteeName = snapshot.val().name;
+      });
+
+    // Send email
+    Promise.all([menteePromise, mentorPromise]).then(() => {
+      emailjs.send(
+        'gmail',
+        'template_bbajqvj',
+        templateParams,
+        'user_2x3ekfRvEqEttZg87VyrZ',
+      );
     });
-    menteeNameRef.on('value', (snapshot) => {
-      templateParams.menteeName = snapshot.val();
-    });
-    loggedRef.on('value', (snapshot) => {
-      templateParams.loggedEmail = snapshot.val();
-    });
-    loggedNameRef.on('value', (snapshot) => {
-      templateParams.loggedName = snapshot.val();
-    });
-    emailjs.send(
-      'gmail',
-      'template_bbajqvj',
-      templateParams,
-      'user_2x3ekfRvEqEttZg87VyrZ',
-    );
   }
 
   handleDeclineClick() {
