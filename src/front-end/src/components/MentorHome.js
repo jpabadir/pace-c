@@ -24,11 +24,10 @@ class MentorHome extends Component {
           type="primary"
           htmlType="button"
           id="mentorHome"
-          href="/Auth/MentorTutorial"
+          href="/Auth/mentor-tutorial"
         >
           Mentor Tutorial
         </Button>
-        {/* button below Redirects to MentorSuggested.js page: */}
         <Button
           type="primary"
           htmlType="button"
@@ -37,7 +36,6 @@ class MentorHome extends Component {
         >
           Suggested Mentees
         </Button>
-        {/* button below Redirects to MentorAccepted.js page: */}
         <Button
           type="primary"
           htmlType="button"
@@ -47,7 +45,7 @@ class MentorHome extends Component {
           Accepted Mentees
         </Button>
         {/* replace what's in square brackets [] w/ info from DB */}
-        <Button
+        {/* <Button
           type="primary"
           htmlType="button"
           id="logout_button"
@@ -56,11 +54,11 @@ class MentorHome extends Component {
           // href="[insert logout page path here]"
         >
           Logout
-        </Button>
+        </Button> */}
 
         <Route path="/Auth/SuggestedMentees" component={MentorSuggested} />
         <Route path="/Auth/MentorAccepted" component={MentorAccepted} />
-        <Route path="/Auth/MentorTutorial" component={MentorTutorial} />
+        <Route path="/Auth/mentor-tutorial" component={MentorTutorial} />
       </>
     );
   }

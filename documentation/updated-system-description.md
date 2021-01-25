@@ -1,0 +1,6 @@
+- view and modify the mentee form (Yes)
+- view the mentor form (Yes)
+- choose whether the mentor form is available publicly for people to see if they go to mentormatch.com/nameofmycompany/mentors (From my conversations with the client, the Mentor Form shouldn't be accessible to the public, only through email invite)
+- same thing for the mentee form with mentormatch.com/nameofmecompany/mentees (From what the client has indicated, the Mentee Form is to be embedded within the Organization's website itself [i.e if I'm an admin for Girls in Tech, I would go to the Girls in Tech website and embed the Mentee Form within  an iFrame tag in the organization website's html])
+- invite mentees to fill the form using a UI where I input their email address (The client hasn't mentioned this for the Mentee Form, but possibly)
+- invite mentors to fill the form using a UI where I input their email address (Yes, admins request Mentors to access the form through email invite)
