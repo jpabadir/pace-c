@@ -25,17 +25,19 @@ class MenteeDisplay extends Component {
       mentorName: '',
       menteeEmail: '',
       menteeName: '',
+      skills: '',
     };
 
-    // Set mentor email and name
+    // Set mentor email, name, skills.
     templateParams.mentorEmail = fire.auth().currentUser.email;
     const mentorPromise = fire
       .database()
       .ref('users/' + fire.auth().currentUser.uid)
       .on('value', (snapshot) => {
         templateParams.mentorName = snapshot.val().name;
+        templateParams.skills = snapshot.val().rankedSkills;
       });
-
+    
     // Set mentee email and name
     const menteePromise = fire
       .database()
