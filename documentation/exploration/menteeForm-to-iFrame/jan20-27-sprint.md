@@ -6,7 +6,7 @@
 
 When Researching how to Create an iFrame from a React Component:
 
-1. I came across the [react-frame-component library] (https://github.com/ryanseddon/react-frame-component). To implement, I simply installed the library and wrapped everything that the component should return when rendered in a <Frame> tag. Upon testing, this resulted in the styling of the form being removed, which is definitely not what we want. The screenshot below displays the result of this.
+1. I came across the [react-frame-component library](https://github.com/ryanseddon/react-frame-component). To implement, I simply installed the library and wrapped everything that the component should return when rendered in a <Frame> tag. Upon testing, this resulted in the styling of the form being removed, which is definitely not what we want. The screenshot below displays the result of this.
    ![](react-frame-component-library.png)
 
 2. My next train of thought was to then see if I could merely use the <iframe> tag. To test this, I put the iFrame tag within the ‘MentorTutorial’ component. I wanted to see what importing the MenteeForm component and using that within the src or srcDoc property would do. In both cases, the result was an empty iFrame display. The code that I used to test this was as follows:
@@ -49,9 +49,10 @@ When Researching how to Create an iFrame from a React Component:
 
 ![](iFrame-src-MenteeForm-URL.png)
 
-5. Since external sites need to be able to access the form, testing internally seems to be difficult. As such (when I have more time) I'm hoping to follow something similar as outlined [here](https://dev.to/damcosset/iframes-and-communicating-between-applications-31k5) and/or think of other possible ways in the meantime to go about this. Although the source I linked is aiming for different functionality, I came across it when initially thinking that we'd need to split the MenteeForm from our current app. Closer to develop, we'll remove the 'MenteeForm' and 'MentorForm' tabs, and the 'Login' component will be stand-alone. Admin accounts will essentially host the MentorForm (that potential Mentor users can access through email invite), while the MenteeForms will be available to public sites who embed them. Therefore, I'm thinking that a possible way to proceed would be as follows:
+5. Since external sites need to be able to access the form, testing internally seems to be difficult. Initially, I was looking into following something similar to what's outlined [here](https://dev.to/damcosset/iframes-and-communicating-between-applications-31k5). Although the source I linked is aiming for different functionality, I came across it when thinking that we'd need to split the MenteeForm from our current app. Closer to development, we'll remove the 'MenteeForm' and 'MentorForm' tabs, and the 'Login' component will be stand-alone. Admin accounts will essentially host the MentorForm (that potential Mentor users can access through email invite), while the MenteeForms will be available to public sites who embed them. Originally, I thought we might need to develop a separate React App to host the Mentee form (just copying over the MenteeForm files to a new react app). Then, we could test rendering that into the current MenteeForm tab in an iFrame tag.
 
-- Develop a separate React App to host the Mentee form (just copy over the MenteeForm files).
-- In our current MenteeForm tab, embed the separate MenteeForm app via an iframe.
+However, that initial thought doesn't make much sense, especially in terms of longevity. Essentially, the root of my thoughts boiled down to: 'How do we host the MenteeForm separate from our current application?'. Albeit, this exploration stems down to gaps in my own knowledge.
 
-\*\*This is my initial train of thought. I'll do my best to look further into this to see if there's a way to host the MenteeForm separate from our current application.
+After continuing to give this some thought, I wanted to look further into what Firebase offers. I turned to Google, querying 'render stored html page from firebase' in hopes that something would be a match. That's when I came across [this](https://firebase.google.com/docs/hosting/serverless-overview). My experience with Firebase is pretty much nonexistent, but from what I can tell, I think that since our MenteeForm is a single page we could use Firebase Hosting to host the form, along with Cloud Functions to request the page. This would hopefully be accessed through a hardcoded URL that the iFrame tag would access through a GET request.
+
+To restate as a disclaimer: I really don't have a solid understanding of Cloud Functions, but at a high-level consideration, I think that Firebase Hosting and Cloud Functions is the way to go.
