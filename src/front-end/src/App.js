@@ -7,6 +7,8 @@ import Auth from './components/Auth/Auth';
 import MenteeForm from './components/MenteeForm/MenteeForm';
 import ForgotPassword from './components/ForgotPassword/ForgotPassword';
 import Home from './components/Home/Home';
+import AdminSignup from './components/AdminSignup/AdminSignup';
+import AccountMenuItem from './components/AccountMenuItem/AccountMenuItem';
 
 const { Header, Content, Footer } = Layout;
 
@@ -30,7 +32,7 @@ function App() {
               </NavLink>
             </Menu.Item>
             <Menu.Item key="5" style={{ float: 'right' }}>
-              <NavLink to="/login">Log in</NavLink>
+              <AccountMenuItem />
             </Menu.Item>
           </Menu>
         </Header>
@@ -44,10 +46,11 @@ function App() {
         >
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/login" component={Auth} />
+            <Route path="/my-account" component={Auth} />
             <Route exact path="/forgot-password" component={ForgotPassword} />
             <Route exact path="/mentor-form" component={MentorForm} />
             <Route exact path="/mentee-form" component={MenteeForm} />
+            <Route exact path="/signup" component={AdminSignup} />
           </Switch>
         </Content>
         <Footer
