@@ -2,7 +2,11 @@
 
 # FOURTEENTH CLIENT MEETING 01/26
 
-## 26 JANUARY 2021 / 9:00AM/ VIA GOOGLE MEETS
+## 26 JANUARY 2021 / 9:00 - 10:03AM/ VIA GOOGLE MEETS
+
+### ATTENDEES
+
+Katrina M., Philip O., Maya T.
 
 ### AGENDA
 
@@ -31,3 +35,11 @@
 
 - Our last client meeting could potentially be on the last day of class (April 13).
 - The client will be ranking the second peer testing milestone at the end of February/beginning of March, as well as our final report and demo in April.
+
+### NOTES
+
+Katrina, Philip, and Maya joined the meeting by 9AM, and waited for the client to join. At around 9:15AM, Maya decided to email the client to see if she would be able to attend the meeting. By 9:50AM, the client had not responded to Maya's email, or joined the Google Meets call. Philip emailed the client at 9:52AM with Maya and myself CC'ed to check-in. Depending on if the client responds, we might be able to reschedule this week's meeting, or be able to email any questions that we'd like addressed before next Tuesday. Hopefully the client is doing well.
+
+### ACTION ITEMS
+
+- 1/26-01. Katrina will update the team on Discord when the client responds. Depending on the response, another meeting for this week could potentially be booked, or Katrina can email the client any questions that we have.
