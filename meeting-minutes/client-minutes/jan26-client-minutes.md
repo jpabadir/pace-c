@@ -15,7 +15,7 @@
 
 1. Conduct "Stand Up".
 
-- Our Github project board will be displayed at this time to showcase that we completed unit testing for most components, and have worked towards exploration tasks for creating the matching algorithm, embedding the mentee form in an iframe, and ways of obtaining Mentor availability. The application will also be run on the 303-make-routing-and-navbar-make-sense branch to showcase the work that was done, as well as to confirm the logistics discussed within documentation/updated-system-description.md.
+- Our Github project board will be displayed at this time to showcase that we completed unit testing for most components, and have worked towards exploration tasks for creating the matching algorithm, embedding the mentee form in an iframe, and ways of obtaining Mentor availability. The application will also be run on the 303-make-routing-and-navbar-make-sense branch to showcase the work that was done, as well as to confirm the logistics discussed within documentation/updated-system-description.md. The email that mentees receive once their request has been submitted will also be shown.
 
 2. Discuss "Road Blocks"
 
