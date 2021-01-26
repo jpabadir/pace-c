@@ -20,7 +20,7 @@ class ForgotPassword extends Component {
 
   handleEmailChange(event) {
     this.setState({ email: event.target.value });
-  }
+  }123
 
   render() {
     return (
