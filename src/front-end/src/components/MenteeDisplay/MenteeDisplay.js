@@ -1,6 +1,8 @@
 /* eslint-disable */
 import React, { Component } from 'react';
 import { Button, Card } from 'antd';
+import emailjs from 'emailjs-com';
+import fire from '../../firebase-init';
 import { UserOutlined, CheckOutlined, CloseOutlined } from '@ant-design/icons';
 import PropTypes from 'prop-types';
 
@@ -16,6 +18,44 @@ class MenteeDisplay extends Component {
 
   handleAcceptClick() {
     this.props.acceptMentee(this.props.menteeUid);
+
+    // Prepare parameters to send mentee acceptance email
+    const templateParams = {
+      mentorEmail: '',
+      mentorName: '',
+      menteeEmail: '',
+      menteeName: '',
+      skills: '',
+    };
+
+    // Set mentor email, name, skills.
+    templateParams.mentorEmail = fire.auth().currentUser.email;
+    const mentorPromise = fire
+      .database()
+      .ref('users/' + fire.auth().currentUser.uid)
+      .on('value', (snapshot) => {
+        templateParams.mentorName = snapshot.val().name;
+        templateParams.skills = snapshot.val().rankedSkills;
+      });
+    
+    // Set mentee email and name
+    const menteePromise = fire
+      .database()
+      .ref('users/' + this.props.menteeUid)
+      .on('value', (snapshot) => {
+        templateParams.menteeEmail = snapshot.val().email;
+        templateParams.menteeName = snapshot.val().name;
+      });
+
+    // Send email
+    Promise.all([menteePromise, mentorPromise]).then(() => {
+      emailjs.send(
+        'gmail',
+        'template_bbajqvj',
+        templateParams,
+        'user_2x3ekfRvEqEttZg87VyrZ',
+      );
+    });
   }
 
   handleDeclineClick() {
