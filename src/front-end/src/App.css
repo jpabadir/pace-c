@@ -49,6 +49,12 @@ p3 {
   border: solid black;
 }
 
+.my-menu {
+  height: 64px; 
+  background: rgba(0, 0, 0, 0);
+  color: rgb(211, 211, 211);
+}
+
 #logout_button {
   position: absolute;
   right: 0;

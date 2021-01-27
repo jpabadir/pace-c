@@ -1,22 +1,12 @@
 import React, { Component } from 'react';
 import { Button } from 'antd';
 import { Route } from 'react-router-dom';
-import fire from '../firebase-init';
 import MentorSuggested from './MentorSuggested';
 import MentorAccepted from './MentorAccepted';
 import MentorTutorial from './MentorTutorial/MentorTutorial';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class MentorHome extends Component {
-  constructor(props) {
-    super(props);
-    this.onLogout = this.onLogout.bind(this);
-  }
-
-  onLogout() {
-    fire.auth().signOut();
-  }
-
   render() {
     return (
       <>
@@ -24,43 +14,33 @@ class MentorHome extends Component {
           type="primary"
           htmlType="button"
           id="mentorHome"
-          href="/Auth/MentorTutorial"
+          href="/my-account/mentor-tutorial"
         >
           Mentor Tutorial
         </Button>
-        {/* button below Redirects to MentorSuggested.js page: */}
         <Button
           type="primary"
           htmlType="button"
           id="suggestedMentees"
-          href="/Auth/SuggestedMentees"
+          href="/my-account/suggested-mentees"
         >
           Suggested Mentees
         </Button>
-        {/* button below Redirects to MentorAccepted.js page: */}
         <Button
           type="primary"
           htmlType="button"
           id="acceptedMentees"
-          href="/Auth/MentorAccepted"
+          href="/my-account/accepted-mentees"
         >
           Accepted Mentees
         </Button>
-        {/* replace what's in square brackets [] w/ info from DB */}
-        <Button
-          type="primary"
-          htmlType="button"
-          id="logout_button"
-          onClick={this.onLogout}
-          size="large"
-          // href="[insert logout page path here]"
-        >
-          Logout
-        </Button>
 
-        <Route path="/Auth/SuggestedMentees" component={MentorSuggested} />
-        <Route path="/Auth/MentorAccepted" component={MentorAccepted} />
-        <Route path="/Auth/MentorTutorial" component={MentorTutorial} />
+        <Route
+          path="/my-account/suggested-mentees"
+          component={MentorSuggested}
+        />
+        <Route path="/my-account/accepted-mentees" component={MentorAccepted} />
+        <Route path="/my-account/mentor-tutorial" component={MentorTutorial} />
       </>
     );
   }

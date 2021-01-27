@@ -6,6 +6,9 @@ import MentorForm from './components/MentorForm/MentorForm';
 import Auth from './components/Auth/Auth';
 import MenteeForm from './components/MenteeForm/MenteeForm';
 import ForgotPassword from './components/ForgotPassword/ForgotPassword';
+import Home from './components/Home/Home';
+import AdminSignup from './components/AdminSignup/AdminSignup';
+import AccountMenuItem from './components/AccountMenuItem/AccountMenuItem';
 
 const { Header, Content, Footer } = Layout;
 
@@ -16,13 +19,20 @@ function App() {
         <Header>
           <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
             <Menu.Item key="2">
-              <NavLink to="/Auth">Login</NavLink>
+              <NavLink to="/">Home</NavLink>
             </Menu.Item>
             <Menu.Item key="3">
-              <NavLink to="/MentorForm">MentorForm</NavLink>
+              <NavLink to="/mentor-form">
+                MentorForm (this link left for development)
+              </NavLink>
             </Menu.Item>
             <Menu.Item key="4">
-              <NavLink to="/MenteeForm">MenteeForm</NavLink>
+              <NavLink to="/mentee-form">
+                MenteeForm (this link left for development)
+              </NavLink>
+            </Menu.Item>
+            <Menu.Item key="5" style={{ float: 'right' }}>
+              <AccountMenuItem />
             </Menu.Item>
           </Menu>
         </Header>
@@ -35,10 +45,12 @@ function App() {
           }}
         >
           <Switch>
-            <Route path="/ForgotPassword" component={ForgotPassword} />
-            <Route path="/Auth" component={Auth} />
-            <Route exact path="/MentorForm" component={MentorForm} />
-            <Route exact path="/MenteeForm" component={MenteeForm} />
+            <Route exact path="/" component={Home} />
+            <Route path="/my-account" component={Auth} />
+            <Route exact path="/forgot-password" component={ForgotPassword} />
+            <Route exact path="/mentor-form" component={MentorForm} />
+            <Route exact path="/mentee-form" component={MenteeForm} />
+            <Route exact path="/signup" component={AdminSignup} />
           </Switch>
         </Content>
         <Footer
