@@ -25,33 +25,16 @@ class Login extends Component {
   onLogin() {
     const userEmail = document.getElementById('useremail').value;
     const userPassword = document.getElementById('userpassword').value;
+
     // below is used to get current user
-    // const user = fire.auth().currentUser;
+    const user = fire.auth().currentUser;
 
     if (userEmail && userPassword) {
-      /*
-      Below is used to check if email is verified:
-      if (user.emailVerified) {
-        // email is verified.
-      } else {
-        window.alert(
-          'Email is not verified. Please verify your email before you log in.',
-        );
-      }
-      */
       fire
         .auth()
         .signInWithEmailAndPassword(userEmail, userPassword)
         .catch((error) => {
           switch (error.code) {
-            /*
-            I was also trying to see if error cases worked:
-            case '':
-              window.alert(
-                'Email is not verified. Please verify your email before you log in.',
-              );
-              break;
-            */
             case 'auth/invalid-email':
               break;
             case 'auth/wrong-password':
@@ -64,6 +47,14 @@ class Login extends Component {
               break;
           }
         });
+      // below is to verify user:
+      if (user.emailVerified) {
+        // email is verified.
+      } else {
+        window.alert(
+          'Email is not verified. Please verify your email before you log in.',
+        );
+      }
     }
   }
 
