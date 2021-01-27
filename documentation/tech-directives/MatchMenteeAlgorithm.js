@@ -129,7 +129,7 @@ var sortedByNum = Object.entries(count).sort((a, b) => {
   }
 });
 //print sorted mentees
-console.log(sortedByNum);ß
+console.log(sortedByNum);
 // print suggested mentees
 var suggestedmentee = { Mentor1: [] };
 for (i = 0; i < 3; i++) {
