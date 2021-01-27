@@ -9,6 +9,7 @@
   - Ideally, we should aim to have most of the large functionality components complete by the end of Feb/beginning of March. The instructor typically recommends reserving March for final touches.
   - NOTE: my home phone started to ring as Dr. Hui was explaining this, so if there's anything that I may have misheard, please correct me.
 - [Aleks] Do we want to look into other sign in options such a google or facebook? When I was looking through some of the firebase documentation I saw that we could add other sign in options (if the client/the team thinks it is a good idea)
+- [Aleks] The login page's "Login to access the mentor ship" portal box is off centered when resizing the browser window size.
 - 
 
 ## Detailed Notes:
