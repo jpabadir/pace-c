@@ -23,6 +23,8 @@
 - (Katrina will double check) When admins sign up, they fill in their information and then someone from mentormatch.com will review and decline/accept their invitation
 - For now anyone can sign up as an admin
 - After the user logs in, the user will be directed to a mentor
+- Katrina will also write what she thinks the admin page should look like (optional)
+- JP will deal with repeated files
 - 
 
 ### Current Week Tasks:
@@ -41,6 +43,7 @@
 - Finish availability implementation
 - Spend 7 minutes testing
 - Look into mentee matching algorithm
+- Will delete repeated files
 - 
 
 ### Katrina
