@@ -76,6 +76,11 @@ let loggedmentor = {
   },
 };
 
+// run algorithm
+matchMenteeAlgorithm(sampleData, loggedmentor);
+
+//algorithm
+function matchMenteeAlgorithm(sampleData, loggedmentor){
 // push mentor's skills to global variable
 var Mentorskills = loggedmentor.Mentor1.rankedSkills;
 
@@ -137,3 +142,4 @@ for (i = 0; i < 3; i++) {
 }
 
 console.log(suggestedmentee);
+}
