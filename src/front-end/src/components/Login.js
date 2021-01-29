@@ -30,30 +30,6 @@ class Login extends Component {
       fire
         .auth()
         .signInWithEmailAndPassword(userEmail, userPassword)
-        // used to confirm that email is verified:
-        .then((userCredential) => {
-          // signed in:
-          const user = userCredential.user;
-          // below is to verify user:
-          switch (user.emailVerified) {
-            case false:
-              /*
-              in the future we can replace this with a page that the user will 
-              be redirected to instead of a window. alert if it is more
-              preferred.
-              */
-              window.alert(
-                'Email is not verified. Please verify your email before you log in.',
-              );
-              // should not go to the mentor home page
-              break;
-            case true:
-              // email is verified
-              break;
-            default:
-              break;
-          }
-        })
         .catch((error) => {
           switch (error.code) {
             case 'auth/invalid-email':
