@@ -43,38 +43,39 @@ January 26: Katrina, Philip, and Maya joined the meeting by 9AM, and waited for 
 
 January 27: Since the client missed yesterday's meeting, it was rescheduled for January 27th. Katrina started the meeting by showing our project board, and running through the changes to our application. The client's responses to questions our team wanted clarification on are as follows:
 
-- Do we need to do Firebase mocking (for example, to test user login)?
+1. Do we need to do Firebase mocking (for example, to test user login)?
 
-  - The client mentioned that once we learn how to mock our Firebase functions with Jest, it should be simple to do. However, there's no minimum amount of tests that she is requiring (our tests don't have to have 100% code coverage), and there's not any specific components that she would deem as crucial to test.
+- The client mentioned that once we learn how to mock our Firebase functions with Jest, it should be simple to do. However, there's no minimum amount of tests that she is requiring (our tests don't have to have 100% code coverage), and there's not any specific components that she would deem as crucial to test.
 
-- When it comes to unit tests, how complete does our testing have to be? What kind of coverage does the client want?
-  - As long as we have a standard, and we ensure that features are functional before merging, that should be sufficient.
+2. When it comes to unit tests, how complete does our testing have to be? What kind of coverage does the client want?
 
-Do we need to do any other kind of testing? Smoke testing, etc.
+- As long as we have a standard, and we ensure that features are functional before merging, that should be sufficient.
+
+3. Do we need to do any other kind of testing? Smoke testing, etc.
 
 - Unit tests with Jest should suffice. If we have time, we could perform additional tests. However, to summarize the above: _testing isn't a high priority for the client_. If there are members on the team who are interested in learning more about testing, the client notes that learning how to test is an important skill for the computer science industry. So, if any members on our team want to further their knoweldge in testing, they can do so, but to restate: it's not on the top of the list as a priority.
 
-Should users who access our website see a list of organizations currently registered? If so, how should this be displayed?
+4. Should users who access our website see a list of organizations currently registered? If so, how should this be displayed?
 
 - Users do not have to be able to view which organizations are currently using the platform. In the future, our website's landing page (currently the 'Home' tab) could display registered organization's icons, but since organizations are dynamic, it could add a layer of complexity that isn't necessary for the M.V.P. Something that we could do later on would be to include a general description of our website, as well as some of the features that are availble with pictures. As an example, view the [Pace website](https://www.pacerevenue.com/).
 
-Can anyone register their organization?
+5. Can anyone register their organization?
 
 - Yes.
 
-What should Admins be able to view (i.e currently active mentor and mentees, or just be able to view the forms and invite mentors?)?
+6. What should Admins be able to view (i.e currently active mentor and mentees, or just be able to view the forms and invite mentors?)?
 
 - Admins should be able to view the Mentor and Mentee forms, as well as have the ability to email invite Mentors to the Mentor form. It would be nice if we could view a list of active Mentors, as well as pending Mentors (those who have been invited to register, but that haven't yet).
 - As a potential bonus feature: We could allow Admins to have the ability to 'opt-in' to be a Mentor.
 
-Is there any validation for the Admin form to ensure the individual is from the organization that they say they’re from? Should we worry about duplicate organizations?
+7. Is there any validation for the Admin form to ensure the individual is from the organization that they say they’re from? Should we worry about duplicate organizations?
 
 - For now, we do not have to worry about the possibility of duplicate organizations registering (i.e If someone from Girls in Tech has already registered, it's fine if someone else later comes along and registers Girls in Tech again). We also do not have to validate that the domain name of the email address entered is associated to the inputted organization (i.e user@gmail.com would be accepted, it doesn't have to be user@girlsintech.com).
   - Sidenote from Katrina (not yet discussed with the client): I am completely aware of the security risks associated with not validating an admin's/mentor's identity. It's definitely not secure to go by the honor system in hopes that individuals who claim to be from a company actually are. If by the end of the project we're not able to circle back to this to find a way to make our setup more secure, I would advise highlighting this in our final report as a disclaimer.
 - **The only thing we have to ensure is that the email entered does not already exist within our database**.
 - In regard to what information we should be gaining from Admins, we should have input fields to obtain: Their organization's name, the user's name, the user's email address, a password, and their confirmed password.
 
-As part of the MVP, do we still need to allow Admins to edit the fields of the form?
+8. As part of the MVP, do we still need to allow Admins to edit the fields of the form?
 
 - No, we do not have to worry about making the forms editable by an admin. As long as we can embed the Mentee form, the client will be happy. If we have enough time, allowing admins to edit the form could be a bonus feature.
 
