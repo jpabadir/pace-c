@@ -6,7 +6,7 @@ import MentorForm from './components/MentorForm/MentorForm';
 import Auth from './components/Auth/Auth';
 import MenteeForm from './components/MenteeForm/MenteeForm';
 import ForgotPassword from './components/ForgotPassword/ForgotPassword';
-import Home from './components/Home/Home';
+import LandingPage from './components/LandingPage/LandingPage';
 import AdminSignup from './components/AdminSignup/AdminSignup';
 import AccountMenuItem from './components/AccountMenuItem/AccountMenuItem';
 
@@ -45,7 +45,7 @@ function App() {
           }}
         >
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={LandingPage} />
             <Route path="/my-account" component={Auth} />
             <Route exact path="/forgot-password" component={ForgotPassword} />
             <Route exact path="/mentor-form" component={MentorForm} />
