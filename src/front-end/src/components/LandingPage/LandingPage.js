@@ -32,13 +32,19 @@ function LandingPage() {
       <p>&nbsp;</p>
       <div className="container">
         <div id="adminLeft">
-          <p> As an Admin </p>
+          <h1>
+            <center> As an Admin... </center>
+          </h1>
         </div>
         <div id="mentorMiddle">
-          <p> As a Mentor... </p>
+          <h1>
+            <center> As a Mentor... </center>
+          </h1>
         </div>
         <div id="menteeRight">
-          <p> As a mentee... </p>
+          <h1>
+            <center> As a Mentee... </center>
+          </h1>
         </div>
       </div>
     </div>

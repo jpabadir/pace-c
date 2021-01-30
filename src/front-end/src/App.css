@@ -48,6 +48,8 @@ p3 {
   float:left; 
   width:30%; 
   height:80%; 
+  padding-top:.5%; 
+  padding-bottom: .5%;
   border:solid black; 
 }
 
@@ -55,6 +57,8 @@ p3 {
   float:left; 
   width:30%; 
   height:80%; 
+  padding-top:.5%; 
+  padding-bottom: .5%;
   border:solid black; 
   margin-left:5%; 
 }
@@ -63,6 +67,8 @@ p3 {
   float:right; 
   width:30%; 
   height:80%; 
+  padding-top:.5%; 
+  padding-bottom: .5%;
   border:solid black; 
 }
 
