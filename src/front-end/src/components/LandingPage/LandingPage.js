@@ -17,7 +17,7 @@ function LandingPage() {
       </h2>
       <p>
         <center>
-          <font size="4">
+          <font size="5">
             <p>
               Mentor Match brings together mentors and mentees through a
               matching system. Mentors and mentees are matched based on the
@@ -33,18 +33,63 @@ function LandingPage() {
       <div className="container">
         <div id="adminLeft">
           <h1>
-            <center> As an Admin... </center>
+            <center>
+              <i> As an Admin... </i>
+            </center>
           </h1>
+          {/* Insert Image for Admin here. */}
+          <center>
+            <h3>Admin Image Place Holder</h3>
+          </center>
+          <p>
+            <font size="4">
+              <center>
+                Register your organization. Invite potential mentors from your
+                company. Embed the mentee form in your organization&apos;s
+                website.
+              </center>
+            </font>
+          </p>
         </div>
         <div id="mentorMiddle">
           <h1>
-            <center> As a Mentor... </center>
+            <center>
+              <i> As a Mentor... </i>
+            </center>
           </h1>
+          {/* Insert Image for Mentor here. */}
+          <center>
+            <h3>Mentor Image Place Holder</h3>
+          </center>
+          <p>
+            <font size="4">
+              <center>
+                Accept mentees requests to teach them skills. Meetings are based
+                around your schedule. Choose as many or as little mentees to
+                mentor as desired.
+              </center>
+            </font>
+          </p>
         </div>
         <div id="menteeRight">
           <h1>
-            <center> As a Mentee... </center>
+            <center>
+              <i> As a Mentee... </i>
+            </center>
           </h1>
+          {/* Insert Image for Mentee here. */}
+          <center>
+            <h3>Mentee Image Place Holder</h3>
+          </center>
+          <p>
+            <font size="4">
+              <center>
+                You&apos;ll be matched with experienced individuals who can help
+                with the skills you&apos;ll need. Matches are made on common
+                skillsets and timezones.
+              </center>
+            </font>
+          </p>
         </div>
       </div>
     </div>

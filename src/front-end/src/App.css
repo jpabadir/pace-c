@@ -28,11 +28,19 @@ p3 {
 .MentorTutorial,
 .MentorCompletion,
 .MenteeCompletion,
-.LandingPage,
 .ForgotPassword {
   border: solid black;
   padding: 25px;
   margin: 30px;
+}
+
+.landingPage {
+  /*
+    If we want to use a border around this page:
+    border: solid black;
+    padding: 25px;
+    margin: 30px;
+  */
 }
 
 .container { 
@@ -50,6 +58,8 @@ p3 {
   height:80%; 
   padding-top:.5%; 
   padding-bottom: .5%;
+  padding-left:.5%; 
+  padding-right:.5%; 
   border:solid black; 
 }
 
@@ -59,6 +69,8 @@ p3 {
   height:80%; 
   padding-top:.5%; 
   padding-bottom: .5%;
+  padding-left:.5%; 
+  padding-right:.5%; 
   border:solid black; 
   margin-left:5%; 
 }
@@ -69,6 +81,8 @@ p3 {
   height:80%; 
   padding-top:.5%; 
   padding-bottom: .5%;
+  padding-left:.5%; 
+  padding-right:.5%; 
   border:solid black; 
 }
 
