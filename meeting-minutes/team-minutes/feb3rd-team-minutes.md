@@ -12,7 +12,7 @@
 ### Current Week Tasks:
 - 
 
-## Action Items (Due by next sprint: Feburary 10th):
+## Action Items (Due by next sprint: February 10th):
 ### JP
 - 
 
