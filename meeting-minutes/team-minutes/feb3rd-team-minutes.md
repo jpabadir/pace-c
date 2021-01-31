@@ -2,6 +2,7 @@
 - 
 
 ## Agenda Items:
+- [aleks] we could make the "please verify your email" page have a design as a task (if more tasks are needed)
 - 
 
 ## Detailed Notes:
@@ -11,7 +12,7 @@
 ### Current Week Tasks:
 - 
 
-## Action Items (Due by next sprint: January 10th):
+## Action Items (Due by next sprint: Feburary 10th):
 ### JP
 - 
 
