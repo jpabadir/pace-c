@@ -79,7 +79,7 @@ function LandingPage() {
           </h1>
           {/* Insert Image for Mentee here. */}
           <center>
-            <h3>Mentee Image Place Holder</h3>
+            <h3>Mentee Image Placeholder</h3>
           </center>
           <p>
             <font size="4">
