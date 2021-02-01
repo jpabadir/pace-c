@@ -4,7 +4,7 @@ import './App.css';
 import { NavLink, Switch, Route } from 'react-router-dom';
 import MentorForm from './components/MentorForm/MentorForm';
 import Auth from './components/Auth/Auth';
-import MenteeForm from './components/MenteeForm/MenteeForm';
+import MenteeFormAndEmbedder from './components/MenteeFormAndEmbedder/MenteeFormAndEmbedder';
 import ForgotPassword from './components/ForgotPassword/ForgotPassword';
 import LandingPage from './components/LandingPage/LandingPage';
 import AdminSignup from './components/AdminSignup/AdminSignup';
@@ -49,7 +49,11 @@ function App() {
             <Route path="/my-account" component={Auth} />
             <Route exact path="/forgot-password" component={ForgotPassword} />
             <Route exact path="/mentor-form" component={MentorForm} />
-            <Route exact path="/mentee-form" component={MenteeForm} />
+            <Route
+              exact
+              path="/mentee-form"
+              component={MenteeFormAndEmbedder}
+            />
             <Route exact path="/signup" component={AdminSignup} />
           </Switch>
         </Content>
