@@ -30,9 +30,7 @@ class Auth extends Component {
       return <MentorHome />;
     }
     if (this.state.user) {
-      // changed to a window alert to show what happens
-      // when you switch between the mentor tabs after login
-      window.alert('Please verify email');
+      return <h1>Please verify your email to access your account!</h1>;
     }
     return <Login />;
   }
