@@ -106,6 +106,14 @@ export function fetchMenteesFullInfo(menteesIDs, context) {
   }
 }
 
+export function marshallAdminInfo(adminFormValues) {
+  return {
+    organization: adminFormValues.organizationInput,
+    email: adminFormValues.emailInput,
+    name: adminFormValues.nameInput,
+    userType: 'admin',
+  };
+}
 // This function was copied directly from: https://stackoverflow.com/questions/2970525/converting-any-string-into-camel-case.
 export function getCamelCase(inputString) {
   return inputString
