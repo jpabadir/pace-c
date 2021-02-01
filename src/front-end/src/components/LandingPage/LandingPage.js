@@ -85,7 +85,7 @@ function LandingPage() {
             <font size="4">
               <center>
                 You&apos;ll be matched with experienced individuals who can help
-                with the skills you&apos;ll need. Matches are made on common
+                with the skills you need. Matches are made on common
                 skillsets and timezones.
               </center>
             </font>
