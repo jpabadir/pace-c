@@ -65,8 +65,7 @@ function LandingPage() {
             <font size="4">
               <center>
                 Accept mentees' requests to start teaching. Meetings are based
-                around your schedule. Choose as many or as little mentees to
-                mentor as desired.
+                around your schedule. Choose as many or as few mentees as you like.
               </center>
             </font>
           </p>
