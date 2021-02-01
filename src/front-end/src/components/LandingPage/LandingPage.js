@@ -45,7 +45,7 @@ function LandingPage() {
             <font size="4">
               <center>
                 Register your organization. Invite potential mentors from your
-                company. Embed the mentee form in your organization&apos;s
+                company. Embed the mentee signup form in your organization&apos;s
                 website.
               </center>
             </font>
