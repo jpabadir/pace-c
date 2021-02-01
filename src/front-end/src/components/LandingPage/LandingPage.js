@@ -59,7 +59,7 @@ function LandingPage() {
           </h1>
           {/* Insert Image for Mentor here. */}
           <center>
-            <h3>Mentor Image Place Holder</h3>
+            <h3>Mentor Image Placeholder</h3>
           </center>
           <p>
             <font size="4">
