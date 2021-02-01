@@ -45,8 +45,8 @@ function LandingPage() {
             <font size="4">
               <center>
                 Register your organization. Invite potential mentors from your
-                company. Embed the mentee signup form in your organization&apos;s
-                website.
+                company. Embed the mentee signup form in your
+                organization&apos;s website.
               </center>
             </font>
           </p>
@@ -64,8 +64,9 @@ function LandingPage() {
           <p>
             <font size="4">
               <center>
-                Accept mentees' requests to start teaching. Meetings are based
-                around your schedule. Choose as many or as few mentees as you like.
+                Accept mentees&apos; requests to start teaching. Meetings are
+                based around your schedule. Choose as many or as few mentees as
+                you like.
               </center>
             </font>
           </p>
@@ -84,8 +85,8 @@ function LandingPage() {
             <font size="4">
               <center>
                 You&apos;ll be matched with experienced individuals who can help
-                with the skills you need. Matches are made on common
-                skillsets and timezones.
+                with the skills you need. Matches are made on common skillsets
+                and timezones.
               </center>
             </font>
           </p>
