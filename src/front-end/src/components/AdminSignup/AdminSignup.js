@@ -56,8 +56,8 @@ class AdminSignup extends Component {
             <Form.Item
               label="Organization"
               name="organizationInput"
-              tooltip="The organization you're planning to be a Mentor with"
-              rules={[{ required: true, message: 'Please input something' }]}
+              tooltip="The name of the organization that you're associated with"
+              rules={[{ required: true, message: 'Please enter name of your organization' }]}
             >
               <Input placeholder="Please enter your Organization" />
             </Form.Item>
