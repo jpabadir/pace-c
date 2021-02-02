@@ -2,11 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import MenteeForm from './components/MenteeForm/MenteeForm';
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <Switch>
+      <Route exact path="/mentee-form-embed" component={MenteeForm} />
+      <App />
+    </Switch>
   </BrowserRouter>,
   document.getElementById('root'),
 );
