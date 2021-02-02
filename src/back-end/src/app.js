@@ -93,4 +93,3 @@ app.listen(port, () => {
 // });
 // Also, do we need to match based on ranked skills? Or just skills?
 // Also, we're gonna need to add a way to make sure mentors are only matched with mentees who signed up for this specific organization (organization segregation when matching)
-// It seems like updating the firebase data from the console crashes the server when it's running. Let's fix that.
