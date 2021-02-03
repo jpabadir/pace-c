@@ -8,9 +8,14 @@
 
 ## Detailed Notes:
 ### General Notes:
+- Ask prof if we will lose marks if we do not span the entire groups.
+- Try to stay with the same person as last time for peer testing
+- If you can not get the same person try to get the same group.
 - 
 
 ### Current Week Tasks:
+- Build manage mentor page (use bootstrap)
+- Build dynamic admin vs mentors content rendering (add mentee form and embed if possible)
 - 
 
 ## Action Items (Due by next sprint: February 10th):
@@ -21,7 +26,9 @@
 - 
 
 ### Eric
--
+- Build dynamic admin vs mentors content rendering (add mentee form and embed if possible)
+- 
 
 ### Aleks
+- Build manage mentor page (use bootstrap, make rectangles textboxes)
 - 
