@@ -15,6 +15,7 @@
 - Is it okay for a mentor link to be forwarded (client question)
 - Do we have to make single use links (client question)
 - Can we make the link available to the public for now then if needed later make it restricted (client question)
+- will send prof an email about last weeks gitstats
 - 
 
 ### Current Week Tasks:
@@ -39,6 +40,7 @@
 ### Katrina
 - Enable resending of verifying email to user
 - Fix tab switching delay
+- will send prof an email about last weeks gitstats
 - 
 
 ### Eric
