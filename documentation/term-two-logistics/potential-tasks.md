@@ -19,3 +19,21 @@
    - Potentially could be done by creating an array for 'Current/Active Mentors' and one for 'Invited/Pending Mentors'. When an admin enters an email address to request mentors, they could automatically be added to the 'Invited/Pending Mentors' array. Once an email address in the Invited/Pending array has been associated with a mentor account, they then get moved to the 'Current/Active Mentors' section.
 
 5. Create the outline for the upcoming Peer Testing sessions.
+
+# Future Tasks
+
+1. Correlate instances of the Mentee form with the organization so that Mentees are matched with Mentors from that organization. Add a field for organizations to Mentees in the database.
+
+2. Update the matching algorithm so that organization types are considered in the matching process.
+
+3. Incorporate client feedback as stated in the client meeting minutes.
+
+4. Incorporate feedback from peers after conducting the peer testing sessions.
+
+5. Fix any bugs.
+
+6. Conduct additional unit tests.
+
+7. Discuss how we'd like to deploy the webiste.
+
+8. Start final documentation.
