@@ -23,3 +23,6 @@
   - Can we prioritize other functionality in the meantime?
 - Back in October, our team debated using Cloud Functions, however, we'd need to update our plan to the Blaze payment plan. After further development, it looks like we'll be able to achieve the required functionality without Cloud Functions, by hosting via a node server. As pointed out by a member of the team, if we write the server using node 14, that's what Cloud Functions use. So, it would support the ability to migrate later on.
   - Is this alright with the client?
+- When it comes to how Mentors receive the Mentor form upon an Admin's request:
+  - Is it alright if all requested users receive the same link? Potentially, a user who receives the Mentor form could then forward the link of the form to another user who hasn't been requested.
+    - If that poses a problem, a possible work-around would be for whoever takes over the site to manually go onto Firebase and approve users. This would take some time to implement, but could probably work.
