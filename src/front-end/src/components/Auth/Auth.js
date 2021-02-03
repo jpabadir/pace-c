@@ -26,7 +26,13 @@ class Auth extends Component {
   }
 
   render() {
-    return <div>{this.state.user ? <MentorHome /> : <Login />}</div>;
+    if (this.state.user && this.state.user.emailVerified) {
+      return <MentorHome />;
+    }
+    if (this.state.user) {
+      return <h1>Please verify your email to access your account!</h1>;
+    }
+    return <Login />;
   }
 }
 

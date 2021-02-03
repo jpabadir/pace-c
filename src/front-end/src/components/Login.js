@@ -25,6 +25,7 @@ class Login extends Component {
   onLogin() {
     const userEmail = document.getElementById('useremail').value;
     const userPassword = document.getElementById('userpassword').value;
+
     if (userEmail && userPassword) {
       fire
         .auth()
