@@ -2,6 +2,7 @@
 - 
 
 ## Agenda Items:
+- [aleks] when clicking logout, the user is not directed anywhere. The user stays on the mentor tutorial screen even though they are already logged out.
 - 
 
 ## Detailed Notes:
