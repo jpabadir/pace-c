@@ -215,11 +215,11 @@ class MentorForm extends Component {
               rules={[
                 {
                   required: true,
-                  message: 'Please introduce yourself to us.',
+                  message: 'Plese introduce yourself to us. ',
                 },
               ]}
             >
-              <Input.TextArea placeholder="Tell us a bit about yourself" />
+              <Input.TextArea placeholder="Tell us a bit about yourself. Please be advised that this description will be shared with Mentees that you accept to mentor." />
             </Form.Item>
             <Button
               type="primary"
