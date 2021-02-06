@@ -122,6 +122,23 @@ class MentorForm extends Component {
               </Select>
             </Form.Item>
             <Form.Item
+              label="Availability"
+              name="calendarLink"
+              tooltip="Paste the link to your Google Calendar so Mentees can book timeslots when you're available to mentor them"
+              rules={[
+                {
+                  required: true,
+                  message: 'Please provide a valid link to your calendar.',
+                },
+              ]}
+            >
+              <Input
+                type="url"
+                pattern="https://calendar.google.com/calendar/.*"
+                placeholder="The link of your available timeslots to provide mentorship"
+              />
+            </Form.Item>
+            <Form.Item
               label="Password"
               name="password"
               tooltip="Password should be at least 8 characters."
