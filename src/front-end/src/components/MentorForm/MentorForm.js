@@ -215,7 +215,7 @@ class MentorForm extends Component {
               rules={[
                 {
                   required: true,
-                  message: 'Plese introduce yourself to us. ',
+                  message: 'Please introduce yourself to us. ',
                 },
               ]}
             >
