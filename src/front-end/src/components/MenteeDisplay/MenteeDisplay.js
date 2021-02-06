@@ -23,6 +23,7 @@ class MenteeDisplay extends Component {
     const templateParams = {
       mentorEmail: '',
       mentorName: '',
+      mentorAvailability: '',
       menteeEmail: '',
       menteeName: '',
       skills: '',
@@ -36,8 +37,9 @@ class MenteeDisplay extends Component {
       .on('value', (snapshot) => {
         templateParams.mentorName = snapshot.val().name;
         templateParams.skills = snapshot.val().rankedSkills;
+        templateParams.mentorAvailability = snapshot.val().availability;
       });
-    
+
     // Set mentee email and name
     const menteePromise = fire
       .database()
