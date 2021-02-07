@@ -6,9 +6,7 @@ export function resendVerificationEmail(user) {
   user
     .sendEmailVerification()
     .then(() => {
-      window.alert(
-        'An new verification email sent has successfully been sent!',
-      );
+      window.alert('A new verification email has successfully been sent!');
       console.log('Success');
     })
     .catch((error) => {
