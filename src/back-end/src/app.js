@@ -1,7 +1,8 @@
 // Server initialization
 const express = require('express');
-const port = 8020;
 const cors = require('cors');
+
+const port = 8020;
 const app = express();
 app.use(cors());
 const fire = require('firebase');
@@ -18,7 +19,56 @@ const firebaseConfig = {
 };
 fire.initializeApp(firebaseConfig);
 
-var allData = null;
+let allData = null;
+
+function getTimeDiff(user1, user2) {
+  return Math.abs(
+    parseInt(user1.timeZone.substring(4, 7), 10) -
+      parseInt(user2.timeZone.substring(4, 7), 10),
+  );
+}
+
+function getIntersectionLength(array1, array2) {
+  return array1.filter((elem) => array2.includes(elem)).length;
+}
+
+function sortBySkillsThenTimezone(array1, array2) {
+  // If first item is enough to sort, return
+  if (array1.numSkillsInCommon > array2.numSkillsInCommon) {
+    return -1;
+  }
+  if (array1.numSkillsInCommon < array2.numSkillsInCommon) {
+    return 1;
+  }
+
+  // Else, use second item
+  if (array1.timeDiff < array2.timeDiff) {
+    return -1;
+  }
+  if (array1.timeDiff > array2.timeDiff) {
+    return 1;
+  }
+  return 0;
+}
+
+function matchWithMentees(uid) {
+  const mentorInfo = allData[uid];
+  const criteriaScores = [];
+  Object.entries(allData)
+    .filter((user) => user[1].userType === 'mentee')
+    .forEach((user) => {
+      criteriaScores.push({
+        menteeUid: user[0],
+        numSkillsInCommon: getIntersectionLength(
+          user[1].rankedSkills,
+          mentorInfo.rankedSkills,
+        ),
+        timeDiff: getTimeDiff(mentorInfo, user[1]),
+      });
+    });
+  criteriaScores.sort(sortBySkillsThenTimezone);
+  return criteriaScores;
+}
 
 app.get('/match-with-mentees', (req, res) => {
   // Read parameter passed from query
@@ -30,57 +80,17 @@ app.get('/match-with-mentees', (req, res) => {
     .ref('users')
     .once(
       'value',
-      function (snapshot) {
+      (snapshot) => {
         allData = snapshot.val();
         res.send(matchWithMentees(uid).slice(0, 3));
       },
-      function (errorObject) {
-        console.log('Firebase read failed with error code: ' + errorObject.code);
-      }
+      (errorObject) => {
+        console.log(
+          'Firebase read failed with error code: ' + errorObject.code,
+        );
+      },
     );
 });
-
-function matchWithMentees(uid) {
-  const mentorInfo = allData[uid];
-  criteriaScores = [];
-  Object.entries(allData)
-    .filter((user) => user[1].userType == 'mentee')
-    .forEach((user) => {
-      criteriaScores.push({
-        menteeUid: user[0],
-        numSkillsInCommon: getIntersectionLength(user[1].rankedSkills, mentorInfo.rankedSkills),
-        timeDiff: getTimeDiff(mentorInfo, user[1]),
-      });
-    });
-  criteriaScores.sort(sortBySkillsThenTimezone);
-  return criteriaScores;
-}
-
-function getIntersectionLength(array1, array2) {
-  return array1.filter((elem) => array2.includes(elem)).length;
-}
-
-function getTimeDiff(user1, user2) {
-  return Math.abs(parseInt(user1.timeZone.substring(4, 7)) - parseInt(user2.timeZone.substring(4, 7)));
-}
-
-function sortBySkillsThenTimezone(array1, array2) {
-  // If first item is enough to sort, return
-  if (array1.numSkillsInCommon > array2.numSkillsInCommon) {
-    return -1;
-  } else if (array1.numSkillsInCommon < array2.numSkillsInCommon) {
-    return 1;
-  }
-
-  // Else, use second item
-  if (array1.timeDiff < array2.timeDiff) {
-    return -1;
-  } else if (array1.timeDiff > array2.timeDiff) {
-    return 1;
-  } else {
-    return 0;
-  }
-}
 
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
@@ -92,4 +102,7 @@ app.listen(port, () => {
 //   console.log(snapshot.key);
 // });
 // Also, do we need to match based on ranked skills? Or just skills?
-// Also, we're gonna need to add a way to make sure mentors are only matched with mentees who signed up for this specific organization (organization segregation when matching)
+// Also, we're gonna need to add a way to make sure mentors
+// are only matched with mentees
+// who signed up for this specific
+// organization (organization segregation when matching)
