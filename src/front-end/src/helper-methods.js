@@ -2,6 +2,29 @@ import firebase from './firebase-init';
 
 const auth = firebase.auth();
 
+export function resendVerificationEmail(user) {
+  user
+    .sendEmailVerification()
+    .then(() => {
+      window.alert(
+        'An new verification email sent has successfully been sent!',
+      );
+      console.log('Success');
+    })
+    .catch((error) => {
+      console.log(error);
+      switch (error.code) {
+        case 'auth/too-many-requests':
+          window.alert(
+            'Please check the inbox and junk folder of your email before pressing the button again',
+          );
+          break;
+        default:
+          break;
+      }
+    });
+}
+
 function mySendEmailVerification(user) {
   user
     .sendEmailVerification()
