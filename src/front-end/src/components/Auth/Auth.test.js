@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { act } from 'react-dom/test-utils';
-import userEvent from '@testing-library/user-event';
+// import { act } from 'react-dom/test-utils';
+// import userEvent from '@testing-library/user-event';
 import { mockWindowMatchMedia } from '../../helper-methods';
 
 import Auth from './Auth';
@@ -84,7 +84,9 @@ it('renders without crashing', () => {
 //   await act(async () => userEvent.click(logoutButton));
 
 //   expect(container.textContent).toBe(
-//     "Login to access the Mentorship PortalEmailPasswordLoginForgot your password?  Don't have a mentor account yet?Create Account",
+//     "Login to access the Mentorship PortalEmailPasswordLoginForgot
+//  your password?
+//  Don't have a mentor account yet?Create Account",
 //   );
 // });
 
