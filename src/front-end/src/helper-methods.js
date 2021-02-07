@@ -88,10 +88,17 @@ export function resetPassword(emailAddress) {
   auth
     .sendPasswordResetEmail(emailAddress)
     .then(() => {
+      window.alert('We sent you an email with a link to reset your password.');
       console.log('Email sent');
     })
     .catch((error) => {
       console.log(error);
+      switch (error.code) {
+        case 'auth/invalid-email':
+          break;
+        default:
+          break;
+      }
     });
 }
 
