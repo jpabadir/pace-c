@@ -31,7 +31,7 @@ it('renders without crashing', () => {
     container,
   );
   expect(container.textContent).toBe(
-    'Please verify your email to access your account!',
+    'Please verify your email to access your account!Resend Verification Email',
   );
 });
 
