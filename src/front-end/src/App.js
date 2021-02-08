@@ -42,11 +42,6 @@ function App() {
             <Menu.Item key="5" style={{ float: 'right' }}>
               <AccountMenuItem />
             </Menu.Item>
-            <Menu.Item key="6">
-              <NavLink to="/manage-mentors">
-                Manage Mentors (this link left for development)
-              </NavLink>
-            </Menu.Item>
           </Menu>
         </Header>
         <Content

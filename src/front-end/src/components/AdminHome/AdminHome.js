@@ -20,7 +20,7 @@ class AdminHome extends Component {
           type="primary"
           htmlType="button"
           id="manageMentors"
-          href="/placeHolder"
+          href="/manage-mentors"
         >
           Manage Mentors
         </Button>
