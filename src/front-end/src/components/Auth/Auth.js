@@ -3,6 +3,7 @@ import fire from '../../firebase-init';
 import Login from '../Login';
 import MentorHome from '../MentorHome';
 import AdminHome from '../AdminHome/AdminHome';
+import EmailVerify from '../EmailVerify';
 
 class Auth extends Component {
   constructor(props) {
@@ -47,12 +48,7 @@ class Auth extends Component {
       return <MentorHome />;
     }
     if (this.state.user) {
-      return (
-        <h1>
-          Thanks for signing up! We&apos;ve sent you an email so you can verify
-          your account. Please do so to access it.
-        </h1>
-      );
+      return <EmailVerify />;
     }
     if (
       this.state.user &&

@@ -124,7 +124,7 @@ class Login extends Component {
             <p>
               <a
                 className="loginlink"
-                href="http://localhost:3000/ForgotPassword
+                href="http://localhost:3000/forgot-password
               "
               >
                 Forgot your password?&nbsp;

@@ -203,7 +203,7 @@ class MenteeForm extends Component {
                 },
               ]}
             >
-              <Input.TextArea placeholder="Tell us a bit about yourself" />
+              <Input.TextArea placeholder="Tell us a bit about yourself. Please be advised that this description will be shared with Mentors that you match with." />
             </Form.Item>
             <Button
               type="primary"
