@@ -33,6 +33,11 @@ function App() {
                 MenteeForm (this link left for development)
               </NavLink>
             </Menu.Item>
+            <Menu.Item key="7">
+              <NavLink to="/signup">
+                AdminSignup (this link left for development)
+              </NavLink>
+            </Menu.Item>
             <Menu.Item key="5" style={{ float: 'right' }}>
               <AccountMenuItem />
             </Menu.Item>
