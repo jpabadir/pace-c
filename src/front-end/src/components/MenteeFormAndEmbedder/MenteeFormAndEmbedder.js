@@ -10,9 +10,8 @@ function MentorFormAndEmbedder() {
   }
 
   return (
-    <div>
+    <div style={{ paddingTop: '15px' }}>
       <div>
-        <MenteeForm />
         <center>
           <h1>
             Click on the &quot;Generate iFrame Tag&quot; button to create an
@@ -26,6 +25,7 @@ function MentorFormAndEmbedder() {
             htmlType="submit"
             className="formSubmitButton"
             size="large"
+            style={{ backgroundColor: '#35aa98', border: 'none' }}
           >
             Generate iFrame Tag
           </Button>
@@ -40,7 +40,7 @@ function MentorFormAndEmbedder() {
                 width: '330px',
                 resize: 'none',
                 marginTop: '10px',
-                backgroundColor: '#110a47',
+                backgroundColor: '#35aa98',
                 color: 'white',
               }}
               value='<iframe width="1000" height="500" src="http://localhost:3000/mentee-form-embed" frameborder="0" allowfullscreen></iframe>'
@@ -48,6 +48,7 @@ function MentorFormAndEmbedder() {
             />
           )}
         </center>
+        <MenteeForm />
       </div>
     </div>
   );
