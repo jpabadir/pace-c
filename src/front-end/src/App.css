@@ -28,7 +28,8 @@ p3 {
 .MentorTutorial,
 .MentorCompletion,
 .MenteeCompletion,
-.ForgotPassword {
+.ForgotPassword,
+.EmailVerify {
   border: solid black;
   padding: 25px;
   margin: 30px;
