@@ -5,7 +5,6 @@ import {
   SolutionOutlined,
   UsergroupAddOutlined,
 } from '@ant-design/icons';
-// import { Route } from 'react-router-dom';
 import MentorSuggested from './MentorSuggested';
 import MentorAccepted from './MentorAccepted';
 import MentorTutorial from './MentorTutorial/MentorTutorial';
