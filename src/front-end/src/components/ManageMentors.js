@@ -78,32 +78,36 @@ class ManageMentors extends Component {
                   them to Mentor Match&apos;s Mentor Form.
                   <br />
                   <br />
-                  <Form.Item
-                    label="Mentor's Email Address:"
-                    id="inviteMentorEmail"
-                    // must have an input:
-                    rules={[
-                      {
-                        required: true,
-                        message: "Please enter the mentor's email",
-                      },
-                    ]}
-                  >
-                    <Input
-                      onInput={this.handleNameChange}
+                  <Form>
+                    <Form.Item
+                      label="Mentor's Email Address:"
                       id="inviteMentorEmail"
-                      placeholder="Email Address"
-                    />
-                  </Form.Item>
-                  <Button
-                    onClick={requestMentor}
-                    type="primary"
-                    htmlType="submit"
-                    className="formSubmitButton"
-                    size="large"
-                  >
-                    Request Mentor
-                  </Button>
+                      name="emailInput"
+                      // must have an input:
+                      rules={[
+                        {
+                          required: true,
+                          message: "Please enter the mentor's email",
+                        },
+                      ]}
+                    >
+                      <Input
+                        type="email"
+                        onInput={this.handleNameChange}
+                        id="inviteMentorEmail"
+                        placeholder="Email Address"
+                      />
+                    </Form.Item>
+                    <Button
+                      onClick={requestMentor}
+                      type="primary"
+                      htmlType="submit"
+                      className="formSubmitButton"
+                      size="large"
+                    >
+                      Request Mentor
+                    </Button>
+                  </Form>
                 </center>
               </font>
             </p>
