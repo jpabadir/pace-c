@@ -9,6 +9,7 @@ import ForgotPassword from './components/ForgotPassword/ForgotPassword';
 import LandingPage from './components/LandingPage/LandingPage';
 import AdminSignup from './components/AdminSignup/AdminSignup';
 import AccountMenuItem from './components/AccountMenuItem/AccountMenuItem';
+import ManageMentors from './components/ManageMentors';
 
 const { Header, Content, Footer } = Layout;
 
@@ -34,6 +35,11 @@ function App() {
             <Menu.Item key="5" style={{ float: 'right' }}>
               <AccountMenuItem />
             </Menu.Item>
+            <Menu.Item key="6">
+              <NavLink to="/manage-mentors">
+                Manage Mentors (this link left for development)
+              </NavLink>
+            </Menu.Item>
           </Menu>
         </Header>
         <Content
@@ -55,6 +61,7 @@ function App() {
               component={MenteeFormAndEmbedder}
             />
             <Route exact path="/signup" component={AdminSignup} />
+            <Route exact path="/manage-mentors" component={ManageMentors} />;
           </Switch>
         </Content>
         <Footer
