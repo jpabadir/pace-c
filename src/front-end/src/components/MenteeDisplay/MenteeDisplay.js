@@ -38,7 +38,7 @@ class MenteeDisplay extends Component {
       .on('value', (snapshot) => {
         templateParams.mentorName = snapshot.val().name;
         templateParams.skills = snapshot.val().rankedSkills;
-        templateParams.description = snapshot.val().description;
+        templateParams.mentorDescription = snapshot.val().description;
         templateParams.mentorAvailability = snapshot.val().availability;
       });
 
