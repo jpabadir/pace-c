@@ -7,14 +7,13 @@ export function resendVerificationEmail(user) {
     .sendEmailVerification()
     .then(() => {
       window.alert('A new verification email has successfully been sent!');
-      console.log('Success');
     })
     .catch((error) => {
       console.log(error);
       switch (error.code) {
         case 'auth/too-many-requests':
           window.alert(
-            'Please check the inbox and junk folder of your email before pressing the button again',
+            'Too many requests. Please check the inbox and junk folder of your email before pressing the button again.',
           );
           break;
         default:
@@ -90,12 +89,16 @@ export function resetPassword(emailAddress) {
     .sendPasswordResetEmail(emailAddress)
     .then(() => {
       window.alert('We sent you an email with a link to reset your password.');
-      console.log('Email sent');
     })
     .catch((error) => {
       console.log(error);
       switch (error.code) {
         case 'auth/invalid-email':
+          break;
+        case 'auth/user-not-found':
+          window.alert(
+            'The email address that you have entered does not match with any accounts in our system.',
+          );
           break;
         default:
           break;
