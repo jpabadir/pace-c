@@ -9,6 +9,7 @@ import ForgotPassword from './components/ForgotPassword/ForgotPassword';
 import LandingPage from './components/LandingPage/LandingPage';
 import AdminSignup from './components/AdminSignup/AdminSignup';
 import AccountMenuItem from './components/AccountMenuItem/AccountMenuItem';
+import AdminHome from './components/AdminHome/AdminHome';
 
 const { Header, Content, Footer } = Layout;
 
@@ -55,6 +56,7 @@ function App() {
               component={MenteeFormAndEmbedder}
             />
             <Route exact path="/signup" component={AdminSignup} />
+            <Route exact path="/admin-home" component={AdminHome} />
           </Switch>
         </Content>
         <Footer
