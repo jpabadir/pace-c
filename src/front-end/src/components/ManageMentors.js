@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import { Form, Input, Button } from 'antd';
-import fire from '../firebase-init';
+import firebase from '../firebase-init';
+
 // eslint-disable-next-line react/prefer-stateless-function
+
+const nodemailer = require('nodemailer');
+
 class ManageMentors extends Component {
   constructor(props) {
     super(props);
@@ -18,6 +22,23 @@ class ManageMentors extends Component {
   }
 
   sendEmail() {
+    const transporter = nodemailer.createTransport({
+      host: 'smtp.gmail.com',
+      port: 587,
+      secure: false, // true for 465, false for other ports
+      auth: {
+        user: 'wrc9817@gmail.com', // generated ethereal user
+        pass: '13163338455', // generated ethereal password
+      },
+    });
+    transporter.sendMail({
+      from: 'wrc9817@gamil.com', // sender address
+      to: this.state.email, // list of receivers
+      subject: 'Pace Mentorship', // Subject line
+      text: 'Hi, link: http://localhost:3000/mentor-form-embed', // plain text body
+      html: '<p>Hi, link: http://localhost:3000/mentor-form-embed</p>', // html body
+    });
+    /* 
     const email = this.state.email;
     const templateParams = {
       nameInput: '',
@@ -32,6 +53,7 @@ class ManageMentors extends Component {
     Promise.all([loggedPromise]).then(() => {
       emailjs.send('gmail', '', templateParams, 'user_2x3ekfRvEqEttZg87VyrZ');
     });
+  */
   }
 
   requestMentor(values) {
@@ -45,6 +67,7 @@ class ManageMentors extends Component {
       .then((snapshot) => {
         if (snapshot.exists()) {
           this.sendEmail(values);
+          window.alert('The link of mentor form has been sent.');
         } else {
           window.alert(
             'The email address has not been registered in the system.',
@@ -123,12 +146,11 @@ class ManageMentors extends Component {
                   them to Mentor Match&apos;s Mentor Form.
                   <br />
                   <br />
-                  <Form>
+                  <Form onFinish={this.requestMentor}>
                     <Form.Item
                       label="Mentor's Email Address:"
                       id="inviteMentorEmail"
                       name="emailInput"
-                      onFinish={this.requestMentor}
                       // must have an input:
                       rules={[
                         {
