@@ -10,6 +10,7 @@ import LandingPage from './components/LandingPage/LandingPage';
 import AdminSignup from './components/AdminSignup/AdminSignup';
 import AccountMenuItem from './components/AccountMenuItem/AccountMenuItem';
 import AdminHome from './components/AdminHome/AdminHome';
+import PlaceHolder from './components/AdminHome/PlaceHolder';
 
 const { Header, Content, Footer } = Layout;
 
@@ -57,6 +58,7 @@ function App() {
             />
             <Route exact path="/signup" component={AdminSignup} />
             <Route exact path="/admin-home" component={AdminHome} />
+            <Route exact path="/placeHolder" component={PlaceHolder} />
           </Switch>
         </Content>
         <Footer
