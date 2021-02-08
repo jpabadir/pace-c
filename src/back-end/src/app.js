@@ -67,7 +67,7 @@ function matchWithMentees(uid) {
       });
     });
   criteriaScores.sort(sortBySkillsThenTimezone);
-  return criteriaScores;
+  return criteriaScores.map(({ menteeUid }) => menteeUid);
 }
 
 app.get('/match-with-mentees', (req, res) => {
@@ -82,7 +82,13 @@ app.get('/match-with-mentees', (req, res) => {
       'value',
       (snapshot) => {
         allData = snapshot.val();
-        res.send(matchWithMentees(uid).slice(0, 3));
+        fire
+          .database()
+          .ref('users/' + uid + '/suggestedMentees')
+          .set(matchWithMentees(uid).slice(0, 3))
+          .then(() => {
+            res.send('Successfully updated mentees');
+          });
       },
       (errorObject) => {
         console.log(
