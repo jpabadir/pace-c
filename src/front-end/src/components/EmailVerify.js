@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { Button } from 'antd';
+import fire from '../firebase-init';
+import { resendVerificationEmail } from '../helper-methods';
 
 function resendVerifyEmail() {
-  // insert code to resend verification email
-  // or insert code to re-route to resend verification email page
-  window.alert('Verification Email Sent!');
+  const myUser = fire.auth().currentUser;
+  resendVerificationEmail(myUser);
 }
 
 // eslint-disable-next-line react/prefer-stateless-function
