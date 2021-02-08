@@ -1,13 +1,58 @@
 import React, { Component } from 'react';
 import { Form, Input, Button } from 'antd';
-
-function requestMentor() {
-  // insert code to request mentors
-  window.alert('Your mentor request has been sent!');
-}
-
+import fire from '../firebase-init';
 // eslint-disable-next-line react/prefer-stateless-function
 class ManageMentors extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: '',
+    };
+    this.handleEmailChange = this.handleEmailChange.bind(this);
+    this.sendEmail = this.sendEmail.bind(this);
+    this.requestMentor = this.requestMentor.bind(this);
+  }
+
+  handleEmailChange(values) {
+    this.setState({ email: values.target.value });
+  }
+
+  sendEmail() {
+    const email = this.state.email;
+    const templateParams = {
+      nameInput: '',
+      emailInput: email,
+      link: 'http://localhost:3000/mentor-form-embed',
+    };
+    const loggedPromise = fire.database
+      .ref('users/' + fire.auth().currentUser.uid)
+      .on('values', (snapshot) => {
+        templateParams.nameInput = snapshot.val().name;
+      });
+    Promise.all([loggedPromise]).then(() => {
+      emailjs.send('gmail', '', templateParams, 'user_2x3ekfRvEqEttZg87VyrZ');
+    });
+  }
+
+  requestMentor(values) {
+    firebase
+      .database()
+      .ref()
+      .child('users')
+      .orderByChild('email')
+      .equalTo(values.emailInput)
+      .once('value')
+      .then((snapshot) => {
+        if (snapshot.exists()) {
+          this.sendEmail(values);
+        } else {
+          window.alert(
+            'The email address has not been registered in the system.',
+          );
+        }
+      });
+  }
+
   render() {
     return (
       <div className="ManageMentors" style={{ paddingTop: '10px' }}>
@@ -83,6 +128,7 @@ class ManageMentors extends Component {
                       label="Mentor's Email Address:"
                       id="inviteMentorEmail"
                       name="emailInput"
+                      onFinish={this.requestMentor}
                       // must have an input:
                       rules={[
                         {
@@ -93,13 +139,12 @@ class ManageMentors extends Component {
                     >
                       <Input
                         type="email"
-                        onInput={this.handleNameChange}
+                        onInput={this.handleEmailChange}
                         id="inviteMentorEmail"
                         placeholder="Email Address"
                       />
                     </Form.Item>
                     <Button
-                      onClick={requestMentor}
                       type="primary"
                       htmlType="submit"
                       className="formSubmitButton"
