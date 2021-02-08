@@ -33,6 +33,7 @@ class Auth extends Component {
       .database()
       .ref('users/' + this.state.user.uid)
       .on('value', (snapshot) => {
+        console.log(snapshot.val());
         this.setState({ userType: snapshot.val().userType });
       });
   }
@@ -46,7 +47,12 @@ class Auth extends Component {
       return <MentorHome />;
     }
     if (this.state.user) {
-      return <h1>Please verify your email to access your account!</h1>;
+      return (
+        <h1>
+          Thanks for signing up! We&apos;ve sent you an email so you can verify
+          your account. Please do so to access it.
+        </h1>
+      );
     }
     if (
       this.state.user &&
