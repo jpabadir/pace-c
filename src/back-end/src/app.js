@@ -51,16 +51,23 @@ function sortBySkillsThenTimezone(array1, array2) {
   return 0;
 }
 
+function isPotentialMatch(mentorInfo, user) {
+  const isMentee = user[1].userType === 'mentee';
+  const isNotYetAccepted =
+    mentorInfo.acceptedMentees == null ||
+    !mentorInfo.acceptedMentees.includes(user[0]);
+  const isNotDeclined =
+    mentorInfo.declinedMentees == null ||
+    !mentorInfo.declinedMentees.includes(user[0]);
+
+  return isMentee && isNotYetAccepted && isNotDeclined;
+}
+
 function matchWithMentees(uid) {
   const mentorInfo = allData[uid];
   const criteriaScores = [];
   Object.entries(allData)
-    .filter(
-      (user) =>
-        user[1].userType === 'mentee' &&
-        (mentorInfo.acceptedMentees == null ||
-          !mentorInfo.acceptedMentees.includes(user[0])),
-    )
+    .filter((user) => isPotentialMatch(mentorInfo, user))
     .forEach((user) => {
       criteriaScores.push({
         menteeUid: user[0],
