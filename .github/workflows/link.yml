@@ -6,7 +6,7 @@ name: CI
 # events but only for the develop branch
 on:
   pull_request:
-    branches: [ develop, master ]
+    branches: [develop, master]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -19,27 +19,24 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-        
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
-        with: 
+        with:
           node-version: '15.x'
-      - run: | 
+      - run: |
           npm install -g eslint
           npm install eslint-plugin-react@latest --save-dev
           npm install --save eslint-config-airbnb
           npm install eslint-plugin-prettier@latest --save-dev
           npm install --save-dev eslint-config-prettier
           npm install eslint-config-standard
-          npm install 
-        
+          npm install
+
       - name: Run ESLint
         run: eslint src/front-end/src/**/*.js src/back-end/src/**/*.js
-      
+
       - name: Run jest
         run: |
-          npm install --save-dev jest@26.6.0
-          npm install react-test-renderer
-          npm install
-          cd src/front-end/
-          npm test
+          cd src/front-end/; npm install
+          npm run test

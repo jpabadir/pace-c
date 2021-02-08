@@ -7,12 +7,12 @@ export default () => (
       activate your account through the email we just sent and click&nbsp;
       <a
         className="loginlink"
-        href="http://localhost:3000/login
+        href="http://localhost:3000/Auth
       "
       >
         here&nbsp;
       </a>
-      to login!
+      to access your account!
     </p>
   </div>
 );

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Form, Button, Input } from 'antd';
+import { Form, Button, Input, Card } from 'antd';
+import { MailTwoTone, LockTwoTone } from '@ant-design/icons';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css';
 import fire from '../firebase-init';
 import { resetPassword } from '../helper-methods';
 
@@ -25,14 +25,26 @@ class Login extends Component {
   onLogin() {
     const userEmail = document.getElementById('useremail').value;
     const userPassword = document.getElementById('userpassword').value;
-    fire
-      .auth()
-      .signInWithEmailAndPassword(userEmail, userPassword)
-      .catch((error) => {
-        const errorMessage = error.message;
-        // eslint-disable-next-line
-        window.alert(errorMessage.trim());
-      });
+
+    if (userEmail && userPassword) {
+      fire
+        .auth()
+        .signInWithEmailAndPassword(userEmail, userPassword)
+        .catch((error) => {
+          switch (error.code) {
+            case 'auth/invalid-email':
+              break;
+            case 'auth/wrong-password':
+              window.alert('Your password is incorrect.');
+              break;
+            case 'auth/user-not-found':
+              window.alert('Username does not exist.');
+              break;
+            default:
+              break;
+          }
+        });
+    }
   }
 
   handleEmailChange(event) {
@@ -46,58 +58,88 @@ class Login extends Component {
 
   render() {
     return (
-      <Form>
-        <p>Welcome to MentorMatch!</p>
-        <p>Login to access the mentorship portal</p>
-        <Form.Item
-          type="email"
-          label="Email"
-          name="email"
-          // must have an input:
-          rules={[{ required: true, message: 'Please input something' }]}
+      <div className="Login">
+        <Card
+          id="login-card"
+          bordered
+          hoverable
+          bodyStyle={{
+            backgroundColor: '#F0F2F5',
+            border: '#001529',
+          }}
         >
-          <Input
-            type="email"
-            placeholder="please enter your email"
-            id="useremail"
-            onInput={this.onChange}
-            value={this.state.email}
-            onChange={this.handleEmailChange}
-          />
-        </Form.Item>
-        <Form.Item
-          type="password"
-          label="Password"
-          name="password"
-          // must have an input:
-          rules={[{ required: true, message: 'Please input something' }]}
-        >
-          <Input
-            type="password"
-            placeholder="please enter your password"
-            id="userpassword"
-            onInput={this.onChange}
-          />
-        </Form.Item>
-        <p>{/* used to space buttons */}</p>
-        {/* button below should send the information from the page: */}
-        {/* login to the database. To verify the account password/email */}
-        <Button type="primary" htmlType="submit" onClick={this.onLogin}>
-          Login
-        </Button>
-        {/* link below should allow the user to reset password: */}
-        <p>
-          Forgot your password? Enter your email above and click&nbsp;
-          <Button onClick={this.localResetPassword}>here!</Button>
-        </p>
-        {/* below is used as a space between the two links */}
-        &nbsp;
-        <p>Don&apos;t have an account yet?</p>
-        {/* button below should link to the createaccount page: */}
-        <Button type="primary" htmlType="button">
-          Create Account
-        </Button>
-      </Form>
+          <h1>Login to access the Mentorship Portal</h1>
+          <Form
+            onFinish={this.onFinish}
+            onFinishFailed={this.onFinishFailed}
+            autoComplete="off"
+            labelCol={{ span: 5 }}
+            wrapperCol={{ span: 14 }}
+            layout="horizontal"
+            labelAlign="left"
+          >
+            <Form.Item
+              type="email"
+              label="Email"
+              name="email"
+              // must have an input:
+              rules={[
+                { required: true, message: 'Please enter your email address' },
+              ]}
+            >
+              <Input
+                type="email"
+                placeholder=" please enter your email"
+                id="useremail"
+                onInput={this.onChange}
+                value={this.state.email}
+                onChange={this.handleEmailChange}
+                prefix={<MailTwoTone twoToneColor="#adc6ff" />}
+              />
+            </Form.Item>
+            <Form.Item
+              type="password"
+              label="Password"
+              name="password"
+              // must have an input:
+              rules={[
+                { required: true, message: 'Please enter your password' },
+              ]}
+            >
+              <Input
+                type="password"
+                placeholder=" please enter your password"
+                id="userpassword"
+                onInput={this.onChange}
+                prefix={<LockTwoTone twoToneColor="#adc6ff" />}
+              />
+            </Form.Item>
+            <p>{/* used to space buttons */}</p>
+            {/* button below should send the information from the page: */}
+            {/* login to the database. To verify the account password/email */}
+            <Button type="primary" htmlType="submit" onClick={this.onLogin}>
+              Login
+            </Button>
+            {/* link below should allow the user to reset password: */}
+            <p>
+              <a
+                className="loginlink"
+                href="http://localhost:3000/ForgotPassword
+              "
+              >
+                Forgot your password?&nbsp;
+              </a>
+            </p>
+            {/* below is used as a space between the two links */}
+            &nbsp;
+            <p>Don&apos;t have an account yet?</p>
+            {/* button below should link to the createaccount page: */}
+            <Button type="primary" htmlType="button" href="/signup">
+              Create Account
+            </Button>
+          </Form>
+        </Card>
+      </div>
     );
   }
 }

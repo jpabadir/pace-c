@@ -1,12 +1,11 @@
 // Server initialization
-const express = require('express')
-const bodyParser = require('body-parser')
-const port = 8000
-const cors = require('cors')
-const app = express()
-app.use(cors())
-const jsonParser = bodyParser.json()
-const firebase = require('firebase')
+const express = require('express');
+const cors = require('cors');
+
+const port = 8020;
+const app = express();
+app.use(cors());
+const fire = require('firebase');
 
 // Firebase initialization
 const firebaseConfig = {
@@ -16,25 +15,94 @@ const firebaseConfig = {
   projectId: 'mentormatch-afa46',
   storageBucket: 'mentormatch-afa46.appspot.com',
   messagingSenderId: '515592331593',
-  appId: '1:515592331593:web:c38e0d3defadf9886cfa98'
+  appId: '1:515592331593:web:c38e0d3defadf9886cfa98',
+};
+fire.initializeApp(firebaseConfig);
+
+let allData = null;
+
+function getTimeDiff(user1, user2) {
+  return Math.abs(
+    parseInt(user1.timeZone.substring(4, 7), 10) -
+      parseInt(user2.timeZone.substring(4, 7), 10),
+  );
 }
-firebase.initializeApp(firebaseConfig)
 
-// Server logic
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-  console.log('Server received GET request! 🚀')
-})
+function getIntersectionLength(array1, array2) {
+  return array1.filter((elem) => array2.includes(elem)).length;
+}
 
-app.post('/save-signup-form', jsonParser, (req, res) => {
-  saveForm(req.body)
-})
+function sortBySkillsThenTimezone(array1, array2) {
+  // If first item is enough to sort, return
+  if (array1.numSkillsInCommon > array2.numSkillsInCommon) {
+    return -1;
+  }
+  if (array1.numSkillsInCommon < array2.numSkillsInCommon) {
+    return 1;
+  }
+
+  // Else, use second item
+  if (array1.timeDiff < array2.timeDiff) {
+    return -1;
+  }
+  if (array1.timeDiff > array2.timeDiff) {
+    return 1;
+  }
+  return 0;
+}
+
+function matchWithMentees(uid) {
+  const mentorInfo = allData[uid];
+  const criteriaScores = [];
+  Object.entries(allData)
+    .filter((user) => user[1].userType === 'mentee')
+    .forEach((user) => {
+      criteriaScores.push({
+        menteeUid: user[0],
+        numSkillsInCommon: getIntersectionLength(
+          user[1].rankedSkills,
+          mentorInfo.rankedSkills,
+        ),
+        timeDiff: getTimeDiff(mentorInfo, user[1]),
+      });
+    });
+  criteriaScores.sort(sortBySkillsThenTimezone);
+  return criteriaScores;
+}
+
+app.get('/match-with-mentees', (req, res) => {
+  // Read parameter passed from query
+  const uid = req.query.uid;
+
+  // Fetch all firebase data and match mentor with mentees
+  fire
+    .database()
+    .ref('users')
+    .once(
+      'value',
+      (snapshot) => {
+        allData = snapshot.val();
+        res.send(matchWithMentees(uid).slice(0, 3));
+      },
+      (errorObject) => {
+        console.log(
+          'Firebase read failed with error code: ' + errorObject.code,
+        );
+      },
+    );
+});
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
-})
+  console.log(`Server listening at http://localhost:${port}`);
+});
 
-// Firebase logic
-function saveForm (form) {
-  firebase.database().ref('filled-forms').push().set(form)
-}
+// Notes and TODOs: could fetch only the mentees using code like this:
+// var ref = db.ref("dinosaurs");
+// ref.orderByChild("height").equalTo(25).on("child_added", function(snapshot) {
+//   console.log(snapshot.key);
+// });
+// Also, do we need to match based on ranked skills? Or just skills?
+// Also, we're gonna need to add a way to make sure mentors
+// are only matched with mentees
+// who signed up for this specific
+// organization (organization segregation when matching)

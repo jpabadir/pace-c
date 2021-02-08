@@ -8,12 +8,15 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "antd": "^4.7.3",
+    "emailjs-com": "^2.6.4",
     "firebase": "^8.0.1",
+    "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-bootstrap-timezone-picker": "^2.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
+    "react-test-renderer": "^17.0.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
@@ -42,6 +45,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
+    "babel-preset-react-app": "^10.0.0",
     "eslint": "^7.11.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-node": "^4.1.0",
@@ -52,6 +56,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "jest": "^26.6.0",
     "prettier": "^2.1.2"
   }
 }

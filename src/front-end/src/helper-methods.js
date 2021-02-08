@@ -24,6 +24,7 @@ export function createUserInFirebase(email, password) {
       })
       .catch((error) => {
         console.log(error);
+        resolve(error);
       });
   });
 }
@@ -36,6 +37,8 @@ export function pushToDB(reference, objectToSave) {
   firebase.database().ref(reference).push(objectToSave);
 }
 
+/* TODO: reduce redundancy between two below methods 
+with a third method for the attributes in common */
 export function marshallMentorInfo(mentorFormValues) {
   return {
     organization: mentorFormValues.organization,
@@ -43,15 +46,20 @@ export function marshallMentorInfo(mentorFormValues) {
     name: mentorFormValues.nameInput,
     timeZone: mentorFormValues.timeZone,
     userType: 'mentor',
+    rankedSkills: mentorFormValues.teachables,
+    description: mentorFormValues.description,
+    suggestedMentees: ['MLy_owDfdsfsZSNtIanUi6', 'MLy_owDS4aZSNtIanUi6'],
   };
 }
 
-export function marshallMenteeInfo(mentorFormValues) {
+export function marshallMenteeInfo(menteeFormValues) {
   return {
-    email: mentorFormValues.emailInput,
-    name: mentorFormValues.nameInput,
-    timeZone: mentorFormValues.timeZone,
+    email: menteeFormValues.emailInput,
+    name: menteeFormValues.nameInput,
+    timeZone: menteeFormValues.timeZone,
     userType: 'mentee',
+    rankedSkills: menteeFormValues.skillset,
+    description: menteeFormValues.description,
   };
 }
 
@@ -64,4 +72,69 @@ export function resetPassword(emailAddress) {
     .catch((error) => {
       console.log(error);
     });
+}
+
+export function fetchMenteesIDs(loggedUserUid, typeOfMentee) {
+  return new Promise((resolve) => {
+    const userRef = firebase.database().ref('users/' + loggedUserUid);
+    userRef.on('value', (snapshot) => {
+      if (snapshot.val() != null) {
+        const result =
+          typeOfMentee === 'suggested'
+            ? snapshot.val().suggestedMentees
+            : snapshot.val().acceptedMentees;
+        resolve(result);
+      } else {
+        resolve([]);
+      }
+    });
+  });
+}
+
+export function fetchMenteesFullInfo(menteesIDs, context) {
+  if (menteesIDs) {
+    menteesIDs.forEach((menteeId) => {
+      const menteeRef = firebase.database().ref('users/' + menteeId);
+      menteeRef.on('value', (snapshot) => {
+        const menteeWithID = snapshot.val();
+        menteeWithID.id = menteeId;
+        context.setState((prevState) => ({
+          mentees: prevState.mentees.concat(menteeWithID),
+        }));
+      });
+    });
+  }
+}
+
+export function marshallAdminInfo(adminFormValues) {
+  return {
+    organization: adminFormValues.organizationInput,
+    email: adminFormValues.emailInput,
+    name: adminFormValues.nameInput,
+    userType: 'admin',
+  };
+}
+// This function was copied directly from: https://stackoverflow.com/questions/2970525/converting-any-string-into-camel-case.
+export function getCamelCase(inputString) {
+  return inputString
+    .replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => {
+      return index === 0 ? word.toLowerCase() : word.toUpperCase();
+    })
+    .replace(/\s+/g, '');
+}
+
+export function mockWindowMatchMedia() {
+  Object.defineProperty(window, 'matchMedia', {
+    writable: true,
+    value: jest.fn().mockImplementation((query) => ({
+      matches: false,
+      media: query,
+      onchange: null,
+      addListener: jest.fn(), // deprecated
+      removeListener: jest.fn(), // deprecated
+      addEventListener: jest.fn(),
+      removeEventListener: jest.fn(),
+      dispatchEvent: jest.fn(),
+    })),
+  });
 }
