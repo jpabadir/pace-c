@@ -41,6 +41,8 @@ p3 {
     border: solid black;
     padding: 25px;
     margin: 30px;
+
+    needed for formatting the landing page
   */
 }
 
@@ -85,6 +87,45 @@ p3 {
   padding-left:.5%; 
   padding-right:.5%; 
   border:solid black; 
+}
+
+.ManageMentors {
+  /*
+    needed for formating the manage mentors page
+  */
+}
+
+#CurrentActiveMentors {
+  float:left; 
+  width:30%; 
+  height:80%; 
+  padding-top:.5%; 
+  padding-bottom: .5%;
+  padding-left:.5%; 
+  padding-right:.5%; 
+  border:solid black; 
+}
+
+#InvitedPendingMentors {
+  float:left; 
+  width:30%; 
+  height:80%; 
+  padding-top:.5%; 
+  padding-bottom: .5%;
+  padding-left:.5%; 
+  padding-right:.5%; 
+  border:solid black; 
+  margin-left:5%; 
+}
+
+#InviteTab {
+  float:right; 
+  width:30%; 
+  height:80%; 
+  padding-top:.5%; 
+  padding-bottom: .5%;
+  padding-left:.5%; 
+  padding-right:.5%; 
 }
 
 .Login {
