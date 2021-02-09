@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { Component } from 'react';
 import { Form, Input, Button } from 'antd';
 import fire from '../firebase-init';
@@ -15,14 +14,12 @@ class ManageMentors extends Component {
     super(props);
     this.state = {
       organizationInfo: {},
-      loggedUid: null,
     };
   }
 
   authListener() {
     return new Promise((resolve) => {
       fire.auth().onAuthStateChanged((user) => {
-        this.setState({ loggedUid: user.uid });
         resolve(user.uid);
       });
     });
@@ -57,7 +54,7 @@ class ManageMentors extends Component {
             </h1>
             <p>
               <font size="4">
-                {Object.keys(this.state.organizationInfo).length != 0 && (
+                {Object.keys(this.state.organizationInfo).length !== 0 && (
                   <center>
                     {this.state.organizationInfo.activeMentors.map((mentor) => {
                       return (
@@ -82,7 +79,7 @@ class ManageMentors extends Component {
             </h1>
             <p>
               <font size="4">
-                {Object.keys(this.state.organizationInfo).length != 0 && (
+                {Object.keys(this.state.organizationInfo).length !== 0 && (
                   <center>
                     {this.state.organizationInfo.pendingMentors.map(
                       (mentor) => {
