@@ -47,15 +47,15 @@ class Auth extends Component {
     ) {
       return <MentorHome />;
     }
-    if (this.state.user) {
-      return <EmailVerify />;
-    }
     if (
       this.state.user &&
       this.state.user.emailVerified &&
       this.state.userType === 'admin'
     ) {
       return <AdminHome />;
+    }
+    if (this.state.user) {
+      return <EmailVerify />;
     }
     return <Login />;
   }
