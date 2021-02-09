@@ -17,7 +17,12 @@ function AccountMenuItem() {
   });
 
   const onLogout = () => {
-    fire.auth().signOut();
+    fire
+      .auth()
+      .signOut()
+      .then(() => {
+        window.location.href = '/my-account';
+      });
   };
 
   return (
