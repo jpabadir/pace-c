@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { Form, Input, Button } from 'antd';
 import fire from '../firebase-init';
-import { fetchOrganizationName, setOrganizationInfo } from '../helper-methods';
+import {
+  fetchOrganizationName,
+  setOrganizationMentors,
+} from '../helper-methods';
 
 function requestMentor() {
   // insert code to request mentors
@@ -13,7 +16,7 @@ class ManageMentors extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      organizationInfo: {},
+      organizationMentors: {},
     };
   }
 
@@ -28,7 +31,7 @@ class ManageMentors extends Component {
   componentDidMount() {
     this.authListener().then((uid) => {
       fetchOrganizationName(uid).then((organizationName) => {
-        setOrganizationInfo(organizationName, this);
+        setOrganizationMentors(organizationName, this);
       });
     });
   }
@@ -54,16 +57,18 @@ class ManageMentors extends Component {
             </h1>
             <p>
               <font size="4">
-                {Object.keys(this.state.organizationInfo).length !== 0 && (
+                {Object.keys(this.state.organizationMentors).length !== 0 && (
                   <center>
-                    {this.state.organizationInfo.activeMentors.map((mentor) => {
-                      return (
-                        <i>
-                          {mentor}
-                          <br />
-                        </i>
-                      );
-                    })}
+                    {this.state.organizationMentors.activeMentors.map(
+                      (mentor) => {
+                        return (
+                          <i>
+                            {mentor}
+                            <br />
+                          </i>
+                        );
+                      },
+                    )}
                   </center>
                 )}
               </font>
@@ -79,9 +84,9 @@ class ManageMentors extends Component {
             </h1>
             <p>
               <font size="4">
-                {Object.keys(this.state.organizationInfo).length !== 0 && (
+                {Object.keys(this.state.organizationMentors).length !== 0 && (
                   <center>
-                    {this.state.organizationInfo.pendingMentors.map(
+                    {this.state.organizationMentors.pendingMentors.map(
                       (mentor) => {
                         return (
                           <i>

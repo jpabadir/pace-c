@@ -115,7 +115,7 @@ export function fetchOrganizationName(loggedUserUid) {
   });
 }
 
-export async function setOrganizationInfo(organizationName, context) {
+export async function setOrganizationMentors(organizationName, context) {
   const snapshot = await firebase
     .database()
     .ref('organizations')
@@ -150,7 +150,7 @@ export async function setOrganizationInfo(organizationName, context) {
   }
 
   context.setState({
-    organizationInfo: mentorNames,
+    organizationMentors: mentorNames,
   });
 }
 
