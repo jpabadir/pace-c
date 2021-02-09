@@ -115,14 +115,43 @@ export function fetchOrganizationName(loggedUserUid) {
   });
 }
 
-export function fetchOrganizationInfo(organizationName, context) {
-  firebase
+export async function setOrganizationInfo(organizationName, context) {
+  const snapshot = await firebase
     .database()
     .ref('organizations')
     .child(organizationName.toLowerCase())
-    .on('value', (snapshot) => {
-      context.setState({ organizationInfo: snapshot.val() });
+    .once('value');
+  const mentorUIDs = snapshot.val();
+
+  const mentorNames = { pendingMentors: [], activeMentors: [] };
+
+  if (mentorUIDs.pendingMentors != null) {
+    mentorUIDs.pendingMentors.forEach((uid) => {
+      firebase
+        .database()
+        .ref('users/' + uid)
+        .child('name')
+        .on('value', (nameSnapshot) => {
+          mentorNames.pendingMentors.push(nameSnapshot.val());
+        });
     });
+  }
+
+  if (mentorUIDs.activeMentors != null) {
+    mentorUIDs.activeMentors.forEach((uid) => {
+      firebase
+        .database()
+        .ref('users/' + uid)
+        .child('name')
+        .on('value', (nameSnapshot) => {
+          mentorNames.activeMentors.push(nameSnapshot.val());
+        });
+    });
+  }
+
+  context.setState({
+    organizationInfo: mentorNames,
+  });
 }
 
 export function fetchMenteesIDs(loggedUserUid, typeOfMentee) {
