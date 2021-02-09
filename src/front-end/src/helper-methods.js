@@ -106,6 +106,25 @@ export function resetPassword(emailAddress) {
     });
 }
 
+export function fetchOrganizationName(loggedUserUid) {
+  return new Promise((resolve) => {
+    const userRef = firebase.database().ref('users/' + loggedUserUid);
+    userRef.on('value', (snapshot) => {
+      resolve(snapshot.val().organization);
+    });
+  });
+}
+
+export function fetchOrganizationInfo(organizationName, context) {
+  firebase
+    .database()
+    .ref('organizations')
+    .child(organizationName.toLowerCase())
+    .on('value', (snapshot) => {
+      context.setState({ organizationInfo: snapshot.val() });
+    });
+}
+
 export function fetchMenteesIDs(loggedUserUid, typeOfMentee) {
   return new Promise((resolve) => {
     const userRef = firebase.database().ref('users/' + loggedUserUid);

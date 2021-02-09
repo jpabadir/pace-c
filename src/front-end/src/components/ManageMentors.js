@@ -1,5 +1,11 @@
+/* eslint-disable */
 import React, { Component } from 'react';
 import { Form, Input, Button } from 'antd';
+import fire from '../firebase-init';
+import {
+  fetchOrganizationName,
+  fetchOrganizationInfo,
+} from '../helper-methods';
 
 function requestMentor() {
   // insert code to request mentors
@@ -8,6 +14,31 @@ function requestMentor() {
 
 // eslint-disable-next-line react/prefer-stateless-function
 class ManageMentors extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      orgnizationInfo: {},
+      loggedUid: null,
+    };
+  }
+
+  authListener() {
+    return new Promise((resolve) => {
+      fire.auth().onAuthStateChanged((user) => {
+        this.setState({ loggedUid: user.uid });
+        resolve(user.uid);
+      });
+    });
+  }
+
+  componentDidMount() {
+    this.authListener().then((uid) => {
+      fetchOrganizationName(uid).then((organizationName) => {
+        fetchOrganizationInfo(organizationName, this);
+      });
+    });
+  }
+
   render() {
     return (
       <div className="ManageMentors" style={{ paddingTop: '10px' }}>
