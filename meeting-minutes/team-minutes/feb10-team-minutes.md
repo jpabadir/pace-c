@@ -14,6 +14,20 @@
 
 ## Detailed Notes:
 ### General Notes:
+- Katrina will not be here on the 25th
+- Things to do before peer testing:
+  - Make peer testing document (what to test), 02/22
+  - Finalize product before peer testing 02/22
+  - Record video demo, 02/24
+  - Run peer testing sessions, 02/26
+- JP will finish up Eric's prs/issues
+- We will do peer testing after the break
+- Switch firebase to client
+- Switch js / node mailer accounts to client
+- No meeting next week
+- if you find an issue while testing explain what you did in discord 
+- use the branch minor improvements and bug reports when fixing issues you find while testing
+- add bugs to known bugs.md file
 - 
 
 ### Current Week Tasks:
@@ -21,13 +35,22 @@
 
 ## Action Items (Due by next sprint: February 17th):
 ### JP
+- JP will finish up Eric's prs/issues
+- Finalize product
+- run peer testing
+- spend some time testing
 - 
 
 ### Katrina
+- Will do the peer testing document
+- run peer testing
 - 
 
 ### Eric
+- run peer testing
 - 
 
 ### Aleks
+- Do peer testing video
+- run peer testing
 - 
