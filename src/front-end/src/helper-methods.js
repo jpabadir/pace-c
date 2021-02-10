@@ -106,6 +106,54 @@ export function resetPassword(emailAddress) {
     });
 }
 
+export function fetchOrganizationName(loggedUserUid) {
+  return new Promise((resolve) => {
+    const userRef = firebase.database().ref('users/' + loggedUserUid);
+    userRef.on('value', (snapshot) => {
+      resolve(snapshot.val().organization);
+    });
+  });
+}
+
+export async function setOrganizationMentors(organizationName, context) {
+  const snapshot = await firebase
+    .database()
+    .ref('organizations')
+    .child(organizationName.toLowerCase())
+    .once('value');
+  const mentorUIDs = snapshot.val();
+
+  const mentorNames = { pendingMentors: [], activeMentors: [] };
+
+  if (mentorUIDs.pendingMentors != null) {
+    mentorUIDs.pendingMentors.forEach((uid) => {
+      firebase
+        .database()
+        .ref('users/' + uid)
+        .child('name')
+        .on('value', (nameSnapshot) => {
+          mentorNames.pendingMentors.push(nameSnapshot.val());
+        });
+    });
+  }
+
+  if (mentorUIDs.activeMentors != null) {
+    mentorUIDs.activeMentors.forEach((uid) => {
+      firebase
+        .database()
+        .ref('users/' + uid)
+        .child('name')
+        .on('value', (nameSnapshot) => {
+          mentorNames.activeMentors.push(nameSnapshot.val());
+        });
+    });
+  }
+
+  context.setState({
+    organizationMentors: mentorNames,
+  });
+}
+
 export function fetchMenteesIDs(loggedUserUid, typeOfMentee) {
   return new Promise((resolve) => {
     const userRef = firebase.database().ref('users/' + loggedUserUid);
