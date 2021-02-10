@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import fire from '../../firebase-init';
 import Login from '../Login';
 import MentorHome from '../MentorHome';
+import EmailVerify from '../EmailVerify';
 
 class Auth extends Component {
   constructor(props) {
@@ -30,7 +31,7 @@ class Auth extends Component {
       return <MentorHome />;
     }
     if (this.state.user) {
-      return <h1>Please verify your email to access your account!</h1>;
+      return <EmailVerify />;
     }
     return <Login />;
   }

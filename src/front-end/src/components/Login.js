@@ -30,6 +30,15 @@ class Login extends Component {
       fire
         .auth()
         .signInWithEmailAndPassword(userEmail, userPassword)
+        .then((userCredentials) => {
+          fetch(
+            `http://localhost:8020/match-with-mentees?uid=${userCredentials.user.uid}`,
+          ).then((res) => {
+            if (res.status === 200) {
+              window.alert('Your suggested mentees have been updated.');
+            }
+          });
+        })
         .catch((error) => {
           switch (error.code) {
             case 'auth/invalid-email':
@@ -124,7 +133,7 @@ class Login extends Component {
             <p>
               <a
                 className="loginlink"
-                href="http://localhost:3000/ForgotPassword
+                href="http://localhost:3000/forgot-password
               "
               >
                 Forgot your password?&nbsp;

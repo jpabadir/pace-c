@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button } from 'antd';
 import MenteeForm from '../MenteeForm/MenteeForm';
 
 function MentorFormAndEmbedder() {
@@ -9,27 +10,45 @@ function MentorFormAndEmbedder() {
   }
 
   return (
-    <div>
+    <div style={{ paddingTop: '15px' }}>
       <div>
-        <MenteeForm />
-        <button onClick={embed} type="button">
-          Embed this form in your website
-        </button>
+        <center>
+          <h1>
+            Click on the &quot;Generate iFrame Tag&quot; button to create an
+            iFrame tag that can be embedded into your Website!
+          </h1>
+        </center>
+        <center>
+          <Button
+            onClick={embed}
+            type="primary"
+            htmlType="submit"
+            className="formSubmitButton"
+            size="large"
+            style={{ backgroundColor: '#35aa98', border: 'none' }}
+          >
+            Generate iFrame Tag
+          </Button>
+        </center>
       </div>
       <div>
-        {showEmbedCode && (
-          <textarea
-            style={{
-              height: '150px',
-              resize: 'none',
-              marginTop: '10px',
-              backgroundColor: '#110a47',
-              color: 'white',
-            }}
-            value='<iframe width="1000" height="500" src="http://localhost:3000/mentee-form-embed" frameborder="0" allowfullscreen></iframe>'
-            disabled
-          />
-        )}
+        <center>
+          {showEmbedCode && (
+            <textarea
+              style={{
+                height: '120px',
+                width: '330px',
+                resize: 'none',
+                marginTop: '10px',
+                backgroundColor: '#35aa98',
+                color: 'white',
+              }}
+              value='<iframe width="1000" height="500" src="http://localhost:3000/mentee-form-embed" frameborder="0" allowfullscreen></iframe>'
+              disabled
+            />
+          )}
+        </center>
+        <MenteeForm />
       </div>
     </div>
   );
