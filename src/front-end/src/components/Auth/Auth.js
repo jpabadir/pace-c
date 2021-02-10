@@ -16,13 +16,13 @@ class Auth extends Component {
 
   componentDidMount() {
     this.authListener();
-    this.handleUserType();
   }
 
   authListener() {
     fire.auth().onAuthStateChanged((user) => {
       if (user) {
         this.setState({ user });
+        this.handleUserType();
       } else {
         this.setState({ user: null });
       }
@@ -34,28 +34,19 @@ class Auth extends Component {
       .database()
       .ref('users/' + this.state.user.uid)
       .on('value', (snapshot) => {
-        console.log(snapshot.val());
         this.setState({ userType: snapshot.val().userType });
       });
   }
 
   render() {
-    if (
-      this.state.user &&
-      this.state.user.emailVerified &&
-      this.state.userType === 'mentor'
-    ) {
-      return <MentorHome />;
-    }
-    if (
-      this.state.user &&
-      this.state.user.emailVerified &&
-      this.state.userType === 'admin'
-    ) {
-      return <AdminHome />;
-    }
     if (this.state.user) {
-      return <EmailVerify />;
+      if (!this.state.user.emailVerified) {
+        return <EmailVerify />;
+      }
+      if (this.state.userType === 'mentor') {
+        return <MentorHome />;
+      }
+      return <AdminHome />;
     }
     return <Login />;
   }
