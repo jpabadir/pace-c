@@ -9,8 +9,6 @@ import ForgotPassword from './components/ForgotPassword/ForgotPassword';
 import LandingPage from './components/LandingPage/LandingPage';
 import AdminSignup from './components/AdminSignup/AdminSignup';
 import AccountMenuItem from './components/AccountMenuItem/AccountMenuItem';
-import AdminHome from './components/AdminHome/AdminHome';
-import PlaceHolder from './components/AdminHome/PlaceHolder';
 import ManageMentors from './components/ManageMentors';
 
 const { Header, Content, Footer } = Layout;
@@ -34,13 +32,13 @@ function App() {
                 MenteeForm (this link left for development)
               </NavLink>
             </Menu.Item>
-            <Menu.Item key="7">
-              <NavLink to="/signup">
-                AdminSignup (this link left for development)
-              </NavLink>
-            </Menu.Item>
             <Menu.Item key="5" style={{ float: 'right' }}>
               <AccountMenuItem />
+            </Menu.Item>
+            <Menu.Item key="6">
+              <NavLink to="/manage-mentors">
+                Manage Mentors (this link left for development)
+              </NavLink>
             </Menu.Item>
           </Menu>
         </Header>
@@ -63,8 +61,6 @@ function App() {
               component={MenteeFormAndEmbedder}
             />
             <Route exact path="/signup" component={AdminSignup} />
-            <Route exact path="/admin-home" component={AdminHome} />
-            <Route exact path="/placeHolder" component={PlaceHolder} />
             <Route exact path="/manage-mentors" component={ManageMentors} />;
           </Switch>
         </Content>
