@@ -10,6 +10,7 @@
   - Updating the peer testing plan.
   - Deciding on who will create the video demo of our project thus far, which is due Feb. 24th.
   - Once all PRs from this past sprint have been merged, as far as I'm aware, all M.V.P functionality will be completed (yay). After showing the client the progress from this week, I'll be able to gage her expectations to confirm whether all M.V.P functionality has in fact been delivered. But, I anticipate she'll be pleased with our progress. Moving forward, we can likely focus on finalizing our codebase (incorporating feedback from the client/peer testing, adding additional unit tests), any remaining logsitcs, and switching focus towards our final documentation (which I'll try to get clarification on from the instructor).
+  - Decide on how we want to proceed with the sending of emails (maybe something to clarify with the client if it's fine if we create an email address for this project which we pass on after project completion for the client to manage).
 
 ## Detailed Notes:
 ### General Notes:
