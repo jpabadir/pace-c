@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import { Form, Input, Button } from 'antd';
+import fire from '../firebase-init';
+import {
+  fetchOrganizationName,
+  setOrganizationMentors,
+} from '../helper-methods';
 
 function requestMentor() {
   // insert code to request mentors
@@ -8,6 +13,29 @@ function requestMentor() {
 
 // eslint-disable-next-line react/prefer-stateless-function
 class ManageMentors extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      organizationMentors: {},
+    };
+  }
+
+  authListener() {
+    return new Promise((resolve) => {
+      fire.auth().onAuthStateChanged((user) => {
+        resolve(user.uid);
+      });
+    });
+  }
+
+  componentDidMount() {
+    this.authListener().then((uid) => {
+      fetchOrganizationName(uid).then((organizationName) => {
+        setOrganizationMentors(organizationName, this);
+      });
+    });
+  }
+
   render() {
     return (
       <div className="ManageMentors" style={{ paddingTop: '10px' }}>
@@ -29,11 +57,20 @@ class ManageMentors extends Component {
             </h1>
             <p>
               <font size="4">
-                <center>
-                  **(under development)**
-                  <br />
-                  Insert/pull current/active mentors here.
-                </center>
+                {Object.keys(this.state.organizationMentors).length !== 0 && (
+                  <center>
+                    {this.state.organizationMentors.activeMentors.map(
+                      (mentor) => {
+                        return (
+                          <i>
+                            {mentor}
+                            <br />
+                          </i>
+                        );
+                      },
+                    )}
+                  </center>
+                )}
               </font>
             </p>
           </div>
@@ -47,11 +84,20 @@ class ManageMentors extends Component {
             </h1>
             <p>
               <font size="4">
-                <center>
-                  **(under development)**
-                  <br />
-                  Insert/pull invited/pending mentors here.
-                </center>
+                {Object.keys(this.state.organizationMentors).length !== 0 && (
+                  <center>
+                    {this.state.organizationMentors.pendingMentors.map(
+                      (mentor) => {
+                        return (
+                          <i>
+                            {mentor}
+                            <br />
+                          </i>
+                        );
+                      },
+                    )}
+                  </center>
+                )}
               </font>
             </p>
           </div>

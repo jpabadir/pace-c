@@ -51,11 +51,23 @@ function sortBySkillsThenTimezone(array1, array2) {
   return 0;
 }
 
+function isPotentialMatch(mentorInfo, user) {
+  const isMentee = user[1].userType === 'mentee';
+  const isNotYetAccepted =
+    mentorInfo.acceptedMentees == null ||
+    !mentorInfo.acceptedMentees.includes(user[0]);
+  const isNotDeclined =
+    mentorInfo.declinedMentees == null ||
+    !mentorInfo.declinedMentees.includes(user[0]);
+
+  return isMentee && isNotYetAccepted && isNotDeclined;
+}
+
 function matchWithMentees(uid) {
   const mentorInfo = allData[uid];
   const criteriaScores = [];
   Object.entries(allData)
-    .filter((user) => user[1].userType === 'mentee')
+    .filter((user) => isPotentialMatch(mentorInfo, user))
     .forEach((user) => {
       criteriaScores.push({
         menteeUid: user[0],
@@ -67,7 +79,7 @@ function matchWithMentees(uid) {
       });
     });
   criteriaScores.sort(sortBySkillsThenTimezone);
-  return criteriaScores;
+  return criteriaScores.map(({ menteeUid }) => menteeUid);
 }
 
 app.get('/match-with-mentees', (req, res) => {
@@ -82,7 +94,13 @@ app.get('/match-with-mentees', (req, res) => {
       'value',
       (snapshot) => {
         allData = snapshot.val();
-        res.send(matchWithMentees(uid).slice(0, 3));
+        fire
+          .database()
+          .ref('users/' + uid + '/suggestedMentees')
+          .set(matchWithMentees(uid).slice(0, 3))
+          .then(() => {
+            res.send('Successfully updated mentees');
+          });
       },
       (errorObject) => {
         console.log(
