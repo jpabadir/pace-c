@@ -1,4 +1,6 @@
 const nodemailer = require('nodemailer');
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '../.env') });
 
 module.exports = {
   inviteMentor(mentorEmailAddress) {
@@ -10,7 +12,7 @@ module.exports = {
       secure: true, // true for 465, false for other ports
       auth: {
         user: 'pacementormatch@gmail.com',
-        pass: 'thisispacec',
+        pass: process.env.EMAIL_PASSWORD,
       },
     });
 
