@@ -113,7 +113,7 @@ app.get('/match-with-mentees', (req, res) => {
 
 app.get('/invite-mentor', (req, res) => {
   email.inviteMentor(req.query.emailAddress);
-  res.send('The deed is done.');
+  res.send('Invited mentor');
 });
 
 app.listen(port, () => {
