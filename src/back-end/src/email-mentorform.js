@@ -19,9 +19,9 @@ module.exports = {
       to: mentorEmailAddress, // list of receivers
       subject: "You're invited to become a mentor", // Subject line
       text:
-        'Hi, we would like to invite you to become a mentor on our platform, MentorMatch.com.\n\nYou can do so by filling this form:http://localhost:3000/mentor-form-embed.\n\nSincerely,\n\nThe MentorMatch team', // plain text body
+        'Hi, we would like to invite you to become a mentor on our platform, MentorMatch.com.\n\nYou can do so by filling this form:http://localhost:3000/mentor-form.\n\nSincerely,\n\nThe MentorMatch team', // plain text body
       html:
-        '<p>Hi, we would like to invite you to become a mentor on our platform, MentorMatch.com.<p/><p>You can do so by filling this form:http://localhost:3000/mentor-form-embed.<p/><p>Sincerely,<p/><p>The MentorMatch team<p/>', // plain text body
+        '<p>Hi, we would like to invite you to become a mentor on our platform, MentorMatch.com.<p/><p>You can do so by filling this form:http://localhost:3000/mentor-form.<p/><p>Sincerely,<p/><p>The MentorMatch team<p/>', // plain text body
     });
   },
 };

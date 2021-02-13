@@ -4,11 +4,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import MenteeForm from './components/MenteeForm/MenteeForm';
+import MentorForm from './components/MentorForm/MentorForm';
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route exact path="/mentee-form-embed" component={MenteeForm} />
+      <Route exact path="/mentor-form" component={MentorForm} />
       <App />
     </Switch>
   </BrowserRouter>,
