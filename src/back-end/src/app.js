@@ -1,11 +1,12 @@
 // Server initialization
 const express = require('express');
 const cors = require('cors');
+const fire = require('firebase');
+const email = require('./email-mentorform');
 
 const port = 8020;
 const app = express();
 app.use(cors());
-const fire = require('firebase');
 
 // Firebase initialization
 const firebaseConfig = {
@@ -108,6 +109,11 @@ app.get('/match-with-mentees', (req, res) => {
         );
       },
     );
+});
+
+app.get('/invite-mentor', (req, res) => {
+  email.inviteMentor(req.query.emailAddress);
+  res.send('The deed is done.');
 });
 
 app.listen(port, () => {
