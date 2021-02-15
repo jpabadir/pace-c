@@ -120,36 +120,27 @@ export async function setOrganizationMentors(organizationName, context) {
     .ref('organizations')
     .child(organizationName.toLowerCase())
     .once('value');
-  const mentorUIDs = snapshot.val();
+  const organizationInfo = snapshot.val();
 
-  const mentorNames = { pendingMentors: [], activeMentors: [] };
+  const mentorsDisplayedInfo = {
+    pendingMentors: organizationInfo.pendingMentors,
+    activeMentors: [],
+  };
 
-  if (mentorUIDs != null && mentorUIDs.pendingMentors != null) {
-    mentorUIDs.pendingMentors.forEach((uid) => {
+  if (organizationInfo != null && organizationInfo.activeMentors != null) {
+    organizationInfo.activeMentors.forEach((uid) => {
       firebase
         .database()
         .ref('users/' + uid)
         .child('name')
         .on('value', (nameSnapshot) => {
-          mentorNames.pendingMentors.push(nameSnapshot.val());
-        });
-    });
-  }
-
-  if (mentorUIDs != null && mentorUIDs.activeMentors != null) {
-    mentorUIDs.activeMentors.forEach((uid) => {
-      firebase
-        .database()
-        .ref('users/' + uid)
-        .child('name')
-        .on('value', (nameSnapshot) => {
-          mentorNames.activeMentors.push(nameSnapshot.val());
+          mentorsDisplayedInfo.activeMentors.push(nameSnapshot.val());
         });
     });
   }
 
   context.setState({
-    organizationMentors: mentorNames,
+    organizationMentors: mentorsDisplayedInfo,
   });
 }
 
