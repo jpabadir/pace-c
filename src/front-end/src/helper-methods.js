@@ -125,7 +125,7 @@ export async function setOrganizationMentors(organizationName, context) {
 
   const mentorNames = { pendingMentors: [], activeMentors: [] };
 
-  if (mentorUIDs.pendingMentors != null) {
+  if (mentorUIDs != null && mentorUIDs.pendingMentors != null) {
     mentorUIDs.pendingMentors.forEach((uid) => {
       firebase
         .database()
@@ -137,7 +137,7 @@ export async function setOrganizationMentors(organizationName, context) {
     });
   }
 
-  if (mentorUIDs.activeMentors != null) {
+  if (mentorUIDs != null && mentorUIDs.activeMentors != null) {
     mentorUIDs.activeMentors.forEach((uid) => {
       firebase
         .database()
