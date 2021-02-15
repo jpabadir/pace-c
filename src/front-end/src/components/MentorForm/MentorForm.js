@@ -40,6 +40,11 @@ class MentorForm extends Component {
           );
         } else {
           setInDB('users', createUserAttempt.uid, marshallMentorInfo(values));
+          fetch(
+            `http://localhost:8020/remove-email?organization=${values.organization.toLowerCase()}&emailAddress=${
+              values.emailInput
+            }`,
+          );
           this.setState({ isSubmitted: true });
         }
       },
