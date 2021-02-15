@@ -1,4 +1,5 @@
 import React from 'react';
+import { IdcardTwoTone, LikeTwoTone, SmileTwoTone } from '@ant-design/icons';
 
 function LandingPage() {
   return (
@@ -39,7 +40,9 @@ function LandingPage() {
           </h1>
           {/* Insert Image for Admin here. */}
           <center>
-            <h3>Admin Image Placeholder</h3>
+            <h3>
+              <IdcardTwoTone className="landing-icon" />
+            </h3>
           </center>
           <p>
             <font size="4">
@@ -59,7 +62,9 @@ function LandingPage() {
           </h1>
           {/* Insert Image for Mentor here. */}
           <center>
-            <h3>Mentor Image Placeholder</h3>
+            <h3>
+              <LikeTwoTone className="landing-icon" />
+            </h3>
           </center>
           <p>
             <font size="4">
@@ -79,7 +84,9 @@ function LandingPage() {
           </h1>
           {/* Insert Image for Mentee here. */}
           <center>
-            <h3>Mentee Image Placeholder</h3>
+            <h3>
+              <SmileTwoTone className="landing-icon" />
+            </h3>
           </center>
           <p>
             <font size="4">
