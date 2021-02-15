@@ -69,7 +69,6 @@ export function marshallMentorInfo(mentorFormValues) {
     rankedSkills: mentorFormValues.teachables,
     description: mentorFormValues.description,
     availability: mentorFormValues.calendarLink,
-    suggestedMentees: ['MLy_owDfdsfsZSNtIanUi6', 'MLy_owDS4aZSNtIanUi6'],
   };
 }
 
