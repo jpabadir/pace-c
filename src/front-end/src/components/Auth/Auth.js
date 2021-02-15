@@ -43,10 +43,12 @@ class Auth extends Component {
       if (!this.state.user.emailVerified) {
         return <EmailVerify />;
       }
+      if (this.state.userType === 'admin') {
+        return <AdminHome />;
+      }
       if (this.state.userType === 'mentor') {
         return <MentorHome />;
       }
-      return <AdminHome />;
     }
     return <Login />;
   }
