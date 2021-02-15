@@ -15,7 +15,7 @@
 
 ## Tasks as a Mentor
 
-1. Access the Mentor Form (through the 'MentorForm (this link left for development)'tab).
+1. Access the Mentor Form through the email link that you receive from being invited by an admin.
 2. Try to register with the same email address that you used to become an admin. Notice how this results in a popup, requiring you to provide a different email address.
 3. Provide a link to any website (for example: https://www.ubc.ca/) in the 'Availability' input field. Notice how this is not an accepted format. Try a Google Calendar link instead (https://calendar.google.com/calendar/u/0?cid=ZGZ1a24wN2M4M21zaGRqNGg5NzhjZ2l0aWtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ).
 4. Once the form has been submitted successfully, verify your email.
