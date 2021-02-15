@@ -43,7 +43,7 @@ class MentorForm extends Component {
           fetch(
             `http://localhost:8020/remove-email?organization=${values.organization.toLowerCase()}&emailAddress=${
               values.emailInput
-            }`,
+            }&uid=${createUserAttempt.uid}`,
           );
           this.setState({ isSubmitted: true });
         }

@@ -125,6 +125,12 @@ app.get('/remove-email', (req, res) => {
     const pendingMentors = snapshot.val().pendingMentors;
     pendingMentors.splice(pendingMentors.indexOf(req.query.emailAddress), 1);
     organizationRef.child('pendingMentors').set(pendingMentors);
+
+    const activeMentors = snapshot.val().activeMentors
+      ? snapshot.val().activeMentors
+      : [];
+    activeMentors.push(req.query.uid);
+    organizationRef.child('activeMentors').set(activeMentors);
   });
 
   res.send('Removed email');
