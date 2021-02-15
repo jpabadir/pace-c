@@ -6,9 +6,15 @@ import {
   setOrganizationMentors,
 } from '../helper-methods';
 
-function requestMentor() {
-  // insert code to request mentors
-  window.alert('Your mentor request has been sent!');
+function requestMentor(values) {
+  fetch(
+    `http://localhost:8020/invite-mentor?emailAddress=${values.emailInput}`,
+  ).then((res) => {
+    if (res.status === 200) {
+      document.getElementById('inviteMentorEmail').value = '';
+      window.alert('Your mentor request has been sent!');
+    }
+  });
 }
 
 // eslint-disable-next-line react/prefer-stateless-function
@@ -124,7 +130,7 @@ class ManageMentors extends Component {
                   them to Mentor Match&apos;s Mentor Form.
                   <br />
                   <br />
-                  <Form>
+                  <Form onFinish={requestMentor}>
                     <Form.Item
                       label="Mentor's Email Address:"
                       id="inviteMentorEmail"
@@ -139,13 +145,11 @@ class ManageMentors extends Component {
                     >
                       <Input
                         type="email"
-                        onInput={this.handleNameChange}
                         id="inviteMentorEmail"
                         placeholder="Email Address"
                       />
                     </Form.Item>
                     <Button
-                      onClick={requestMentor}
                       type="primary"
                       htmlType="submit"
                       className="formSubmitButton"

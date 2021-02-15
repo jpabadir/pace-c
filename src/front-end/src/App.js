@@ -2,14 +2,11 @@ import React from 'react';
 import { Layout, Menu } from 'antd';
 import './App.css';
 import { NavLink, Switch, Route } from 'react-router-dom';
-import MentorForm from './components/MentorForm/MentorForm';
 import Auth from './components/Auth/Auth';
-import MenteeFormAndEmbedder from './components/MenteeFormAndEmbedder/MenteeFormAndEmbedder';
 import ForgotPassword from './components/ForgotPassword/ForgotPassword';
 import LandingPage from './components/LandingPage/LandingPage';
 import AdminSignup from './components/AdminSignup/AdminSignup';
 import AccountMenuItem from './components/AccountMenuItem/AccountMenuItem';
-import ManageMentors from './components/ManageMentors';
 
 const { Header, Content, Footer } = Layout;
 
@@ -22,23 +19,8 @@ function App() {
             <Menu.Item key="2">
               <NavLink to="/">Home</NavLink>
             </Menu.Item>
-            <Menu.Item key="3">
-              <NavLink to="/mentor-form">
-                MentorForm (this link left for development)
-              </NavLink>
-            </Menu.Item>
-            <Menu.Item key="4">
-              <NavLink to="/mentee-form">
-                MenteeForm (this link left for development)
-              </NavLink>
-            </Menu.Item>
             <Menu.Item key="5" style={{ float: 'right' }}>
               <AccountMenuItem />
-            </Menu.Item>
-            <Menu.Item key="6">
-              <NavLink to="/manage-mentors">
-                Manage Mentors (this link left for development)
-              </NavLink>
             </Menu.Item>
           </Menu>
         </Header>
@@ -54,14 +36,7 @@ function App() {
             <Route exact path="/" component={LandingPage} />
             <Route path="/my-account" component={Auth} />
             <Route exact path="/forgot-password" component={ForgotPassword} />
-            <Route exact path="/mentor-form" component={MentorForm} />
-            <Route
-              exact
-              path="/mentee-form"
-              component={MenteeFormAndEmbedder}
-            />
             <Route exact path="/signup" component={AdminSignup} />
-            <Route exact path="/manage-mentors" component={ManageMentors} />;
           </Switch>
         </Content>
         <Footer
