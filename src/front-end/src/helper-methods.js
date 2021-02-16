@@ -133,7 +133,7 @@ export async function setOrganizationMentors(organizationName, context) {
     activeMentors: [],
   };
 
-  if (organizationInfo != null && organizationInfo.activeMentors != null) {
+  if (organizationInfo && organizationInfo.activeMentors) {
     organizationInfo.activeMentors.forEach((uid) => {
       firebase
         .database()
