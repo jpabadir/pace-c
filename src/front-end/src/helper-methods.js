@@ -69,7 +69,6 @@ export function marshallMentorInfo(mentorFormValues) {
     rankedSkills: mentorFormValues.teachables,
     description: mentorFormValues.description,
     availability: mentorFormValues.calendarLink,
-    suggestedMentees: ['MLy_owDfdsfsZSNtIanUi6', 'MLy_owDS4aZSNtIanUi6'],
   };
 }
 
@@ -121,36 +120,30 @@ export async function setOrganizationMentors(organizationName, context) {
     .ref('organizations')
     .child(organizationName.toLowerCase())
     .once('value');
-  const mentorUIDs = snapshot.val();
+  const organizationInfo = snapshot.val();
 
-  const mentorNames = { pendingMentors: [], activeMentors: [] };
+  // TODO: there might be a null pointer exception
+  // below with organizationInfo being null and callign .pendingMentors on it.
 
-  if (mentorUIDs != null && mentorUIDs.pendingMentors != null) {
-    mentorUIDs.pendingMentors.forEach((uid) => {
+  const mentorsDisplayedInfo = {
+    pendingMentors: organizationInfo.pendingMentors,
+    activeMentors: [],
+  };
+
+  if (organizationInfo != null && organizationInfo.activeMentors != null) {
+    organizationInfo.activeMentors.forEach((uid) => {
       firebase
         .database()
         .ref('users/' + uid)
         .child('name')
         .on('value', (nameSnapshot) => {
-          mentorNames.pendingMentors.push(nameSnapshot.val());
-        });
-    });
-  }
-
-  if (mentorUIDs != null && mentorUIDs.activeMentors != null) {
-    mentorUIDs.activeMentors.forEach((uid) => {
-      firebase
-        .database()
-        .ref('users/' + uid)
-        .child('name')
-        .on('value', (nameSnapshot) => {
-          mentorNames.activeMentors.push(nameSnapshot.val());
+          mentorsDisplayedInfo.activeMentors.push(nameSnapshot.val());
         });
     });
   }
 
   context.setState({
-    organizationMentors: mentorNames,
+    organizationMentors: mentorsDisplayedInfo,
   });
 }
 
