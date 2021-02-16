@@ -83,20 +83,21 @@ class ManageMentors extends Component {
             </h1>
             <p>
               <font size="4">
-                {Object.keys(this.state.organizationMentors).length !== 0 && (
-                  <center>
-                    {this.state.organizationMentors.activeMentors.map(
-                      (mentor) => {
-                        return (
-                          <i>
-                            {mentor}
-                            <br />
-                          </i>
-                        );
-                      },
-                    )}
-                  </center>
-                )}
+                {Object.keys(this.state.organizationMentors).length !== 0 &&
+                  this.state.organizationMentors.activeMentors && (
+                    <center>
+                      {this.state.organizationMentors.activeMentors.map(
+                        (mentor) => {
+                          return (
+                            <i>
+                              {mentor}
+                              <br />
+                            </i>
+                          );
+                        },
+                      )}
+                    </center>
+                  )}
               </font>
             </p>
           </div>
@@ -110,20 +111,21 @@ class ManageMentors extends Component {
             </h1>
             <p>
               <font size="4">
-                {Object.keys(this.state.organizationMentors).length !== 0 && (
-                  <center>
-                    {this.state.organizationMentors.pendingMentors.map(
-                      (mentor) => {
-                        return (
-                          <i>
-                            {mentor}
-                            <br />
-                          </i>
-                        );
-                      },
-                    )}
-                  </center>
-                )}
+                {Object.keys(this.state.organizationMentors).length !== 0 &&
+                  this.state.organizationMentors.pendingMentors && (
+                    <center>
+                      {this.state.organizationMentors.pendingMentors.map(
+                        (mentor) => {
+                          return (
+                            <i>
+                              {mentor}
+                              <br />
+                            </i>
+                          );
+                        },
+                      )}
+                    </center>
+                  )}
               </font>
             </p>
           </div>

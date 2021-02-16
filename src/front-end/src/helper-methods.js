@@ -126,7 +126,10 @@ export async function setOrganizationMentors(organizationName, context) {
   // below with organizationInfo being null and callign .pendingMentors on it.
 
   const mentorsDisplayedInfo = {
-    pendingMentors: organizationInfo.pendingMentors,
+    pendingMentors:
+      organizationInfo && organizationInfo.pendingMentors
+        ? organizationInfo.pendingMentors
+        : [],
     activeMentors: [],
   };
 
