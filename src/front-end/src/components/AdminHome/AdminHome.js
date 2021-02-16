@@ -33,7 +33,7 @@ class AdminHome extends Component {
             tab={
               <span>
                 <UsergroupAddOutlined />
-                Manage Mentees
+                Mentee Form
               </span>
             }
           >
