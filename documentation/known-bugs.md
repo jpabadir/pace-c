@@ -33,5 +33,4 @@ Further investigation might be required to see if there's a better way to change
 1. After creating an account as an admin, we get are kept on the same page where we created the form
 2. We have to manually refresh the page to see the mentor we invited be added to the list after inviting a mentor
 3. When clicking on the link to access our account after signing up as a mentor, we are not routed to the right page
-4. We should refresh the mentor's suggested mentees when (s)he creates an account, otherwise they have to log in an out for that to happen
-5. We should refresh the mentor's suggested mentees when (s)he creates an account
+4. We should refresh the mentor's suggested mentees when (s)he creates an account, otherwise they have to log in and out for that to happen
