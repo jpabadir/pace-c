@@ -14,7 +14,6 @@ const { TabPane } = Tabs;
 // eslint-disable-next-line react/prefer-stateless-function
 class MentorHome extends Component {
   render() {
-    
     return (
       <>
         <Tabs defaultActiveKey="1">
