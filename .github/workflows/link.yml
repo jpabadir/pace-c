@@ -25,6 +25,7 @@ jobs:
         with:
           node-version: '15.x'
       - run: |
+          npm install -g eslint
           cd src/front-end/; npm install
           eslint ../../src/front-end/src/**/*.js ../../src/back-end/src/**/*.js
 
