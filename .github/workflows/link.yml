@@ -26,8 +26,7 @@ jobs:
           node-version: '15.x'
       - run: |
           cd src/front-end/; npm install
-          cd ../../
-          eslint src/front-end/src/**/*.js src/back-end/src/**/*.js
+          eslint ../../src/front-end/src/**/*.js ../../src/back-end/src/**/*.js
 
       # - name: Run ESLint
       #   run: eslint src/front-end/src/**/*.js src/back-end/src/**/*.js
