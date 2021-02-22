@@ -20,21 +20,16 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js ${{ matrix.node-version }} and run ESLint
         uses: actions/setup-node@v1
         with:
           node-version: '15.x'
       - run: |
           npm install -g eslint
-          npm install eslint-plugin-react@latest --save-dev
-          npm install --save eslint-config-airbnb
-          npm install eslint-plugin-prettier@latest --save-dev
-          npm install --save-dev eslint-config-prettier
-          npm install eslint-config-standard
-          npm install
-
-      - name: Run ESLint
-        run: eslint src/front-end/src/**/*.js src/back-end/src/**/*.js
+          cd src/back-end/; npm install
+          cd ..
+          cd front-end/; npm install
+          eslint ../../src/front-end/src/**/*.js ../../src/back-end/src/**/*.js
 
       - name: Run jest
         run: |
