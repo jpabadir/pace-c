@@ -25,13 +25,8 @@ jobs:
         with:
           node-version: '15.x'
       - run: |
-          npm install -g eslint
-          npm install -g eslint-plugin-react@latest 
-          npm install eslint-config-airbnb
-          npm install eslint-plugin-prettier@latest 
-          npm install eslint-config-prettier
-          npm install eslint-config-standard
-          npm install
+          cd src/front-end/; npm install
+          cd ../../
           eslint src/front-end/src/**/*.js src/back-end/src/**/*.js
 
       # - name: Run ESLint
