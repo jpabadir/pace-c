@@ -27,7 +27,7 @@ jobs:
       - run: |
           npm install -g eslint
           npm install -g eslint-plugin-react@latest 
-          npm install -g eslint-config-airbnb
+          npm install eslint-config-airbnb
           npm install -g eslint-plugin-prettier@latest 
           npm install -g eslint-config-prettier
           npm install -g eslint-config-standard
