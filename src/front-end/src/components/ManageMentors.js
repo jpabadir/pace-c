@@ -6,24 +6,16 @@ import {
   setOrganizationMentors,
 } from '../helper-methods';
 
-function requestMentor(values) {
-  fetch(
-    `http://localhost:8020/invite-mentor?emailAddress=${values.emailInput}`,
-  ).then((res) => {
-    if (res.status === 200) {
-      document.getElementById('inviteMentorEmail').value = '';
-      window.alert('Your mentor request has been sent!');
-    }
-  });
-}
-
 // eslint-disable-next-line react/prefer-stateless-function
 class ManageMentors extends Component {
   constructor(props) {
     super(props);
     this.state = {
       organizationMentors: {},
+      organizationName: '',
     };
+    this.requestMentor = this.requestMentor.bind(this);
+    this.addPendingMentorToDB = this.addPendingMentorToDB.bind(this);
   }
 
   authListener() {
@@ -37,8 +29,36 @@ class ManageMentors extends Component {
   componentDidMount() {
     this.authListener().then((uid) => {
       fetchOrganizationName(uid).then((organizationName) => {
+        this.setState({ organizationName });
         setOrganizationMentors(organizationName, this);
       });
+    });
+  }
+
+  addPendingMentorToDB(mentorEmailAddress) {
+    const organizationRef = fire
+      .database()
+      .ref('organizations/' + this.state.organizationName);
+
+    organizationRef.once('value', (snapshot) => {
+      const pendingMentors =
+        snapshot.val() && snapshot.val().pendingMentors
+          ? snapshot.val().pendingMentors
+          : [];
+      pendingMentors.push(mentorEmailAddress);
+      organizationRef.child('pendingMentors').set(pendingMentors);
+    });
+  }
+
+  requestMentor(values) {
+    fetch(
+      `http://localhost:8020/invite-mentor?emailAddress=${values.emailInput}`,
+    ).then((res) => {
+      if (res.status === 200) {
+        document.getElementById('inviteMentorEmail').value = '';
+        window.alert('Your mentor request has been sent!');
+        this.addPendingMentorToDB(values.emailInput);
+      }
     });
   }
 
@@ -63,20 +83,21 @@ class ManageMentors extends Component {
             </h1>
             <p>
               <font size="4">
-                {Object.keys(this.state.organizationMentors).length !== 0 && (
-                  <center>
-                    {this.state.organizationMentors.activeMentors.map(
-                      (mentor) => {
-                        return (
-                          <i>
-                            {mentor}
-                            <br />
-                          </i>
-                        );
-                      },
-                    )}
-                  </center>
-                )}
+                {Object.keys(this.state.organizationMentors).length !== 0 &&
+                  this.state.organizationMentors.activeMentors && (
+                    <center>
+                      {this.state.organizationMentors.activeMentors.map(
+                        (mentor) => {
+                          return (
+                            <i>
+                              {mentor}
+                              <br />
+                            </i>
+                          );
+                        },
+                      )}
+                    </center>
+                  )}
               </font>
             </p>
           </div>
@@ -90,20 +111,21 @@ class ManageMentors extends Component {
             </h1>
             <p>
               <font size="4">
-                {Object.keys(this.state.organizationMentors).length !== 0 && (
-                  <center>
-                    {this.state.organizationMentors.pendingMentors.map(
-                      (mentor) => {
-                        return (
-                          <i>
-                            {mentor}
-                            <br />
-                          </i>
-                        );
-                      },
-                    )}
-                  </center>
-                )}
+                {Object.keys(this.state.organizationMentors).length !== 0 &&
+                  this.state.organizationMentors.pendingMentors && (
+                    <center>
+                      {this.state.organizationMentors.pendingMentors.map(
+                        (mentor) => {
+                          return (
+                            <i>
+                              {mentor}
+                              <br />
+                            </i>
+                          );
+                        },
+                      )}
+                    </center>
+                  )}
               </font>
             </p>
           </div>
@@ -130,7 +152,7 @@ class ManageMentors extends Component {
                   them to Mentor Match&apos;s Mentor Form.
                   <br />
                   <br />
-                  <Form onFinish={requestMentor}>
+                  <Form onFinish={this.requestMentor}>
                     <Form.Item
                       label="Mentor's Email Address:"
                       id="inviteMentorEmail"

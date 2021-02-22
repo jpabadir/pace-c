@@ -116,6 +116,26 @@ app.get('/invite-mentor', (req, res) => {
   res.send('Invited mentor');
 });
 
+app.get('/remove-email', (req, res) => {
+  const organizationRef = fire
+    .database()
+    .ref('organizations/' + req.query.organization);
+
+  organizationRef.once('value', (snapshot) => {
+    const pendingMentors = snapshot.val().pendingMentors;
+    pendingMentors.splice(pendingMentors.indexOf(req.query.emailAddress), 1);
+    organizationRef.child('pendingMentors').set(pendingMentors);
+
+    const activeMentors = snapshot.val().activeMentors
+      ? snapshot.val().activeMentors
+      : [];
+    activeMentors.push(req.query.uid);
+    organizationRef.child('activeMentors').set(activeMentors);
+  });
+
+  res.send('Removed email');
+});
+
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
 });

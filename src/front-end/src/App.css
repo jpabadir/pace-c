@@ -46,47 +46,53 @@ p3 {
   */
 }
 
-.container { 
-  width:100%; 
-  height:100%; 
-  padding-top:1%; 
-  padding-left:5%; 
-  padding-right:5%; 
+.landing-icon {
+  font-size: 125px;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  padding-top: 1%;
+  padding-left: 5%;
+  padding-right: 5%;
   padding-bottom: 5%;
-} 
+}
 
 #adminLeft {
-  float:left; 
-  width:30%; 
-  height:80%; 
-  padding-top:.5%; 
-  padding-bottom: .5%;
-  padding-left:.5%; 
-  padding-right:.5%; 
-  border:solid black; 
+  float: left;
+  width: 30%;
+  height: 80%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  border: solid black;
+  box-shadow: 1px 8px 30px -2px #adc6ff inset, 5px 10px 10px #888888;
 }
 
 #mentorMiddle {
-  float:left; 
-  width:30%; 
-  height:80%; 
-  padding-top:.5%; 
-  padding-bottom: .5%;
-  padding-left:.5%; 
-  padding-right:.5%; 
-  border:solid black; 
-  margin-left:5%; 
+  float: left;
+  width: 30%;
+  height: 80%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  border: solid black;
+  margin-left: 5%;
+  box-shadow: 1px 8px 30px -2px #adc6ff inset, 5px 10px 10px #888888;
 }
 
 #menteeRight {
-  float:right; 
-  width:30%; 
-  height:80%; 
-  padding-top:.5%; 
-  padding-bottom: .5%;
-  padding-left:.5%; 
-  padding-right:.5%; 
-  border:solid black; 
+  float: right;
+  width: 30%;
+  height: 80%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  border: solid black;
+  box-shadow: 1px 8px 30px -2px #adc6ff inset, 5px 10px 10px #888888;
 }
 
 .ManageMentors {
@@ -96,36 +102,36 @@ p3 {
 }
 
 #CurrentActiveMentors {
-  float:left; 
-  width:30%; 
-  height:80%; 
-  padding-top:.5%; 
-  padding-bottom: .5%;
-  padding-left:.5%; 
-  padding-right:.5%; 
-  border:solid black; 
+  float: left;
+  width: 30%;
+  height: 80%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  border: solid black;
 }
 
 #InvitedPendingMentors {
-  float:left; 
-  width:30%; 
-  height:80%; 
-  padding-top:.5%; 
-  padding-bottom: .5%;
-  padding-left:.5%; 
-  padding-right:.5%; 
-  border:solid black; 
-  margin-left:5%; 
+  float: left;
+  width: 30%;
+  height: 80%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  border: solid black;
+  margin-left: 5%;
 }
 
 #InviteTab {
-  float:right; 
-  width:30%; 
-  height:80%; 
-  padding-top:.5%; 
-  padding-bottom: .5%;
-  padding-left:.5%; 
-  padding-right:.5%; 
+  float: right;
+  width: 30%;
+  height: 80%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
 }
 
 .Login {
@@ -145,7 +151,7 @@ p3 {
 }
 
 .my-menu {
-  height: 64px; 
+  height: 64px;
   background: rgba(0, 0, 0, 0);
   color: rgb(211, 211, 211);
 }
