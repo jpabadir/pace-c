@@ -25,11 +25,11 @@ jobs:
         with:
           node-version: '15.x'
       - run: |
-          npm install -g eslint
-          npm install --save eslint-plugin-react@latest 
-          npm install --save eslint-config-airbnb
-          npm install --save eslint-plugin-prettier@latest 
-          npm install --save-dev eslint-config-prettier
+          npm install eslint
+          npm install eslint-plugin-react@latest 
+          npm install eslint-config-airbnb
+          npm install eslint-plugin-prettier@latest 
+          npm install eslint-config-prettier
           npm install eslint-config-standard
           npm install
 
