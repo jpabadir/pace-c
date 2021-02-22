@@ -32,9 +32,10 @@ jobs:
           npm install eslint-config-prettier
           npm install eslint-config-standard
           npm install
+          eslint src/front-end/src/**/*.js src/back-end/src/**/*.js
 
-      - name: Run ESLint
-        run: eslint src/front-end/src/**/*.js src/back-end/src/**/*.js
+      # - name: Run ESLint
+      #   run: eslint src/front-end/src/**/*.js src/back-end/src/**/*.js
 
       - name: Run jest
         run: |
