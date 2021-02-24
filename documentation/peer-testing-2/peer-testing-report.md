@@ -19,7 +19,7 @@ In total, **\_** individuals took part in our peer testing sessions. The members
 | Katrina | [Name of participant] | [Type of session ran, and link to the recording] |
 | Aleks | [Name of participant] | [Type of session ran, and link to the recording] |
 | Aleks | [Name of participant]| [Type of session ran, and link to the recording] |
-| Eric | [Name of participant] | [Type of session ran, and link to the recording]|
+| Eric | Henter Yang | Thinkaloud: https://drive.google.com/file/d/1_FdA0rP5zLAmFA0Aos2wamYdOZxMxHJd/view?usp=sharing|
 | Eric |[Name of participant] | [Type of session ran, and link to the recording]|
 
 ## User Groups and List of Tasks that Participants Completed
