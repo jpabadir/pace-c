@@ -6,8 +6,10 @@
 
 ## Detailed Notes:
 ### General Notes:
-- This weeks tasks is for bug fixing
-- Finish peer testing (report and video)
+- This weeks tasks is for bug fixing and the peer testing report
+- Finish peer testing videos
+- Finish peer testing report
+- Finish tasks for this week
 - 
 
 ### Current Week Tasks:
@@ -24,6 +26,7 @@
 - Current set of features available on peer report
 - We should refresh the mentor's suggested mentees when (s)he creates an account, otherwise they have to log in and out for that to happen
 - We should not have to manually refresh the page to see the mentor we invited be added to the list after inviting a mentor
+- Fix dynamically loaded bugs
 - 
 
 ## Action Items (Due by next sprint: March 3rd):
@@ -38,6 +41,7 @@
 - User groups and list of tasks on peer report
 - Current set of features available on peer report
 - Fill in "everyone" tasks on peer testing report
+- Fill in the peer testing report that are marked with "katrina"
 - 
 
 ### Eric
@@ -53,6 +57,7 @@
 - Peer testing video (aleks)
 - Fill in "everyone" tasks on peer testing report
 - 
+
 
 
 
