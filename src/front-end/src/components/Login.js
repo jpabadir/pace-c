@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button, Input, Card } from 'antd';
+import { Form, Button, Input, Card, notification } from 'antd';
 import { MailTwoTone, LockTwoTone } from '@ant-design/icons';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import fire from '../firebase-init';
@@ -35,7 +35,9 @@ class Login extends Component {
             `http://localhost:8020/match-with-mentees?uid=${userCredentials.user.uid}`,
           ).then((res) => {
             if (res.status === 200) {
-              window.alert('Your suggested mentees have been updated.');
+              notification.open({
+                message: 'Your suggested mentees have been updated.',
+              });
             }
           });
         })
