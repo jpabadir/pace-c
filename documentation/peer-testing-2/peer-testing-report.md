@@ -35,11 +35,16 @@ In total, **\_** individuals took part in our peer testing sessions. The members
 #### Medium
 
 #### Low
+- One of the people testing said it would be nice to let mentees add a picture of themself on their suggested/accepted mentee card
 
 ## Quantitative Data
 
 **To be completed after the peer testing sessions**
 
 ### Testimonials from the Participants to Explain the Graph
-
-**To be completed after the peer testing sessions**
+- "Very clean design"
+- "Aesthetically pleasing"
+- "Tasks are easy to navigate to and easy to complete"
+- "The tutorial pages are very helpful for people who just signed up"
+- "Very cool design. The way the mentor and chose to accept or decline mentees is very interesting"
+- 
