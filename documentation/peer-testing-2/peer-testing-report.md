@@ -44,7 +44,7 @@ In total, **\_** individuals took part in our peer testing sessions. The members
 ### Testimonials from the Participants to Explain the Graph
 - "Very clean design"
 - "Aesthetically pleasing"
-- "Tasks are easy to navigate to and easy to complete"
-- "The tutorial pages are very helpful for people who just signed up"
+- "Tasks are easy to navigate and easy to complete"
+- "The tutorial and home page are very helpful for people who just signed up and wants to learn how the website works"
 - "Very cool design. The design of how the mentors accept and decline mentees is very practical"
 - 
