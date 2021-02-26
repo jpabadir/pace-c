@@ -25,6 +25,7 @@ class MentorForm extends Component {
     this.state = {
       isSubmitted: false,
       selectedItems: [],
+      uid: '',
     };
     this.onFinish = this.onFinish.bind(this);
     this.onFinishFailed = this.onFinishFailed.bind(this);
@@ -45,10 +46,18 @@ class MentorForm extends Component {
               values.emailInput
             }&uid=${createUserAttempt.uid}`,
           );
+          this.setState({ uid: createUserAttempt.uid });
           this.setState({ isSubmitted: true });
         }
       },
     );
+    fetch(
+      `http://localhost:8020/match-with-mentees?uid=${this.state.uid}`,
+    ).then((res) => {
+      if (res.status === 200) {
+        window.alert('Your suggested mentees have been updated.');
+      }
+    });
   }
 
   onFinishFailed(values) {
