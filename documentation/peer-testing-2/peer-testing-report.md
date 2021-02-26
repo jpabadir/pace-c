@@ -46,5 +46,5 @@ In total, **\_** individuals took part in our peer testing sessions. The members
 - "Aesthetically pleasing"
 - "Tasks are easy to navigate to and easy to complete"
 - "The tutorial pages are very helpful for people who just signed up"
-- "Very cool design. The way the mentor and chose to accept or decline mentees is very interesting"
+- "Very cool design. The design of how the mentors accept and decline mentees is very practical"
 - 
