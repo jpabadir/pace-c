@@ -18,7 +18,7 @@ In total, **\_** individuals took part in our peer testing sessions. The members
 | Katrina | [Name of participant] | [Type of session ran, and link to the recording]|
 | Katrina | [Name of participant] | [Type of session ran, and link to the recording] |
 | Aleks | Taha Ilyas | Completed. Thinkaloud: https://youtu.be/fkxPLrxQeDo |
-| Aleks | Aaron | Completed. Thinkaloud:  |
+| Aleks | Aaron Mahnic | Person did not show up to the assigned testing time (9:30-10:30). Thinkaloud: N/A  |
 | Eric | [Name of participant] | [Type of session ran, and link to the recording]|
 | Eric |[Name of participant] | [Type of session ran, and link to the recording]|
 
