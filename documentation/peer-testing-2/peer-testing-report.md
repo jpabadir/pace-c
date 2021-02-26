@@ -31,9 +31,13 @@ In total, **\_** individuals took part in our peer testing sessions. The members
 **To be completed after the peer testing sessions**
 
 #### High
-
+- Server sometimes accidentally shut down for unexpected reason.
+- Need an extra tab for mentors to view the history of their declined mentee.
+- Mentor user should not to logout and login to update their suggested mentees
 #### Medium
-
+- Illustration for avaliability field should be more specific. (contain a picture of an example link in the hint)
+- The purpose of mentee form tab and view mentor form tab should be clarified.
+- The name of tabs for viewing mentee and mentor forms are not consistent.
 #### Low
 
 ## Quantitative Data
@@ -42,4 +46,11 @@ In total, **\_** individuals took part in our peer testing sessions. The members
 
 ### Testimonials from the Participants to Explain the Graph
 
+- After finishing filling AdminForm and verfying new account, user was confused for what to do next because the page remained on 'verification email has been sent'. 
+- User tried to fill the sample forms of mentor and mentee as an admin, which should not happen.
+- "what about google.com" user said when he noticed that he needed to enter an URL in avaliability field, which indicates that using tooltip to hint users is not enought and specific.
+- "How can I accept mentees" user said when he logged in as a mentor for the first time. The suggested mentees were not updated yet when he clicked on the 'suggested mentee' tab.
+- User was confused and did not know what was happening when he was asked to relogin and logout for several times. This because the backend server was somehow not working accidentally.
+- "I don't have a place to see who I just declined" user said when he was trying to find a history of who he just declined.
+- "Maybe I need a link to go to home page" user said when he finished reseting password but needed a button or link to go back to home page.
 **To be completed after the peer testing sessions**
