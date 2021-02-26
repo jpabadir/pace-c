@@ -17,8 +17,8 @@ In total, **\_** individuals took part in our peer testing sessions. The members
 | JP | [Name of participant] | [Type of session ran, and link to the recording]|
 | Katrina | [Name of participant] | [Type of session ran, and link to the recording]|
 | Katrina | [Name of participant] | [Type of session ran, and link to the recording] |
-| Aleks | [Name of participant] | [Type of session ran, and link to the recording] |
-| Aleks | [Name of participant]| [Type of session ran, and link to the recording] |
+| Aleks | Taha Ilyas | Completed. Thinkaloud:  |
+| Aleks | Aaron | Completed. Thinkaloud:  |
 | Eric | Henter Yang | Completed. Thinkaloud: https://drive.google.com/file/d/1_FdA0rP5zLAmFA0Aos2wamYdOZxMxHJd/view?usp=sharing|
 | Eric | Shawn Zhao | Completed. Remote: https://drive.google.com/file/d/1-0M3x3Uhek9k9XlFJKXyyF9WFvIFvIFR/view?usp=sharing|
 
