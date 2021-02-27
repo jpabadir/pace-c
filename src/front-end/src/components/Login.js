@@ -46,10 +46,14 @@ class Login extends Component {
             case 'auth/invalid-email':
               break;
             case 'auth/wrong-password':
-              window.alert('Your password is incorrect.');
+              notification.warning({
+                message: 'Your password is incorrect.',
+              });
               break;
             case 'auth/user-not-found':
-              window.alert('Username does not exist.');
+              notification.warning({
+                message: 'Username does not exist.',
+              });
               break;
             default:
               break;

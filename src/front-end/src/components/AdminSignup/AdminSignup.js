@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Form, Button, Input } from 'antd';
+import { Form, Button, Input, notification } from 'antd';
+import { WarningOutlined } from '@ant-design/icons';
 import {
   setInDB,
   createUserInFirebase,
@@ -20,9 +21,12 @@ class AdminSignup extends Component {
     createUserInFirebase(values.emailInput, values.password).then(
       (createUserAttempt) => {
         if (createUserAttempt.code === 'auth/email-already-in-use') {
-          window.alert(
-            'The email address that you entered is already associated with an email address in our system. Please login to access your account.',
-          );
+          notification.open({
+            message: 'Warning',
+            description:
+              'The email address that you entered is already associated with an email address in our system. Please login to access your account.',
+            icon: <WarningOutlined style={{ color: 'orangered' }} />,
+          });
         } else {
           setInDB('users', createUserAttempt.uid, marshallAdminInfo(values));
           this.setState({ isSubmitted: true });

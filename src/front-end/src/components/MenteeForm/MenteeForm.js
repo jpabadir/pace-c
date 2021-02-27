@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Form, Button, Input, Select } from 'antd';
+import { Form, Button, Input, Select, notification } from 'antd';
+import { WarningOutlined } from '@ant-design/icons';
 import emailjs from 'emailjs-com';
 import MenteeCompletion from '../MenteeCompletion/MenteeCompletion';
 import {
@@ -75,10 +76,12 @@ class MenteeForm extends Component {
       .then((snapshot) => {
         // if exists, alert.
         if (snapshot.exists()) {
-          // probably alerts in other form of message.
-          window.alert(
-            'The email address that you entered is already associated with an email address in our system.',
-          );
+          notification.open({
+            message: 'Warning',
+            description:
+              'The email address that you entered is already associated with an email address in our system. Please login to access your account.',
+            icon: <WarningOutlined style={{ color: 'orangered' }} />,
+          });
           this.setState({ isSubmitted: false });
           // if not exists, create new account and jump to completion page.
         } else {
