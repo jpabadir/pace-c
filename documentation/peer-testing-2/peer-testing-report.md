@@ -106,7 +106,7 @@ In total, **\_** individuals took part in our peer testing sessions. The members
 |-------------------------------------------|--------------------|---------------------------------------------------------------------------------------------------------------|
 | JP | [Name of participant] | [Type of session ran, and link to the recording] |
 | JP | [Name of participant] | [Type of session ran, and link to the recording]|
-| Katrina | Jeff Hatton | [Thinkaloud, unable to complete. The participant did not join the scheduled session on Feb.26 from 8:30AM-9:30AM.] https://drive.google.com/file/d/1k6zD8HmNpZ2L2Y3mqbg3Ijo-FtYthCcN/view?usp=sharing|
+| Katrina | Jeff Hatton | Thinkaloud, unable to complete. The participant did not join the scheduled session on Feb.26 from 8:30AM-9:30AM. https://drive.google.com/file/d/1k6zD8HmNpZ2L2Y3mqbg3Ijo-FtYthCcN/view?usp=sharing|
 | Katrina | Matthew Currie | Remote, completed. https://drive.google.com/file/d/1o_ntBiBYjW7zKHu8OgcnYmwjNKb-yX5o/view?usp=sharing |
 | Aleks | [Name of participant] | [Type of session ran, and link to the recording] |
 | Aleks | [Name of participant]| [Type of session ran, and link to the recording] |
