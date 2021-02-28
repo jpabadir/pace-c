@@ -79,7 +79,7 @@ class MenteeForm extends Component {
           notification.open({
             message: 'Warning',
             description:
-              'The email address that you entered is already associated with an email address in our system. Please login to access your account.',
+              'The email address that you entered is already associated with an email address in our system.',
             icon: <WarningOutlined style={{ color: 'orangered' }} />,
           });
           this.setState({ isSubmitted: false });
