@@ -48,7 +48,7 @@ In total, **\_** individuals took part in our peer testing sessions. The members
 
 - After finishing filling AdminForm and verfying new account, user was confused for what to do next because the page remained on 'verification email has been sent'. 
 - User tried to fill the sample forms of mentor and mentee as an admin, which should not happen.
-- "what about google.com" user said when he noticed that he needed to enter an URL in avaliability field, which indicates that using tooltip to hint users is not enought and specific.
+- "what about google.com" a user said when he noticed that he needed to enter a URL in the availability field, which indicates that using a tooltip to hint to users is not specific enough.
 - "How can I accept mentees" user said when he logged in as a mentor for the first time. The suggested mentees were not updated yet when he clicked on the 'suggested mentee' tab.
 - User was confused and did not know what was happening when he was asked to relogin and logout for several times. This because the backend server was somehow not working accidentally.
 - "I don't have a place to see who I just declined" user said when he was trying to find a history of who he just declined.
