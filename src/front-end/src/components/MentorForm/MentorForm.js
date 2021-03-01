@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { Form, Button, Input, Select } from 'antd';
+import { Form, Button, Input, Select, notification } from 'antd';
+import { WarningOutlined } from '@ant-design/icons';
 import MentorCompletion from '../MentorCompletion';
 import timeZones from '../../timeZones.json';
+
 import {
   setInDB,
   createUserInFirebase,
@@ -35,9 +37,12 @@ class MentorForm extends Component {
     createUserInFirebase(values.emailInput, values.password).then(
       (createUserAttempt) => {
         if (createUserAttempt.code === 'auth/email-already-in-use') {
-          window.alert(
-            'The email address that you entered is already associated with an email address in our system. Please login to access your account.',
-          );
+          notification.open({
+            message: 'Warning',
+            description:
+              'The email address that you entered is already associated with an email address in our system. Please login to access your account.',
+            icon: <WarningOutlined style={{ color: 'orangered' }} />,
+          });
         } else {
           setInDB('users', createUserAttempt.uid, marshallMentorInfo(values));
           fetch(
