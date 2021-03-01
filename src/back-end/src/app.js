@@ -54,6 +54,10 @@ function sortBySkillsThenTimezone(array1, array2) {
 
 function isPotentialMatch(mentorInfo, user) {
   const isMentee = user[1].userType === 'mentee';
+
+  // If mentor is signing up for first time
+  if (!mentorInfo) return isMentee;
+
   const isNotYetAccepted =
     mentorInfo.acceptedMentees == null ||
     !mentorInfo.acceptedMentees.includes(user[0]);
@@ -122,6 +126,7 @@ app.get('/remove-email', (req, res) => {
     .ref('organizations/' + req.query.organization);
 
   organizationRef.once('value', (snapshot) => {
+    if (!snapshot.val()) return;
     const pendingMentors = snapshot.val().pendingMentors;
     pendingMentors.splice(pendingMentors.indexOf(req.query.emailAddress), 1);
     organizationRef.child('pendingMentors').set(pendingMentors);

@@ -25,7 +25,6 @@ class MentorForm extends Component {
     this.state = {
       isSubmitted: false,
       selectedItems: [],
-      uid: '',
     };
     this.onFinish = this.onFinish.bind(this);
     this.onFinishFailed = this.onFinishFailed.bind(this);
@@ -40,24 +39,28 @@ class MentorForm extends Component {
             'The email address that you entered is already associated with an email address in our system. Please login to access your account.',
           );
         } else {
+          // Add mentor to DB
           setInDB('users', createUserAttempt.uid, marshallMentorInfo(values));
+
+          // Remove mentor email address from pending mentors in organization
           fetch(
             `http://localhost:8020/remove-email?organization=${values.organization.toLowerCase()}&emailAddress=${
               values.emailInput
             }&uid=${createUserAttempt.uid}`,
           );
-          this.setState({ uid: createUserAttempt.uid });
+
+          // Add suggested mentees to mentor
+          fetch(
+            `http://localhost:8020/match-with-mentees?uid=${createUserAttempt.uid}`,
+          ).then((res) => {
+            if (res.status === 200) {
+              window.alert('Your suggested mentees have been updated.');
+            }
+          });
           this.setState({ isSubmitted: true });
         }
       },
     );
-    fetch(
-      `http://localhost:8020/match-with-mentees?uid=${this.state.uid}`,
-    ).then((res) => {
-      if (res.status === 200) {
-        window.alert('Your suggested mentees have been updated.');
-      }
-    });
   }
 
   onFinishFailed(values) {
