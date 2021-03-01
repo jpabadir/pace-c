@@ -38,4 +38,4 @@ Further investigation might be required to see if there's a better way to change
 
 March update:
 [JP]
-- There is an infinite loop somewhere in the code, and it fills the DB with info and crashes the front-end.
+- There is an infinite loop somewhere in the code, and it fills the DB with info and crashes the front-end. It adds hundreds of times the same email address to the pendingMentors field of the DB.
