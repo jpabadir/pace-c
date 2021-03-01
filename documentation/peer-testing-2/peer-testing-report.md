@@ -4,7 +4,7 @@
 
 Our system, MentorMatch, allows people to sign up to be matched with a mentor, who can teach them skills they are interested in. The system supports three types of users. First, there are Admins. Admins register their organization by creating an account on our platform. To register, they need to provide the name of the Organization that they're from, as well as their name, email address, and a password. Once registered, an Admin can invite Mentors to join the platform, and see which Mentor requests are pending as well which Mentors are actively using the system. Admins can view the Mentor Form that requested Mentors receive the link to in email upon being requested, as well as the Mentee Form, which they can generate an iFrame tag for to embed on their Organization's public website. The second user type are Mentors. Mentors fill out the Mentor Form once requested by an Admin, and they provide information about the skills they are able to teach people, the organization they belong to (this is because MentorMatch aims at eventually being used by organizations which can customize the platform to their needs), when they're available to mentor, and some basic information about themselves. Mentors are able to view mentee requests, and decide whether to accept or decline them. The third user group are Mentees. Mentees register through the Mentee Form, which can be accessed through an Organization's public website. They provide the skills that they want to be Mentored in as well as some basic information about themself. Based on this information, MentorMatch will suggest mentees to mentors based on common skills and time zones. Once a Mentor accepts a Mentee request, that Mentee will receive an email containing information about the Mentor who accepted them. From there, the two user types can correspond through email to arrange meetings.
 
-## Current Set of Features Available in the System
+## Current Set of Features Available in the System - Katrina
 
 The list of features currently within our system is as follows:
 
@@ -99,7 +99,7 @@ The list of features currently within our system is as follows:
 
 - Once Mentees receive the email notifying them that they've been matched, they can book appointments through the Mentor's calendar link and contact them through email.
 
-## Number of Participants
+## Number of Participants - Everyone
 
 In total, **\_** individuals took part in our peer testing sessions. The members in the table are labelled according to how they were entered in the [sign-up document](https://docs.google.com/spreadsheets/d/1hl-bVGtlN1JMaNCbpx4tqgj7R5T_lkqo-KdooR9Aevk/edit#gid=1784474127). A table of this can be seen below:
 | Pace C Team Member Conducting the Session | Participant's Name | Completion status and video link |
@@ -113,7 +113,7 @@ In total, **\_** individuals took part in our peer testing sessions. The members
 | Eric | [Name of participant] | [Type of session ran, and link to the recording]|
 | Eric |[Name of participant] | [Type of session ran, and link to the recording]|
 
-## User Groups and List of Tasks that Participants Completed
+## User Groups and List of Tasks that Participants Completed - Katrina
 
 Mentor Match supports three user types: Admins, Mentors, and Mentees. The functionality for each of these users, which participants completed during the peer testing sessions is as follows:
 
@@ -156,7 +156,7 @@ Mentor Match supports three user types: Admins, Mentors, and Mentees. The functi
 3. View the Google Calendar link (https://calendar.google.com/calendar/u/0?cid=ZGZ1a24wN2M4M21zaGRqNGg5NzhjZ2l0aWtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) and look at the times that the Mentor is available.
 4. Let the Mentor know that you wish to meet with them during one of the timeslots that they're available (either by emailing them directly or using the Google Calendar email feature (i.e by clicking on the envelope)).
 
-## List of Issues Discovered and Their Priority
+## List of Issues Discovered and Their Priority - Everyone
 
 #### High
 
@@ -169,11 +169,11 @@ Mentor Match supports three user types: Admins, Mentors, and Mentees. The functi
 - It might be useful to have the user's type displayed on the page when they're logged in (i.e explicitly stating whether the user is an Admin or Mentor).
 - On the 'Mentor Tutorial' page, it could be nice to have screenshots to visualize how to interact with the system as a mentor, rather than just descriptive text.
 
-## Quantitative Data
+## Quantitative Data - JP
 
 **To be completed after the peer testing sessions**
 
-### Testimonials from the Participants to Explain the Graph
+### Testimonials from the Participants to Explain the Graph - Everyone
 
 - [After clicking the 'Generate iFrame Tag' button] "Oh cool! That's really cool. So you can embed this on a website?"
 - In regard to the system being "simple, clear, and aesthetically pleasing", a user said the following after declining a Mentee request: "Oh nice, that's really cool how it disappears like that."
