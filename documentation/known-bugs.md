@@ -34,3 +34,8 @@ Further investigation might be required to see if there's a better way to change
 2. We have to manually refresh the page to see the mentor we invited be added to the list after inviting a mentor
 3. When clicking on the link to access our account after signing up as a mentor, we are not routed to the right page
 4. We should refresh the mentor's suggested mentees when (s)he creates an account, otherwise they have to log in and out for that to happen
+
+
+March update:
+[JP]
+- There is an infinite loop somewhere in the code, and it fills the DB with info and crashes the front-end.
