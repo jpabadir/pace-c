@@ -32,13 +32,14 @@ In total, **\_** individuals took part in our peer testing sessions. The members
 
 #### High
 - Server sometimes accidentally shut down for unexpected reason.
-- Need an extra tab for mentors to view the history of their declined mentee.
 - Mentor user should not have to logout and login to update their suggested mentees
 #### Medium
 - Illustration for avaliability field should be more specific. (contain a picture of an example link in the hint)
 - The purpose of mentee form tab and view mentor form tab should be clarified.
 - The name of tabs for viewing mentee and mentor forms are not consistent.
+- The page is not routed after finishing filling AdminForm.
 #### Low
+- Need an extra tab for mentors to view the history of their declined mentee.
 
 ## Quantitative Data
 
