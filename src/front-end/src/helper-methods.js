@@ -121,6 +121,7 @@ export function fetchOrganizationName(loggedUserUid) {
   });
 }
 
+// This method is probably not working as expected
 export async function setOrganizationMentors(organizationName, context) {
   const snapshot = await firebase
     .database()
