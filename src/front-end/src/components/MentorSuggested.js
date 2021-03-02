@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form } from 'antd';
+import { Form, notification } from 'antd';
 import MenteeDisplay from './MenteeDisplay/MenteeDisplay';
 import fire from '../firebase-init';
 import { fetchMenteesIDs, fetchMenteesFullInfo } from '../helper-methods';
@@ -42,7 +42,9 @@ class MentorSuggested extends Component {
       });
 
       // Confirm with the user that this was succesful
-      alert('Mentee request accepted!');
+      notification.success({
+        message: 'Mentee request accepted!',
+      });
     });
   }
 
@@ -71,7 +73,9 @@ class MentorSuggested extends Component {
       });
 
       // Confirm with the user that this was succesful
-      alert('Mentee request declined.');
+      notification.error({
+        message: 'Mentee request declined!',
+      });
     });
   }
 

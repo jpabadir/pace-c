@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Form, Input, Button } from 'antd';
+import { Form, Input, Button, notification } from 'antd';
+import { SmileOutlined } from '@ant-design/icons';
 import fire from '../firebase-init';
 import {
   fetchOrganizationName,
@@ -56,7 +57,11 @@ class ManageMentors extends Component {
     ).then((res) => {
       if (res.status === 200) {
         document.getElementById('inviteMentorEmail').value = '';
-        window.alert('Your mentor request has been sent!');
+        notification.open({
+          description: 'Your mentor request has been sent!',
+          icon: <SmileOutlined style={{ color: '#108ee9' }} />,
+          placement: 'bottomRight',
+        });
         this.addPendingMentorToDB(values.emailInput);
       }
     });
