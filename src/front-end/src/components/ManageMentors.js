@@ -41,10 +41,6 @@ class ManageMentors extends Component {
       .database()
       .ref('organizations/' + this.state.organizationName);
 
-    /* 
-    changing .once to .on will have the function 
-    constantly add mentors with the same email.
-    */
     organizationRef.once('value', (snapshot) => {
       const pendingMentors =
         snapshot.val() && snapshot.val().pendingMentors
@@ -69,12 +65,6 @@ class ManageMentors extends Component {
         this.addPendingMentorToDB(values.emailInput);
       }
     });
-    /* 
-    attempt to pull the pendingmentors from DB every time 
-    when a request is made.
-    */
-    setOrganizationMentors(this.state.organizationName, this);
-    console.log(this.state.organizationName);
   }
 
   render() {
