@@ -164,7 +164,7 @@ Mentor Match supports three user types: Admins, Mentors, and Mentees. The functi
 - Mentor user should not have to logout and login to update their suggested mentees
 - Modify the wording of the 'Availability' field so that it's clearer to the user that they should provide a link.
 - There is an infinite loop somewhere in the code that causes the DB to get filled with wrong data and the front-end to crash.
--
+- A mentor who signs up for the first time does not have any suggested mentees.
 
 #### Medium
 
@@ -173,6 +173,7 @@ Mentor Match supports three user types: Admins, Mentors, and Mentees. The functi
 - The name of tabs for viewing mentee and mentor forms are not consistent.
 - The page is not routed after finishing filling AdminForm.
 - After signing up as a mentor, we are routed to an empty page.
+- The profile tab should have an icon so it is easier to find.
 
 #### Low
 
@@ -210,4 +211,7 @@ Mentor Match supports three user types: Admins, Mentors, and Mentees. The functi
 - "The site doesn't have the highest quality redirection"
 - "Maybe the page failed to load, I'm not quite sure at this time."
 - "I thought it was pretty reasonable, though the navbar is a bit confusing"
--
+- "I was kind of expecting a popup or something, it just takes me a few moments to think about it."
+- "It would be good to have an icon for the profile, because it takes a while to find it."
+- "For a hard choice selection, the textbox makes me a little bit confused"
+- "It's just confused. I just don't know what I'm gonna do."
