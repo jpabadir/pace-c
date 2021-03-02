@@ -185,10 +185,14 @@ Mentor Match supports three user types: Admins, Mentors, and Mentees. The functi
 
 ## Quantitative Data
 
-See the attached chart which shows the average score given to us by our participants for several evaluated heuristics, on a scale from 1 to 5. This graph was made using 6 different data points (we had 6 people fill out the form) for each heuristic. 
-- On this graph, we can see that the lowest score our team received is for the heuristic of having multiple ways of completing the same task. This makes sense, since we only have one way of completing every task. (This sentence was copied from our first report, since it is still true)
-- Our team only got 4/5 for the following heuristic: "I can figure out what needs to be done in the system even if I can't remember exactly what the commands are." This grade is our second lowest. This is consistent with, for instance, the following testimonial we received: "It's just confused. I just don't know what I'm gonna do."
-- Our team received a 4.33 (our highest grade) on the following heuristic: "The system's design is consistent with how other software is designed." This is indeed consistent with many of the comments we received from our participants, such as the following ones: "Very clean design", "Aesthetically pleasing", "Very cool design. The design of how the mentors accept and decline mentees is very practical".
+See the attached chart which shows the average score given to us by our participants for several evaluated heuristics, on a scale from 1 to 5. This graph was made using 6 different data points (we had 6 people fill out the form) for each heuristic.    
+
+- On this graph, we can see that the lowest score our team received is for the heuristic of having multiple ways of completing the same task. This makes sense, since we only have one way of completing every task. (This sentence was copied from our first report, since it is still true)  
+
+- Our team only got 4/5 for the following heuristic: "I can figure out what needs to be done in the system even if I can't remember exactly what the commands are." This grade is our second lowest. This is consistent with, for instance, the following testimonial we received: "It's just confused. I just don't know what I'm gonna do."  
+
+- Our team received a 4.33 (our highest grade) on the following heuristic: "The system's design is consistent with how other software is designed." This is indeed consistent with many of the comments we received from our participants, such as the following ones: "Very clean design", "Aesthetically pleasing", "Very cool design. The design of how the mentors accept and decline mentees is very practical".  
+
 - We also got a pretty low grade (4/5) on the following heuristic: "The system design affords good visibility of the system." This is consistent with some of the complaints we received from participants, such as: "I don't have a place to see who I just declined". 
 
 ### Testimonials from the Participants to Explain the Graph
