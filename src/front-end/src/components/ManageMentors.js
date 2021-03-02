@@ -31,7 +31,7 @@ class ManageMentors extends Component {
     this.authListener().then((uid) => {
       fetchOrganizationName(uid).then((organizationName) => {
         this.setState({ organizationName });
-        setOrganizationMentors(this.state.organizationName, this);
+        setOrganizationMentors(organizationName, this);
       });
     });
   }
