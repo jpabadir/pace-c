@@ -101,7 +101,7 @@ The list of features currently within our system is as follows:
 
 ## Number of Participants
 
-In total, **\_** individuals took part in our peer testing sessions. The members in the table are labelled according to how they were entered in the [sign-up document](https://docs.google.com/spreadsheets/d/1hl-bVGtlN1JMaNCbpx4tqgj7R5T_lkqo-KdooR9Aevk/edit#gid=1784474127). A table of this can be seen below:
+In total, 6 individuals took part in our peer testing sessions. The members in the table are labelled according to how they were entered in the [sign-up document](https://docs.google.com/spreadsheets/d/1hl-bVGtlN1JMaNCbpx4tqgj7R5T_lkqo-KdooR9Aevk/edit#gid=1784474127). A table of this can be seen below:
 | Pace C Team Member Conducting the Session | Participant's Name | Completion status and video link |
 |-------------------------------------------|--------------------|---------------------------------------------------------------------------------------------------------------|
 | JP | Andrew Dai | Thinkaloud, completed. https://youtu.be/eoLe0BolW7g |
