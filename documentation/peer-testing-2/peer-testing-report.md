@@ -110,8 +110,8 @@ In total, **\_** individuals took part in our peer testing sessions. The members
 | Katrina | Matthew Currie | Remote, completed. https://drive.google.com/file/d/1o_ntBiBYjW7zKHu8OgcnYmwjNKb-yX5o/view?usp=sharing |
 | Aleks | [Name of participant] | [Type of session ran, and link to the recording] |
 | Aleks | [Name of participant]| [Type of session ran, and link to the recording] |
-| Eric | [Name of participant] | [Type of session ran, and link to the recording]|
-| Eric |[Name of participant] | [Type of session ran, and link to the recording]|
+| Eric | Henter Yang | Completed. Thinkaloud: https://drive.google.com/file/d/1_FdA0rP5zLAmFA0Aos2wamYdOZxMxHJd/view?usp=sharing|
+| Eric | Shawn Zhao | Completed. Remote: https://drive.google.com/file/d/1-0M3x3Uhek9k9XlFJKXyyF9WFvIFvIFR/view?usp=sharing|
 
 ## User Groups and List of Tasks that Participants Completed - Katrina
 
@@ -159,13 +159,16 @@ Mentor Match supports three user types: Admins, Mentors, and Mentees. The functi
 ## List of Issues Discovered and Their Priority - Everyone
 
 #### High
-
+- Server sometimes accidentally shut down for unexpected reason.
+- Mentor user should not have to logout and login to update their suggested mentees
 - Modify the wording of the 'Availability' field so that it's clearer to the user that they should provide a link.
-
 #### Medium
-
+- Illustration for avaliability field should be more specific. (contain a picture of an example link in the hint)
+- The purpose of mentee form tab and view mentor form tab should be clarified.
+- The name of tabs for viewing mentee and mentor forms are not consistent.
+- The page is not routed after finishing filling AdminForm.
 #### Low
-
+- Need an extra tab for mentors to view the history of their declined mentee.
 - It might be useful to have the user's type displayed on the page when they're logged in (i.e explicitly stating whether the user is an Admin or Mentor).
 - On the 'Mentor Tutorial' page, it could be nice to have screenshots to visualize how to interact with the system as a mentor, rather than just descriptive text.
 
@@ -174,7 +177,15 @@ Mentor Match supports three user types: Admins, Mentors, and Mentees. The functi
 **To be completed after the peer testing sessions**
 
 ### Testimonials from the Participants to Explain the Graph - Everyone
+**To be completed after the peer testing sessions**
 
+- After finishing filling AdminForm and verfying new account, user was confused for what to do next because the page remained on 'verification email has been sent'. 
+- User tried to fill the sample forms of mentor and mentee as an admin, which should not happen.
+- "what about google.com" a user said when he noticed that he needed to enter a URL in the availability field, which indicates that using a tooltip to hint to users is not specific enough.
+- "How can I accept mentees" user said when he logged in as a mentor for the first time. The suggested mentees were not updated yet when he clicked on the 'suggested mentee' tab.
+- User was confused and did not know what was happening when he was asked to relogin and logout for several times. This because the backend server was somehow not working accidentally.
+- "I don't have a place to see who I just declined" user said when he was trying to find a history of who he just declined.
+- "Maybe I need a link to go to home page" user said when he finished reseting password but needed a button or link to go back to home page.
 - [After clicking the 'Generate iFrame Tag' button] "Oh cool! That's really cool. So you can embed this on a website?"
 - In regard to the system being "simple, clear, and aesthetically pleasing", a user said the following after declining a Mentee request: "Oh nice, that's really cool how it disappears like that."
 - To demonstrate how our system allows for "visibility of system status", a user noted how the pop-up informed them of how they were unable to successfully register as a Mentor with the same email address that they used for their Admin account.
