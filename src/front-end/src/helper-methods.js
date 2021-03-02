@@ -1,3 +1,4 @@
+import { notification } from 'antd';
 import firebase from './firebase-init';
 
 const auth = firebase.auth();
@@ -6,15 +7,18 @@ export function resendVerificationEmail(user) {
   user
     .sendEmailVerification()
     .then(() => {
-      window.alert('A new verification email has successfully been sent!');
+      notification.success({
+        message: 'A new verification email has successfully been sent!',
+      });
     })
     .catch((error) => {
       console.log(error);
       switch (error.code) {
         case 'auth/too-many-requests':
-          window.alert(
-            'Too many requests. Please check the inbox and junk folder of your email before pressing the button again.',
-          );
+          notification.error({
+            message:
+              'Too many requests. Please check the inbox and junk folder of your email before pressing the button again.',
+          });
           break;
         default:
           break;
@@ -87,7 +91,9 @@ export function resetPassword(emailAddress) {
   auth
     .sendPasswordResetEmail(emailAddress)
     .then(() => {
-      window.alert('We sent you an email with a link to reset your password.');
+      notification.success({
+        message: 'We sent you an email with a link to reset your password.',
+      });
     })
     .catch((error) => {
       console.log(error);
@@ -95,9 +101,10 @@ export function resetPassword(emailAddress) {
         case 'auth/invalid-email':
           break;
         case 'auth/user-not-found':
-          window.alert(
-            'The email address that you have entered does not match with any accounts in our system.',
-          );
+          notification.error({
+            message:
+              'The email address that you have entered does not match with any accounts in our system.',
+          });
           break;
         default:
           break;
