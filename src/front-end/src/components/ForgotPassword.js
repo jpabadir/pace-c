@@ -15,7 +15,6 @@ class ForgotPassword extends Component {
   localResetPassword() {
     // TODO: implement some validation here
     resetPassword(this.state.email);
-    window.alert('We sent you an email with a link to reset your password.');
   }
 
   handleEmailChange(event) {
