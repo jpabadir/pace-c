@@ -109,7 +109,7 @@ In total, **\_** individuals took part in our peer testing sessions. The members
 | Katrina | Jeff Hatton | Thinkaloud, unable to complete. The participant did not join the scheduled session on Feb.26 from 8:30AM-9:30AM. https://drive.google.com/file/d/1k6zD8HmNpZ2L2Y3mqbg3Ijo-FtYthCcN/view?usp=sharing|
 | Katrina | Matthew Currie | Remote, completed. https://drive.google.com/file/d/1o_ntBiBYjW7zKHu8OgcnYmwjNKb-yX5o/view?usp=sharing |
 | Aleks | Taha Ilyas | Completed. Thinkaloud: https://youtu.be/fkxPLrxQeDo |
-| Aleks | Aaron Mahnic | Person did not show up to the assigned testing time: Feb.25 from 9:30PM-10:30PM. Thinkaloud: N/A  |
+| Aleks | Aaron Mahnic | Person did not show up to the assigned testing time: Feb.25 from 9:30PM-10:30PM. Thinkaloud: N/A |
 | Eric | Henter Yang | Completed. Thinkaloud: https://drive.google.com/file/d/1_FdA0rP5zLAmFA0Aos2wamYdOZxMxHJd/view?usp=sharing|
 | Eric | Shawn Zhao | Completed. Remote: https://drive.google.com/file/d/1-0M3x3Uhek9k9XlFJKXyyF9WFvIFvIFR/view?usp=sharing|
 
@@ -159,28 +159,38 @@ Mentor Match supports three user types: Admins, Mentors, and Mentees. The functi
 ## List of Issues Discovered and Their Priority - Everyone
 
 #### High
+
 - Server sometimes accidentally shut down for unexpected reason.
 - Mentor user should not have to logout and login to update their suggested mentees
 - Modify the wording of the 'Availability' field so that it's clearer to the user that they should provide a link.
+- There is an infinite loop somewhere in the code that causes the DB to get filled with wrong data and the front-end to crash.
+-
+
 #### Medium
+
 - Illustration for avaliability field should be more specific. (contain a picture of an example link in the hint)
 - The purpose of mentee form tab and view mentor form tab should be clarified.
 - The name of tabs for viewing mentee and mentor forms are not consistent.
 - The page is not routed after finishing filling AdminForm.
+- After signing up as a mentor, we are routed to an empty page.
+
 #### Low
+
 - One of the people testing said it would be nice to let mentees add a picture of themself on their suggested/accepted mentee card
 - Need an extra tab for mentors to view the history of their declined mentee.
 - It might be useful to have the user's type displayed on the page when they're logged in (i.e explicitly stating whether the user is an Admin or Mentor).
 - On the 'Mentor Tutorial' page, it could be nice to have screenshots to visualize how to interact with the system as a mentor, rather than just descriptive text.
+- In mentor tutorial, should have a button underneath each category to take the user to the right tab.
 
 ## Quantitative Data - JP
-**To be completed after the peer testing sessions**
 
+**To be completed after the peer testing sessions**
 
 ### Testimonials from the Participants to Explain the Graph - Everyone
+
 **To be completed after the peer testing sessions**
 
-- After finishing filling AdminForm and verfying new account, user was confused for what to do next because the page remained on 'verification email has been sent'. 
+- After finishing filling AdminForm and verfying new account, user was confused for what to do next because the page remained on 'verification email has been sent'.
 - User tried to fill the sample forms of mentor and mentee as an admin, which should not happen.
 - "what about google.com" a user said when he noticed that he needed to enter a URL in the availability field, which indicates that using a tooltip to hint to users is not specific enough.
 - "How can I accept mentees" user said when he logged in as a mentor for the first time. The suggested mentees were not updated yet when he clicked on the 'suggested mentee' tab.
@@ -195,3 +205,9 @@ Mentor Match supports three user types: Admins, Mentors, and Mentees. The functi
 - "Tasks are easy to navigate and easy to complete"
 - "The tutorial and home page are very helpful for people who just signed up and wants to learn how the website works"
 - "Very cool design. The design of how the mentors accept and decline mentees is very practical"
+- "I feel like [being able to see this form] didn't add too much to my understanding of the process"
+- "I didn't feel to confused, just disappointed"
+- "The site doesn't have the highest quality redirection"
+- "Maybe the page failed to load, I'm not quite sure at this time."
+- "I thought it was pretty reasonable, though the navbar is a bit confusing"
+-
