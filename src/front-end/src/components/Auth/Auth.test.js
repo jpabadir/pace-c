@@ -31,7 +31,7 @@ it('renders without crashing', () => {
     container,
   );
   expect(container.textContent).toBe(
-    'A verification email has been sent to your email address!Please verify your email address in order to access:Your Mentor AccountThe Mentor TutorialYour Suggested MenteesYour Accepted MenteesIf you did not recieve a verification email or if the verification email has already expired, click the button below to resend a verification email.Resend Verification Email',
+    'A verification email has been sent to your email address!Please verify your email address in order to access your account.If you did not recieve a verification email or if the verification email has already expired, click the button below to resend a verification email.Resend Verification Email',
   );
 });
 

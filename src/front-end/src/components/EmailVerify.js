@@ -24,23 +24,7 @@ class EmailVerify extends Component {
         <center>
           <h2>
             <font size="5">
-              Please verify your email address in order to access:
-            </font>
-            <font size="4">
-              <ul style={{ listStyleType: 'none' }}>
-                <li>
-                  <i>Your Mentor Account</i>
-                </li>
-                <li>
-                  <i>The Mentor Tutorial</i>
-                </li>
-                <li>
-                  <i>Your Suggested Mentees</i>
-                </li>
-                <li>
-                  <i>Your Accepted Mentees</i>
-                </li>
-              </ul>
+              Please verify your email address in order to access your account.
             </font>
           </h2>
         </center>
