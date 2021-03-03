@@ -2,9 +2,9 @@
 
 ## Brief Description of The System
 
-Our system, MentorMatch, allows people to sign up to be matched with a mentor, who can teach them skills they are interested in. The system supports three types of users. First, there are Admins. Admins register their organization by creating an account on our platform. To register, they need to provide the name of the Organization that they're from, as well as their name, email address, and a password. Once registered, an Admin can invite Mentors to join the platform, and see which Mentor requests are pending as well which Mentors are actively using the system. Admins can view the Mentor Form that requested Mentors receive the link to in email upon being requested, as well as the Mentee Form, which they can generate an iFrame tag for to embed on their Organization's public website. The second user type are Mentors. Mentors fill out the Mentor Form once requested by an Admin, and they provide information about the skills they are able to teach people, the organization they belong to (this is because MentorMatch aims at eventually being used by organizations which can customize the platform to their needs), when they're available to mentor, and some basic information about themselves. Mentors are able to view mentee requests, and decide whether to accept or decline them. The third user group are Mentees. Mentees register through the Mentee Form, which can be accessed through an Organization's public website. They provide the skills that they want to be Mentored in as well as some basic information about themself. Based on this information, MentorMatch will suggest mentees to mentors based on common skills and time zones. Once a Mentor accepts a Mentee request, that Mentee will receive an email containing information about the Mentor who accepted them. From there, the two user types can correspond through email to arrange meetings.
+Our system, MentorMatch, allows people to sign up to be matched with a mentor, who can teach them skills they are interested in. The system supports three types of users. First, there are Admins. Admins register their organization by creating an account on our platform. To register, they need to provide the name of the Organization that they're from, as well as their name, email address, and a password. Once registered, an Admin can invite Mentors to join the platform, and see which Mentor requests are pending as well which Mentors are actively using the system. Admins can view the Mentor Form that requested Mentors receive the link to in email upon being requested, as well as the Mentee Form, which they can generate an iFrame tag for to embed on their Organization's public website. The second user type are Mentors. Mentors fill out the Mentor Form once requested by an Admin, and they provide information about the skills they are able to teach people, the organization they belong to (this is because MentorMatch aims at eventually being used by organizations which can customize the platform to their needs), when they're available to mentor, and some basic information about themselves. Mentors are able to view mentee requests, and decide whether to accept or decline them. The third user group are Mentees. Mentees register through the Mentee Form, which can be accessed through an Organization's public website. They provide the skills that they want to be Mentored in as well as some basic information about themselves. Based on this information, MentorMatch will suggest mentees to mentors based on common skills and time zones. Once a Mentor accepts a Mentee request, that Mentee will receive an email containing information about the Mentor who accepted them. From there, the two user types can correspond through email to arrange meetings.
 
-## Current Set of Features Available in the System - Katrina
+## Current Set of Features Available in the System
 
 The list of features currently within our system is as follows:
 
@@ -99,9 +99,9 @@ The list of features currently within our system is as follows:
 
 - Once Mentees receive the email notifying them that they've been matched, they can book appointments through the Mentor's calendar link and contact them through email.
 
-## Number of Participants - Everyone
+## Number of Participants
 
-In total, **\_** individuals took part in our peer testing sessions. The members in the table are labelled according to how they were entered in the [sign-up document](https://docs.google.com/spreadsheets/d/1hl-bVGtlN1JMaNCbpx4tqgj7R5T_lkqo-KdooR9Aevk/edit#gid=1784474127). A table of this can be seen below:
+In total, 6 individuals took part in our peer testing sessions. The members in the table are labelled according to how they were entered in the [sign-up document](https://docs.google.com/spreadsheets/d/1hl-bVGtlN1JMaNCbpx4tqgj7R5T_lkqo-KdooR9Aevk/edit#gid=1784474127). A table of this can be seen below:
 | Pace C Team Member Conducting the Session | Participant's Name | Completion status and video link |
 |-------------------------------------------|--------------------|---------------------------------------------------------------------------------------------------------------|
 | JP | Andrew Dai | Thinkaloud, completed. https://youtu.be/eoLe0BolW7g |
@@ -113,7 +113,7 @@ In total, **\_** individuals took part in our peer testing sessions. The members
 | Eric | Henter Yang | Completed. Thinkaloud: https://drive.google.com/file/d/1_FdA0rP5zLAmFA0Aos2wamYdOZxMxHJd/view?usp=sharing|
 | Eric | Shawn Zhao | Completed. Remote: https://drive.google.com/file/d/1-0M3x3Uhek9k9XlFJKXyyF9WFvIFvIFR/view?usp=sharing|
 
-## User Groups and List of Tasks that Participants Completed - Katrina
+## User Groups and List of Tasks that Participants Completed
 
 Mentor Match supports three user types: Admins, Mentors, and Mentees. The functionality for each of these users, which participants completed during the peer testing sessions is as follows:
 
@@ -156,7 +156,7 @@ Mentor Match supports three user types: Admins, Mentors, and Mentees. The functi
 3. View the Google Calendar link (https://calendar.google.com/calendar/u/0?cid=ZGZ1a24wN2M4M21zaGRqNGg5NzhjZ2l0aWtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) and look at the times that the Mentor is available.
 4. Let the Mentor know that you wish to meet with them during one of the timeslots that they're available (either by emailing them directly or using the Google Calendar email feature (i.e by clicking on the envelope)).
 
-## List of Issues Discovered and Their Priority - Everyone
+## List of Issues Discovered and Their Priority
 
 #### High
 
@@ -177,27 +177,33 @@ Mentor Match supports three user types: Admins, Mentors, and Mentees. The functi
 
 #### Low
 
-- One of the people testing said it would be nice to let mentees add a picture of themself on their suggested/accepted mentee card
+- One of the people testing said it would be nice to let mentees add a picture of themselves on their suggested/accepted mentee card
 - Need an extra tab for mentors to view the history of their declined mentee.
 - It might be useful to have the user's type displayed on the page when they're logged in (i.e explicitly stating whether the user is an Admin or Mentor).
 - On the 'Mentor Tutorial' page, it could be nice to have screenshots to visualize how to interact with the system as a mentor, rather than just descriptive text.
 - In mentor tutorial, should have a button underneath each category to take the user to the right tab.
 
-## Quantitative Data - JP
+## Quantitative Data
 
-**To be completed after the peer testing sessions**
+See the attached chart which shows the average score given to us by our participants for several evaluated heuristics, on a scale from 1 to 5. This graph was made using 6 different data points (we had 6 people fill out the form) for each heuristic.    
 
-### Testimonials from the Participants to Explain the Graph - Everyone
+- On this graph, we can see that the lowest score our team received is for the heuristic of having multiple ways of completing the same task. This makes sense, since we only have one way of completing every task. (This sentence was copied from our first report, since it is still true)  
 
-**To be completed after the peer testing sessions**
+- Our team only got 4/5 for the following heuristic: "I can figure out what needs to be done in the system even if I can't remember exactly what the commands are." This grade is our second lowest. This is consistent with, for instance, the following testimonial we received: "It's just confused. I just don't know what I'm gonna do."  
 
-- After finishing filling AdminForm and verfying new account, user was confused for what to do next because the page remained on 'verification email has been sent'.
+- Our team received a 4.33 (our highest grade) on the following heuristic: "The system's design is consistent with how other software is designed." This is indeed consistent with many of the comments we received from our participants, such as the following ones: "Very clean design", "Aesthetically pleasing", "Very cool design. The design of how the mentors accept and decline mentees is very practical".  
+
+- We also got a pretty low grade (4/5) on the following heuristic: "The system design affords good visibility of the system." This is consistent with some of the complaints we received from participants, such as: "I don't have a place to see who I just declined". 
+
+### Testimonials from the Participants to Explain the Graph
+
+- After finishing filling AdminForm and verifying new account, user was confused for what to do next because the page remained on 'verification email has been sent'.
 - User tried to fill the sample forms of mentor and mentee as an admin, which should not happen.
 - "what about google.com" a user said when he noticed that he needed to enter a URL in the availability field, which indicates that using a tooltip to hint to users is not specific enough.
 - "How can I accept mentees" user said when he logged in as a mentor for the first time. The suggested mentees were not updated yet when he clicked on the 'suggested mentee' tab.
 - User was confused and did not know what was happening when he was asked to relogin and logout for several times. This because the backend server was somehow not working accidentally.
 - "I don't have a place to see who I just declined" user said when he was trying to find a history of who he just declined.
-- "Maybe I need a link to go to home page" user said when he finished reseting password but needed a button or link to go back to home page.
+- "Maybe I need a link to go to home page" user said when he finished resetting password but needed a button or link to go back to home page.
 - [After clicking the 'Generate iFrame Tag' button] "Oh cool! That's really cool. So you can embed this on a website?"
 - In regard to the system being "simple, clear, and aesthetically pleasing", a user said the following after declining a Mentee request: "Oh nice, that's really cool how it disappears like that."
 - To demonstrate how our system allows for "visibility of system status", a user noted how the pop-up informed them of how they were unable to successfully register as a Mentor with the same email address that they used for their Admin account.
