@@ -1,0 +1,1 @@
+[Katrina] Add possibility of adding profile pictures for users

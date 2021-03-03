@@ -6,6 +6,7 @@ import {
   createUserInFirebase,
   marshallAdminInfo,
 } from '../../helper-methods';
+import EmailVerify from '../EmailVerify';
 
 class AdminSignup extends Component {
   constructor(props) {
@@ -41,7 +42,7 @@ class AdminSignup extends Component {
 
   render() {
     if (this.state.isSubmitted) {
-      return <AdminSignup />;
+      return <EmailVerify />;
     }
     if (!this.state.isSubmitted) {
       return (

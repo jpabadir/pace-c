@@ -44,12 +44,24 @@ class MentorForm extends Component {
             icon: <WarningOutlined style={{ color: 'orangered' }} />,
           });
         } else {
+          // Add mentor to DB
           setInDB('users', createUserAttempt.uid, marshallMentorInfo(values));
+
+          // Remove mentor email address from pending mentors in organization
           fetch(
             `http://localhost:8020/remove-email?organization=${values.organization.toLowerCase()}&emailAddress=${
               values.emailInput
             }&uid=${createUserAttempt.uid}`,
           );
+
+          // Add suggested mentees to mentor
+          fetch(
+            `http://localhost:8020/match-with-mentees?uid=${createUserAttempt.uid}`,
+          ).then((res) => {
+            if (res.status === 200) {
+              window.alert('Your suggested mentees have been updated.');
+            }
+          });
           this.setState({ isSubmitted: true });
         }
       },
