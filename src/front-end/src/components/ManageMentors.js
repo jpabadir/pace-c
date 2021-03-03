@@ -63,6 +63,17 @@ class ManageMentors extends Component {
           placement: 'bottomRight',
         });
         this.addPendingMentorToDB(values.emailInput);
+
+        // Update component state with proper values
+        this.setState((prevState) => ({
+          organizationMentors: {
+            activeMentors: prevState.organizationMentors.activeMentors,
+            pendingMentors: [
+              ...prevState.organizationMentors.pendingMentors,
+              values.emailInput,
+            ],
+          },
+        }));
       }
     });
   }
