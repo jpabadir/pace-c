@@ -129,9 +129,6 @@ export async function setOrganizationMentors(organizationName, context) {
     .once('value');
   const organizationInfo = snapshot.val();
 
-  // TODO: there might be a null pointer exception
-  // below with organizationInfo being null and callign .pendingMentors on it.
-
   const mentorsDisplayedInfo = {
     pendingMentors:
       organizationInfo && organizationInfo.pendingMentors
