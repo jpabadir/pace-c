@@ -144,7 +144,7 @@ class MentorForm extends Component {
               </Select>
             </Form.Item>
             <Form.Item
-              label="Availability"
+              label="Calendar link"
               name="calendarLink"
               tooltip="Paste the link to your Google Calendar so Mentees can book timeslots when you're available to mentor them"
               rules={[
