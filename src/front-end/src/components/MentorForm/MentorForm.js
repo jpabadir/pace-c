@@ -157,7 +157,7 @@ class MentorForm extends Component {
               <Input
                 type="url"
                 pattern="https://calendar.google.com/calendar/.*"
-                placeholder="The link of your available timeslots to provide mentorship"
+                placeholder="https://calendar.google.com/calendar/abcdefg"
               />
             </Form.Item>
             <Form.Item
