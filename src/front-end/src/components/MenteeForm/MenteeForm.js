@@ -213,6 +213,8 @@ class MenteeForm extends Component {
               htmlType="submit"
               className="formSubmitButton"
               size="large"
+              href="http://localhost:3000/"
+              target="_blank"
             >
               Submit
             </Button>
