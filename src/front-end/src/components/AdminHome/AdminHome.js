@@ -48,6 +48,9 @@ class AdminHome extends Component {
               </span>
             }
           >
+            <center>
+              <h2>The form below is an example of the mentor form:</h2>
+            </center>
             <MentorForm />
           </TabPane>
         </Tabs>
