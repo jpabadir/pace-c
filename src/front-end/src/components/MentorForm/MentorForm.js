@@ -78,6 +78,7 @@ class MentorForm extends Component {
 
   render() {
     const { selectedItems } = this.state;
+
     if (this.state.isSubmitted) {
       return <MentorCompletion />;
     }
@@ -100,7 +101,11 @@ class MentorForm extends Component {
               tooltip="The organization you're planning to be a Mentor with"
               rules={[{ required: true, message: 'Please input something' }]}
             >
-              <Input placeholder="Please enter your Organization" />
+              <Input
+                placeholder="Please enter your Organization"
+                // eslint-disable-next-line react/jsx-boolean-value
+                disabled={this.props.isShowCaseMode}
+              />
             </Form.Item>
             <Form.Item
               label="Name"

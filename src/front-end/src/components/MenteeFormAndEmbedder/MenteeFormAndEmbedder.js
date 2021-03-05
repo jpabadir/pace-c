@@ -53,7 +53,7 @@ function MentorFormAndEmbedder() {
         <center>
           <h2>The form below is an example of the mentee form:</h2>
         </center>
-        <MenteeForm />
+        <MenteeForm isShowCaseMode />
       </div>
     </div>
   );

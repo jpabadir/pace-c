@@ -51,7 +51,7 @@ class AdminHome extends Component {
             <center>
               <h2>The form below is an example of the mentor form:</h2>
             </center>
-            <MentorForm />
+            <MentorForm isShowCaseMode />
           </TabPane>
         </Tabs>
       </>
