@@ -103,7 +103,6 @@ class MentorForm extends Component {
             >
               <Input
                 placeholder="Please enter your Organization"
-                // eslint-disable-next-line react/jsx-boolean-value
                 disabled={this.props.isShowCaseMode}
               />
             </Form.Item>
