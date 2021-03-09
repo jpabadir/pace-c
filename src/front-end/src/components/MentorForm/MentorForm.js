@@ -111,7 +111,10 @@ class MentorForm extends Component {
               name="nameInput"
               rules={[{ required: true, message: 'Please enter your name' }]}
             >
-              <Input placeholder="First name Last name" />
+              <Input
+                placeholder="First name Last name"
+                disabled={this.props.isShowCaseMode}
+              />
             </Form.Item>
             <Form.Item
               label="Email"
@@ -124,7 +127,11 @@ class MentorForm extends Component {
                 },
               ]}
             >
-              <Input type="email" placeholder="name@example.com" />
+              <Input
+                type="email"
+                placeholder="name@example.com"
+                disabled={this.props.isShowCaseMode}
+              />
             </Form.Item>
             <Form.Item
               label="Time-zone"
@@ -137,7 +144,11 @@ class MentorForm extends Component {
                 },
               ]}
             >
-              <Select placeholder="Select timezone.." showSearch>
+              <Select
+                placeholder="Select timezone.."
+                showSearch
+                disabled={this.props.isShowCaseMode}
+              >
                 {timeZones.map((zone) => {
                   return (
                     <Option key={zone.id} value={getCamelCase(zone.id)}>
@@ -159,6 +170,7 @@ class MentorForm extends Component {
               ]}
             >
               <Input
+                disabled={this.props.isShowCaseMode}
                 type="url"
                 pattern="https://calendar.google.com/calendar/.*"
                 placeholder="https://calendar.google.com/calendar/abcdefg"
@@ -175,7 +187,12 @@ class MentorForm extends Component {
                 },
               ]}
             >
-              <Input type="password" placeholder="Password" minLength="8" />
+              <Input
+                disabled={this.props.isShowCaseMode}
+                type="password"
+                placeholder="Password"
+                minLength="8"
+              />
             </Form.Item>
             <Form.Item
               name="confirmPassword"
@@ -199,6 +216,7 @@ class MentorForm extends Component {
               ]}
             >
               <Input
+                disabled={this.props.isShowCaseMode}
                 type="password"
                 placeholder="Confirm your password"
                 minLength="8"
@@ -217,6 +235,7 @@ class MentorForm extends Component {
               ]}
             >
               <Select
+                disabled={this.props.isShowCaseMode}
                 mode="multiple"
                 value={selectedItems}
                 onChange={this.handleSkillsChange}
@@ -245,13 +264,17 @@ class MentorForm extends Component {
                 },
               ]}
             >
-              <Input.TextArea placeholder="Tell us a bit about yourself. Please be advised that this description will be shared with Mentees that you accept to mentor." />
+              <Input.TextArea
+                placeholder="Tell us a bit about yourself. Please be advised that this description will be shared with Mentees that you accept to mentor."
+                disabled={this.props.isShowCaseMode}
+              />
             </Form.Item>
             <Button
               type="primary"
               htmlType="submit"
               className="formSubmitButton"
               size="large"
+              disabled={this.props.isShowCaseMode}
             >
               Submit
             </Button>
