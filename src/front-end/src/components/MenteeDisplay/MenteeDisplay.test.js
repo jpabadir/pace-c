@@ -62,3 +62,36 @@ test('render the card actions without the accept & decline buttons if not a requ
   const spanTag = actionsContainer.getElementsByTagName('span');
   expect(spanTag.textContent).toBe(undefined);
 });
+
+test('render no email fields when input suggested mentees', () => {
+  const suggested = {
+    menteeUid: '',
+    name: '',
+    email: '',
+    skills: '',
+    description: '',
+    request: false,
+    acceptMentee: mockFunction,
+    declineMentee: mockFunction,
+  };
+  render(<MenteeDisplay {...suggested} />, container);
+  const email = document.getElementsByTagName('p')[0];
+  // this test should past after PR471 merged
+  expect(email.textContent == ' Email: ').toBe(false);
+});
+
+test('render email fields when input accepted mentees', () => {
+  const accepted = {
+    menteeUid: '',
+    name: '',
+    email: 'wrc9817@gmail.com',
+    skills: '',
+    description: '',
+    request: false,
+    acceptMentee: mockFunction,
+    declineMentee: mockFunction,
+  };
+  render(<MenteeDisplay {...accepted} />, container);
+  const email = document.getElementsByTagName('p')[0];
+  expect(email.textContent == ' Email: wrc9817@gmail.com').toBe(true);
+});
