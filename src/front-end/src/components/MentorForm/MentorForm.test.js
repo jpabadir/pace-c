@@ -25,7 +25,7 @@ afterEach(() => {
 test('render without crashing', () => {
   render(<MentorForm />, container);
   expect(container.textContent).toBe(
-    'Sign up as a MentorOrganizationNameEmailTime-zoneSelect timezone..AvailabilityPasswordConfirm PasswordTop 3 skills\xa0DescriptionSubmit',
+    'Sign up as a MentorOrganizationNameEmailTime-zoneSelect timezone..Calendar linkPasswordConfirm PasswordTop 3 skills\xa0DescriptionSubmit',
   );
 });
 
@@ -37,7 +37,7 @@ test('Every text field has a corresponding input field', () => {
     'Name',
     'Email',
     'Time-zone',
-    'Availability',
+    'Calendar link',
     'Password',
     'Confirm Password',
     'Top 3 skills',
