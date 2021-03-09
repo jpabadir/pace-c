@@ -47,7 +47,7 @@ class MentorAccepted extends Component {
           return (
             <MenteeDisplay
               name={mentee.name}
-              email=""
+              email={mentee.email}
               skills={mentee.rankedSkills.join(', ')}
               description={mentee.description}
               request={false}
