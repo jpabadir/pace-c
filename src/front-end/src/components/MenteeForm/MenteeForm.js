@@ -88,10 +88,7 @@ class MenteeForm extends Component {
           this.sendEmail(values);
           pushToDB('users', marshallMenteeInfo(values));
           this.setState({ isSubmitted: true });
-          setTimeout(
-            () => window.open('http://localhost:3000/'),
-            3000,
-          );
+          setTimeout(() => window.open('http://localhost:3000/'), 3000);
         }
       });
   }
