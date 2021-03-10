@@ -16,6 +16,16 @@ class MenteeDisplay extends Component {
     this.handleDeclineClick = this.handleDeclineClick.bind(this);
   }
 
+  renderEmail(){
+    if(this.props.email !=""){
+      return <div><strong>Email: </strong>
+             {this.props.email}
+             </div>;
+    }else{
+      return;
+    }
+  }
+
   handleAcceptClick() {
     this.props.acceptMentee(this.props.menteeUid);
 
@@ -107,8 +117,7 @@ class MenteeDisplay extends Component {
               ]}
             >
               <p>
-                <strong> Email: </strong>
-                {this.props.email}
+                    {this.renderEmail()}
               </p>
               <p>
                 <strong> Skills Seeking Mentorship: </strong>
@@ -125,6 +134,7 @@ class MenteeDisplay extends Component {
     );
   }
 }
+
 
 MenteeDisplay.propTypes = {
   menteeUid: PropTypes.string.isRequired,

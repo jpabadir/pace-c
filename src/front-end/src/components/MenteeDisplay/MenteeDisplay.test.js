@@ -45,7 +45,7 @@ test('render the body of the card correctly', () => {
   for (let i = 0; i < p.length; i += 1) {
     expect(container.contains(p[i])).toBe(true);
   }
-  expect(p[0].textContent).toBe(' Email: ');
+  expect(p[0].textContent).toBe('');
   expect(p[1].textContent).toBe(' Skills Seeking Mentorship: ');
   expect(p[2].textContent).toBe('  Description:  ');
 });
