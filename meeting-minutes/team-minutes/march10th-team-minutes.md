@@ -26,7 +26,8 @@
   - Write technical information: the website has a front end and a backend, the DB is firebase, etc etc. Use use nodemailer to do xyz, etc
   - information by component: what does each component do? Etc
   - How to run the project?
-- Testing task (Eric)
+- Testing task1 (Eric)
+- Testing task2 (Eric)
 - Turn the three columns of that page into the ant design card component. Make sure to keep functionality the way it currently is
 - Put invite a mentor text input and title into card component and put additional explanatory text in tooltip. The same way it is done on mentee and mentor forms
 - You want to have a "Request a mentor" button to show and hide the modal and in the modal you have the input field with the tooltip and "send request" button and you can invite someone
@@ -51,7 +52,8 @@
 - 
 
 ### Eric
-- Testing task (Eric)
+- Testing task1 (Eric)
+- Testing task2 (Eric)
 - Turn the three columns of that page into the ant design card component. Make sure to keep functionality the way it currently is
 - Put invite a mentor text input and title into card component and put additional explanatory text in tooltip. The same way it is done on mentee and mentor forms
 - You want to have a "Request a mentor" button to show and hide the modal and in the modal you have the input field with the tooltip and "send request" button and you can invite someone
