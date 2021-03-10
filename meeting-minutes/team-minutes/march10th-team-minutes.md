@@ -27,7 +27,8 @@
   - information by component: what does each component do? Etc
   - How to run the project?
 - Testing task1 (Eric)
-- Testing task2 (Eric)
+- Unit test for Login component
+- Firebase mocking
 - Turn the three columns of that page into the ant design card component. Make sure to keep functionality the way it currently is
 - Put invite a mentor text input and title into card component and put additional explanatory text in tooltip. The same way it is done on mentee and mentor forms
 - You want to have a "Request a mentor" button to show and hide the modal and in the modal you have the input field with the tooltip and "send request" button and you can invite someone
@@ -36,6 +37,7 @@
 - Create an md file and keep track of which parts (js files / components) you have completely gone over)
 - Testing task (JP)
 - Standardize nodemailer vs email js 
+- Run client meeting
 - 
 
 
@@ -49,6 +51,7 @@
 - Testing task (Katrina)
 - Go through parts of the website and remove unnecessary code, and add comments where you think they are needed
 - Create an md file and keep track of which parts (js files / components) you have completely gone over)
+- Run client meeting
 - 
 
 ### Eric
@@ -57,6 +60,8 @@
 - Turn the three columns of that page into the ant design card component. Make sure to keep functionality the way it currently is
 - Put invite a mentor text input and title into card component and put additional explanatory text in tooltip. The same way it is done on mentee and mentor forms
 - You want to have a "Request a mentor" button to show and hide the modal and in the modal you have the input field with the tooltip and "send request" button and you can invite someone
+- Unit test for Login component
+- Firebase mocking
 - 
 
 ### Aleks
