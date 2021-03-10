@@ -44,12 +44,21 @@ class MentorForm extends Component {
             icon: <WarningOutlined style={{ color: 'orangered' }} />,
           });
         } else {
+          // Get organization from url bar
+          const search = this.props.location.search;
+          const organization = decodeURI(
+            search.substring(search.indexOf('=') + 1),
+          );
           // Add mentor to DB
-          setInDB('users', createUserAttempt.uid, marshallMentorInfo(values));
+          setInDB(
+            'users',
+            createUserAttempt.uid,
+            marshallMentorInfo(values, organization),
+          );
 
           // Remove mentor email address from pending mentors in organization
           fetch(
-            `http://localhost:8020/remove-email?organization=${values.organization.toLowerCase()}&emailAddress=${
+            `http://localhost:8020/remove-email?organization=${organization.toLowerCase()}&emailAddress=${
               values.emailInput
             }&uid=${createUserAttempt.uid}`,
           );
@@ -95,17 +104,6 @@ class MentorForm extends Component {
             labelAlign="left"
           >
             <h1>Sign up as a Mentor</h1>
-            <Form.Item
-              label="Organization"
-              name="organization"
-              tooltip="The organization you're planning to be a Mentor with"
-              rules={[{ required: true, message: 'Please input something' }]}
-            >
-              <Input
-                placeholder="Please enter your Organization"
-                disabled={this.props.isShowCaseMode}
-              />
-            </Form.Item>
             <Form.Item
               label="Name"
               name="nameInput"

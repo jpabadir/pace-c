@@ -63,9 +63,9 @@ export function pushToDB(reference, objectToSave) {
 
 /* TODO: reduce redundancy between two below methods 
 with a third method for the attributes in common */
-export function marshallMentorInfo(mentorFormValues) {
+export function marshallMentorInfo(mentorFormValues, organization) {
   return {
-    organization: mentorFormValues.organization,
+    organization,
     email: mentorFormValues.emailInput,
     name: mentorFormValues.nameInput,
     timeZone: mentorFormValues.timeZone,
@@ -76,7 +76,7 @@ export function marshallMentorInfo(mentorFormValues) {
   };
 }
 
-export function marshallMenteeInfo(menteeFormValues) {
+export function marshallMenteeInfo(menteeFormValues, organization) {
   return {
     email: menteeFormValues.emailInput,
     name: menteeFormValues.nameInput,
@@ -84,6 +84,7 @@ export function marshallMenteeInfo(menteeFormValues) {
     userType: 'mentee',
     rankedSkills: menteeFormValues.skillset,
     description: menteeFormValues.description,
+    organization,
   };
 }
 
