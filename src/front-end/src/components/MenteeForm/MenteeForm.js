@@ -95,6 +95,7 @@ class MenteeForm extends Component {
             ),
           );
           this.setState({ isSubmitted: true });
+          setTimeout(() => window.open('http://localhost:3000/'), 3000);
         }
       });
   }
@@ -131,6 +132,7 @@ class MenteeForm extends Component {
               rules={[{ required: true, message: 'Please enter your name' }]}
             >
               <Input
+                disabled={this.props.isShowCaseMode}
                 onInput={this.handleNameChange}
                 id="nameid"
                 placeholder="First name Last name"
@@ -152,6 +154,7 @@ class MenteeForm extends Component {
               <Input
                 onInput={this.handleEmailChange}
                 id="emailid"
+                disabled={this.props.isShowCaseMode}
                 placeholder="name@example.com"
                 type="email"
               />
@@ -162,7 +165,11 @@ class MenteeForm extends Component {
               // must have an input:
               rules={[{ required: true, message: 'This field is required' }]}
             >
-              <Select placeholder="Select timezone.." showSearch>
+              <Select
+                placeholder="Select timezone.."
+                showSearch
+                disabled={this.props.isShowCaseMode}
+              >
                 {timeZones.map((zone) => {
                   return (
                     <Option key={zone.id} value={getCamelCase(zone.id)}>
@@ -186,6 +193,7 @@ class MenteeForm extends Component {
             >
               <Select
                 mode="multiple"
+                disabled={this.props.isShowCaseMode}
                 value={selectedItems}
                 onChange={this.handleSkillsChange}
               >
@@ -213,13 +221,17 @@ class MenteeForm extends Component {
                 },
               ]}
             >
-              <Input.TextArea placeholder="Tell us a bit about yourself. Please be advised that this description will be shared with Mentors that you match with." />
+              <Input.TextArea
+                placeholder="Tell us a bit about yourself. Please be advised that this description will be shared with Mentors that you match with."
+                disabled={this.props.isShowCaseMode}
+              />
             </Form.Item>
             <Button
               type="primary"
               htmlType="submit"
               className="formSubmitButton"
               size="large"
+              disabled={this.props.isShowCaseMode}
             >
               Submit
             </Button>
