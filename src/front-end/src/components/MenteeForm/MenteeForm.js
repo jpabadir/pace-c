@@ -86,7 +86,14 @@ class MenteeForm extends Component {
           // if not exists, create new account and jump to completion page.
         } else {
           this.sendEmail(values);
-          pushToDB('users', marshallMenteeInfo(values));
+          const search = this.props.location.search;
+          pushToDB(
+            'users',
+            marshallMenteeInfo(
+              values,
+              search.substring(search.indexOf('=') + 1),
+            ),
+          );
           this.setState({ isSubmitted: true });
         }
       });

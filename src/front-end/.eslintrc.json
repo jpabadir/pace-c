@@ -61,6 +61,9 @@
         "ignoreTemplateLiterals": true,
         "ignoreRegExpLiterals": true
       }
+    ],
+    "react/prop-types": [
+      "off"
     ]
   }
 }

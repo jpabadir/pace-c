@@ -76,7 +76,7 @@ export function marshallMentorInfo(mentorFormValues) {
   };
 }
 
-export function marshallMenteeInfo(menteeFormValues) {
+export function marshallMenteeInfo(menteeFormValues, organization) {
   return {
     email: menteeFormValues.emailInput,
     name: menteeFormValues.nameInput,
@@ -84,6 +84,7 @@ export function marshallMenteeInfo(menteeFormValues) {
     userType: 'mentee',
     rankedSkills: menteeFormValues.skillset,
     description: menteeFormValues.description,
+    organization,
   };
 }
 
