@@ -116,7 +116,7 @@ app.get('/match-with-mentees', (req, res) => {
 });
 
 app.get('/invite-mentor', (req, res) => {
-  email.inviteMentor(req.query.emailAddress);
+  email.inviteMentor(req.query.emailAddress, req.query.organization);
   res.send('Invited mentor');
 });
 

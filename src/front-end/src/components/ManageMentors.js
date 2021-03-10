@@ -53,7 +53,7 @@ class ManageMentors extends Component {
 
   requestMentor(values) {
     fetch(
-      `http://localhost:8020/invite-mentor?emailAddress=${values.emailInput}`,
+      `http://localhost:8020/invite-mentor?emailAddress=${values.emailInput}&organization=${this.state.organizationName}`,
     ).then((res) => {
       if (res.status === 200) {
         document.getElementById('inviteMentorEmail').value = '';
