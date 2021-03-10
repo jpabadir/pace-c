@@ -23,6 +23,6 @@ afterEach(() => {
 it('renders without crashing', () => {
   render(<MenteeCompletion />, container);
   expect(container.textContent).toBe(
-    "Congratulations! You have successfully submitted your request for mentorship. We'll send you an email once we match you with a mentor!",
+    "Congratulations! You have successfully submitted your request for mentorship. We'll send you an email once we match you with a mentor! You will be routed to Home page in 3 seconds.",
   );
 });
