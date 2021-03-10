@@ -17,7 +17,7 @@ function App() {
         <Header>
           <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
             <Menu.Item key="2">
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/">MentorMatch</NavLink>
             </Menu.Item>
             <Menu.Item key="5" style={{ float: 'right' }}>
               <AccountMenuItem />
