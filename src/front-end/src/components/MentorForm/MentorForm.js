@@ -44,12 +44,21 @@ class MentorForm extends Component {
             icon: <WarningOutlined style={{ color: 'orangered' }} />,
           });
         } else {
+          // Get organization from url bar
+          const search = this.props.location.search;
+          const organization = decodeURI(
+            search.substring(search.indexOf('=') + 1),
+          );
           // Add mentor to DB
-          setInDB('users', createUserAttempt.uid, marshallMentorInfo(values));
+          setInDB(
+            'users',
+            createUserAttempt.uid,
+            marshallMentorInfo(values, organization),
+          );
 
           // Remove mentor email address from pending mentors in organization
           fetch(
-            `http://localhost:8020/remove-email?organization=${values.organization.toLowerCase()}&emailAddress=${
+            `http://localhost:8020/remove-email?organization=${organization.toLowerCase()}&emailAddress=${
               values.emailInput
             }&uid=${createUserAttempt.uid}`,
           );
@@ -78,6 +87,7 @@ class MentorForm extends Component {
 
   render() {
     const { selectedItems } = this.state;
+
     if (this.state.isSubmitted) {
       return <MentorCompletion />;
     }
@@ -95,19 +105,14 @@ class MentorForm extends Component {
           >
             <h1>Sign up as a Mentor</h1>
             <Form.Item
-              label="Organization"
-              name="organization"
-              tooltip="The organization you're planning to be a Mentor with"
-              rules={[{ required: true, message: 'Please input something' }]}
-            >
-              <Input placeholder="Please enter your Organization" />
-            </Form.Item>
-            <Form.Item
               label="Name"
               name="nameInput"
               rules={[{ required: true, message: 'Please enter your name' }]}
             >
-              <Input placeholder="First name Last name" />
+              <Input
+                placeholder="First name Last name"
+                disabled={this.props.isShowCaseMode}
+              />
             </Form.Item>
             <Form.Item
               label="Email"
@@ -120,7 +125,11 @@ class MentorForm extends Component {
                 },
               ]}
             >
-              <Input type="email" placeholder="name@example.com" />
+              <Input
+                type="email"
+                placeholder="name@example.com"
+                disabled={this.props.isShowCaseMode}
+              />
             </Form.Item>
             <Form.Item
               label="Time-zone"
@@ -133,7 +142,11 @@ class MentorForm extends Component {
                 },
               ]}
             >
-              <Select placeholder="Select timezone.." showSearch>
+              <Select
+                placeholder="Select timezone.."
+                showSearch
+                disabled={this.props.isShowCaseMode}
+              >
                 {timeZones.map((zone) => {
                   return (
                     <Option key={zone.id} value={getCamelCase(zone.id)}>
@@ -144,7 +157,7 @@ class MentorForm extends Component {
               </Select>
             </Form.Item>
             <Form.Item
-              label="Availability"
+              label="Calendar link"
               name="calendarLink"
               tooltip="Paste the link to your Google Calendar so Mentees can book timeslots when you're available to mentor them"
               rules={[
@@ -155,9 +168,10 @@ class MentorForm extends Component {
               ]}
             >
               <Input
+                disabled={this.props.isShowCaseMode}
                 type="url"
                 pattern="https://calendar.google.com/calendar/.*"
-                placeholder="The link of your available timeslots to provide mentorship"
+                placeholder="https://calendar.google.com/calendar/abcdefg"
               />
             </Form.Item>
             <Form.Item
@@ -171,7 +185,12 @@ class MentorForm extends Component {
                 },
               ]}
             >
-              <Input type="password" placeholder="Password" minLength="8" />
+              <Input
+                disabled={this.props.isShowCaseMode}
+                type="password"
+                placeholder="Password"
+                minLength="8"
+              />
             </Form.Item>
             <Form.Item
               name="confirmPassword"
@@ -195,6 +214,7 @@ class MentorForm extends Component {
               ]}
             >
               <Input
+                disabled={this.props.isShowCaseMode}
                 type="password"
                 placeholder="Confirm your password"
                 minLength="8"
@@ -213,6 +233,7 @@ class MentorForm extends Component {
               ]}
             >
               <Select
+                disabled={this.props.isShowCaseMode}
                 mode="multiple"
                 value={selectedItems}
                 onChange={this.handleSkillsChange}
@@ -241,13 +262,17 @@ class MentorForm extends Component {
                 },
               ]}
             >
-              <Input.TextArea placeholder="Tell us a bit about yourself. Please be advised that this description will be shared with Mentees that you accept to mentor." />
+              <Input.TextArea
+                placeholder="Tell us a bit about yourself. Please be advised that this description will be shared with Mentees that you accept to mentor."
+                disabled={this.props.isShowCaseMode}
+              />
             </Form.Item>
             <Button
               type="primary"
               htmlType="submit"
               className="formSubmitButton"
               size="large"
+              disabled={this.props.isShowCaseMode}
             >
               Submit
             </Button>
