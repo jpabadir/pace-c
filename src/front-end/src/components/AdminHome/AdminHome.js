@@ -33,7 +33,7 @@ class AdminHome extends Component {
             tab={
               <span>
                 <UsergroupAddOutlined />
-                Mentee Form
+                View Mentee Form
               </span>
             }
           >
@@ -48,7 +48,10 @@ class AdminHome extends Component {
               </span>
             }
           >
-            <MentorForm />
+            <center>
+              <h2>The form below is an example of the mentor form:</h2>
+            </center>
+            <MentorForm isShowCaseMode />
           </TabPane>
         </Tabs>
       </>

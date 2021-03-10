@@ -15,7 +15,7 @@ function MentorFormAndEmbedder() {
         <center>
           <h1>
             Click on the &quot;Generate iFrame Tag&quot; button to create an
-            iFrame tag that can be embedded into your Website!
+            iFrame tag that can be embedded into your website!
           </h1>
         </center>
         <center>
@@ -48,7 +48,12 @@ function MentorFormAndEmbedder() {
             />
           )}
         </center>
-        <MenteeForm />
+        <br />
+        <br />
+        <center>
+          <h2>The form below is an example of the mentee form:</h2>
+        </center>
+        <MenteeForm isShowCaseMode />
       </div>
     </div>
   );
