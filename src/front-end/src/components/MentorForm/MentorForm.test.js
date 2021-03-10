@@ -25,7 +25,7 @@ afterEach(() => {
 test('render without crashing', () => {
   render(<MentorForm />, container);
   expect(container.textContent).toBe(
-    'Sign up as a MentorOrganizationNameEmailTime-zoneSelect timezone..Calendar linkPasswordConfirm PasswordTop 3 skills\xa0DescriptionSubmit',
+    'Sign up as a MentorNameEmailTime-zoneSelect timezone..Calendar linkPasswordConfirm PasswordTop 3 skills DescriptionSubmit',
   );
 });
 
@@ -33,7 +33,6 @@ test('Every text field has a corresponding input field', () => {
   render(<MentorForm />, container);
   const renderedLabels = document.getElementsByTagName('label');
   const correctLabels = [
-    'Organization',
     'Name',
     'Email',
     'Time-zone',

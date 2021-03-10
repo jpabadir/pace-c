@@ -39,7 +39,7 @@ class ManageMentors extends Component {
   addPendingMentorToDB(mentorEmailAddress) {
     const organizationRef = fire
       .database()
-      .ref('organizations/' + this.state.organizationName);
+      .ref('organizations/' + this.state.organizationName.toLowerCase());
 
     organizationRef.once('value', (snapshot) => {
       const pendingMentors =
@@ -53,7 +53,7 @@ class ManageMentors extends Component {
 
   requestMentor(values) {
     fetch(
-      `http://localhost:8020/invite-mentor?emailAddress=${values.emailInput}`,
+      `http://localhost:8020/invite-mentor?emailAddress=${values.emailInput}&organization=${this.state.organizationName}`,
     ).then((res) => {
       if (res.status === 200) {
         document.getElementById('inviteMentorEmail').value = '';
