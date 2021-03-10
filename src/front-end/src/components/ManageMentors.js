@@ -39,7 +39,7 @@ class ManageMentors extends Component {
   addPendingMentorToDB(mentorEmailAddress) {
     const organizationRef = fire
       .database()
-      .ref('organizations/' + this.state.organizationName);
+      .ref('organizations/' + this.state.organizationName.toLowerCase());
 
     organizationRef.once('value', (snapshot) => {
       const pendingMentors =
