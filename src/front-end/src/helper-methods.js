@@ -63,9 +63,9 @@ export function pushToDB(reference, objectToSave) {
 
 /* TODO: reduce redundancy between two below methods 
 with a third method for the attributes in common */
-export function marshallMentorInfo(mentorFormValues) {
+export function marshallMentorInfo(mentorFormValues, organization) {
   return {
-    organization: mentorFormValues.organization,
+    organization,
     email: mentorFormValues.emailInput,
     name: mentorFormValues.nameInput,
     timeZone: mentorFormValues.timeZone,
