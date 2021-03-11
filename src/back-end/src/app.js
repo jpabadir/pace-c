@@ -55,8 +55,12 @@ function sortBySkillsThenTimezone(array1, array2) {
 function isPotentialMatch(mentorInfo, user) {
   const isMentee = user[1].userType === 'mentee';
 
-  // If mentor is signing up for first time
-  if (!mentorInfo) return isMentee;
+  const isInSameOrganization =
+    user[1].organization.toLowerCase() ===
+    mentorInfo.organization.toLowerCase();
+
+  // If mentor is signing up (as opposed to signing in)
+  if (!mentorInfo) return isMentee && isInSameOrganization;
 
   const isNotYetAccepted =
     mentorInfo.acceptedMentees == null ||
@@ -65,7 +69,7 @@ function isPotentialMatch(mentorInfo, user) {
     mentorInfo.declinedMentees == null ||
     !mentorInfo.declinedMentees.includes(user[0]);
 
-  return isMentee && isNotYetAccepted && isNotDeclined;
+  return isMentee && isInSameOrganization && isNotYetAccepted && isNotDeclined;
 }
 
 function matchWithMentees(uid) {
@@ -116,7 +120,7 @@ app.get('/match-with-mentees', (req, res) => {
 });
 
 app.get('/invite-mentor', (req, res) => {
-  email.inviteMentor(req.query.emailAddress);
+  email.inviteMentor(req.query.emailAddress, req.query.organization);
   res.send('Invited mentor');
 });
 
