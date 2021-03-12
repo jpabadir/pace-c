@@ -207,20 +207,7 @@ class ManageMentors extends Component {
             centered
             visible={this.state.visible}
             onCancel={this.handleCancel}
-            footer={[
-              <Button key="back" onClick={this.handleCancel}>
-                cancel
-              </Button>,
-              <Button
-                key="submit"
-                className="formSubmitButton"
-                type="primary"
-                htmltype="submit"
-                // onClick={form.submit}
-              >
-                Send request
-              </Button>,
-            ]}
+            footer=""
           >
             <Form onFinish={this.requestMentor}>
               <Form.Item
@@ -241,6 +228,18 @@ class ManageMentors extends Component {
                   id="inviteMentorEmail"
                   placeholder="Email Address"
                 />
+                <Button key="back" onClick={this.handleCancel}>
+                  cancel
+                </Button>
+                <Button
+                  key="submit"
+                  className="formSubmitButton"
+                  type="primary"
+                  htmltype="submit"
+                  // onClick={form.submit}
+                >
+                  Send request
+                </Button>
               </Form.Item>
             </Form>
           </Modal>
