@@ -22,7 +22,7 @@ function MentorFormAndEmbedder() {
       <div>
         <center>
           <h1>
-            Click on the &quot;Generate iFrame Tag&quot; button to create an
+            Click on the &apos;Generate iFrame Tag&apos; button to create an
             iFrame tag that can be embedded into your website!
           </h1>
         </center>
