@@ -20,7 +20,7 @@ import {
 } from '../helper-methods';
 
 const { Title } = Typography;
-const form = Form.useForm();
+// const form = Form.useForm();
 
 // eslint-disable-next-line react/prefer-stateless-function
 class ManageMentors extends Component {
@@ -216,13 +216,13 @@ class ManageMentors extends Component {
                 className="formSubmitButton"
                 type="primary"
                 htmltype="submit"
-                onClick={form.submit}
+                // onClick={form.submit}
               >
                 Send request
               </Button>,
             ]}
           >
-            <Form form={form} onFinish={this.requestMentor}>
+            <Form onFinish={this.requestMentor}>
               <Form.Item
                 label="Mentor's Email Address:"
                 id="inviteMentorEmail"
