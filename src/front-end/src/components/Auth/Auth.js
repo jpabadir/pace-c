@@ -3,7 +3,7 @@ import fire from '../../firebase-init';
 import Login from '../Login';
 import MentorHome from '../MentorHome';
 import AdminHome from '../AdminHome/AdminHome';
-import EmailVerify from '../EmailVerify';
+import EmailVerify from '../EmailVerify/EmailVerify';
 
 class Auth extends Component {
   constructor(props) {
