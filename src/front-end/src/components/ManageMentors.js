@@ -1,11 +1,25 @@
 import React, { Component } from 'react';
-import { Form, Input, Button, notification } from 'antd';
-import { SmileOutlined } from '@ant-design/icons';
+import {
+  Form,
+  Input,
+  Button,
+  notification,
+  Card,
+  Typography,
+  Modal,
+} from 'antd';
+import {
+  SmileOutlined,
+  UserSwitchOutlined,
+  UserAddOutlined,
+} from '@ant-design/icons';
 import fire from '../firebase-init';
 import {
   fetchOrganizationName,
   setOrganizationMentors,
 } from '../helper-methods';
+
+const { Title } = Typography;
 
 // eslint-disable-next-line react/prefer-stateless-function
 class ManageMentors extends Component {
@@ -14,9 +28,25 @@ class ManageMentors extends Component {
     this.state = {
       organizationMentors: {},
       organizationName: '',
+      visible: false,
     };
     this.requestMentor = this.requestMentor.bind(this);
     this.addPendingMentorToDB = this.addPendingMentorToDB.bind(this);
+    this.showModal = this.showModal.bind(this);
+    this.handleCancel = this.handleCancel.bind(this);
+  }
+
+  showModal() {
+    this.setState({
+      visible: true,
+    });
+  }
+
+  handleCancel(e) {
+    console.log(e);
+    this.setState({
+      visible: false,
+    });
   }
 
   authListener() {
@@ -89,14 +119,11 @@ class ManageMentors extends Component {
           </h1>
           <br />
           <br />
-          <div id="CurrentActiveMentors">
-            <h1>
-              <center>
-                <i>
-                  <font size="5"> Current/Active Mentors: </font>
-                </i>
-              </center>
-            </h1>
+          <Card
+            style={{ fontSize: '30px', backgroundColor: 'rgb(250, 250, 250)' }}
+            title={<Title level={3}>Current/Active Mentors:</Title>}
+            id="CurrentActiveMentors"
+          >
             <p>
               <font size="4">
                 {Object.keys(this.state.organizationMentors).length !== 0 &&
@@ -106,7 +133,18 @@ class ManageMentors extends Component {
                         (mentor) => {
                           return (
                             <i>
-                              {mentor}
+                              <Card
+                                hoverable
+                                style={{
+                                  width: '300px',
+                                  textAlign: 'left',
+                                  fontSize: '18px',
+                                }}
+                              >
+                                <UserAddOutlined style={{ fontSize: '300%' }} />
+                                {'  '}
+                                {mentor}
+                              </Card>
                               <br />
                             </i>
                           );
@@ -116,17 +154,14 @@ class ManageMentors extends Component {
                   )}
               </font>
             </p>
-          </div>
-          <div id="InvitedPendingMentors">
-            <h1>
-              <center>
-                <i>
-                  <font size="5"> Invited/Pending Mentors: </font>
-                </i>
-              </center>
-            </h1>
+          </Card>
+          <Card
+            style={{ fontSize: '30px', backgroundColor: 'rgb(250, 250, 250)' }}
+            title={<Title level={3}>Invited/Pending Mentors:</Title>}
+            id="InvitedPendingMentors"
+          >
             <p>
-              <font size="4">
+              <font size="2">
                 {Object.keys(this.state.organizationMentors).length !== 0 &&
                   this.state.organizationMentors.pendingMentors && (
                     <center>
@@ -134,7 +169,20 @@ class ManageMentors extends Component {
                         (mentor) => {
                           return (
                             <i>
-                              {mentor}
+                              <Card
+                                hoverable
+                                style={{
+                                  width: '300px',
+                                  textAlign: 'left',
+                                  fontSize: '18px',
+                                }}
+                              >
+                                <UserSwitchOutlined
+                                  style={{ fontSize: '200%' }}
+                                />
+                                {'  '}
+                                {mentor}
+                              </Card>
                               <br />
                             </i>
                           );
@@ -144,62 +192,52 @@ class ManageMentors extends Component {
                   )}
               </font>
             </p>
-          </div>
-          <div id="InviteTab">
-            <h1>
-              <center>
-                <i>
-                  <font size="5"> Invite A Mentor! </font>
-                </i>
-              </center>
-            </h1>
-            <p>
-              <font size="4">
-                <center>
-                  <i> How To Invite A Mentor: </i>
-                  <br />
-                  To invite a user to join Mentor Match as a mentor that is
-                  associated with your organization, type their email address in
-                  the text box below and then click the &apos;request&apos;
-                  button.
-                  <br />
-                  <br />
-                  The mentor will then receive a link via email which will take
-                  them to Mentor Match&apos;s Mentor Form.
-                  <br />
-                  <br />
-                  <Form onFinish={this.requestMentor}>
-                    <Form.Item
-                      label="Mentor's Email Address:"
-                      id="inviteMentorEmail"
-                      name="emailInput"
-                      // must have an input:
-                      rules={[
-                        {
-                          required: true,
-                          message: "Please enter the mentor's email",
-                        },
-                      ]}
-                    >
-                      <Input
-                        type="email"
-                        id="inviteMentorEmail"
-                        placeholder="Email Address"
-                      />
-                    </Form.Item>
-                    <Button
-                      type="primary"
-                      htmlType="submit"
-                      className="formSubmitButton"
-                      size="large"
-                    >
-                      Request Mentor
-                    </Button>
-                  </Form>
-                </center>
-              </font>
-            </p>
-          </div>
+          </Card>
+          <Button
+            type="primary"
+            htmlType="submit"
+            className="formSubmitButton"
+            size="large"
+            onClick={this.showModal}
+          >
+            Request a Mentor
+          </Button>
+          <Modal
+            title="Basic Modal"
+            centered
+            visible={this.state.visible}
+            onCancel={this.handleCancel}
+            footer={[
+              <Button key="back" onClick={this.handleCancel}>
+                cancel
+              </Button>,
+              <Button key="submit" type="primary">
+                Send request
+              </Button>,
+            ]}
+          >
+            <Form onFinish={this.requestMentor}>
+              <Form.Item
+                label="Mentor's Email Address:"
+                id="inviteMentorEmail"
+                name="emailInput"
+                tooltip="How To Invite A Mentor: To invite a user to join Mentor Match as a mentor that is associated with your organization, type their email address in the text box below and then click the 'request' button. The mentor will then receive a link via email which will take them to Mentor Match's Mentor Form."
+                // must have an input:
+                rules={[
+                  {
+                    required: true,
+                    message: "Please enter the mentor's email",
+                  },
+                ]}
+              >
+                <Input
+                  type="email"
+                  id="inviteMentorEmail"
+                  placeholder="Email Address"
+                />
+              </Form.Item>
+            </Form>
+          </Modal>
         </div>
       </div>
     );
