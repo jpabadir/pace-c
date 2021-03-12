@@ -20,6 +20,7 @@ import {
 } from '../helper-methods';
 
 const { Title } = Typography;
+const form = Form.useForm();
 
 // eslint-disable-next-line react/prefer-stateless-function
 class ManageMentors extends Component {
@@ -202,7 +203,7 @@ class ManageMentors extends Component {
             Request a Mentor
           </Button>
           <Modal
-            title="Basic Modal"
+            title="How To Invite A Mentor"
             centered
             visible={this.state.visible}
             onCancel={this.handleCancel}
@@ -215,18 +216,18 @@ class ManageMentors extends Component {
                 className="formSubmitButton"
                 type="primary"
                 htmltype="submit"
-                onClick={this.requestMentor}
+                onClick={form.submit}
               >
                 Send request
               </Button>,
             ]}
           >
-            <Form>
+            <Form form={form} onFinish={this.requestMentor}>
               <Form.Item
                 label="Mentor's Email Address:"
                 id="inviteMentorEmail"
                 name="emailInput"
-                tooltip="How To Invite A Mentor: To invite a user to join Mentor Match as a mentor that is associated with your organization, type their email address in the text box below and then click the 'request' button. The mentor will then receive a link via email which will take them to Mentor Match's Mentor Form."
+                tooltip="To invite a user to join Mentor Match as a mentor that is associated with your organization, type their email address in the text box below and then click the 'request' button. The mentor will then receive a link via email which will take them to Mentor Match's Mentor Form."
                 // must have an input:
                 rules={[
                   {
@@ -240,7 +241,6 @@ class ManageMentors extends Component {
                   id="inviteMentorEmail"
                   placeholder="Email Address"
                 />
-                <button type="submit">123</button>
               </Form.Item>
             </Form>
           </Modal>
