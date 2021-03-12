@@ -89,7 +89,7 @@ class ManageMentors extends Component {
           </h1>
           <br />
           <br />
-          <div id="CurrentActiveMentors">
+          <div className="column" id="CurrentActiveMentors">
             <h1>
               <center>
                 <i>
@@ -117,7 +117,7 @@ class ManageMentors extends Component {
               </font>
             </p>
           </div>
-          <div id="InvitedPendingMentors">
+          <div className="column" id="InvitedPendingMentors">
             <h1>
               <center>
                 <i>
@@ -145,7 +145,7 @@ class ManageMentors extends Component {
               </font>
             </p>
           </div>
-          <div id="InviteTab">
+          <div className="column" id="InviteTab">
             <h1>
               <center>
                 <i>

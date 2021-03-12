@@ -16,12 +16,15 @@ class MenteeDisplay extends Component {
     this.handleDeclineClick = this.handleDeclineClick.bind(this);
   }
 
-  renderEmail(){
-    if(this.props.email !=""){
-      return <div><strong>Email: </strong>
-             {this.props.email}
-             </div>;
-    }else{
+  renderEmail() {
+    if (this.props.email != '') {
+      return (
+        <div>
+          <strong>Email: </strong>
+          {this.props.email}
+        </div>
+      );
+    } else {
       return;
     }
   }
@@ -78,63 +81,53 @@ class MenteeDisplay extends Component {
 
   render() {
     return (
-      <div className="mentee-requests">
-        <div className="individual-mentee">
-          <>
-            <Card
-              hoverable
-              style={{ width: '350px' }}
-              title={[
-                <UserOutlined
-                  className="user-icon"
-                  key={this.props.menteeUid}
-                />,
-                this.props.name,
-              ]}
-              actions={[
-                this.props.request && (
-                  <tr id="request-row">
-                    <td>
-                      <Button
-                        type="text"
-                        onClick={this.handleAcceptClick}
-                        id="accept"
-                      >
-                        Accept
-                        <CheckOutlined className="check" />{' '}
-                      </Button>
-                      <Button
-                        type="text"
-                        onClick={this.handleDeclineClick}
-                        id="decline"
-                      >
-                        Decline
-                        <CloseOutlined className="close" />{' '}
-                      </Button>
-                    </td>
-                  </tr>
-                ),
-              ]}
-            >
-              <p>
-                    {this.renderEmail()}
-              </p>
-              <p>
-                <strong> Skills Seeking Mentorship: </strong>
-                {this.props.skills}
-              </p>
-              <p>
-                {' '}
-                <strong> Description: </strong> {this.props.description}
-              </p>
-            </Card>
-          </>
-        </div>
+      <div className="mentee-card">
+        <>
+          <Card
+            hoverable
+            style={{ width: '350px' }}
+            title={[
+              <UserOutlined className="user-icon" key={this.props.menteeUid} />,
+              this.props.name,
+            ]}
+            actions={[
+              this.props.request && (
+                <td id="mentee-request-row">
+                  <Button
+                    type="text"
+                    onClick={this.handleAcceptClick}
+                    id="accept"
+                  >
+                    Accept
+                    <CheckOutlined className="check" />{' '}
+                  </Button>
+                  <Button
+                    type="text"
+                    onClick={this.handleDeclineClick}
+                    id="decline"
+                  >
+                    Decline
+                    <CloseOutlined className="close" />{' '}
+                  </Button>
+                </td>
+              ),
+            ]}
+          >
+            <p>{this.renderEmail()}</p>
+            <p>
+              <strong> Skills Seeking Mentorship: </strong>
+              {this.props.skills}
+            </p>
+            <p>
+              {' '}
+              <strong> Description: </strong> {this.props.description}
+            </p>
+          </Card>
+        </>
       </div>
     );
   }
 }
-
 
 MenteeDisplay.propTypes = {
   menteeUid: PropTypes.string.isRequired,

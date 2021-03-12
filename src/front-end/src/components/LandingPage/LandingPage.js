@@ -32,7 +32,7 @@ function LandingPage() {
       {/* eslint-disable-next-line react/self-closing-comp */}
       <p>&nbsp;</p>
       <div className="container">
-        <div id="adminLeft">
+        <div className="column" id="adminLeft">
           <h1>
             <center>
               <i> As an Admin... </i>
@@ -54,7 +54,7 @@ function LandingPage() {
             </font>
           </p>
         </div>
-        <div id="mentorMiddle">
+        <div className="column" id="mentorMiddle">
           <h1>
             <center>
               <i> As a Mentor... </i>
@@ -76,7 +76,7 @@ function LandingPage() {
             </font>
           </p>
         </div>
-        <div id="menteeRight">
+        <div className="column" id="menteeRight">
           <h1>
             <center>
               <i> As a Mentee... </i>
