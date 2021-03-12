@@ -196,7 +196,6 @@ class ManageMentors extends Component {
           <Button
             type="primary"
             htmlType="submit"
-            className="formSubmitButton"
             size="large"
             onClick={this.showModal}
           >
@@ -211,12 +210,18 @@ class ManageMentors extends Component {
               <Button key="back" onClick={this.handleCancel}>
                 cancel
               </Button>,
-              <Button key="submit" type="primary">
+              <Button
+                key="submit"
+                className="formSubmitButton"
+                type="primary"
+                htmltype="submit"
+                onClick={this.requestMentor}
+              >
                 Send request
               </Button>,
             ]}
           >
-            <Form onFinish={this.requestMentor}>
+            <Form>
               <Form.Item
                 label="Mentor's Email Address:"
                 id="inviteMentorEmail"
@@ -235,6 +240,7 @@ class ManageMentors extends Component {
                   id="inviteMentorEmail"
                   placeholder="Email Address"
                 />
+                <button type="submit">123</button>
               </Form.Item>
             </Form>
           </Modal>
