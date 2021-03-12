@@ -209,7 +209,7 @@ class ManageMentors extends Component {
             onCancel={this.handleCancel}
             footer=""
           >
-            <Form onFinish={this.requestMentor}>
+            <Form style={{ height: '85px' }} onFinish={this.requestMentor}>
               <Form.Item
                 label="Mentor's Email Address:"
                 id="inviteMentorEmail"
@@ -228,19 +228,33 @@ class ManageMentors extends Component {
                   id="inviteMentorEmail"
                   placeholder="Email Address"
                 />
-                <Button key="back" onClick={this.handleCancel}>
+              </Form.Item>
+              <div
+                style={{
+                  position: 'absolute',
+                  right: '10pt',
+                  bottom: '10pt',
+                }}
+              >
+                <Button
+                  style={{ marginRight: '10px' }}
+                  size="medium"
+                  key="back"
+                  onClick={this.handleCancel}
+                >
                   cancel
                 </Button>
                 <Button
-                  key="submit"
-                  className="formSubmitButton"
+                  style={{ marginRight: '10px', marginBottom: '10px' }}
                   type="primary"
-                  htmltype="submit"
+                  htmlType="submit"
+                  className="formSubmitButton"
+                  size="medium"
                   // onClick={form.submit}
                 >
                   Send request
                 </Button>
-              </Form.Item>
+              </div>
             </Form>
           </Modal>
         </div>
