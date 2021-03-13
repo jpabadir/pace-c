@@ -19,7 +19,7 @@ afterEach(() => {
   container = null;
 });
 
-it('has a resend email button', () => {
+it('has a Generate iFrame Tag button', () => {
   render(<MentorFormAndEmbedder />, container);
   const button = document.getElementsByTagName('button')[0];
   expect(container.contains(button)).toBe(true);
