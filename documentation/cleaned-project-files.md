@@ -21,3 +21,8 @@ As of March 13, 2021:
 - MentorCompletion.js
 - MentorHome.js
 - MentorSuggested.js
+
+Components that could potentially benefit from additional comments:
+
+- App.js
+- helper-methods.js

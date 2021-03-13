@@ -211,7 +211,7 @@ class MenteeForm extends Component {
                 value={selectedItems}
                 onChange={this.handleSkillsChange}
               >
-                {/* Populates the multiselect with elements in the teachableSkills 
+                {/* Populates the multiselect with elements in the learnableSkills 
                 array */}
                 {learnableSkills.map((item) => (
                   <Option

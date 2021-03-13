@@ -1,8 +1,12 @@
+// Helper methods are imported into various files within the 'components' folder
 import { notification } from 'antd';
 import firebase from './firebase-init';
 
 const auth = firebase.auth();
 
+/* This function resends the verification email to the email address associated 
+with the user's account
+*/
 export function resendVerificationEmail(user) {
   user
     .sendEmailVerification()
@@ -13,6 +17,8 @@ export function resendVerificationEmail(user) {
     })
     .catch((error) => {
       console.log(error);
+      /* If the method is called too many times (1 minute must
+         elapse between each request) */
       switch (error.code) {
         case 'auth/too-many-requests':
           notification.error({
@@ -26,6 +32,7 @@ export function resendVerificationEmail(user) {
     });
 }
 
+// This method is called each time a Mentor and Admin user is created
 function mySendEmailVerification(user) {
   user
     .sendEmailVerification()
@@ -37,6 +44,8 @@ function mySendEmailVerification(user) {
     });
 }
 
+/* Creates a user with the credentials they provided in the database upon 
+successfull Mentor and Admin form submission */
 export function createUserInFirebase(email, password) {
   return new Promise((resolve) => {
     firebase
@@ -61,8 +70,9 @@ export function pushToDB(reference, objectToSave) {
   firebase.database().ref(reference).push(objectToSave);
 }
 
-/* TODO: reduce redundancy between two below methods 
-with a third method for the attributes in common */
+/* TODO: reduce redundancy between three below methods with a third method 
+for the attributes in common. Each method takes the information from their 
+respective forms and associates it to a field in the DB. */
 export function marshallMentorInfo(mentorFormValues, organization) {
   return {
     organization,
@@ -88,6 +98,17 @@ export function marshallMenteeInfo(menteeFormValues, organization) {
   };
 }
 
+export function marshallAdminInfo(adminFormValues) {
+  return {
+    organization: adminFormValues.organizationInput,
+    email: adminFormValues.emailInput,
+    name: adminFormValues.nameInput,
+    userType: 'admin',
+  };
+}
+
+/* If an authenticated email has been provided, a password resend link 
+will be sent */
 export function resetPassword(emailAddress) {
   auth
     .sendPasswordResetEmail(emailAddress)
@@ -113,6 +134,7 @@ export function resetPassword(emailAddress) {
     });
 }
 
+// Obtains the organization name for the logged in user
 export function fetchOrganizationName(loggedUserUid) {
   return new Promise((resolve) => {
     const userRef = firebase.database().ref('users/' + loggedUserUid);
@@ -137,7 +159,6 @@ export async function setOrganizationMentors(organizationName, context) {
         : [],
     activeMentors: [],
   };
-
   if (organizationInfo && organizationInfo.activeMentors) {
     organizationInfo.activeMentors.forEach((uid) => {
       firebase
@@ -187,14 +208,6 @@ export function fetchMenteesFullInfo(menteesIDs, context) {
   }
 }
 
-export function marshallAdminInfo(adminFormValues) {
-  return {
-    organization: adminFormValues.organizationInput,
-    email: adminFormValues.emailInput,
-    name: adminFormValues.nameInput,
-    userType: 'admin',
-  };
-}
 // This function was copied directly from: https://stackoverflow.com/questions/2970525/converting-any-string-into-camel-case.
 export function getCamelCase(inputString) {
   return inputString
@@ -204,6 +217,8 @@ export function getCamelCase(inputString) {
     .replace(/\s+/g, '');
 }
 
+/* Required for testing purposes since Jest uses jsdom to create a 
+browser environment */
 export function mockWindowMatchMedia() {
   Object.defineProperty(window, 'matchMedia', {
     writable: true,
