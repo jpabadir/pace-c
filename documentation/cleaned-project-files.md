@@ -16,3 +16,8 @@ As of March 13, 2021:
 - MenteeForm.js
 - MentorForm.js
 - MentorTutorial.js
+- ManageMentors.js
+- MentorAccepted.js
+- MentorCompletion.js
+- MentorHome.js
+- MentorSuggested.js

@@ -1,3 +1,6 @@
+/* The landing page is what the user is brought to when they access the website.
+This page contains basic information about the website.
+*/
 import React from 'react';
 import { IdcardTwoTone, LikeTwoTone, SmileTwoTone } from '@ant-design/icons';
 
