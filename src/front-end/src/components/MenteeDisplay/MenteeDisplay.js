@@ -1,10 +1,13 @@
-/* eslint-disable */
+/* MenteeDisplay.js is a card component to display Mentee information to 
+Mentors in the 'Suggested Mentees' and 'Accepted Mentees' tabs within 
+MentorHome.js
+*/
 import React, { Component } from 'react';
 import { Button, Card } from 'antd';
 import emailjs from 'emailjs-com';
-import fire from '../../firebase-init';
 import { UserOutlined, CheckOutlined, CloseOutlined } from '@ant-design/icons';
 import PropTypes from 'prop-types';
+import fire from '../../firebase-init';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class MenteeDisplay extends Component {
@@ -16,16 +19,15 @@ class MenteeDisplay extends Component {
     this.handleDeclineClick = this.handleDeclineClick.bind(this);
   }
 
+  // eslint-disable-next-line consistent-return
   renderEmail() {
-    if (this.props.email != '') {
+    if (this.props.email !== '') {
       return (
         <div>
           <strong>Email: </strong>
           {this.props.email}
         </div>
       );
-    } else {
-      return;
     }
   }
 

@@ -18,6 +18,9 @@ class Auth extends Component {
     this.authListener();
   }
 
+  /* Once a user logins in with valid credentials, we want to update 
+  the application's state, and obtain the user's type
+*/
   authListener() {
     fire.auth().onAuthStateChanged((user) => {
       if (user) {
@@ -38,6 +41,10 @@ class Auth extends Component {
       });
   }
 
+  /* After login (which triggers a state change), route the user according to 
+  the correct display depending on whether they've verified their email,
+  or if they're an admin or mentor.
+  */
   render() {
     if (this.state.user) {
       if (!this.state.user.emailVerified) {

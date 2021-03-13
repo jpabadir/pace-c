@@ -9,6 +9,7 @@ import ManageMentors from '../ManageMentors';
 import MenteeFormAndEmbedder from '../MenteeFormAndEmbedder/MenteeFormAndEmbedder';
 import MentorForm from '../MentorForm/MentorForm';
 
+// These are the tabs displayed to a logged in user of type 'admin'
 const { TabPane } = Tabs;
 
 // eslint-disable-next-line react/prefer-stateless-function
@@ -58,5 +59,4 @@ class AdminHome extends Component {
     );
   }
 }
-// exports:
 export default AdminHome;

@@ -12,11 +12,16 @@ class ForgotPassword extends Component {
     this.handleEmailChange = this.handleEmailChange.bind(this);
   }
 
+  /* calls the 'resetPasword' method in helper-methods.js once
+   the input field has been sucessfully submited
+  */
   localResetPassword() {
-    // TODO: implement some validation here
     resetPassword(this.state.email);
   }
 
+  /* Update the application's state with the string that the user provided 
+  so that the localResetPassword() method can perform validation on the input
+  */
   handleEmailChange(event) {
     this.setState({ email: event.target.value });
   }
@@ -29,7 +34,6 @@ class ForgotPassword extends Component {
           <Form.Item
             label="Email"
             name="emailInput"
-            // must have an input:
             rules={[
               {
                 required: true,
@@ -54,5 +58,4 @@ class ForgotPassword extends Component {
     );
   }
 }
-// exports:
 export default ForgotPassword;

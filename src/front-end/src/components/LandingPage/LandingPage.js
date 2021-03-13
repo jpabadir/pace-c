@@ -9,7 +9,6 @@ function LandingPage() {
           <font size="7">Welcome to Mentor Match!</font>
         </center>
       </h1>
-      {/* eslint-disable-next-line react/self-closing-comp */}
       <p>&nbsp;</p>
       <h2>
         <center>
@@ -29,7 +28,6 @@ function LandingPage() {
           </font>
         </center>
       </p>
-      {/* eslint-disable-next-line react/self-closing-comp */}
       <p>&nbsp;</p>
       <div className="container">
         <div className="column" id="adminLeft">
@@ -38,7 +36,6 @@ function LandingPage() {
               <i> As an Admin... </i>
             </center>
           </h1>
-          {/* Insert Image for Admin here. */}
           <center>
             <h3>
               <IdcardTwoTone className="landing-icon" />
@@ -60,7 +57,6 @@ function LandingPage() {
               <i> As a Mentor... </i>
             </center>
           </h1>
-          {/* Insert Image for Mentor here. */}
           <center>
             <h3>
               <LikeTwoTone className="landing-icon" />
@@ -82,7 +78,6 @@ function LandingPage() {
               <i> As a Mentee... </i>
             </center>
           </h1>
-          {/* Insert Image for Mentee here. */}
           <center>
             <h3>
               <SmileTwoTone className="landing-icon" />
