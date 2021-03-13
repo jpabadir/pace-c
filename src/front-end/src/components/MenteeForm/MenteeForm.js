@@ -12,6 +12,10 @@ import firebase from '../../firebase-init';
 import timeZones from '../../timeZones.json';
 
 const { Option } = Select;
+
+/* Hardcoded array of skills that the Mentee can select from the multiselect 
+dropdown
+*/
 const learnableSkills = [
   'Time management',
   'Leadership',
@@ -48,6 +52,9 @@ class MenteeForm extends Component {
     this.setState({ selectedItems: event });
   }
 
+  /* Once Mentees submit the Mentee form, an email is sent to the email address 
+  that they provided. 
+  */
   sendEmail() {
     const email = this.state.email;
     const name = this.state.name;
@@ -74,7 +81,7 @@ class MenteeForm extends Component {
       .equalTo(values.emailInput)
       .once('value')
       .then((snapshot) => {
-        // if exists, alert.
+        // If the email address exists in our DB, display a warning.
         if (snapshot.exists()) {
           notification.open({
             message: 'Warning',
@@ -83,7 +90,9 @@ class MenteeForm extends Component {
             icon: <WarningOutlined style={{ color: 'orangered' }} />,
           });
           this.setState({ isSubmitted: false });
-          // if not exists, create new account and jump to completion page.
+          /* If the user doesn't exist, create a new Mentee user in the DB
+          with the information provided, and jump to the completion page.
+          */
         } else {
           this.sendEmail(values);
           const search = this.props.location.search;
@@ -95,6 +104,9 @@ class MenteeForm extends Component {
             ),
           );
           this.setState({ isSubmitted: true });
+          /* Opens a new tab to direct the user from the website the MenteeForm 
+          is embedded on, to MentorMatch.
+          */
           setTimeout(() => window.open('http://localhost:3000/'), 3000);
         }
       });
@@ -117,18 +129,18 @@ class MenteeForm extends Component {
             onFinish={this.onFinish}
             onFinishFailed={this.onFinishFailed}
             autoComplete="off"
+            // Used to adjust the placement of labels
             labelCol={{ span: 3 }}
+            // Used to adjust the placement of inputs
             wrapperCol={{ span: 16 }}
             layout="horizontal"
             labelAlign="left"
           >
             <h1>Sign up as a Mentee</h1>
-
             <Form.Item
               label="Name"
               id="nameInput"
               name="nameInput"
-              // must have an input:
               rules={[{ required: true, message: 'Please enter your name' }]}
             >
               <Input
@@ -162,7 +174,6 @@ class MenteeForm extends Component {
             <Form.Item
               label="Time-zone"
               name="timeZone"
-              // must have an input:
               rules={[{ required: true, message: 'This field is required' }]}
             >
               <Select
@@ -170,6 +181,9 @@ class MenteeForm extends Component {
                 showSearch
                 disabled={this.props.isShowCaseMode}
               >
+                {/* The time-zone dropdown options are populated from the timeZones.json file,
+                which was imported on line 12
+                 */}
                 {timeZones.map((zone) => {
                   return (
                     <Option key={zone.id} value={getCamelCase(zone.id)}>
@@ -197,10 +211,13 @@ class MenteeForm extends Component {
                 value={selectedItems}
                 onChange={this.handleSkillsChange}
               >
+                {/* Populates the multiselect with elements in the teachableSkills 
+                array */}
                 {learnableSkills.map((item) => (
                   <Option
                     key={item}
                     value={getCamelCase(item)}
+                    // Limits the user to select 3 skills at most
                     disabled={
                       selectedItems.length >= 3 &&
                       !selectedItems.includes(getCamelCase(item))
@@ -242,5 +259,4 @@ class MenteeForm extends Component {
     return null;
   }
 }
-// exports:
 export default MenteeForm;

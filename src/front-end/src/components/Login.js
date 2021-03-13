@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Button, Input, Card, notification } from 'antd';
 import { MailTwoTone, LockTwoTone } from '@ant-design/icons';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import fire from '../firebase-init';
-import { resetPassword } from '../helper-methods';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class Login extends Component {
@@ -12,8 +10,6 @@ class Login extends Component {
     this.state = {
       email: '',
     };
-    this.localResetPassword = this.localResetPassword.bind(this);
-    this.handleEmailChange = this.handleEmailChange.bind(this);
     this.onLogin = this.onLogin.bind(this);
     this.onChange = this.onChange.bind(this);
   }
@@ -22,6 +18,7 @@ class Login extends Component {
     this.setState({ [values.target.name]: values.target.value });
   }
 
+  // Called when the 'Login' button has been clicked
   onLogin() {
     const userEmail = document.getElementById('useremail').value;
     const userPassword = document.getElementById('userpassword').value;
@@ -31,6 +28,9 @@ class Login extends Component {
         .auth()
         .signInWithEmailAndPassword(userEmail, userPassword)
         .then((userCredentials) => {
+          /* Passes the userID of the logged in user to update the 
+          back-end matching algorithm 
+          */
           fetch(
             `http://localhost:8020/match-with-mentees?uid=${userCredentials.user.uid}`,
           ).then((res) => {
@@ -62,15 +62,6 @@ class Login extends Component {
     }
   }
 
-  handleEmailChange(event) {
-    this.setState({ email: event.target.value });
-  }
-
-  localResetPassword() {
-    // TODO: implement some validation here
-    resetPassword(this.state.email);
-  }
-
   render() {
     return (
       <div className="Login">
@@ -88,7 +79,9 @@ class Login extends Component {
             onFinish={this.onFinish}
             onFinishFailed={this.onFinishFailed}
             autoComplete="off"
+            // Used to adjust the placement of labels
             labelCol={{ span: 5 }}
+            // Used to adjust the placement of inputs
             wrapperCol={{ span: 14 }}
             layout="horizontal"
             labelAlign="left"
@@ -129,13 +122,12 @@ class Login extends Component {
                 prefix={<LockTwoTone twoToneColor="#adc6ff" />}
               />
             </Form.Item>
-            <p>{/* used to space buttons */}</p>
             {/* button below should send the information from the page: */}
             {/* login to the database. To verify the account password/email */}
             <Button type="primary" htmlType="submit" onClick={this.onLogin}>
               Login
             </Button>
-            {/* link below should allow the user to reset password: */}
+            {/* link below redirects the user to reset their password: */}
             <p>
               <a
                 className="loginlink"
@@ -148,7 +140,7 @@ class Login extends Component {
             {/* below is used as a space between the two links */}
             &nbsp;
             <p>Don&apos;t have an account yet?</p>
-            {/* button below should link to the createaccount page: */}
+            {/* button redirects to the Admin/Organization form */}
             <Button type="primary" htmlType="button" href="/signup">
               Create Account
             </Button>
@@ -158,5 +150,4 @@ class Login extends Component {
     );
   }
 }
-// exports:
 export default Login;

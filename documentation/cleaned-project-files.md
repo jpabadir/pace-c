@@ -1,6 +1,6 @@
 This file contains a list of js files that have been commented with extraneous LOC removed.
 
-As of March 12, 2021:
+As of March 13, 2021:
 
 - App.css
 - AccountMenuItem.js
@@ -10,3 +10,9 @@ As of March 12, 2021:
 - LandingPage.js
 - MenteeCompletion.js
 - MenteeDisplay.js
+- EmailVerify.js
+- Login.js
+- AdminSignup.js
+- MenteeForm.js
+- MentorForm.js
+- MentorTutorial.js

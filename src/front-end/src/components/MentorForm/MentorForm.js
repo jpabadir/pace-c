@@ -12,6 +12,10 @@ import {
 } from '../../helper-methods';
 
 const { Option } = Select;
+
+/* Hardcoded array of skills that Mentors can select from the multiselect 
+dropdown
+*/
 const teachableSkills = [
   'Time management',
   'Leadership',
@@ -36,6 +40,7 @@ class MentorForm extends Component {
   onFinish(values) {
     createUserInFirebase(values.emailInput, values.password).then(
       (createUserAttempt) => {
+        // If the user exists in the database, display a warning
         if (createUserAttempt.code === 'auth/email-already-in-use') {
           notification.open({
             message: 'Warning',
@@ -98,7 +103,9 @@ class MentorForm extends Component {
             onFinish={this.onFinish}
             onFinishFailed={this.onFinishFailed}
             autoComplete="off"
+            // Used to adjust the placement of labels
             labelCol={{ span: 3 }}
+            // Used to adjust the placement of inputs
             wrapperCol={{ span: 16 }}
             layout="horizontal"
             labelAlign="left"
@@ -134,7 +141,6 @@ class MentorForm extends Component {
             <Form.Item
               label="Time-zone"
               name="timeZone"
-              // must have an input:
               rules={[
                 {
                   required: true,
@@ -147,6 +153,9 @@ class MentorForm extends Component {
                 showSearch
                 disabled={this.props.isShowCaseMode}
               >
+                {/* The time-zone dropdown options are populated from the timeZones.json file,
+                which was imported on line 5
+                 */}
                 {timeZones.map((zone) => {
                   return (
                     <Option key={zone.id} value={getCamelCase(zone.id)}>
@@ -170,6 +179,9 @@ class MentorForm extends Component {
               <Input
                 disabled={this.props.isShowCaseMode}
                 type="url"
+                /* Restricts the user to only providing a link in the specific 
+                format (i.e a Google Calendar)
+                */
                 pattern="https://calendar.google.com/calendar/.*"
                 placeholder="https://calendar.google.com/calendar/abcdefg"
               />
@@ -203,7 +215,11 @@ class MentorForm extends Component {
                 },
                 ({ getFieldValue }) => ({
                   validator(rule, value) {
+                    /* Checks whether the input entered in 'confirm password'
+                    is the same as what's in the 'password' field
+                    */
                     if (!value || getFieldValue('password') === value) {
+                      // If the inputs match, remove the red error text
                       return Promise.resolve();
                     }
                     return Promise.reject(
@@ -238,10 +254,13 @@ class MentorForm extends Component {
                 value={selectedItems}
                 onChange={this.handleSkillsChange}
               >
+                {/* Populates the multiselect with elements in the teachableSkills 
+                array */}
                 {teachableSkills.map((item) => (
                   <Option
                     key={item}
                     value={getCamelCase(item)}
+                    // Limits the user to select 3 skills at most
                     disabled={
                       selectedItems.length >= 3 &&
                       !selectedItems.includes(getCamelCase(item))
@@ -283,5 +302,4 @@ class MentorForm extends Component {
     return null;
   }
 }
-// exports:
 export default MentorForm;

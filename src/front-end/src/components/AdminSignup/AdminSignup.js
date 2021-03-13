@@ -55,7 +55,9 @@ class AdminSignup extends Component {
             onFinish={this.onFinish}
             onFinishFailed={this.onFinishFailed}
             autoComplete="off"
+            // Used to adjust the placement of labels
             labelCol={{ span: 3 }}
+            // Used to adjust the placement of inputs
             wrapperCol={{ span: 16 }}
             layout="horizontal"
             labelAlign="left"
@@ -128,9 +130,13 @@ class AdminSignup extends Component {
                   required: true,
                   message: 'Please confirm your password',
                 },
+                /* Checks whether the input entered in 'confirm password'
+                is the same as what's in the 'password' field
+                */
                 ({ getFieldValue }) => ({
                   validator(rule, value) {
                     if (!value || getFieldValue('password') === value) {
+                      // If the inputs match, remove the red error text
                       return Promise.resolve();
                     }
                     return Promise.reject(
