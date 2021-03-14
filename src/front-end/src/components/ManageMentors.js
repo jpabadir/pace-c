@@ -20,7 +20,6 @@ import {
 } from '../helper-methods';
 
 const { Title } = Typography;
-// const form = Form.useForm();
 
 // eslint-disable-next-line react/prefer-stateless-function
 class ManageMentors extends Component {
@@ -215,7 +214,6 @@ class ManageMentors extends Component {
                 id="inviteMentorEmail"
                 name="emailInput"
                 tooltip="To invite a user to join Mentor Match as a mentor that is associated with your organization, type their email address in the text box below and then click the 'request' button. The mentor will then receive a link via email which will take them to Mentor Match's Mentor Form."
-                // must have an input:
                 rules={[
                   {
                     required: true,
@@ -250,7 +248,6 @@ class ManageMentors extends Component {
                   htmlType="submit"
                   className="formSubmitButton"
                   size="medium"
-                  // onClick={form.submit}
                 >
                   Send request
                 </Button>
