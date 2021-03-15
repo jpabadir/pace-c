@@ -79,9 +79,9 @@ class Login extends Component {
             onFinish={this.onFinish}
             onFinishFailed={this.onFinishFailed}
             autoComplete="off"
-            // Used to adjust the placement of labels
+            // Adjust the placement of labels
             labelCol={{ span: 5 }}
-            // Used to adjust the placement of inputs
+            // Adjust the placement of inputs
             wrapperCol={{ span: 14 }}
             layout="horizontal"
             labelAlign="left"
@@ -90,7 +90,6 @@ class Login extends Component {
               type="email"
               label="Email"
               name="email"
-              // must have an input:
               rules={[
                 { required: true, message: 'Please enter your email address' },
               ]}
@@ -109,7 +108,6 @@ class Login extends Component {
               type="password"
               label="Password"
               name="password"
-              // must have an input:
               rules={[
                 { required: true, message: 'Please enter your password' },
               ]}
@@ -127,7 +125,6 @@ class Login extends Component {
             <Button type="primary" htmlType="submit" onClick={this.onLogin}>
               Login
             </Button>
-            {/* link below redirects the user to reset their password: */}
             <p>
               <a
                 className="loginlink"
@@ -140,7 +137,7 @@ class Login extends Component {
             {/* below is used as a space between the two links */}
             &nbsp;
             <p>Don&apos;t have an account yet?</p>
-            {/* button redirects to the Admin/Organization form */}
+            {/* button redirects to the Admin account creation form */}
             <Button type="primary" htmlType="button" href="/signup">
               Create Account
             </Button>

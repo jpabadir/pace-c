@@ -8,9 +8,10 @@ import { Button } from 'antd';
 import fire from '../firebase-init';
 import { resendVerificationEmail } from '../helper-methods';
 
-/* Obtains information about the logged in user and passes it 
+/**
+ Obtains information about the logged in user and passes it 
 to the helper method so that the verification email can be resent
-*/
+ */
 function resendVerifyEmail() {
   const myUser = fire.auth().currentUser;
   resendVerificationEmail(myUser);

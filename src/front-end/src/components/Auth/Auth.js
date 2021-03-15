@@ -20,7 +20,7 @@ class Auth extends Component {
 
   /* Once a user logins in with valid credentials, we want to update 
   the application's state, and obtain the user's type
-*/
+  */
   authListener() {
     fire.auth().onAuthStateChanged((user) => {
       if (user) {

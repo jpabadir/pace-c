@@ -30,7 +30,9 @@ class ManageMentors extends Component {
     });
   }
 
-  // Obtains the organization name of the admin currently logged in
+  /* Updates state with organization name of the admin currently logged in,
+  and the pending and accepted mentors of the admin's organization.
+  */
   componentDidMount() {
     this.authListener().then((uid) => {
       fetchOrganizationName(uid).then((organizationName) => {
@@ -40,10 +42,9 @@ class ManageMentors extends Component {
     });
   }
 
-  /* Once an Admin requests a Mentor by providing an email address,
+  /** Once an Admin requests a Mentor by providing an email address,
   that email address will be added to the 'pendingMentors' field 
-  under the Admin's organization in the database
-  */
+  under the Admin's organization in the database */
   addPendingMentorToDB(mentorEmailAddress) {
     const organizationRef = fire
       .database()
@@ -192,7 +193,6 @@ class ManageMentors extends Component {
                       label="Mentor's Email Address:"
                       id="inviteMentorEmail"
                       name="emailInput"
-                      // must have an input:
                       rules={[
                         {
                           required: true,

@@ -81,7 +81,7 @@ class MenteeForm extends Component {
       .equalTo(values.emailInput)
       .once('value')
       .then((snapshot) => {
-        // If the email address exists in our DB, display a warning.
+        // If the email address already exists in our DB, display a warning.
         if (snapshot.exists()) {
           notification.open({
             message: 'Warning',
@@ -129,9 +129,9 @@ class MenteeForm extends Component {
             onFinish={this.onFinish}
             onFinishFailed={this.onFinishFailed}
             autoComplete="off"
-            // Used to adjust the placement of labels
+            // Adjust the placement of labels
             labelCol={{ span: 3 }}
-            // Used to adjust the placement of inputs
+            // Adjust the placement of inputs
             wrapperCol={{ span: 16 }}
             layout="horizontal"
             labelAlign="left"
@@ -155,7 +155,6 @@ class MenteeForm extends Component {
               id="emailInput"
               type="email"
               name="emailInput"
-              // must have an input:
               rules={[
                 {
                   required: true,

@@ -18,10 +18,9 @@ class AdminSignup extends Component {
     this.onFinishFailed = this.onFinishFailed.bind(this);
   }
 
-  /* Once the form has been submitted, only create a user in the Fireabse
+  /** Once the form has been submitted, only create a user in the Fireabse
   database if the email provided isn't already in the database. If the email
-  has already been authenticated in the database, display a warning message.
-  */
+  has already been authenticated in the database, display a warning message. */
   onFinish(values) {
     createUserInFirebase(values.emailInput, values.password).then(
       (createUserAttempt) => {
@@ -55,9 +54,9 @@ class AdminSignup extends Component {
             onFinish={this.onFinish}
             onFinishFailed={this.onFinishFailed}
             autoComplete="off"
-            // Used to adjust the placement of labels
+            // Adjust the placement of labels
             labelCol={{ span: 3 }}
-            // Used to adjust the placement of inputs
+            // Adjust the placement of inputs
             wrapperCol={{ span: 16 }}
             layout="horizontal"
             labelAlign="left"
@@ -136,7 +135,7 @@ class AdminSignup extends Component {
                 ({ getFieldValue }) => ({
                   validator(rule, value) {
                     if (!value || getFieldValue('password') === value) {
-                      // If the inputs match, remove the red error text
+                      // Remove the red error text
                       return Promise.resolve();
                     }
                     return Promise.reject(

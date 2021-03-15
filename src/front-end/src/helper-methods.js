@@ -4,7 +4,7 @@ import firebase from './firebase-init';
 
 const auth = firebase.auth();
 
-/* This function resends the verification email to the email address associated 
+/* Resends the verification email to the email address associated 
 with the user's account
 */
 export function resendVerificationEmail(user) {
@@ -45,7 +45,7 @@ function mySendEmailVerification(user) {
 }
 
 /* Creates a user with the credentials they provided in the database upon 
-successfull Mentor and Admin form submission */
+successful Mentor or Admin form submission */
 export function createUserInFirebase(email, password) {
   return new Promise((resolve) => {
     firebase

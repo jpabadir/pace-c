@@ -103,9 +103,9 @@ class MentorForm extends Component {
             onFinish={this.onFinish}
             onFinishFailed={this.onFinishFailed}
             autoComplete="off"
-            // Used to adjust the placement of labels
+            // Adjust the placement of labels
             labelCol={{ span: 3 }}
-            // Used to adjust the placement of inputs
+            // Adjust the placement of inputs
             wrapperCol={{ span: 16 }}
             layout="horizontal"
             labelAlign="left"
@@ -124,7 +124,6 @@ class MentorForm extends Component {
             <Form.Item
               label="Email"
               name="emailInput"
-              // must have an input:
               rules={[
                 {
                   required: true,
@@ -219,7 +218,7 @@ class MentorForm extends Component {
                     is the same as what's in the 'password' field
                     */
                     if (!value || getFieldValue('password') === value) {
-                      // If the inputs match, remove the red error text
+                      // Remove the red error text
                       return Promise.resolve();
                     }
                     return Promise.reject(

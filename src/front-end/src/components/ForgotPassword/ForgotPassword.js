@@ -12,16 +12,14 @@ class ForgotPassword extends Component {
     this.handleEmailChange = this.handleEmailChange.bind(this);
   }
 
-  /* calls the 'resetPasword' method in helper-methods.js once
-   the input field has been sucessfully submited
-  */
+  /** Calls the 'resetPasword' method in helper-methods.js once
+   the form with the input field has been sucessfully submited */
   localResetPassword() {
     resetPassword(this.state.email);
   }
 
-  /* Update the application's state with the string that the user provided 
-  so that the localResetPassword() method can perform validation on the input
-  */
+  /** Update the application's state with the string that the user provided 
+  so that the localResetPassword() method can perform validation on the input */
   handleEmailChange(event) {
     this.setState({ email: event.target.value });
   }
