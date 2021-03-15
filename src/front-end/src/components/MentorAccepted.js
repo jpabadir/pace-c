@@ -21,6 +21,9 @@ class MentorAccepted extends Component {
     });
   }
 
+  /* Obtains the User Id for the logged in mentor, and gets information about 
+  the Mentees based on the Mentees' user ID in the 'acceptedMentees' field.
+  */
   componentDidMount() {
     this.authListener().then((uid) => {
       fetchMenteesIDs(uid, 'accepted').then((menteesIDs) => {
@@ -59,5 +62,4 @@ class MentorAccepted extends Component {
     );
   }
 }
-// exports:
 export default MentorAccepted;
