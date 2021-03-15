@@ -39,12 +39,6 @@ it('has a submit button', () => {
   expect(button.textContent).toBe('Submit');
 });
 
-test('renders the correct header text', () => {
-  render(<AdminSignup />, container);
-  const h1 = document.getElementsByTagName('h1');
-  expect(h1[0].textContent).toBe('Register your Organization on Mentor Match');
-});
-
 test('renders the correct input labels', () => {
   render(<AdminSignup />, container);
   const renderedLabels = document.getElementsByTagName('label');
