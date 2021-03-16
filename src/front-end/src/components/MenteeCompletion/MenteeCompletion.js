@@ -1,5 +1,9 @@
 import React from 'react';
 
+/* Once the Mentee Form has successfully been submitted on an embedded 
+organization's website, this is what the user will see.
+*/
+
 export default () => (
   <div className="MenteeCompletion">
     <p>

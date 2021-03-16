@@ -117,6 +117,9 @@ class MentorSuggested extends Component {
           return (
             <MenteeDisplay
               name={mentee.name}
+              /* For privacy, Mentee emails will only be displayed to Mentors 
+              once Mentors accept the request
+              */
               email=""
               skills={mentee.rankedSkills.join(', ')}
               description={mentee.description}
@@ -131,5 +134,4 @@ class MentorSuggested extends Component {
     );
   }
 }
-// exports:
 export default MentorSuggested;
