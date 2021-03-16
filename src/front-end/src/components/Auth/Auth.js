@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import fire from '../../firebase-init';
-import Login from '../Login';
+import Login from '../Login/Login';
 import MentorHome from '../MentorHome';
 import AdminHome from '../AdminHome/AdminHome';
 import EmailVerify from '../EmailVerify';
