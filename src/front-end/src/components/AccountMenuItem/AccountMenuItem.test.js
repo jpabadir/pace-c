@@ -5,7 +5,6 @@ import { mockWindowMatchMedia } from '../../helper-methods';
 import AccountMenuItem from './AccountMenuItem';
 
 let container = null;
-
 mockWindowMatchMedia();
 
 beforeEach(() => {
@@ -33,4 +32,14 @@ test('', () => {
   // const button = document.getElementsByTagName('button')[0];
   // expect(container.contains(button)).toBe(true);
   // expect(button.textContent).toBe('Confirm');
+});
+
+test('renders when no user logs in', () => {
+  render(
+    <Router>
+      <AccountMenuItem />
+    </Router>,
+    container,
+  );
+  expect(container.textContent).toBe('Login');
 });
