@@ -7,6 +7,7 @@ const email = require('./email-mentorform');
 const port = 8020;
 const app = express();
 app.use(cors());
+app.use(express.json());
 
 // Firebase initialization
 const firebaseConfig = {
@@ -122,6 +123,11 @@ app.get('/match-with-mentees', (req, res) => {
 app.get('/invite-mentor', (req, res) => {
   email.inviteMentor(req.query.emailAddress, req.query.organization);
   res.send('Invited mentor');
+});
+
+app.post('/accept-mentee', (req, res) => {
+  email.acceptMentee(req.body.menteeEmail, req.body);
+  res.send('Accepted mentee');
 });
 
 app.get('/remove-email', (req, res) => {
