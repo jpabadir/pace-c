@@ -1,3 +1,6 @@
+/* This component provides introductory information about the functionality of 
+the system to logged in Mentor users 
+*/
 import React, { Component } from 'react';
 import { CheckOutlined, CloseOutlined } from '@ant-design/icons';
 
@@ -53,5 +56,4 @@ class MentorTutorial extends Component {
     );
   }
 }
-// exports:
 export default MentorTutorial;

@@ -1,10 +1,13 @@
-/* eslint-disable */
+/* MenteeDisplay.js is a card component to display Mentee information to 
+Mentors in the 'Suggested Mentees' and 'Accepted Mentees' tabs within 
+MentorHome.js
+*/
 import React, { Component } from 'react';
 import { Button, Card } from 'antd';
 import emailjs from 'emailjs-com';
-import fire from '../../firebase-init';
 import { UserOutlined, CheckOutlined, CloseOutlined } from '@ant-design/icons';
 import PropTypes from 'prop-types';
+import fire from '../../firebase-init';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class MenteeDisplay extends Component {
@@ -16,13 +19,15 @@ class MenteeDisplay extends Component {
     this.handleDeclineClick = this.handleDeclineClick.bind(this);
   }
 
-  renderEmail(){
-    if(this.props.email !=""){
-      return <div><strong>Email: </strong>
-             {this.props.email}
-             </div>;
-    }else{
-      return;
+  // eslint-disable-next-line consistent-return
+  renderEmail() {
+    if (this.props.email !== '') {
+      return (
+        <div>
+          <strong>Email: </strong>
+          {this.props.email}
+        </div>
+      );
     }
   }
 
@@ -78,63 +83,53 @@ class MenteeDisplay extends Component {
 
   render() {
     return (
-      <div className="mentee-requests">
-        <div className="individual-mentee">
-          <>
-            <Card
-              hoverable
-              style={{ width: '350px' }}
-              title={[
-                <UserOutlined
-                  className="user-icon"
-                  key={this.props.menteeUid}
-                />,
-                this.props.name,
-              ]}
-              actions={[
-                this.props.request && (
-                  <tr id="request-row">
-                    <td>
-                      <Button
-                        type="text"
-                        onClick={this.handleAcceptClick}
-                        id="accept"
-                      >
-                        Accept
-                        <CheckOutlined className="check" />{' '}
-                      </Button>
-                      <Button
-                        type="text"
-                        onClick={this.handleDeclineClick}
-                        id="decline"
-                      >
-                        Decline
-                        <CloseOutlined className="close" />{' '}
-                      </Button>
-                    </td>
-                  </tr>
-                ),
-              ]}
-            >
-              <p>
-                    {this.renderEmail()}
-              </p>
-              <p>
-                <strong> Skills Seeking Mentorship: </strong>
-                {this.props.skills}
-              </p>
-              <p>
-                {' '}
-                <strong> Description: </strong> {this.props.description}
-              </p>
-            </Card>
-          </>
-        </div>
+      <div className="mentee-card">
+        <>
+          <Card
+            hoverable
+            style={{ width: '350px' }}
+            title={[
+              <UserOutlined className="user-icon" key={this.props.menteeUid} />,
+              this.props.name,
+            ]}
+            actions={[
+              this.props.request && (
+                <td id="mentee-request-row">
+                  <Button
+                    type="text"
+                    onClick={this.handleAcceptClick}
+                    id="accept"
+                  >
+                    Accept
+                    <CheckOutlined className="check" />{' '}
+                  </Button>
+                  <Button
+                    type="text"
+                    onClick={this.handleDeclineClick}
+                    id="decline"
+                  >
+                    Decline
+                    <CloseOutlined className="close" />{' '}
+                  </Button>
+                </td>
+              ),
+            ]}
+          >
+            <p>{this.renderEmail()}</p>
+            <p>
+              <strong> Skills Seeking Mentorship: </strong>
+              {this.props.skills}
+            </p>
+            <p>
+              {' '}
+              <strong> Description: </strong> {this.props.description}
+            </p>
+          </Card>
+        </>
       </div>
     );
   }
 }
-
 
 MenteeDisplay.propTypes = {
   menteeUid: PropTypes.string.isRequired,

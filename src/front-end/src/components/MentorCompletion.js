@@ -1,3 +1,7 @@
+/* Once the Mentor Form has successfully been submitted by a user through email 
+invite, this is what the user will see.
+*/
+
 import React from 'react';
 
 export default () => (
