@@ -50,7 +50,7 @@ function App() {
             color: '#A6ADB4',
           }}
         >
-          MentorMatch ©2020 Created by UBCO Students - Pace C
+          MentorMatch ©2021 Created by UBCO Students - Pace C
         </Footer>
       </Layout>
     </div>
