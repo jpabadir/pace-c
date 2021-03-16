@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from 'antd';
-import fire from '../firebase-init';
-import { resendVerificationEmail } from '../helper-methods';
+import fire from '../../firebase-init';
+import { resendVerificationEmail } from '../../helper-methods';
 
 function resendVerifyEmail() {
   const myUser = fire.auth().currentUser;

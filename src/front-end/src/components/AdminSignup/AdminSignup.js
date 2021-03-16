@@ -6,7 +6,7 @@ import {
   createUserInFirebase,
   marshallAdminInfo,
 } from '../../helper-methods';
-import EmailVerify from '../EmailVerify';
+import EmailVerify from '../EmailVerify/EmailVerify';
 
 class AdminSignup extends Component {
   constructor(props) {
