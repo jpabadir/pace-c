@@ -154,8 +154,3 @@ app.listen(port, () => {
 // ref.orderByChild("height").equalTo(25).on("child_added", function(snapshot) {
 //   console.log(snapshot.key);
 // });
-// Also, do we need to match based on ranked skills? Or just skills?
-// Also, we're gonna need to add a way to make sure mentors
-// are only matched with mentees
-// who signed up for this specific
-// organization (organization segregation when matching)
