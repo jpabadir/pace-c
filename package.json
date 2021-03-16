@@ -1,1 +1,8 @@
-{}
+{
+  "devDependencies": {
+    "jest": "^26.6.0"
+  },
+  "dependencies": {
+    "react-test-renderer": "^17.0.1"
+  }
+}

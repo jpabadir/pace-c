@@ -1,3 +1,6 @@
+/* This component allows admins to view current Mentors in their organization, 
+as well as request and view pending Mentors.
+*/
 import React, { Component } from 'react';
 import {
   Form,
@@ -57,6 +60,9 @@ class ManageMentors extends Component {
     });
   }
 
+  /* Updates state with organization name of the admin currently logged in,
+  and the pending and accepted mentors of the admin's organization.
+  */
   componentDidMount() {
     this.authListener().then((uid) => {
       fetchOrganizationName(uid).then((organizationName) => {
@@ -66,6 +72,9 @@ class ManageMentors extends Component {
     });
   }
 
+  /** Once an Admin requests a Mentor by providing an email address,
+  that email address will be added to the 'pendingMentors' field 
+  under the Admin's organization in the database */
   addPendingMentorToDB(mentorEmailAddress) {
     const organizationRef = fire
       .database()
@@ -82,9 +91,16 @@ class ManageMentors extends Component {
   }
 
   requestMentor(values) {
+    /* Once an admin provides an email address in the input field, the input is 
+    passed to the back-end along with the admin's organization in a GET request.
+    This is so that nodemailer can configure and send an email to the 
+    address provided, with a link to access the Mentor form associated with
+    the admin's organization.
+    */
     fetch(
       `http://localhost:8020/invite-mentor?emailAddress=${values.emailInput}&organization=${this.state.organizationName}`,
     ).then((res) => {
+      // If the request is successful, the admin is notified
       if (res.status === 200) {
         document.getElementById('inviteMentorEmail').value = '';
         notification.open({
@@ -126,6 +142,8 @@ class ManageMentors extends Component {
           >
             <p>
               <font size="4">
+                {/* Displays the email addresses of the users in the activeMentors field for that admin's organization
+                 */}
                 {Object.keys(this.state.organizationMentors).length !== 0 &&
                   this.state.organizationMentors.activeMentors && (
                     <center>
@@ -259,5 +277,4 @@ class ManageMentors extends Component {
     );
   }
 }
-// exports:
 export default ManageMentors;
