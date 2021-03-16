@@ -5,8 +5,8 @@ the functionality that a verified user can.
 */
 import React, { Component } from 'react';
 import { Button } from 'antd';
-import fire from '../firebase-init';
-import { resendVerificationEmail } from '../helper-methods';
+import fire from '../../firebase-init';
+import { resendVerificationEmail } from '../../helper-methods';
 
 /**
  Obtains information about the logged in user and passes it 
