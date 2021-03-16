@@ -2,7 +2,6 @@
 Mentors in the 'Suggested Mentees' and 'Accepted Mentees' tabs within 
 MentorHome.js
 */
-/* eslint-disable */ // To be removed!
 import React, { Component } from 'react';
 import { Button, Card } from 'antd';
 import { UserOutlined, CheckOutlined, CloseOutlined } from '@ant-design/icons';
