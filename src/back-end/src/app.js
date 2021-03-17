@@ -130,6 +130,11 @@ app.post('/accept-mentee', (req, res) => {
   res.send('Accepted mentee');
 });
 
+app.post('/welcome-mentee', (req, res) => {
+  email.welcomeMentee(req.body.email, req.body.name);
+  res.send('Welcomed mentee');
+});
+
 app.get('/remove-email', (req, res) => {
   const organizationRef = fire
     .database()

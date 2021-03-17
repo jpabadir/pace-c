@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Button, Input, Select, notification } from 'antd';
 import { WarningOutlined } from '@ant-design/icons';
-import emailjs from 'emailjs-com';
 import MenteeCompletion from '../MenteeCompletion/MenteeCompletion';
 import {
   marshallMenteeInfo,
@@ -58,17 +57,15 @@ class MenteeForm extends Component {
   sendEmail() {
     const email = this.state.email;
     const name = this.state.name;
-    const templateParams = {
-      nameInput: name,
-      emailInput: email,
-    };
+    const templateParams = { name, email };
 
-    emailjs.send(
-      'gmail',
-      'template_kfjkdm4',
-      templateParams,
-      'user_2x3ekfRvEqEttZg87VyrZ',
-    );
+    fetch('http://localhost:8020/welcome-mentee', {
+      method: 'post',
+      body: JSON.stringify(templateParams),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
     return false;
   }
 

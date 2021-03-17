@@ -76,4 +76,14 @@ module.exports = {
       )}.<br/><br/>Sincerely,<br/><br/>the MentorMatch team`,
     });
   },
+
+  welcomeMentee(menteeEmailAddress, menteeName) {
+    transporter.sendMail({
+      from: '"MentorMatch Team" <pacementormatch@gmail.com>',
+      to: menteeEmailAddress,
+      subject: 'A mentor accepted your mentorship request!',
+      text: `Hi ${menteeName}, \n\nThanks for signing up on MentorMatch! We are matching you with mentors who can teach you the skills you want to learn, and you'll receive an email as soon as one of them confirms they want to mentor you!\n\nSincerely,\n\nThe MentorMatch team`,
+      html: `Hi ${menteeName}, <br/><br/>Thanks for signing up on MentorMatch! We are matching you with mentors who can teach you the skills you want to learn, and you'll receive an email as soon as one of them confirms they want to mentor you!<br/><br/>Sincerely,<br/><br/>The MentorMatch team`,
+    });
+  },
 };
