@@ -19,7 +19,7 @@ afterEach(() => {
   container = null;
 });
 
-test('', () => {
+test('render the correct number of menuItems', () => {
   render(
     <Router>
       <AccountMenuItem />
