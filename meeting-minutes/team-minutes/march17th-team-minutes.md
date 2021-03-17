@@ -18,6 +18,7 @@
 
 ## Detailed Notes:
 ### General Notes:
+- Login, Auth, AccountMenuItem components need Firebase mocking in order to test these components
 - 
 
 ### Current Week Tasks:
@@ -25,16 +26,37 @@
 
 ## Action Items (Due by next sprint: March 24th):
 ### JP
+- Remove the notification upon login stating that the user's suggested mentees have been updated. Further clean and comment code.
+- Also, work on unit testing:
+  - MentorSuggested.js
+  - Mentoraccepted.js
+- Look into the back-end security of our website (https://github.com/public-apis/public-apis). Possibly also provide some ideas of how to configure Firebase so it's more secure (it's currently in test/developer mode. If this site it to be deployed, we should make a note of this for handover since in its current state, it'd be really insecure).
 - 
 
 ### Katrina
+- Update DFDs.
+- Update the Functional Requirements/User Stories, Description of MentorMatch, and User Groups (currently the final document has descriptions from the first milestone, and since then the client has adjusted the scope of certain aspects of the project so these sections should be updated).
+- Run client meeting
 - 
 
 ### Eric
+- Test the following componenents:
+  - MentorHome.js
+  - Mentorcompletion.js
+- Notes about testing: firebase auth mocking is not required, and test the presence of specific inner components (such as MentorTutorial in the mentor home) rather than the full components. You can do that by checkin that a specific string is present in the component.
 - 
 
 ### Aleks
+- Unit test the following components (Firebase auth mocking not expected):
+  - AdminHome
+  - ManageMentor
+  - Menteeformembedder: make a test that tests the iframe generation
+- Document features that the client will need to maintain (i.e Gmail account for Nodemailer, Firebase, etc). Also begin to note any limitations of the application (ex. the way we obtain individual's availability is external from our application through the Calendar link field on the Mentor form, this is currently restricted to Google Calendar links. Mentees and Mentors communicate via email, so if the application is to be developed in the future, Mentees would need an account if the application were to support internal communication)
+- Start organizing the presentation: go through the requirements and break them down into sections that we will be able to then assign to people to present. You don't need to actually make slides for anything, just "in-between" slides. Submit the google slides link in your PR.
+Requirements link: https://people.ok.ubc.ca/bowenhui/499/finalReport.html
 - 
+
+
 
 
 
