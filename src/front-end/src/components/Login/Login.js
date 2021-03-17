@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Button, Input, Card, notification } from 'antd';
 import { MailTwoTone, LockTwoTone } from '@ant-design/icons';
-import fire from '../firebase-init';
+import fire from '../../firebase-init';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class Login extends Component {
