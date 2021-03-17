@@ -1,8 +1,17 @@
+/* This component is only displayed if the user hasn't verified their account.
+This is to ensure that only valid email addresses are used for account 
+creation. If a fraudulent email was used, the user won't be able to access
+the functionality that a verified user can.
+*/
 import React, { Component } from 'react';
 import { Button } from 'antd';
-import fire from '../firebase-init';
-import { resendVerificationEmail } from '../helper-methods';
+import fire from '../../firebase-init';
+import { resendVerificationEmail } from '../../helper-methods';
 
+/**
+ Obtains information about the logged in user and passes it 
+to the helper method so that the verification email can be resent
+ */
 function resendVerifyEmail() {
   const myUser = fire.auth().currentUser;
   resendVerificationEmail(myUser);
@@ -52,5 +61,4 @@ class EmailVerify extends Component {
     );
   }
 }
-// exports:
 export default EmailVerify;

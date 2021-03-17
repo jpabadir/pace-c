@@ -1,11 +1,10 @@
-/* eslint-disable */
 import SubMenu from 'antd/lib/menu/SubMenu';
 import { Menu } from 'antd';
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import fire from '../../firebase-init';
-// import styles from  './account-menu-styles';
 
+// Updates the header text from 'Login' to a subset of the user's email
 function AccountMenuItem() {
   const [currentUserEmail, setCurrentUserEmail] = useState(null);
   fire.auth().onAuthStateChanged((user) => {

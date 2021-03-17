@@ -6,7 +6,7 @@ import {
   createUserInFirebase,
   marshallAdminInfo,
 } from '../../helper-methods';
-import EmailVerify from '../EmailVerify';
+import EmailVerify from '../EmailVerify/EmailVerify';
 
 class AdminSignup extends Component {
   constructor(props) {
@@ -18,6 +18,9 @@ class AdminSignup extends Component {
     this.onFinishFailed = this.onFinishFailed.bind(this);
   }
 
+  /** Once the form has been submitted, only create a user in the Fireabse
+  database if the email provided isn't already in the database. If the email
+  has already been authenticated in the database, display a warning message. */
   onFinish(values) {
     createUserInFirebase(values.emailInput, values.password).then(
       (createUserAttempt) => {
@@ -51,7 +54,9 @@ class AdminSignup extends Component {
             onFinish={this.onFinish}
             onFinishFailed={this.onFinishFailed}
             autoComplete="off"
+            // Adjust the placement of labels
             labelCol={{ span: 3 }}
+            // Adjust the placement of inputs
             wrapperCol={{ span: 16 }}
             layout="horizontal"
             labelAlign="left"
@@ -75,7 +80,6 @@ class AdminSignup extends Component {
               label="Name"
               id="nameInput"
               name="nameInput"
-              // must have an input:
               rules={[{ required: true, message: 'Please enter your name' }]}
             >
               <Input
@@ -89,7 +93,6 @@ class AdminSignup extends Component {
               id="emailInput"
               type="email"
               name="emailInput"
-              // must have an input:
               rules={[
                 {
                   required: true,
@@ -126,9 +129,13 @@ class AdminSignup extends Component {
                   required: true,
                   message: 'Please confirm your password',
                 },
+                /* Checks whether the input entered in 'confirm password'
+                is the same as what's in the 'password' field
+                */
                 ({ getFieldValue }) => ({
                   validator(rule, value) {
                     if (!value || getFieldValue('password') === value) {
+                      // Remove the red error text
                       return Promise.resolve();
                     }
                     return Promise.reject(
