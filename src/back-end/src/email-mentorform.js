@@ -51,7 +51,7 @@ module.exports = {
         parameters.mentorName
       }:\n\nHe or she left the following description about themselves for you to read:\n\n${
         parameters.mentorDescription
-      }\n\nTheir email address is email address is ${
+      }\n\nTheir email address is ${
         parameters.mentorEmail
       }. You can view this mentor's availability on the following calendar: ${
         parameters.mentorAvailability
