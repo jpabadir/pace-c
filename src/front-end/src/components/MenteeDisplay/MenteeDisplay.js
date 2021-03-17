@@ -4,7 +4,6 @@ MentorHome.js
 */
 import React, { Component } from 'react';
 import { Button, Card } from 'antd';
-import emailjs from 'emailjs-com';
 import { UserOutlined, CheckOutlined, CloseOutlined } from '@ant-design/icons';
 import PropTypes from 'prop-types';
 import fire from '../../firebase-init';
@@ -68,12 +67,13 @@ class MenteeDisplay extends Component {
 
     // Send email
     Promise.all([menteePromise, mentorPromise]).then(() => {
-      emailjs.send(
-        'gmail',
-        'template_bbajqvj',
-        templateParams,
-        'user_2x3ekfRvEqEttZg87VyrZ',
-      );
+      fetch('http://localhost:8020/accept-mentee', {
+        method: 'post',
+        body: JSON.stringify(templateParams),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
     });
   }
 

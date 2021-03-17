@@ -7,6 +7,7 @@ const email = require('./email-mentorform');
 const port = 8020;
 const app = express();
 app.use(cors());
+app.use(express.json());
 
 // Firebase initialization
 const firebaseConfig = {
@@ -124,6 +125,16 @@ app.get('/invite-mentor', (req, res) => {
   res.send('Invited mentor');
 });
 
+app.post('/accept-mentee', (req, res) => {
+  email.acceptMentee(req.body.menteeEmail, req.body);
+  res.send('Accepted mentee');
+});
+
+app.post('/welcome-mentee', (req, res) => {
+  email.welcomeMentee(req.body.email, req.body.name);
+  res.send('Welcomed mentee');
+});
+
 app.get('/remove-email', (req, res) => {
   const organizationRef = fire
     .database()
@@ -154,8 +165,3 @@ app.listen(port, () => {
 // ref.orderByChild("height").equalTo(25).on("child_added", function(snapshot) {
 //   console.log(snapshot.key);
 // });
-// Also, do we need to match based on ranked skills? Or just skills?
-// Also, we're gonna need to add a way to make sure mentors
-// are only matched with mentees
-// who signed up for this specific
-// organization (organization segregation when matching)
