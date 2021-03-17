@@ -45,9 +45,8 @@ test('render the body of the card correctly', () => {
   for (let i = 0; i < p.length; i += 1) {
     expect(container.contains(p[i])).toBe(true);
   }
-  expect(p[0].textContent).toBe('');
-  expect(p[1].textContent).toBe(' Skills Seeking Mentorship: ');
-  expect(p[2].textContent).toBe('  Description:  ');
+  expect(p[0].textContent).toBe(' Skills Seeking Mentorship: ');
+  expect(p[1].textContent).toBe('  Description:  ');
 });
 
 test('render the actions of the card correctly', () => {
@@ -61,4 +60,41 @@ test('render the card actions without the accept & decline buttons if not a requ
   const actionsContainer = document.querySelector('.ant-card-actions');
   const spanTag = actionsContainer.getElementsByTagName('span');
   expect(spanTag.textContent).toBe(undefined);
+});
+
+test('render no email fields when input suggested mentees', () => {
+  const suggested = {
+    menteeUid: '',
+    name: 'Eric',
+    // this field is set empty because in suggestedMentee.js it is set empty as well.
+    email: '',
+    skills: 'Time management',
+    description: "Hi I'm Eric",
+    request: false,
+    acceptMentee: mockFunction,
+    declineMentee: mockFunction,
+  };
+  render(<MenteeDisplay {...suggested} />, container);
+  const email = document.getElementsByTagName('div')[0];
+  expect(email.textContent).toBe(
+    "Eric Skills Seeking Mentorship: Time management  Description:  Hi I'm Eric",
+  );
+});
+
+test('render email fields when input accepted mentees', () => {
+  const accepted = {
+    menteeUid: '',
+    name: 'Bruce',
+    email: 'wrc9817@gmail.com',
+    skills: 'superPower',
+    description: "Hi I'm Bruce",
+    request: false,
+    acceptMentee: mockFunction,
+    declineMentee: mockFunction,
+  };
+  render(<MenteeDisplay {...accepted} />, container);
+  const email = document.getElementsByTagName('div')[0];
+  expect(email.textContent).toBe(
+    "BruceEmail: wrc9817@gmail.com Skills Seeking Mentorship: superPower  Description:  Hi I'm Bruce",
+  );
 });

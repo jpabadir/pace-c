@@ -2,11 +2,9 @@ import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { mockWindowMatchMedia } from '../../helper-methods';
-
-import Auth from './Auth';
+import AccountMenuItem from './AccountMenuItem';
 
 let container = null;
-
 mockWindowMatchMedia();
 
 beforeEach(() => {
@@ -21,14 +19,23 @@ afterEach(() => {
   container = null;
 });
 
-it('renders without crashing', () => {
+test('render the correct number of menuItems', () => {
   render(
     <Router>
-      <Auth />
+      <AccountMenuItem />
     </Router>,
     container,
   );
-  expect(container.textContent).toBe(
-    "Login to access the Mentorship PortalEmailPasswordLoginForgot your password?  Don't have an account yet?Create Account",
+  const menuItem = document.getElementsByTagName('a');
+  expect(menuItem.length).toBe(1);
+});
+
+test('renders without crashing', () => {
+  render(
+    <Router>
+      <AccountMenuItem />
+    </Router>,
+    container,
   );
+  expect(container.textContent).toBe('Login');
 });
