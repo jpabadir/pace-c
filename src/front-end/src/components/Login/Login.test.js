@@ -42,7 +42,7 @@ test('renders the login button correctly', () => {
 
 test('renders the create Account button correctly', () => {
   render(<Login />, container);
-  const button = document.getElementsByTagName('p')[2].nextElementSibling;
+  const button = document.getElementsByTagName('p')[1].nextElementSibling;
   expect(container.contains(button)).toBe(true);
   expect(button.textContent).toBe('Create Account');
   expect(button.href).toBe('http://localhost/signup');
