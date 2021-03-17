@@ -1,11 +1,28 @@
+/* This component allows admins to view current Mentors in their organization, 
+as well as request and view pending Mentors.
+*/
 import React, { Component } from 'react';
-import { Form, Input, Button, notification } from 'antd';
-import { SmileOutlined } from '@ant-design/icons';
+import {
+  Form,
+  Input,
+  Button,
+  notification,
+  Card,
+  Typography,
+  Modal,
+} from 'antd';
+import {
+  SmileOutlined,
+  UserSwitchOutlined,
+  UserAddOutlined,
+} from '@ant-design/icons';
 import fire from '../firebase-init';
 import {
   fetchOrganizationName,
   setOrganizationMentors,
 } from '../helper-methods';
+
+const { Title } = Typography;
 
 // eslint-disable-next-line react/prefer-stateless-function
 class ManageMentors extends Component {
@@ -14,9 +31,25 @@ class ManageMentors extends Component {
     this.state = {
       organizationMentors: {},
       organizationName: '',
+      visible: false,
     };
     this.requestMentor = this.requestMentor.bind(this);
     this.addPendingMentorToDB = this.addPendingMentorToDB.bind(this);
+    this.showModal = this.showModal.bind(this);
+    this.handleCancel = this.handleCancel.bind(this);
+  }
+
+  showModal() {
+    this.setState({
+      visible: true,
+    });
+  }
+
+  handleCancel(e) {
+    console.log(e);
+    this.setState({
+      visible: false,
+    });
   }
 
   authListener() {
@@ -27,6 +60,9 @@ class ManageMentors extends Component {
     });
   }
 
+  /* Updates state with organization name of the admin currently logged in,
+  and the pending and accepted mentors of the admin's organization.
+  */
   componentDidMount() {
     this.authListener().then((uid) => {
       fetchOrganizationName(uid).then((organizationName) => {
@@ -36,6 +72,9 @@ class ManageMentors extends Component {
     });
   }
 
+  /** Once an Admin requests a Mentor by providing an email address,
+  that email address will be added to the 'pendingMentors' field 
+  under the Admin's organization in the database */
   addPendingMentorToDB(mentorEmailAddress) {
     const organizationRef = fire
       .database()
@@ -52,9 +91,16 @@ class ManageMentors extends Component {
   }
 
   requestMentor(values) {
+    /* Once an admin provides an email address in the input field, the input is 
+    passed to the back-end along with the admin's organization in a GET request.
+    This is so that nodemailer can configure and send an email to the 
+    address provided, with a link to access the Mentor form associated with
+    the admin's organization.
+    */
     fetch(
       `http://localhost:8020/invite-mentor?emailAddress=${values.emailInput}&organization=${this.state.organizationName}`,
     ).then((res) => {
+      // If the request is successful, the admin is notified
       if (res.status === 200) {
         document.getElementById('inviteMentorEmail').value = '';
         notification.open({
@@ -89,16 +135,15 @@ class ManageMentors extends Component {
           </h1>
           <br />
           <br />
-          <div id="CurrentActiveMentors">
-            <h1>
-              <center>
-                <i>
-                  <font size="5"> Current/Active Mentors: </font>
-                </i>
-              </center>
-            </h1>
+          <Card
+            style={{ fontSize: '30px', backgroundColor: 'rgb(250, 250, 250)' }}
+            title={<Title level={3}>Current/Active Mentors:</Title>}
+            id="CurrentActiveMentors"
+          >
             <p>
               <font size="4">
+                {/* Displays the email addresses of the users in the activeMentors field for that admin's organization
+                 */}
                 {Object.keys(this.state.organizationMentors).length !== 0 &&
                   this.state.organizationMentors.activeMentors && (
                     <center>
@@ -106,7 +151,18 @@ class ManageMentors extends Component {
                         (mentor) => {
                           return (
                             <i>
-                              {mentor}
+                              <Card
+                                hoverable
+                                style={{
+                                  width: '300px',
+                                  textAlign: 'left',
+                                  fontSize: '18px',
+                                }}
+                              >
+                                <UserAddOutlined style={{ fontSize: '300%' }} />
+                                {'  '}
+                                {mentor}
+                              </Card>
                               <br />
                             </i>
                           );
@@ -116,17 +172,14 @@ class ManageMentors extends Component {
                   )}
               </font>
             </p>
-          </div>
-          <div id="InvitedPendingMentors">
-            <h1>
-              <center>
-                <i>
-                  <font size="5"> Invited/Pending Mentors: </font>
-                </i>
-              </center>
-            </h1>
+          </Card>
+          <Card
+            style={{ fontSize: '30px', backgroundColor: 'rgb(250, 250, 250)' }}
+            title={<Title level={3}>Invited/Pending Mentors:</Title>}
+            id="InvitedPendingMentors"
+          >
             <p>
-              <font size="4">
+              <font size="2">
                 {Object.keys(this.state.organizationMentors).length !== 0 &&
                   this.state.organizationMentors.pendingMentors && (
                     <center>
@@ -134,7 +187,20 @@ class ManageMentors extends Component {
                         (mentor) => {
                           return (
                             <i>
-                              {mentor}
+                              <Card
+                                hoverable
+                                style={{
+                                  width: '300px',
+                                  textAlign: 'left',
+                                  fontSize: '18px',
+                                }}
+                              >
+                                <UserSwitchOutlined
+                                  style={{ fontSize: '200%' }}
+                                />
+                                {'  '}
+                                {mentor}
+                              </Card>
                               <br />
                             </i>
                           );
@@ -144,66 +210,71 @@ class ManageMentors extends Component {
                   )}
               </font>
             </p>
-          </div>
-          <div id="InviteTab">
-            <h1>
-              <center>
-                <i>
-                  <font size="5"> Invite A Mentor! </font>
-                </i>
-              </center>
-            </h1>
-            <p>
-              <font size="4">
-                <center>
-                  <i> How To Invite A Mentor: </i>
-                  <br />
-                  To invite a user to join Mentor Match as a mentor that is
-                  associated with your organization, type their email address in
-                  the text box below and then click the &apos;request&apos;
-                  button.
-                  <br />
-                  <br />
-                  The mentor will then receive a link via email which will take
-                  them to Mentor Match&apos;s Mentor Form.
-                  <br />
-                  <br />
-                  <Form onFinish={this.requestMentor}>
-                    <Form.Item
-                      label="Mentor's Email Address:"
-                      id="inviteMentorEmail"
-                      name="emailInput"
-                      // must have an input:
-                      rules={[
-                        {
-                          required: true,
-                          message: "Please enter the mentor's email",
-                        },
-                      ]}
-                    >
-                      <Input
-                        type="email"
-                        id="inviteMentorEmail"
-                        placeholder="Email Address"
-                      />
-                    </Form.Item>
-                    <Button
-                      type="primary"
-                      htmlType="submit"
-                      className="formSubmitButton"
-                      size="large"
-                    >
-                      Request Mentor
-                    </Button>
-                  </Form>
-                </center>
-              </font>
-            </p>
-          </div>
+          </Card>
+          <Button
+            type="primary"
+            htmlType="submit"
+            size="large"
+            onClick={this.showModal}
+          >
+            Request a Mentor
+          </Button>
+          <Modal
+            title="How To Invite A Mentor"
+            centered
+            visible={this.state.visible}
+            onCancel={this.handleCancel}
+            footer=""
+          >
+            <Form style={{ height: '85px' }} onFinish={this.requestMentor}>
+              <Form.Item
+                label="Mentor's Email Address:"
+                id="inviteMentorEmail"
+                name="emailInput"
+                tooltip="To invite a user to join Mentor Match as a mentor that is associated with your organization, type their email address in the text box below and then click the 'request' button. The mentor will then receive a link via email which will take them to Mentor Match's Mentor Form."
+                rules={[
+                  {
+                    required: true,
+                    message: "Please enter the mentor's email",
+                  },
+                ]}
+              >
+                <Input
+                  type="email"
+                  id="inviteMentorEmail"
+                  placeholder="Email Address"
+                />
+              </Form.Item>
+              <div
+                style={{
+                  position: 'absolute',
+                  right: '10pt',
+                  bottom: '10pt',
+                }}
+              >
+                <Button
+                  style={{ marginRight: '10px' }}
+                  size="medium"
+                  key="back"
+                  onClick={this.handleCancel}
+                >
+                  cancel
+                </Button>
+                <Button
+                  style={{ marginRight: '10px', marginBottom: '10px' }}
+                  type="primary"
+                  htmlType="submit"
+                  className="formSubmitButton"
+                  size="medium"
+                >
+                  Send request
+                </Button>
+              </div>
+            </Form>
+          </Modal>
         </div>
       </div>
     );
   }
 }
-// exports:
 export default ManageMentors;

@@ -1,3 +1,6 @@
+/* The landing page is what the user is brought to when they access the website.
+This page contains basic information about the website.
+*/
 import React from 'react';
 import { IdcardTwoTone, LikeTwoTone, SmileTwoTone } from '@ant-design/icons';
 
@@ -9,7 +12,6 @@ function LandingPage() {
           <font size="7">Welcome to Mentor Match!</font>
         </center>
       </h1>
-      {/* eslint-disable-next-line react/self-closing-comp */}
       <p>&nbsp;</p>
       <h2>
         <center>
@@ -29,16 +31,14 @@ function LandingPage() {
           </font>
         </center>
       </p>
-      {/* eslint-disable-next-line react/self-closing-comp */}
       <p>&nbsp;</p>
       <div className="container">
-        <div id="adminLeft">
+        <div className="column" id="adminLeft">
           <h1>
             <center>
               <i> As an Admin... </i>
             </center>
           </h1>
-          {/* Insert Image for Admin here. */}
           <center>
             <h3>
               <IdcardTwoTone className="landing-icon" />
@@ -54,13 +54,12 @@ function LandingPage() {
             </font>
           </p>
         </div>
-        <div id="mentorMiddle">
+        <div className="column" id="mentorMiddle">
           <h1>
             <center>
               <i> As a Mentor... </i>
             </center>
           </h1>
-          {/* Insert Image for Mentor here. */}
           <center>
             <h3>
               <LikeTwoTone className="landing-icon" />
@@ -76,13 +75,12 @@ function LandingPage() {
             </font>
           </p>
         </div>
-        <div id="menteeRight">
+        <div className="column" id="menteeRight">
           <h1>
             <center>
               <i> As a Mentee... </i>
             </center>
           </h1>
-          {/* Insert Image for Mentee here. */}
           <center>
             <h3>
               <SmileTwoTone className="landing-icon" />
