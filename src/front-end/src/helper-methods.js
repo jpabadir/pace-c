@@ -1,5 +1,4 @@
 // Helper methods are imported into various files within the 'components' folder
-// REMOVE ME
 import { notification } from 'antd';
 import firebase from './firebase-init';
 
