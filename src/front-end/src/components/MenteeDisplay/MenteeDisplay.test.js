@@ -69,14 +69,16 @@ test('render no email fields when input suggested mentees', () => {
     // this field is set empty because in suggestedMentee.js it is set empty as well.
     email: '',
     skills: 'Time management',
-    description: 'Hi I\'m Eric',
+    description: "Hi I'm Eric",
     request: false,
     acceptMentee: mockFunction,
     declineMentee: mockFunction,
   };
   render(<MenteeDisplay {...suggested} />, container);
   const email = document.getElementsByTagName('div')[0];
-  expect(email.textContent).toBe('Eric Skills Seeking Mentorship: Time management  Description:  Hi I\'m Eric');
+  expect(email.textContent).toBe(
+    "Eric Skills Seeking Mentorship: Time management  Description:  Hi I'm Eric",
+  );
 });
 
 test('render email fields when input accepted mentees', () => {
@@ -85,12 +87,14 @@ test('render email fields when input accepted mentees', () => {
     name: 'Bruce',
     email: 'wrc9817@gmail.com',
     skills: 'superPower',
-    description: 'Hi I\'m Bruce',
+    description: "Hi I'm Bruce",
     request: false,
     acceptMentee: mockFunction,
     declineMentee: mockFunction,
   };
   render(<MenteeDisplay {...accepted} />, container);
   const email = document.getElementsByTagName('div')[0];
-  expect(email.textContent).toBe('BruceEmail: wrc9817@gmail.com Skills Seeking Mentorship: superPower  Description:  Hi I\'m Bruce');
+  expect(email.textContent).toBe(
+    "BruceEmail: wrc9817@gmail.com Skills Seeking Mentorship: superPower  Description:  Hi I'm Bruce",
+  );
 });
