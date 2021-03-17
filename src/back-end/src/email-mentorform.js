@@ -67,7 +67,7 @@ module.exports = {
         parameters.mentorName
       }:<br/><br/>He or she left the following description about themselves for you to read:<br/><br/>${
         parameters.mentorDescription
-      }<br/><br/>Their email address is email address is ${
+      }<br/><br/>Their email address is ${
         parameters.mentorEmail
       }. You can view this mentor's availability on the following calendar: ${
         parameters.mentorAvailability
@@ -81,7 +81,7 @@ module.exports = {
     transporter.sendMail({
       from: '"MentorMatch Team" <pacementormatch@gmail.com>',
       to: menteeEmailAddress,
-      subject: 'A mentor accepted your mentorship request!',
+      subject: 'Welcome to MentorMatch!',
       text: `Hi ${menteeName}, \n\nThanks for signing up on MentorMatch! We are matching you with mentors who can teach you the skills you want to learn, and you'll receive an email as soon as one of them confirms they want to mentor you!\n\nSincerely,\n\nThe MentorMatch team`,
       html: `Hi ${menteeName}, <br/><br/>Thanks for signing up on MentorMatch! We are matching you with mentors who can teach you the skills you want to learn, and you'll receive an email as soon as one of them confirms they want to mentor you!<br/><br/>Sincerely,<br/><br/>The MentorMatch team`,
     });
