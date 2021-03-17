@@ -26,15 +26,11 @@ test('', () => {
     </Router>,
     container,
   );
-  // const menuItem = document.getElementsByClassName('ant-menu-item');
   const menuItem = document.getElementsByTagName('a');
   expect(menuItem.length).toBe(1);
-  // const button = document.getElementsByTagName('button')[0];
-  // expect(container.contains(button)).toBe(true);
-  // expect(button.textContent).toBe('Confirm');
 });
 
-test('renders when no user logs in', () => {
+test('renders without crashing',()=>{
   render(
     <Router>
       <AccountMenuItem />
