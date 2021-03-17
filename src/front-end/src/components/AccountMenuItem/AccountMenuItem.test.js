@@ -30,7 +30,7 @@ test('', () => {
   expect(menuItem.length).toBe(1);
 });
 
-test('renders without crashing',()=>{
+test('renders without crashing', () => {
   render(
     <Router>
       <AccountMenuItem />

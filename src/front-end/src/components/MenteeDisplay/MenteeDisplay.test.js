@@ -45,9 +45,8 @@ test('render the body of the card correctly', () => {
   for (let i = 0; i < p.length; i += 1) {
     expect(container.contains(p[i])).toBe(true);
   }
-  expect(p[0].textContent).toBe('');
-  expect(p[1].textContent).toBe(' Skills Seeking Mentorship: ');
-  expect(p[2].textContent).toBe('  Description:  ');
+  expect(p[0].textContent).toBe(' Skills Seeking Mentorship: ');
+  expect(p[1].textContent).toBe('  Description:  ');
 });
 
 test('render the actions of the card correctly', () => {
@@ -66,36 +65,32 @@ test('render the card actions without the accept & decline buttons if not a requ
 test('render no email fields when input suggested mentees', () => {
   const suggested = {
     menteeUid: '',
-    name: '',
+    name: 'Eric',
+    // this field is set empty because in suggestedMentee.js it is set empty as well.
     email: '',
-    skills: '',
-    description: '',
+    skills: 'Time management',
+    description: 'Hi I\'m Eric',
     request: false,
     acceptMentee: mockFunction,
     declineMentee: mockFunction,
   };
   render(<MenteeDisplay {...suggested} />, container);
-  const email = document.getElementsByTagName('p')[0];
-  // this test should past after PR471 merged
-  expect(email.textContent === ' Email: ').toBe(false);
+  const email = document.getElementsByTagName('div')[0];
+  expect(email.textContent).toBe('Eric Skills Seeking Mentorship: Time management  Description:  Hi I\'m Eric');
 });
 
 test('render email fields when input accepted mentees', () => {
   const accepted = {
     menteeUid: '',
-    name: '',
+    name: 'Bruce',
     email: 'wrc9817@gmail.com',
-    skills: '',
-    description: '',
+    skills: 'superPower',
+    description: 'Hi I\'m Bruce',
     request: false,
     acceptMentee: mockFunction,
     declineMentee: mockFunction,
   };
   render(<MenteeDisplay {...accepted} />, container);
-  const email = document.getElementsByTagName('p')[0];
-  expect(email.textContent === 'Email: wrc9817@gmail.com').toBe(true);
-});
-
-test('placeholder test', () => {
-  expect(true).toBe(true);
+  const email = document.getElementsByTagName('div')[0];
+  expect(email.textContent).toBe('BruceEmail: wrc9817@gmail.com Skills Seeking Mentorship: superPower  Description:  Hi I\'m Bruce');
 });

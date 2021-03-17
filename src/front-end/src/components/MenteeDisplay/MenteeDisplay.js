@@ -23,10 +23,10 @@ class MenteeDisplay extends Component {
   renderEmail() {
     if (this.props.email !== '') {
       return (
-        <div>
+        <p>
           <strong>Email: </strong>
           {this.props.email}
-        </div>
+        </p>
       );
     }
   }
@@ -84,48 +84,46 @@ class MenteeDisplay extends Component {
   render() {
     return (
       <div className="mentee-card">
-        <>
-          <Card
-            hoverable
-            style={{ width: '350px' }}
-            title={[
-              <UserOutlined className="user-icon" key={this.props.menteeUid} />,
-              this.props.name,
-            ]}
-            actions={[
-              this.props.request && (
-                <td id="mentee-request-row">
-                  <Button
-                    type="text"
-                    onClick={this.handleAcceptClick}
-                    id="accept"
-                  >
-                    Accept
-                    <CheckOutlined className="check" />{' '}
-                  </Button>
-                  <Button
-                    type="text"
-                    onClick={this.handleDeclineClick}
-                    id="decline"
-                  >
-                    Decline
-                    <CloseOutlined className="close" />{' '}
-                  </Button>
-                </td>
-              ),
-            ]}
-          >
-            <p>{this.renderEmail()}</p>
-            <p>
-              <strong> Skills Seeking Mentorship: </strong>
-              {this.props.skills}
-            </p>
-            <p>
-              {' '}
-              <strong> Description: </strong> {this.props.description}
-            </p>
-          </Card>
-        </>
+        <Card
+          hoverable
+          style={{ width: '350px' }}
+          title={[
+            <UserOutlined className="user-icon" key={this.props.menteeUid} />,
+            this.props.name,
+          ]}
+          actions={[
+            this.props.request && (
+              <td id="mentee-request-row">
+                <Button
+                  type="text"
+                  onClick={this.handleAcceptClick}
+                  id="accept"
+                >
+                  Accept
+                  <CheckOutlined className="check" />{' '}
+                </Button>
+                <Button
+                  type="text"
+                  onClick={this.handleDeclineClick}
+                  id="decline"
+                >
+                  Decline
+                  <CloseOutlined className="close" />{' '}
+                </Button>
+              </td>
+            ),
+          ]}
+        >
+          {this.renderEmail()}
+          <p>
+            <strong> Skills Seeking Mentorship: </strong>
+            {this.props.skills}
+          </p>
+          <p>
+            {' '}
+            <strong> Description: </strong> {this.props.description}
+          </p>
+        </Card>
       </div>
     );
   }
