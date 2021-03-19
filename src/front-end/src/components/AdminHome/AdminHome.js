@@ -5,7 +5,7 @@ import {
   SolutionOutlined,
   UsergroupAddOutlined,
 } from '@ant-design/icons';
-import ManageMentors from '../ManageMentors';
+import ManageMentors from '../ManageMentors/ManageMentors';
 import MenteeFormAndEmbedder from '../MenteeFormAndEmbedder/MenteeFormAndEmbedder';
 import MentorForm from '../MentorForm/MentorForm';
 
