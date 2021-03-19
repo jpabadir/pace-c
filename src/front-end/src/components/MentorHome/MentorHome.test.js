@@ -2,7 +2,6 @@ import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { mockWindowMatchMedia } from '../../helper-methods';
 import MentorHome from './MentorHome';
-import MentorTutorial from '../MentorTutorial/MentorTutorial';
 
 let container = null;
 
