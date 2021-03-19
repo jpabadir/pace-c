@@ -57,68 +57,53 @@ Mentees register through the Mentee Form, which can be accessed through an Organ
 
 <br>
 
-## Functional Requiremnets
+## Functional Requirements
 
-FR1. Create a static form that can be embedded into a website via iFrame (with Name, email, time-zone, availability, ranked skills, and user type [Mentee vs. Mentor]).
+FR1. Create a static Mentee form which can be embedded into a website via an iFrame tag (with name, email, time-zone, availability, ranked skills, and description fields).
 
-FR2. The form will be split into subsections, using a “next” button to navigate to the next section, and a "back" button to view the previous one.
+FR2. Both mentors and mentees will use a multiselect dropdown (limited to a maximum of three selectable items) to indicate either their skills or areas seeking mentorship. This, as well as time-zone selection and common organization name will be used to match mentees with mentors.
 
-FR3. Both mentors and mentees will use a ranking system to indicate either their skills or areas seeking mentorship. This, as well as time-zone selection and availability will be used to weigh matching mentees to mentors.
+FR3. Once the user submits the publicly hosted Mentee form, they will be notified whether their submission was successful. A new tab will then be opened to MentorMatch so that the user can chose whether they want to remain on their Organization's website or explore MentorMatch's website.
 
-FR4. The form should restrict the age of Mentors (anyone 17 and under should not be able to become a mentor).
+FR4. Upon successful Mentee Form registration, the user will receive a welcome email informing them that they'll be notified once a Mentor has accepted their request.
 
-FR5. Once the user submits the publicly hosted form, a popup will appear. The popup will state the domain address to access the Mentorship Portal, but it will redirect the user to the hosting organization’s website.
+FR5. Create a static Organization registration form with organization, name, email, password, and confirm password fields.
 
-FR6. The “Mentorship Portal” will host 3 functionalities: Login, Forgot Password, and Register. A member of an organization will click on Register to select their user-type (either Mentor or Organization) to enter information about themselves and create an account within the system.
+FR6. The MentorMatch login page will host 3 functionalities: Login, Forgot Password, and Create Account. A member of an organization will click on the Create Account button to access the Organization Form to register their organization and create an account within the system.
 
-FR7. To register Organizations and Mentors successfully, a unique email must be entered. If that email has already been used in the database, an error message will be displayed.
+FR7. To register Organizations and Mentors successfully, a unique email must be entered. If that email has already been used in the database, a warning message will be displayed to the user.
 
-FR8. To correlate the company to the user, the domain name of the email will be used (i.e john.doe@UBC.ca signifies that John Doe’s organization is UBC).
+FR8. Unique email addresses will be used as the user's username. They will also need to provide a password (in the format of at least 8 characters).
 
-FR9. To complete organization registration, the user will create an account using the same email address, which will be their username. They will also need to provide a password (in the format of at least 6-10 characters, with at least one number). That user will then be allocated admin privileges.
+FR9. Logged in Admins will be able to publicly host the Mentee Form by clicking on the 'Generate iFrame tag' button on the 'View Mentor Form' tab, copying the contents, and pasting it into their organization's website's source code.
 
-FR10. The Admin will publicly host the form (by embedding the form within their website via iFrame) for Mentee registration.
+FR10. Logged in Admins will be able view current Mentors in their organization.
 
-FR11. Account registration for Mentors requires a unique email address, and a password. To register an account successfully, the email must not be associated to a pre-existing account but must match with an email used in the mentorship form (which will be accessible through email invite). If the entered email has not been associated to a form, an error message directing the user to fill out a form will be displayed.
+FR11. Logged in Admins will be able to request Mentors by providing the Mentor's email address. They will be able to view a list of the Mentors that they have requested.
 
-FR12. An email will be sent to the address provided in account registration. The user must click that link to be able to login to their account.
+FR12. Logged in Admins will be able to view the Mentor form.
 
-FR13. Mentors and Admins will be able to login from the Mentorship Portal. The login will be unsuccessful if either the email or password credentials do not align with what’s in the database (in which case, an error message will be displayed).
+FR13. Once an Admin requests a Mentor, the email address that the Admin entered will receive an email with a link to the instance of that Organization's Mentor Form.
 
-FR14. Mentors and Admins will be able to reset their password by clicking on “Forgot your password?” on the Mentorship Portal. The user will be required to enter an email address which has been associated with an account in the database. If successful, an email will be sent to that address, which the user can click to be brought to a separate page to reset their password.
+FR14. Create a static Mentor form with name, email, time zone, calendar link, password, confirm password, top three skills, and description fields.
 
-FR15. Mentors will be required to fill in the form through email invite.
+FR15. Associate the Mentee and Mentor forms with the Admin's Organization that the form was accessed through so Mentees and Mentors only match from the same organization.
 
-FR16. Mentors and Admins will be able to logout of their account, to which they will return to the index of the mentorship portal, where they can login, retrieve their password, or register.
+FR16. Account registration for Mentors requires a unique email address, and a password. To register an account successfully, the user must be invited by an admin.
 
-FR17. Logged in Mentors on the Mentorship Portal will be able to accept Mentees that they have matched with (based off of similar skills, availability, and timezone).
+FR17. A verification email will be sent to the address provided in account registration to Mentors and Admins. The user must click that link to be able to login to their account so that they can access the features specific to their user type.
 
-FR18. Once a Mentor has accepted a Mentee, an email will be sent to the Mentee to notify them of a successful match. The two can then correspond through email.
+FR18. Mentors and Admins will be able to login through MentorMatch's login page. The login will be unsuccessful if either the email or password credentials do not align with what’s in the database (in which case, an error message will be displayed).
 
-FR19. The Admin will decide how to host the Mentorship form (either publicly, or internally through email invite). The source code for publicly embedded forms will be generated by clicking a "Generate" button so that Admins can add the iFrame tag to their organization's public website.
+FR19. Mentors and Admins will be able to reset their password by clicking on the “Forgot your password?” link on the Login page. The user will be required to enter an email address which has been associated with an account in the database. If successful, an email will be sent to that address, which the user can click to be brought to a separate page to reset their password.
 
-FR20. The form will be dynamic in the way that Admins can edit the fields of the form to suit their needs.
+FR20. Mentors and Admins will be able to logout of their account, to which they will return to the login page, where they can login, retrieve their password, or register.
 
-FR21. The form will be dynamic in the way that depending on the user filling out the form on public sites (i.e either mentor or mentee), once the radio button is selected for the type of user, the form will display appropriate information for each.
+FR21. Logged in Mentors will be able to accept Mentees that they have matched with (based off of similar skills, common organization name, and time-zone).
 
-FR22. The email that notifies Mentees that they have been matched to a Mentor will link to a third-party calendar (such as Google Calendar) with the Mentor's availability. Mentees will be able to create an appointment with Mentors through that calendar.
+FR22. Once a Mentor has accepted a Mentee, an email will be sent to the Mentee to notify them of a successful match. The two can then correspond through email, and the Mentee will be able to set a time to meet with the Mentor via the Mentor's calendar link.
 
-FR23. To "unmatch" Mentees and Mentors, the Mentee can remove themselves from the calendar, cancelling all future appointments. The Mentor could then remove them for their dashboard on the Mentorship Portal.
-
-FR24. Mentors who validate their email address will be able to login, however, they will not be able to view any matched Mentees until an Admin approves their account.
-
-FR25. Admins will be able to approve Mentors through the Mentorship Portal.
-
-FR26. Ensure all components of the system are functional, fixing any final bugs.
-
-FR27. Implement “bonus features” (a.k.a features that are not required of the system, but that would be nice to have):
-
-- Allow Mentees to create an account with the system, and develop surrounding UI, with additional features.
-- Allow Mentors the ability to continue receiving Mentee requests, or put them on hold.
-- Allow a user to be both a Mentor and Mentee
-- Allow Admins to be associated with more than one organization
-- Allow the system to support more than one language.
-- Allow Admins to pass their admin privileges to another user if that current admin no longer wishes to sustain an Admin role.
+FR23. To "unmatch" Mentees and Mentors, the Mentee can remove themselves from the calendar, cancelling all future appointments.
 
 <br>
 
