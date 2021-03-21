@@ -16,8 +16,8 @@ Admins register their Organization by creating an account on our platform. To re
 
 **An example of how Admins interact with the system:**<br>
 
-After learning about MentorMatch through a friend, and talking to individuals within our Organization, I decided to register. MentorMatch facilitates the process of bringing together skilled individuals from our organization so that they can aide in our vision of teaching skills to others. By going to MentorMatch and clicking on the 'create account' button, I'm able to register my organization and become the admin account holder. Once my email has been verified, I can manage my Organization's mentors by viewing who is a Mentor on the platform, as well as which individuals that I have requested haven't yet registered. Requesting Mentors is simple, as only providing a valid email address is required to notify prospective Mentors that I'd like to register on the platform.
-I can view the form that requested Mentors receive by navigating to the 'View Mentor Form' tab, and by going to the 'View Mentee Form' tab, I can see the Mentee Form. Clicking on the 'Generate iFrame Tag' button allows me to grab the HTML tag which can be embedded on my organization's public website.
+After learning about MentorMatch through a friend, and talking to individuals within our Organization, I decided to register. MentorMatch facilitates the process of bringing together skilled individuals from our organization so that they can aide in our vision of teaching skills to others. By going to MentorMatch and clicking on the 'create account' button, I'm able to register my organization and become the admin account holder. Once my email has been verified, I can manage my Organization's mentors by viewing who is a Mentor on the platform, as well as which individuals that I have requested haven't yet registered. Requesting Mentors is simple, as only providing a valid email address is required to notify prospective Mentors that I'd like them to register on the platform.
+I can view the form that requested Mentors receive by navigating to the 'View Mentor Form' tab, and by going to the 'View Mentee Form' tab, I can see the Mentee Form. Clicking on the 'Generate iFrame Tag' button allows me to grab the HTML tag which can be embedded into my organization's website's source code.
 
 ### 2) Mentor
 
@@ -52,8 +52,6 @@ Mentees register through the Mentee Form, which can be accessed through an Organ
 - This DFD shows the system architecture within more detail.
 - It is encouraged to download the image to view it with more ease.
 - This DFD has the same three external entities as the previous one, but the mentor and mentee are duplicated in a few different places in order to avoid data flows crossing one another. Furthermore, it goes deeper into showing how accounts are actually created, and matches actually made. In addition, this DFD also shows the system's data stores, as opposed to its level 0 counterpart.
-- Any feature included in a red rectangle is to be completed for the Peer Review #2 milestone.
-- Any feature included in a dotted rectangle (or shown in a dotted fashion itself) is to be completed for the Final Project milestone.
 
 <br>
 
