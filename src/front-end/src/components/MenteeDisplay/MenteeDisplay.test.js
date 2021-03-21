@@ -66,7 +66,8 @@ test('render no email fields when input suggested mentees', () => {
   const suggested = {
     menteeUid: '',
     name: 'Eric',
-    // this field is set empty because in suggestedMentee.js it is set empty as well.
+    /* this field is set empty because in suggestedMentee.js it is set empty 
+    as well. */
     email: '',
     skills: 'Time management',
     description: "Hi I'm Eric",
