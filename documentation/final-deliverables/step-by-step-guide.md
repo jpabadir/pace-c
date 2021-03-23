@@ -62,9 +62,19 @@ Install Node:
 
 ## Maintenance Issues
 
-Gmail account details: (to be added)
+Gmail Account (Nodemailer) Details:
 
-Firebase account details: (to be added)
+Username:
+
+Password:
+
+<br>
+
+Firebase Account Details:
+
+Username:
+
+Password:
 
 <br>
 

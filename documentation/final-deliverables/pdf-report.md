@@ -109,3 +109,11 @@ FR27. Implement “bonus features” (a.k.a features that are not required of th
 ## Technical Specifications
 
  (needs to be added)
+
+<br>
+
+## Limitations of MentorMatch
+
+* The way a mentor's availability is obatined is through a Google Calendar link field on the mentor form. This field is currently limited to only accepted Google Calendar links.
+
+* Mentees and mentors communicate via email messages. Due to this, if MentorMatch was further developed and internal communication between mentor and mentee were created, mentees would also need a MentorMatch account.
