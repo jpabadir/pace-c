@@ -33,13 +33,7 @@ class Login extends Component {
           */
           fetch(
             `http://localhost:8020/match-with-mentees?uid=${userCredentials.user.uid}`,
-          ).then((res) => {
-            if (res.status === 200) {
-              notification.open({
-                message: 'Your suggested mentees have been updated.',
-              });
-            }
-          });
+          );
         })
         .catch((error) => {
           switch (error.code) {
