@@ -44,6 +44,9 @@ test('renders the correct header2 text', () => {
 });
 
 /*
+// We did not quite have time to get this test in a working state, but
+// our intention was to simulate a user click on the "generate iframe" button
+// and ensure the iframe was properly shown.
 
 test('calls onClick prop when clicked', () => {
   const handleClick = jest.fn()
