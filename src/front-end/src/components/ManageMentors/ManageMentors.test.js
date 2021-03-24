@@ -33,3 +33,6 @@ test('renders without crashing', () => {
 });
 
 */
+
+test.skip('Used to prevent the error: Your test suite must contain at least one test.', () =>
+  1);
