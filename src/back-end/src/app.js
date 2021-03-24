@@ -57,7 +57,7 @@ function sortBySkillsThenTimezone(array1, array2) {
 }
 
 /** Returns true if a given user is a mentee, in the same organization as
- * the given mentor, and is neither accepted not declined by the given mentor.
+ * the given mentor, and is neither accepted nor declined by the given mentor.
  * Returns false otherwise.
  */
 function isPotentialMatch(mentorInfo, user) {
