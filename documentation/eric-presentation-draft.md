@@ -18,3 +18,8 @@
 ### Test results ###
 - Here is a screenshot of unit test results and coverage.
 - Most of the components are tested except parts related to firebase mocking.
+
+
+Link: https://docs.google.com/presentation/d/1sVmy_5QQ0siq0K7j4UhdK43ZlHqF2yE5FaPrWn5iHbU/edit#slide=id.gc79c3884c2_0_64
+
+Slides 2-8
