@@ -1,3 +1,5 @@
+// This file contains helpers used when we send custom emails to users.
+
 const nodemailer = require('nodemailer');
 const path = require('path');
 require('dotenv').config({ path: path.join(__dirname, '../.env') });
@@ -14,16 +16,22 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// Adapted from https://stackoverflow.com/questions/7225407/convert-camelcasetext-to-sentence-case-text
+// Below function adapted from https://stackoverflow.com/questions/7225407/convert-camelcasetext-to-sentence-case-text
+/** Returns the spaces-separated version of the
+ * camel case string it receives. */
 function getRegularCase(camelCaseString) {
   return camelCaseString.replace(/([A-Z])/g, ' $1');
 }
 
+/** Returns an array containing the regular case versions of the array
+ * of camel case strings it receives.
+ */
 function getSkillsList(skills) {
   return skills.map((skill) => getRegularCase(skill).toLowerCase()).join(' ');
 }
 
 module.exports = {
+  /** Sends a mentor invitation to the email address it receives. */
   inviteMentor(mentorEmailAddress, organization) {
     transporter.sendMail({
       from: '"MentorMatch Team" <pacementormatch@gmail.com>', // sender address
@@ -38,6 +46,7 @@ module.exports = {
     });
   },
 
+  /** Sends a mentee acceptance email to the email address it is given. */
   acceptMentee(menteeEmailAddress, parameters) {
     transporter.sendMail({
       from: '"MentorMatch Team" <pacementormatch@gmail.com>',
@@ -77,6 +86,7 @@ module.exports = {
     });
   },
 
+  /** Sends a mentee welcome email to the email address it is given. */
   welcomeMentee(menteeEmailAddress, menteeName) {
     transporter.sendMail({
       from: '"MentorMatch Team" <pacementormatch@gmail.com>',

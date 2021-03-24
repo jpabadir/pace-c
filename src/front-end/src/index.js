@@ -6,6 +6,10 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import MenteeForm from './components/MenteeForm/MenteeForm';
 import MentorForm from './components/MentorForm/MentorForm';
 
+// This component is almost the same as the default index.js for a React app. It does contain a router, however.
+// The reason there is a router is to be able to render the mentee and mentor forms independently from the rest of the
+// website. This way, when we embed the mentee form or route mentor to the mentor form, these users see nothing but the
+// form itself, without being able to navigate elsewhere in our website. 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>

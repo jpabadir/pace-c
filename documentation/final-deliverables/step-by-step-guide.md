@@ -62,15 +62,25 @@ Install Node:
 
 ## Maintenance Issues
 
-Gmail account details: (to be added)
+### Gmail Account (Nodemailer) Details
 
-Firebase account details: (to be added)
+Email Address: pacementormatch@gmail.com
+
+Ownership of Nodemailer will be transferred via email when the project is completed.
+
+<br>
+
+### Firebase Account Details
+
+Due to using Firebase, ownership of the account must be transferred via email. Pace C will transfer ownership of the firebase account when the project is completed.
 
 <br>
 
 ## Untested Existing Features
 
-(to be added)
+- Due to using firebase, we were not able to perform tests that involved creating a test user. (Firebase mocking).
+
+(more to be added)
 
 <br>
 
