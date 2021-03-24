@@ -72,7 +72,7 @@ Ownership of Nodemailer will be transfered via email when the project is complet
 
 ### Firebase Account Details
 
-Due to using Firebase, ownership of the account must be transfered via email. Pace C will transfer ownership of the firebase account when the project is completed.
+Due to using Firebase, ownership of the account must be transferred via email. Pace C will transfer ownership of the firebase account when the project is completed.
 
 <br>
 
