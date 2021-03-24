@@ -16,11 +16,11 @@ import {
   UserSwitchOutlined,
   UserAddOutlined,
 } from '@ant-design/icons';
-import fire from '../firebase-init';
+import fire from '../../firebase-init';
 import {
   fetchOrganizationName,
   setOrganizationMentors,
-} from '../helper-methods';
+} from '../../helper-methods';
 
 const { Title } = Typography;
 
