@@ -2,6 +2,7 @@ import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { mockWindowMatchMedia } from '../../helper-methods';
 import MentorFormAndEmbedder from './MenteeFormAndEmbedder';
+// import { screen, fireEvent } from '@testing-library/react';
 
 let container = null;
 
@@ -41,3 +42,17 @@ test('renders the correct header2 text', () => {
     'The form below is an example of the mentee form:',
   );
 });
+
+/*
+// We did not quite have time to get this test in a working state, but
+// our intention was to simulate a user click on the "generate iframe" button
+// and ensure the iframe was properly shown.
+
+test('calls onClick prop when clicked', () => {
+  const handleClick = jest.fn()
+  render(<MentorFormAndEmbedder />, container)
+  fireEvent.click(screen.getByText(/Generate iFrame Tag/i))
+  expect(handleClick).toHaveBeenCalledTimes(1)
+})
+
+*/
