@@ -66,7 +66,7 @@ Install Node:
 
 Email Address: pacementormatch@gmail.com
 
-Ownership of Nodemailer will be transfered via email when the project is completed.
+Ownership of Nodemailer will be transferred via email when the project is completed.
 
 <br>
 
