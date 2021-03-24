@@ -1,4 +1,4 @@
-// Server initialization
+// Initialize server
 const express = require('express');
 const cors = require('cors');
 const fire = require('firebase');
@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Firebase initialization
+// Initialize Firebase
 const firebaseConfig = {
   apiKey: 'AIzaSyAdutyXDo_0GvanZ58V1l702Co_zQu4a3M',
   authDomain: 'mentormatch-afa46.firebaseapp.com',
@@ -21,8 +21,9 @@ const firebaseConfig = {
 };
 fire.initializeApp(firebaseConfig);
 
-let allData = null;
+let allUsersData = null;
 
+/** Returns the number of hours between two users' timezones */
 function getTimeDiff(user1, user2) {
   return Math.abs(
     parseInt(user1.timeZone.substring(4, 7), 10) -
@@ -30,10 +31,12 @@ function getTimeDiff(user1, user2) {
   );
 }
 
+/** Returns the number of elements in common between two given arrays */
 function getIntersectionLength(array1, array2) {
   return array1.filter((elem) => array2.includes(elem)).length;
 }
 
+/** Helper method to sort mentees based on their similarity with mentors */
 function sortBySkillsThenTimezone(array1, array2) {
   // If first item is enough to sort, return
   if (array1.numSkillsInCommon > array2.numSkillsInCommon) {
@@ -53,6 +56,10 @@ function sortBySkillsThenTimezone(array1, array2) {
   return 0;
 }
 
+/** Returns true if a given user is a mentee, in the same organization as
+ * the given mentor, and is neither accepted not declined by the given mentor.
+ * Returns false otherwise.
+ */
 function isPotentialMatch(mentorInfo, user) {
   const isMentee = user[1].userType === 'mentee';
 
@@ -73,10 +80,15 @@ function isPotentialMatch(mentorInfo, user) {
   return isMentee && isInSameOrganization && isNotYetAccepted && isNotDeclined;
 }
 
-function matchWithMentees(uid) {
-  const mentorInfo = allData[uid];
+/** Returns the mentees matching with a given mentor's uid */
+function getMatchingMentees(uid) {
+  const mentorInfo = allUsersData[uid];
   const criteriaScores = [];
-  Object.entries(allData)
+
+  // For each mentee who is a potential match, push to criteriaScore an object
+  // containing the mentee's uid, the number of skills in common with
+  // the mentor, and the timezone difference.
+  Object.entries(allUsersData)
     .filter((user) => isPotentialMatch(mentorInfo, user))
     .forEach((user) => {
       criteriaScores.push({
@@ -88,26 +100,31 @@ function matchWithMentees(uid) {
         timeDiff: getTimeDiff(mentorInfo, user[1]),
       });
     });
+
+  // Sort the criteria scores array
   criteriaScores.sort(sortBySkillsThenTimezone);
+
+  // Return the uids from the criteriaScores array
   return criteriaScores.map(({ menteeUid }) => menteeUid);
 }
 
+// A backend route called to get the mentees who match with a mentor
 app.get('/match-with-mentees', (req, res) => {
   // Read parameter passed from query
   const uid = req.query.uid;
 
-  // Fetch all firebase data and match mentor with mentees
+  // Fetch all firebase users' data and match mentor with mentees
   fire
     .database()
     .ref('users')
     .once(
       'value',
       (snapshot) => {
-        allData = snapshot.val();
+        allUsersData = snapshot.val();
         fire
           .database()
           .ref('users/' + uid + '/suggestedMentees')
-          .set(matchWithMentees(uid).slice(0, 3))
+          .set(getMatchingMentees(uid).slice(0, 3))
           .then(() => {
             res.send('Successfully updated mentees');
           });
@@ -120,32 +137,46 @@ app.get('/match-with-mentees', (req, res) => {
     );
 });
 
+// A backend route called to invite a new mentor to sign up
 app.get('/invite-mentor', (req, res) => {
   email.inviteMentor(req.query.emailAddress, req.query.organization);
   res.send('Invited mentor');
 });
 
+// A backend route called when a mentor accepts a mentee
 app.post('/accept-mentee', (req, res) => {
   email.acceptMentee(req.body.menteeEmail, req.body);
   res.send('Accepted mentee');
 });
 
+// A backend route called when a mentee signs up
 app.post('/welcome-mentee', (req, res) => {
   email.welcomeMentee(req.body.email, req.body.name);
   res.send('Welcomed mentee');
 });
 
+// A backend route called when a mentor signs up
 app.get('/remove-email', (req, res) => {
+  // Read the organization passed to us from the frontend and get a reference
+  // to that organization's data in the DB
   const organizationRef = fire
     .database()
     .ref('organizations/' + req.query.organization);
 
   organizationRef.once('value', (snapshot) => {
+    // Make sure organization exists.
     if (!snapshot.val()) return;
+
+    // Remove the email passed to us by the frontend from
+    // the organization's pending mentors. This is the email of the
+    // mentor who just signed up.
     const pendingMentors = snapshot.val().pendingMentors;
     pendingMentors.splice(pendingMentors.indexOf(req.query.emailAddress), 1);
     organizationRef.child('pendingMentors').set(pendingMentors);
 
+    // Add the uid passed to us by the frontend to the
+    // organization's active mentors. This is the newly-created uid of
+    // the mentor who just signed up.
     const activeMentors = snapshot.val().activeMentors
       ? snapshot.val().activeMentors
       : [];
@@ -153,15 +184,19 @@ app.get('/remove-email', (req, res) => {
     organizationRef.child('activeMentors').set(activeMentors);
   });
 
+  // Send the frontend a confirmation that we were successful
   res.send('Removed email');
 });
 
+// A function used to listen for connections on a specific port
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
 });
 
-// Notes and TODOs: could fetch only the mentees using code like this:
+// A possible improvement to this code:
+// In certain places, we could fetch only the mentees using code like this:
 // var ref = db.ref("dinosaurs");
 // ref.orderByChild("height").equalTo(25).on("child_added", function(snapshot) {
 //   console.log(snapshot.key);
 // });
+// instead of fetching all users.
