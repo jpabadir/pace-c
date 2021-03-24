@@ -14,25 +14,46 @@
   - Within pdf-report.md, add information under the "Technical Specifications" header.
   - Create/update the presentation slides.
   - Eliminate typos and inconsistencies from slides.
+- 
 
 ## Detailed Notes:
 ### General Notes:
+- We will ask what is the expecation of the video (subtitles, etc)
+- Send jp your part of the video 
 - 
 
 ### Current Week Tasks:
+- The target audience for your software and potential usage scenario - Aleks
+- Create promo video
+- Incorporate minor modifications to the 'Manage Mentors' tab per the client's suggestions (expand the width of the columns so they each take up 50% of the window's width; move the placement of the 'Request Mentor' button/modal to the upper right corner of the 'Requested/Pending Mentors' column; and change the name of the columns so it's just one or two words without the '/' (i.e 'Pending Mentors' rather than 'Invited/Pending Mentors'.).)
+- The requirements, design, and test results of your software - Eric
+- A brief description of the software you are building - Eric
+- Run client meeting
+- Identify at least one key distinguishing feature of your software so your client appreciates all the effort you've put into polishing it up - Katrina
+- Summary and future work - JP
+- Identify at least one technical challenge in your development process so your client understands the difficulty of the scope of the project - JP
 - 
 
 ## Action Items (Due by next sprint: March 31st):
 ### JP
+- Summary and future work - JP
+- Identify at least one technical challenge in your development process so your client understands the difficulty of the scope of the project - JP
 - 
 
 ### Katrina
+- Run client meeting
+- Identify at least one key distinguishing feature of your software so your client appreciates all the effort you've put into polishing it up - Katrina
 - 
 
 ### Eric
+- Incorporate minor modifications to the 'Manage Mentors' tab per the client's suggestions (expand the width of the columns so they each take up 50% of the window's width; move the placement of the 'Request Mentor' button/modal to the upper right corner of the 'Requested/Pending Mentors' column; and change the name of the columns so it's just one or two words without the '/' (i.e 'Pending Mentors' rather than 'Invited/Pending Mentors'.).)
+- The requirements, design, and test results of your software - Eric
+- A brief description of the software you are building - Eric
 - 
 
 ### Aleks
+- The target audience for your software and potential usage scenario - Aleks
+- Create promo video
 - 
 
 
