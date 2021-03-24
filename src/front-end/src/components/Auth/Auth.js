@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import fire from '../../firebase-init';
 import Login from '../Login/Login';
-import MentorHome from '../MentorHome';
+import MentorHome from '../MentorHome/MentorHome';
 import AdminHome from '../AdminHome/AdminHome';
 import EmailVerify from '../EmailVerify/EmailVerify';
 

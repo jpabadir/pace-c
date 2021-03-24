@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Button, Input, Select, notification } from 'antd';
 import { WarningOutlined } from '@ant-design/icons';
-import MentorCompletion from '../MentorCompletion';
+import MentorCompletion from '../MentorCompletion/MentorCompletion';
 import timeZones from '../../timeZones.json';
 
 import {
