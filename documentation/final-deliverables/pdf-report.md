@@ -105,4 +105,16 @@ FR23. To "unmatch" Mentees and Mentors, the Mentee can communicate with the Ment
 
 ## Technical Specifications
 
-(needs to be added)
+ (needs to be added)
+
+<br>
+
+## Limitations of MentorMatch
+
+* The way a mentor's availability is obtained is through a Google Calendar link field on the mentor form. This field is currently limited to only accepted Google Calendar links.
+
+* Mentees and mentors communicate via email messages. Due to this, if MentorMatch was further developed and internal communication between mentor and mentee were created, mentees would also need a MentorMatch account.
+
+* Mentors will have to manually update their calendar to reflect booked timeslots with Google Calendars. *Note*: Google Appointment Slots helps to remediate this, but since we don't have access to an organization or school Google Calendar, it is not something that we are able to test. However, organizations will likely be able to use Appointment Slots.
+
+* In the case that MentorMatch grows and needs to send >500 emails per day, Nodemailer will became a limitation.
