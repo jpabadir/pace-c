@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Form, notification } from 'antd';
-import MenteeDisplay from './MenteeDisplay/MenteeDisplay';
-import fire from '../firebase-init';
-import { fetchMenteesIDs, fetchMenteesFullInfo } from '../helper-methods';
+import MenteeDisplay from '../MenteeDisplay/MenteeDisplay';
+import fire from '../../firebase-init';
+import { fetchMenteesIDs, fetchMenteesFullInfo } from '../../helper-methods';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class MentorSuggested extends Component {
@@ -41,7 +41,7 @@ class MentorSuggested extends Component {
         mentees: newMentees,
       });
 
-      // Confirm with the user that this was succesful
+      // Confirm with the user that this was successful
       notification.success({
         message: 'Mentee request accepted!',
       });
@@ -72,7 +72,7 @@ class MentorSuggested extends Component {
         mentees: newMentees,
       });
 
-      // Confirm with the user that this was succesful
+      // Confirm with the user that this was successful
       notification.error({
         message: 'Mentee request declined!',
       });
