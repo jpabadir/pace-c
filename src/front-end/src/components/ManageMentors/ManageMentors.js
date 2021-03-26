@@ -136,8 +136,12 @@ class ManageMentors extends Component {
           <br />
           <br />
           <Card
-            style={{ fontSize: '30px', backgroundColor: 'rgb(250, 250, 250)' }}
-            title={<Title level={3}>Current/Active Mentors:</Title>}
+            style={{
+              width: '47.5%',
+              fontSize: '30px',
+              backgroundColor: 'rgb(250, 250, 250)',
+            }}
+            title={<Title level={3}>Active Mentors:</Title>}
             id="CurrentActiveMentors"
           >
             <p>
@@ -174,8 +178,27 @@ class ManageMentors extends Component {
             </p>
           </Card>
           <Card
-            style={{ fontSize: '30px', backgroundColor: 'rgb(250, 250, 250)' }}
-            title={<Title level={3}>Invited/Pending Mentors:</Title>}
+            style={{
+              width: '47.5%',
+              fontSize: '30px',
+              backgroundColor: 'rgb(250, 250, 250)',
+            }}
+            title={
+              <div>
+                <Title style={{ display: 'inline' }} level={3}>
+                  Pending Mentors:
+                </Title>
+                <Button
+                  style={{ display: 'inline', marginLeft: '11em' }}
+                  type="primary"
+                  htmlType="submit"
+                  size="large"
+                  onClick={this.showModal}
+                >
+                  Request Mentor
+                </Button>
+              </div>
+            }
             id="InvitedPendingMentors"
           >
             <p>
@@ -211,14 +234,14 @@ class ManageMentors extends Component {
               </font>
             </p>
           </Card>
-          <Button
+          {/*           <Button
             type="primary"
             htmlType="submit"
             size="large"
             onClick={this.showModal}
           >
             Request a Mentor
-          </Button>
+          </Button> */}
           <Modal
             title="How To Invite A Mentor"
             centered
