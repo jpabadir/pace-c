@@ -234,14 +234,6 @@ class ManageMentors extends Component {
               </font>
             </p>
           </Card>
-          {/*           <Button
-            type="primary"
-            htmlType="submit"
-            size="large"
-            onClick={this.showModal}
-          >
-            Request a Mentor
-          </Button> */}
           <Modal
             title="How To Invite A Mentor"
             centered
