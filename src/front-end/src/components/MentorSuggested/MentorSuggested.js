@@ -43,7 +43,8 @@ class MentorSuggested extends Component {
 
       // Confirm with the user that this was successful
       notification.success({
-        message: 'Mentee request accepted!',
+        message:
+          "Mentee request accepted! The mentee will be notified of their acceptance through email. You can view their email address from the 'Accepted Mentees' tab if you'd like to email them",
       });
     });
   }
