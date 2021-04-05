@@ -195,7 +195,7 @@ class ManageMentors extends Component {
                   size="large"
                   onClick={this.showModal}
                 >
-                  Request Mentor
+                  Invite Mentor
                 </Button>
               </div>
             }
