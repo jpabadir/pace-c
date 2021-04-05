@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Form } from 'antd';
-import MenteeDisplay from './MenteeDisplay/MenteeDisplay';
-import fire from '../firebase-init';
-import { fetchMenteesIDs, fetchMenteesFullInfo } from '../helper-methods';
+import MenteeDisplay from '../MenteeDisplay/MenteeDisplay';
+import fire from '../../firebase-init';
+import { fetchMenteesIDs, fetchMenteesFullInfo } from '../../helper-methods';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class MentorAccepted extends Component {

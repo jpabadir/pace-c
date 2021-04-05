@@ -10,6 +10,10 @@ import AccountMenuItem from './components/AccountMenuItem/AccountMenuItem';
 
 const { Header, Content, Footer } = Layout;
 
+// This component contains the main navigation bar, and the
+// content of the whole website. There are two NavLinks and four routes
+// because two of the routes are accessed by the user through links that
+// are not present on the navigation bar.
 function App() {
   return (
     <div className="App">

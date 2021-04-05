@@ -5,8 +5,8 @@ import {
   SolutionOutlined,
   UsergroupAddOutlined,
 } from '@ant-design/icons';
-import MentorSuggested from '../MentorSuggested';
-import MentorAccepted from '../MentorAccepted';
+import MentorSuggested from '../MentorSuggested/MentorSuggested';
+import MentorAccepted from '../MentorAccepted/MentorAccepted';
 import MentorTutorial from '../MentorTutorial/MentorTutorial';
 
 // These are the tabs displayed to a logged in user of type 'mentor'

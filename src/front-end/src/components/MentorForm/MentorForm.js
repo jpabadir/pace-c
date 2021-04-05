@@ -71,11 +71,7 @@ class MentorForm extends Component {
           // Add suggested mentees to mentor
           fetch(
             `http://localhost:8020/match-with-mentees?uid=${createUserAttempt.uid}`,
-          ).then((res) => {
-            if (res.status === 200) {
-              window.alert('Your suggested mentees have been updated.');
-            }
-          });
+          );
           this.setState({ isSubmitted: true });
         }
       },
