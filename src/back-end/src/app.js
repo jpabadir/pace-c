@@ -2,7 +2,7 @@
 const express = require('express');
 const cors = require('cors');
 const fire = require('firebase');
-const email = require('./email-mentorform');
+const email = require('./email-helpers');
 
 const port = 8020;
 const app = express();
