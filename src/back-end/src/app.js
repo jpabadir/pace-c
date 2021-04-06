@@ -1,7 +1,8 @@
 // Initialize server
 const express = require('express');
 const cors = require('cors');
-const fire = require('firebase');
+const admin = require('firebase-admin');
+const serviceAccount = require('../../../secrets/mentormatch-afa46-firebase-adminsdk-bc6mr-0de1641262.json');
 const email = require('./email-helpers');
 
 const port = 8020;
@@ -9,17 +10,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Initialize Firebase
-const firebaseConfig = {
-  apiKey: 'AIzaSyAdutyXDo_0GvanZ58V1l702Co_zQu4a3M',
-  authDomain: 'mentormatch-afa46.firebaseapp.com',
+// Initialize firebase admin SDK
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
   databaseURL: 'https://mentormatch-afa46.firebaseio.com',
-  projectId: 'mentormatch-afa46',
-  storageBucket: 'mentormatch-afa46.appspot.com',
-  messagingSenderId: '515592331593',
-  appId: '1:515592331593:web:c38e0d3defadf9886cfa98',
-};
-fire.initializeApp(firebaseConfig);
+});
 
 let allUsersData = null;
 
@@ -114,14 +109,14 @@ app.get('/match-with-mentees', (req, res) => {
   const uid = req.query.uid;
 
   // Fetch all firebase users' data and match mentor with mentees
-  fire
+  admin
     .database()
     .ref('users')
     .once(
       'value',
       (snapshot) => {
         allUsersData = snapshot.val();
-        fire
+        admin
           .database()
           .ref('users/' + uid + '/suggestedMentees')
           .set(getMatchingMentees(uid).slice(0, 3))
@@ -159,7 +154,7 @@ app.post('/welcome-mentee', (req, res) => {
 app.get('/remove-email', (req, res) => {
   // Read the organization passed to us from the frontend and get a reference
   // to that organization's data in the DB
-  const organizationRef = fire
+  const organizationRef = admin
     .database()
     .ref('organizations/' + req.query.organization);
 
