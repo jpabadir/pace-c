@@ -109,7 +109,7 @@ FR23. To "unmatch" Mentees and Mentors, the Mentee can communicate with the Ment
 
 <br>
 
-## Limitations of MentorMatch
+## Limitations of MentorMatch (and future improvements)
 
 * The way a mentor's availability is obtained is through a Google Calendar link field on the mentor form. This field is currently limited to only accepted Google Calendar links.
 
