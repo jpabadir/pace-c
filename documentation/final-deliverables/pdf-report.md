@@ -150,10 +150,10 @@ Disclaimer: Our application does not have a UI to remove users. If a user is to 
 
 ## Limitations of MentorMatch (and future improvements)
 
-- The way a mentor's availability is obtained is through a Google Calendar link field on the mentor form. This field is currently limited to only accepted Google Calendar links.
+- The way that a mentor's availability is obtained is through a url input field on the Mentor form. This field is currently limited to only accept Google Calendar links.
 
-- Mentees and mentors communicate via email messages. Due to this, if MentorMatch was further developed and internal communication between mentor and mentee were created, mentees would also need a MentorMatch account.
+- Mentees and Mentors communicate via email messages externally from MentorMatch. Due to this, if MentorMatch was further developed to require internal communication between Mentors and Mentees, Mentees would also need a MentorMatch account.
 
-- Mentors will have to manually update their calendar to reflect booked timeslots with Google Calendars. _Note_: Google Appointment Slots helps to remediate this, but since we don't have access to an organization or school Google Calendar, it is not something that we are able to test. However, organizations will likely be able to use Appointment Slots.
+- Mentors will have to manually update their calendar to reflect booked timeslots with Google Calendars. _Note_: (Google Appointment Slots)[https://support.google.com/calendar/answer/190998?co=GENIE.Platform%3DDesktop&hl=en] would help to remediate this, but since we don't have access to an organization or school Google Calendar, it is not something that we are able to test. However, organizations will likely be able to use Appointment Slots.
 
-- In the case that MentorMatch grows and needs to send >500 emails per day, Nodemailer will became a limitation.
+- In the case that MentorMatch grows and needs to send >500 emails per day, Nodemailer will become a limitation.
