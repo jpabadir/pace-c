@@ -40,13 +40,13 @@ Mentees register through the Mentee Form, which can be accessed through an Organ
 
 ### DFD Level 0
 
-- [DFD Level 0](https://github.com/jpabadir/pace-c/blob/requirements-milestone/documentation/dfd-level0.pdf)
+- [DFD Level 0](https://github.com/jpabadir/pace-c/blob/develop/documentation/final-deliverables/dfd/dfd-level0.pdf)
 
 - A description of this DFD can be found at the bottom of the linked image.
 
 ### DFD Level 1
 
-- [DFD Level 1](https://github.com/jpabadir/pace-c/blob/requirements-milestone/documentation/dfd-level-1/dfd-full.jpg)
+- [DFD Level 1](https://github.com/jpabadir/pace-c/blob/develop/documentation/final-deliverables/dfd/dfd-level-1-full.png)
 - This DFD shows the system architecture within more detail.
 - It is encouraged to download the image to view it with more ease.
 - This DFD has the same three external entities as the previous one, but the mentor and mentee are duplicated in a few different places in order to avoid data flows crossing one another. Furthermore, it goes deeper into showing how accounts are actually created, and matches actually made. In addition, this DFD also shows the system's data stores, as opposed to its level 0 counterpart.
