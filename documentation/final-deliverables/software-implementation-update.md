@@ -5,6 +5,7 @@ All of our front-end components within our application are in the 'components' f
 In addition, our Github repository has regression testing, which ensures that all unit tests have passed before any open PR can be merged (ensuring that no new additions to the repo will impact existing features in an adverse way). Continuous Integration within our repo assisted with quality assurance since it served to find any potential issues early in development once pushed. Before pushing, EsLint and Prettier screened for errors and warnings, displaying any areas requiring attention on the console.
 
 In total, we have 15 test suites, with 57 tests that pass.
+[Reminder to myself to add something about total coverage here]
 
 ## Unimplemented Requirements
 
