@@ -55,7 +55,7 @@ Our team decided to share linting rules, and to enforce these with our continuou
 5. Now, running `eslint src/front-end/src/**/*.js src/back-end/src/**/*.js` from the project's top-level directory will lint the entire codebase.
 
 ## About Continuous Integration
-As mentioned, our team uses continuous integration (CI). Our CI pipeline does two things. First, it runs ESLint on the code, and fails if the code is not properly linted. Then, it runs the project's tests, and fails if one of them fail. It is set-up to do so when a Pull Request is made to develop or master, our two default, protected branches. This is all piloted by the `link.yml` file in this repo, please look there to fully understand and modify the CI steps. 
+As mentioned, our team uses continuous integration (CI). Our CI pipeline does two things. First, it runs ESLint on the code, and fails if the code is not properly linted. Then, it runs the project's tests, and fails if any of them fail. It is set-up to do so when a Pull Request is made to develop or master, our two default, protected branches. This is all piloted by the `link.yml` file in this repo, please look there to fully understand and modify the CI steps. 
 
 ## Maintenance Issues
 
