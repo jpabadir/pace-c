@@ -23,6 +23,6 @@ Despite manually testing to ensure functionality, the back-end could benefit in 
 
 ## Known Bugs
 
-After testing each user flow of the application multiple times, no bugs have been found since we have worked to fix any bugs that we have come across. For reference, a comprehensive list of bugs that we have fixed can be found in our repository by going to the 'documentation' folder, then clicking on 'known-bugs.md'.
+After testing each user flow of the application multiple times, no bugs have been found since we have worked to fix any bugs that we have come across. For reference, some of the bugs that we have fixed can be found in our repository by going to the 'documentation' folder, then clicking on 'known-bugs.md'.
 
 - Although this isn't necessarily a bug, it is important to note that a TypeError displaying 'Cannot set property 'id' of null' may occur when navigating to the 'Accepted Mentees' tab. If this occurs, reference the Firebase database to see if the logged in mentor has any suggested or accepted mentees’ IDs that don’t exist in the database. If a mentee ID appears in either field and that mentee doesn't exist as a user in the database, remove that UID. Note: The TypeError is only displayed when the app is being run on localhost, and would not crash the application if deployed.
