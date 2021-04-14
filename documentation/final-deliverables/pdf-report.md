@@ -126,7 +126,7 @@ A major benefit to using React is the ability to use UI Libraries (we opted for 
 
 - Node is a back-end environment which uses JavaScript.
 - Our back-end is accessed from the ‘back-end’ folder within ‘src’.
-- ‘App.js’ contains functions that are triggered from events on a specific port. For example, functions exist for generating matches between Mentees and Mentors (by finding the least difference in time zones, number of commons skills, and same organization string) as well as route calls for inviting new mentors and accepting mentees.
+- ‘app.js’ contains functions that are triggered from requests on specific ports. For example, functions exist for generating matches between Mentees and Mentors (by finding the least difference in time zones, number of commons skills, and same organization string) as well as route calls for inviting new mentors and accepting mentees.
 - ‘Email-helpers.js’ houses functions that send custom emails to users via nodemailer.
 - The back-end is configured to use the Firebase Admin SDK as a way of securing user information.
 
