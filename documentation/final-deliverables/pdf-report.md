@@ -143,6 +143,7 @@ Note that both the front-end and back-end contain files to assist in catching er
 - The ‘Authentication’ tab of the Firebase console allows us to verify Mentor and Admin identities upon account creation as well as to validate credentials upon login. All users are required to verify their email address before being able to access Admin or Mentor privileges of the website. Note that the user id of each user in the 'Authentication' menu is the same as the user id of each user found under the 'Realtime Database' menu.
   - Our Firebase configuration uses the ‘Email/Password’ Sign-in method. This can be modified if needed in the future by going to the ‘Sign-in method’ tab under ‘Authentication’.
   - Authentication also handles password reset changes.
+  - Since we use Firebase's 'Authentication' service, we never have to worry about encrypting or storing users' passwords, because that is also handled for us. 
 
 Disclaimer: Our application does not have a UI to remove users. If a user is to be removed, go to the ‘Authentication’ tab of Firebase, find the user’s email address, then click on the three vertical dots. Simply click ‘Delete Account’ to remove that user. To ensure that the database isn’t cluttered, it would also be a good idea to remove that user from the Realtime Database.
 
