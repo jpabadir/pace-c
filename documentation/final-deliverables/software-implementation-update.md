@@ -17,7 +17,7 @@ Although the majority of features have been unit tested, there are components th
 - MentorAccepted.test.js
 - MentorSuggested.test.js
 
-Despite manually testing to ensure functionality, the back-end could benefit in the future through unit testing via Jest.
+Despite manually testing to ensure functionality, the back-end could benefit in the future from unit testing via Jest.
 
 <br>
 
