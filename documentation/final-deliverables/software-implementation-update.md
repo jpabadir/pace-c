@@ -8,7 +8,7 @@ In total, we have 15 test suites, with 57 tests that pass.
 
 ## Unimplemented Requirements
 
-As our application stands, all features required to meet Minimum Viable Product functionality have been met. As such, there are no requirements that have been unimplemented or that are partially working. Any feature that might have limitations or that could benefit from future development are listed under the " Limitations and Future Improvements" header.
+As our application stands, all features required to meet Minimum Viable Product functionality have been developed. As such, there are no requirements that have been unimplemented or that are only partially working. Any feature that might have limitations or that could benefit from future development is listed under the "Limitations and Future Improvements" section.
 
 Although the majority of features have been unit tested, there are components that we were not able to fully unit test due to the time intensivity of Firebase mocking. Components requiring Firebase mocking have a comment disclosing this. For reference, the files that we were unable to fully test due to the fact that they require a Firebase call to render properly are as follows:
 
