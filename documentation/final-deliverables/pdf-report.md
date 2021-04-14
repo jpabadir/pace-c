@@ -114,7 +114,7 @@ Although the decision for our chosen tech stack was ultimately up to us, our cli
 - React is a library that utilizes JavaScript to create user interfaces.
 - Code pertaining to the front-end can be accessed by navigating to the ‘src’ folder, then by clicking on the ‘front-end’ folder.
 - ‘App.js’ is the main page that launches upon the application being run.
-  - Every other UI page is split into components that are rendered dependent on the program’s state from the user’s actions. Given this, all of our UI components exist in their own folder named according to what it displays within the central folder titled ‘components’.
+  - Every other UI page is split into components that are rendered dependent on the program’s state from the user’s actions. Given this, all of our UI components exist in their own folder named according to what they display within the central folder titled ‘components’.
 - ‘helper-methods.js’ contains various functions that are called throughout the application. The majority of these functions play a crucial role for interacting with the Firebase database (for example, to create users after form submission, to send verification and password reset emails for authenticated users, etc.).
 - Credentials for interacting with the database are within firebase-init.js.
 - ‘index.js’ allows the Mentee and Mentor forms to be rendered independently from the central website.
