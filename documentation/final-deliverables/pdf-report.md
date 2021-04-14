@@ -140,7 +140,7 @@ Note that both the front-end and back-end contain files to assist in catching er
 1.  Organizations - Allow multiple Admins to exist within an Organization, as well as contain mentor email addresses who are either active or pending (for clarity: activeMentors and pendingMentors are ‘children’ of the ‘Organization’ node).
 2.  Users – Contains unique user IDs for each type of user (Admin, Mentor, or Mentee), with the information (i.e ‘children’ of the ‘Users’ node) gathered from the form used to register.
 
-- The ‘Authentication’ tab of the Firebase console allows us to verify Mentor and Admin identities upon account creation as well as to validate credentials upon login. All users are required to verify their email address before being able to access Admin or Mentor privileges of the website.
+- The ‘Authentication’ tab of the Firebase console allows us to verify Mentor and Admin identities upon account creation as well as to validate credentials upon login. All users are required to verify their email address before being able to access Admin or Mentor privileges of the website. Note that the user id of each user in the 'Authentication' menu is the same as the user id of each user found under the 'Realtime Database' menu.
   - Our Firebase configuration uses the ‘Email/Password’ Sign-in method. This can be modified if needed in the future by going to the ‘Sign-in method’ tab under ‘Authentication’.
   - Authentication also handles password reset changes.
 
