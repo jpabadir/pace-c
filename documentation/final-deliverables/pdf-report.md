@@ -107,7 +107,7 @@ FR23. To "unmatch" Mentees and Mentors, the Mentee can communicate with the Ment
 
 **Overview:**
 
-Although the decision for our chosen tech stack was ultimately up to us, our client has technical experience, and so she offered recommendations for front-end and back-end libraries back in September. As such, we aimed to align with the client’s technical suggestions, as well as to pick an MVC model which was well documented. Ultimately, this resulted in React being used for our front-end, Node for our back-end, and Firebase for our database.
+Although the decision for our chosen tech stack was ultimately up to us, our client has technical experience, and so she offered recommendations for front-end and back-end libraries back in September. As such, we aimed to align with the client’s technical suggestions, as well as to pick well-documented technologies. Ultimately, this resulted in React being used for our front-end, Node for our back-end, and Firebase for our database.
 
 **Technical Specifications on the Front-end:**
 
