@@ -109,7 +109,7 @@ FR23. To "unmatch" Mentees and Mentors, the Mentee can communicate with the Ment
 
 <br>
 
-## Limitations of MentorMatch (and future improvements)
+## Limitations of MentorMatch, and future improvements needed
 
 * The way a mentor's availability is obtained is through a Google Calendar link field on the mentor form. This field is currently limited to only accepted Google Calendar links.
 
@@ -118,3 +118,15 @@ FR23. To "unmatch" Mentees and Mentors, the Mentee can communicate with the Ment
 * Mentors will have to manually update their calendar to reflect booked timeslots with Google Calendars. *Note*: Google Appointment Slots helps to remediate this, but since we don't have access to an organization or school Google Calendar, it is not something that we are able to test. However, organizations will likely be able to use Appointment Slots.
 
 * In the case that MentorMatch grows and needs to send >500 emails per day, Nodemailer will became a limitation.
+
+* In the code, when providing an explicit URL was required, 'localhost' was used as the domain name. When the website is deployed, a more permanent solution will need to be implemented. This can be done using environment variables, for instance.
+
+* Currently, anybody who has access to the mentor form url can sign up to be a mentor. We need to make sure that only invited mentors are able to sign up. This can be done upon mentor signup through a simple check of the DB. 
+
+* If the website is to be used with its current configuration, our team will need to communicate with Pace to transfer ownership of the Firebase project, as well as that of the gmail account we created for this website. Please see the step-by-step section for more information about this. 
+
+* While efforts have been made in the last sprint to start implementing security measures for the site, there are still large security gaps in the site that need to be addressed. The ones we can think of are: 
+- The backend needs to be secured to accept only requests from our specific client app. This should be able to be done by changing its CORS settings.
+- The database security rules most likely need to be improved and fine-tuned, although a good starter version is already deployed in production. 
+
+* Currently, any mentor or mentee can change the url we give them when filling out the signup form in order to signup under the name of any company they choose. This is because we are currently using a get-request parameter that we set in the url we give the user in order to determine the name of the organization of the mentor who invited them. This process should be made impervious to potential user interference. 
