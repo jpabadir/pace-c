@@ -128,7 +128,7 @@ A major benefit to using React is the ability to use UI Libraries (we opted for 
 - Our back-end is accessed from the ‘back-end’ folder within ‘src’.
 - ‘app.js’ contains functions that are triggered from requests on specific ports. For example, functions exist for generating matches between Mentees and Mentors (by finding the least difference in time zones, number of commons skills, and same organization string) as well as route calls for inviting new mentors and accepting mentees.
 - ‘Email-helpers.js’ houses functions that send custom emails to users via nodemailer.
-- The back-end is configured to use the Firebase Admin SDK as a way of securing user information.
+- The back-end is configured to use the Firebase Admin SDK. This is needed to give our backend full access to our firebase database, which is, otherwise, secured by rules. 
 
 Note that both the front-end and back-end contain files to assist in catching errors (.eslintrc.json) and for automatic formatting adjustments (.prettierrc.json). The package-lock.json files contain the list of dependencies which are installed whenever the ‘npm install’ command is run in the terminal before running the front-end and back-end.
 
