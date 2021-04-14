@@ -4,8 +4,6 @@
 
 The code for MentorMatch can be found in the GitHub repository: <https://github.com/jpabadir/pace-c>
 
-<br>
-
 ## Setup Installation Details
 
 ### General
@@ -31,8 +29,6 @@ Install Node:
 3. Run nodemon `src/app.js`. Nodemon is a small package that helps us develop faster. All it does is detect when the file app.js has been modified, and stops and re-runs the server so we don't have to do it manually.
 4. Your back-end setup is done!
 
-<br>
-
 ## Unit Test Installation Details
 
 1. Install Jest: run the following command in a terminal:
@@ -43,8 +39,6 @@ Install Node:
    run `cd src/front-end/` and then `npm start`
 4. Now check your package.json file, jest and react-test-renderer should be in dependencies.
 5. Done!
-
-<br>
 
 ## Linting Installation Details
 
@@ -58,8 +52,6 @@ Install Node:
    - For the max line length, say `80`
    - When asked about the trailing commas, enter `3`
 
-<br>
-
 ## Maintenance Issues
 
 ### Gmail Account (Nodemailer) Details
@@ -68,21 +60,15 @@ Email Address: pacementormatch@gmail.com
 
 Ownership of Nodemailer will be transferred via email when the project is completed.
 
-<br>
-
 ### Firebase Account Details
 
 Due to using Firebase, ownership of the account must be transferred via email. Pace C will transfer ownership of the firebase account when the project is completed.
-
-<br>
 
 ## Untested Existing Features
 
 - Due to using firebase, we were not able to perform tests that involved creating a test user. (Firebase mocking).
 
 (more to be added)
-
-<br>
 
 ## Unimplemented Features
 
