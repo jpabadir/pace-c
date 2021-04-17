@@ -60,6 +60,7 @@ As mentioned, our team uses continuous integration (CI). Our CI pipeline does tw
 ## Maintenance Issues
 
 There are two required associated external entities that anyone interested in using this project will want to be aware of: an email address to message users, and a Firebase project. For Pace, who is the original client of this project, there is an option to receive ownership of these two accounts directly from our team. Anyone else using this project in an open-source fashion will need to setup their own Firebase project and email accounts, and change the code in order to link this software to the new accounts.
+Should pace choose to use the same accounts we do, there are three files which are "gitignored" which we will transfer to them: a `.env` file, which stores the password to the Gmail account, a `credentials.json` file, which stored information about our Firebase projects (API key, project ID, etc...) and another file with a very long name which stores information pertaining to the firebase admin SDK, which is therefore used by our backend to bypass the firebase rules. 
 
 ### Gmail Account Details
 
