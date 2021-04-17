@@ -40,13 +40,13 @@ Mentees register through the Mentee Form, which can be accessed through an Organ
 
 ### DFD Level 0
 
-- [DFD Level 0](https://github.com/jpabadir/pace-c/blob/requirements-milestone/documentation/dfd-level0.pdf)
+- [DFD Level 0](https://github.com/jpabadir/pace-c/blob/develop/documentation/final-deliverables/dfd/dfd-level0.pdf)
 
 - A description of this DFD can be found at the bottom of the linked image.
 
 ### DFD Level 1
 
-- [DFD Level 1](https://github.com/jpabadir/pace-c/blob/requirements-milestone/documentation/dfd-level-1/dfd-full.jpg)
+- [DFD Level 1](https://github.com/jpabadir/pace-c/blob/develop/documentation/final-deliverables/dfd/dfd-level-1-full.png)
 - This DFD shows the system architecture within more detail.
 - It is encouraged to download the image to view it with more ease.
 - This DFD has the same three external entities as the previous one, but the mentor and mentee are duplicated in a few different places in order to avoid data flows crossing one another. Furthermore, it goes deeper into showing how accounts are actually created, and matches actually made. In addition, this DFD also shows the system's data stores, as opposed to its level 0 counterpart.
@@ -105,17 +105,57 @@ FR23. To "unmatch" Mentees and Mentors, the Mentee can communicate with the Ment
 
 ## Technical Specifications
 
- (needs to be added)
+**Overview:**
+
+Although the decision for our chosen tech stack was ultimately up to us, our client has technical experience, and so she offered recommendations for front-end and back-end libraries back in September. As such, we aimed to align with the client’s technical suggestions, as well as to pick well-documented technologies. Ultimately, this resulted in React being used for our front-end, Node for our back-end, and Firebase for our database.
+
+**Technical Specifications on the Front-end:**
+
+- React is a library that utilizes JavaScript to create user interfaces.
+- Code pertaining to the front-end can be accessed by navigating to the ‘src’ folder, then by clicking on the ‘front-end’ folder.
+- ‘App.js’ is the main page that launches upon the application being run.
+  - Every other UI page is split into components that are rendered dependent on the program’s state from the user’s actions. Given this, all of our UI components exist in their own folder named according to what they display within the central folder titled ‘components’.
+- ‘helper-methods.js’ contains various functions that are called throughout the application. The majority of these functions play a crucial role for interacting with the Firebase database (for example, to create users after form submission, to send verification and password reset emails for authenticated users, etc.).
+- Credentials for interacting with the database are within firebase-init.js.
+- ‘index.js’ allows the Mentee and Mentor forms to be rendered independently from the rest of the website. This is useful when we need to show only the mentor form to a mentor we just invited via email, and when we need to embed only the mentee form in another organization's website. 
+- ‘timeZones.json’ is utilized to populate the ‘time zone’ dropdown on the Mentee and Mentor forms.
+
+A major benefit to using React is the ability to use UI Libraries (we opted for Ant Design), as well as to integrate with our back-end Node server. The main Ant Design components utilized throughout the app are Notifications, Cards, Forms, Icons, Tabs, and Modals.
+
+**Technical Specifications on the Back-end:**
+
+- Node is a back-end environment which uses JavaScript.
+- Our back-end is accessed from the ‘back-end’ folder within ‘src’.
+- ‘app.js’ contains functions that are triggered from requests on specific ports. For example, functions exist for generating matches between Mentees and Mentors (by finding the least difference in time zones, number of commons skills, and same organization string) as well as route calls for inviting new mentors and accepting mentees.
+- ‘Email-helpers.js’ houses functions that send custom emails to users via nodemailer.
+- The back-end is configured to use the Firebase Admin SDK. This is needed to give our backend full access to our firebase database, which is, otherwise, secured by rules. 
+
+Note that both the front-end and back-end contain files to assist in catching errors (.eslintrc.json) and for automatic formatting adjustments (.prettierrc.json). The package-lock.json files contain the list of dependencies which are installed whenever the ‘npm install’ command is run in the terminal before running the front-end and back-end.
+
+**Technical Specifications of the Database:**
+
+- Firebase is a real-time NoSQL database owned by Google, which is hosted on the cloud.
+- By navigating to the ‘Realtime Database’ tab of the Firebase console, the JSON data can be referenced. Two nodes exist in our database’s structure:
+
+1.  Organizations - Allow multiple Admins to exist within an Organization, as well as contain mentor email addresses who are either active or pending (for clarity: activeMentors and pendingMentors are ‘children’ of the ‘Organization’ node).
+2.  Users – Contains unique user IDs for each type of user (Admin, Mentor, or Mentee), with the information (i.e ‘children’ of the ‘Users’ node) gathered from the form used to register.
+
+- The ‘Authentication’ tab of the Firebase console allows us to verify Mentor and Admin identities upon account creation as well as to validate credentials upon login. All users are required to verify their email address before being able to access Admin or Mentor privileges of the website. Note that the user id of each user in the 'Authentication' menu is the same as the user id of each user found under the 'Realtime Database' menu.
+  - Our Firebase configuration uses the ‘Email/Password’ Sign-in method. This can be modified if needed in the future by going to the ‘Sign-in method’ tab under ‘Authentication’.
+  - Authentication also handles password reset changes.
+  - Since we use Firebase's 'Authentication' service, we never have to worry about encrypting or storing users' passwords, because that is also handled for us. 
+
+Disclaimer: Our application does not have a UI to remove users. If a user is to be removed, go to the ‘Authentication’ tab of Firebase, find the user’s email address, then click on the three vertical dots. Simply click ‘Delete Account’ to remove that user. To ensure that the database isn’t cluttered, it would also be a good idea to remove that user from the Realtime Database.
 
 <br>
 
 ## Limitations of MentorMatch, and Future Improvements Needed
 
-* The way a mentor's availability is obtained is through a Google Calendar link field on the mentor form. This field is currently limited to only accepted Google Calendar links.
+- The way that a mentor's availability is obtained is through a url input field on the Mentor form. This field is currently limited to only accept Google Calendar links.
 
-* Mentees and mentors communicate via email messages. Due to this, if MentorMatch was further developed and internal communication between mentor and mentee were created, mentees would also need a MentorMatch account.
+- Mentees and Mentors communicate via email messages externally from MentorMatch. Due to this, if MentorMatch was further developed to require internal communication between Mentors and Mentees, Mentees would also need a MentorMatch account.
 
-* Mentors will have to manually update their calendar to reflect booked timeslots with Google Calendars. *Note*: Google Appointment Slots helps to remediate this, but since we don't have access to an organization or school Google Calendar, it is not something that we are able to test. However, organizations will likely be able to use Appointment Slots.
+- Mentors will have to manually update their calendar to reflect booked timeslots with Google Calendars. _Note_: (Google Appointment Slots)[https://support.google.com/calendar/answer/190998?co=GENIE.Platform%3DDesktop&hl=en] would help to remediate this, but since we don't have access to an organization or school Google Calendar, it is not something that we are able to test. However, organizations will likely be able to use Appointment Slots.
 
 * In the case that MentorMatch grows and needs to send >500 emails per day, Nodemailer will became a limitation.
 
@@ -130,3 +170,5 @@ FR23. To "unmatch" Mentees and Mentors, the Mentee can communicate with the Ment
 - The database security rules most likely need to be improved and fine-tuned, although a good starter version is already deployed in production. 
 
 * Currently, any mentor or mentee can change the url we give them when filling out the signup form in order to signup under the name of any company they choose. This is because we are currently using a get-request parameter that we set in the url we give the user in order to determine the name of the organization of the mentor who invited them. This process should be made impervious to potential user interference. 
+
+* In the case that MentorMatch grows and needs to send >500 emails per day, Nodemailer (the solution we use to send custom emails) may become a limitation. 
