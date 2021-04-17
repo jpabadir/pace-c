@@ -1,6 +1,7 @@
 # PDF Report
 
 ## General Information
+
 ### Description of MentorMatch
 
 The software that we have created over the duration of this project is a web-based Mentorship platform. The goal of this system is to facilitate the matching process between users seeking to learn skills (Mentees) and individuals who can offer guidance in sought after skills (Mentors). At the heart of this project are the Organizations, represented by one or more Admins, who host instances of the Mentee form on their public facing website and request Mentors internally from their part of our website: the admin's account. Suitable matches are created based on the number of similar skillsets and time-zone proximity. Mentors can only be matched with Mentees who signed up on the website of the organization a mentor is part of. These matches are displayed as requests to Mentors, who then have the option to accept or deny requests. Once a Mentor accepts a request, the accepted Mentee is notified, allowing the two users to communicate, and for the Mentoring to begin.
@@ -118,7 +119,7 @@ Although the decision for our chosen tech stack was ultimately up to us, our cli
   - Every other UI page is split into components that are rendered dependent on the program’s state from the user’s actions. Given this, all of our UI components exist in their own folder named according to what they display within the central folder titled ‘components’.
 - ‘helper-methods.js’ contains various functions that are called throughout the application. The majority of these functions play a crucial role for interacting with the Firebase database (for example, to create users after form submission, to send verification and password reset emails for authenticated users, etc.).
 - Credentials for interacting with the database are within firebase-init.js.
-- ‘index.js’ allows the Mentee and Mentor forms to be rendered independently from the rest of the website. This is useful when we need to show only the mentor form to a mentor we just invited via email, and when we need to embed only the mentee form in another organization's website. 
+- ‘index.js’ allows the Mentee and Mentor forms to be rendered independently from the rest of the website. This is useful when we need to show only the mentor form to a mentor we just invited via email, and when we need to embed only the mentee form in another organization's website.
 - ‘timeZones.json’ is utilized to populate the ‘time zone’ dropdown on the Mentee and Mentor forms.
 
 A major benefit to using React is the ability to use UI Libraries (we opted for Ant Design), as well as to integrate with our back-end Node server. The main Ant Design components utilized throughout the app are Notifications, Cards, Forms, Icons, Tabs, and Modals.
@@ -129,7 +130,7 @@ A major benefit to using React is the ability to use UI Libraries (we opted for 
 - Our back-end is accessed from the ‘back-end’ folder within ‘src’.
 - ‘app.js’ contains functions that are triggered from requests on specific ports. For example, functions exist for generating matches between Mentees and Mentors (by finding the least difference in time zones, number of commons skills, and same organization string) as well as route calls for inviting new mentors and accepting mentees.
 - ‘Email-helpers.js’ houses functions that send custom emails to users via nodemailer.
-- The back-end is configured to use the Firebase Admin SDK. This is needed to give our backend full access to our firebase database, which is, otherwise, secured by rules. 
+- The back-end is configured to use the Firebase Admin SDK. This is needed to give our backend full access to our firebase database, which is, otherwise, secured by rules.
 
 Note that both the front-end and back-end contain files to assist in catching errors (.eslintrc.json) and for automatic formatting adjustments (.prettierrc.json). The package-lock.json files contain the list of dependencies which are installed whenever the ‘npm install’ command is run in the terminal before running the front-end and back-end.
 
@@ -144,7 +145,7 @@ Note that both the front-end and back-end contain files to assist in catching er
 - The ‘Authentication’ tab of the Firebase console allows us to verify Mentor and Admin identities upon account creation as well as to validate credentials upon login. All users are required to verify their email address before being able to access Admin or Mentor privileges of the website. Note that the user id of each user in the 'Authentication' menu is the same as the user id of each user found under the 'Realtime Database' menu.
   - Our Firebase configuration uses the ‘Email/Password’ Sign-in method. This can be modified if needed in the future by going to the ‘Sign-in method’ tab under ‘Authentication’.
   - Authentication also handles password reset changes.
-  - Since we use Firebase's 'Authentication' service, we never have to worry about encrypting or storing users' passwords, because that is also handled for us. 
+  - Since we use Firebase's 'Authentication' service, we never have to worry about encrypting or storing users' passwords, because that is also handled for us.
 
 Disclaimer: Our application does not have a UI to remove users. If a user is to be removed, go to the ‘Authentication’ tab of Firebase, find the user’s email address, then click on the three vertical dots. Simply click ‘Delete Account’ to remove that user. To ensure that the database isn’t cluttered, it would also be a good idea to remove that user from the Realtime Database.
 
@@ -162,17 +163,18 @@ Disclaimer: Our application does not have a UI to remove users. If a user is to 
 
 * In the code, when providing an explicit URL was required, 'localhost' was used as the domain name. When the website is deployed, a more permanent solution will need to be implemented. This can be done using environment variables, for instance.
 
-* Currently, anybody who has access to the mentor form url can sign up to be a mentor. We need to make sure that only invited mentors are able to sign up. This can be done upon mentor signup through a simple check of the DB. 
+* Currently, anybody who has access to the mentor form url can sign up to be a mentor. We need to make sure that only invited mentors are able to sign up. This can be done upon mentor signup through a simple check of the DB.
 
-* If the website is to be used with its current configuration, our team will need to communicate with Pace to transfer ownership of the Firebase project, as well as that of the gmail account we created for this website. Please see the step-by-step section for more information about this. 
+* If the website is to be used with its current configuration, our team will need to communicate with Pace to transfer ownership of the Firebase project, as well as that of the gmail account we created for this website. Please see the step-by-step section for more information about this.
 
-* While efforts have been made in the last sprint to start implementing security measures for the site, there are still large security gaps in the site that need to be addressed. The ones we can think of are: 
+* While efforts have been made in the last sprint to start implementing security measures for the site, there are still large security gaps in the site that need to be addressed. The ones we can think of are:
+
 - The backend needs to be secured to accept only requests from our specific client app. This should be able to be done by changing its CORS settings.
-- The database security rules most likely need to be improved and fine-tuned, although a good starter version is already deployed in production. 
+- The database security rules most likely need to be improved and fine-tuned, although a good starter version is already deployed in production.
 
-* Currently, any mentor or mentee can change the url we give them when filling out the signup form in order to signup under the name of any company they choose. This is because we are currently using a get-request parameter that we set in the url we give the user in order to determine the name of the organization of the mentor who invited them. This process should be made impervious to potential user interference. 
+* Currently, any mentor or mentee can change the url we give them when filling out the signup form in order to signup under the name of any company they choose. This is because we are currently using a get-request parameter that we set in the url we give the user in order to determine the name of the organization of the mentor who invited them. This process should be made impervious to potential user interference.
 
-* In the case that MentorMatch grows and needs to send >500 emails per day, Nodemailer (the solution we use to send custom emails) may become a limitation. 
+* In the case that MentorMatch grows and needs to send >500 emails per day, Nodemailer (the solution we use to send custom emails) may become a limitation.
 
 ## Implementation Update
 
@@ -210,7 +212,7 @@ After testing each user flow of the application multiple times, no bugs have bee
 
 ### Where to Find the Code
 
-The code for MentorMatch can be found in the GitHub repository: <https://github.com/jpabadir/pace-c>. This repo can be forked in order for the code to be used by anyone. 
+The code for MentorMatch can be found in the GitHub repository: <https://github.com/jpabadir/pace-c>. This repo can be forked in order for the code to be used by anyone.
 
 ### Setup Installation Details
 
@@ -263,12 +265,13 @@ Our team decided to share linting rules, and to enforce these with our continuou
 5. Now, running `eslint src/front-end/src/**/*.js src/back-end/src/**/*.js` from the project's top-level directory will lint the entire codebase.
 
 ### About Continuous Integration
-As mentioned, our team uses continuous integration (CI). Our CI pipeline does two things. First, it runs ESLint on the code, and fails if the code is not properly linted. Then, it runs the project's tests, and fails if any of them fail. It is set-up to do so when a Pull Request is made to develop or master, our two default, protected branches. This is all piloted by the `link.yml` file in this repo, please look there to fully understand and modify the CI steps. 
+
+As mentioned, our team uses continuous integration (CI). Our CI pipeline does two things. First, it runs ESLint on the code, and fails if the code is not properly linted. Then, it runs the project's tests, and fails if any of them fail. It is set-up to do so when a Pull Request is made to develop or master, our two default, protected branches. This is all piloted by the `link.yml` file in this repo, please look there to fully understand and modify the CI steps.
 
 ### Maintenance Issues
 
 There are two required associated external entities that anyone interested in using this project will want to be aware of: an email address to message users, and a Firebase project. For Pace, who is the original client of this project, there is an option to receive ownership of these two accounts directly from our team. Anyone else using this project in an open-source fashion will need to setup their own Firebase project and email accounts, and change the code in order to link this software to the new accounts.
-Should pace choose to use the same accounts we do, there are three files which are "gitignored" which we will transfer to them: a `.env` file, which stores the password to the Gmail account, a `credentials.json` file, which stored information about our Firebase projects (API key, project ID, etc...) and another file with a very long name which stores information pertaining to the firebase admin SDK, which is therefore used by our backend to bypass the firebase rules. 
+Should pace choose to use the same accounts we do, there are three files which are "gitignored" which we will transfer to them: a `.env` file, which stores the password to the Gmail account, a `credentials.json` file, which stored information about our Firebase projects (API key, project ID, etc...) and another file with a very long name which stores information pertaining to the firebase admin SDK, which is therefore used by our backend to bypass the firebase rules.
 
 #### Gmail Account Details
 
@@ -281,3 +284,21 @@ Ownership of the Firebase project we created can be transferred to Pace, and our
 ### Untested Existing Features, Unimplemented Features
 
 Please see the "Updated Test Report" as well as the "Unimplemented Requirements" sections for a note about this.
+
+## Links
+
+### GitHub repository link
+
+<https://github.com/jpabadir/pace-c>
+
+### Link to promotion video
+
+<https://link-to-video>
+
+### Link to presentation video
+
+<https://link-to-video>
+
+### Link to slideshow
+
+<https://docs.google.com/presentation/d/1sVmy_5QQ0siq0K7j4UhdK43ZlHqF2yE5FaPrWn5iHbU/edit?usp=sharing>
