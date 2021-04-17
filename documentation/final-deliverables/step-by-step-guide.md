@@ -1,12 +1,12 @@
 # Step-by-Step Guide for Pace Group C - MentorMatch
 
-## Where to Find the Code
+### Where to Find the Code
 
 The code for MentorMatch can be found in the GitHub repository: <https://github.com/jpabadir/pace-c>. This repo can be forked in order for the code to be used by anyone. 
 
-## Setup Installation Details
+### Setup Installation Details
 
-### General
+#### General
 
 Install Node:
 
@@ -15,14 +15,14 @@ Install Node:
 3. Run `node -v` to check that node is installed and that you're using the latest version.
 4. Open your IDE, checkout the develop branch, and pull (`git checkout develop`, `git pull`)
 
-### Front-end
+#### Front-end
 
 1. In your terminal, navigate to `pace-c/src/front-end` (`cd pace-c/src/front-end`)
 2. Run `npm install`. This will look into the package.json, and install all required dependencies
 3. Run `npm start`. This will start the MentorMatch app! You should see the homepage of MentorMatch open in your browser.
 4. Your front-end setup is done!
 
-### Back-end
+#### Back-end
 
 Note that for the website to work properly, you need to run the backend at the same time as you run the frontend. Therefore, we suggested opening another terminal window or tab before running the instructions below.
 
@@ -31,7 +31,7 @@ Note that for the website to work properly, you need to run the backend at the s
 3. Run `nodemon src/app.js`. Nodemon is a small package that helps us develop faster. All it does is detect when the file `app.js` has been modified, and stops and re-runs the server so we don't have to do it manually.
 4. Your back-end setup is done!
 
-## Unit Testing Packages Installation Details
+### Unit Testing Packages Installation Details
 
 1. Install Jest: run the following command in a terminal:
    `npm install --save-dev jest@26.6.0`
@@ -39,7 +39,7 @@ Note that for the website to work properly, you need to run the backend at the s
    `npm install react-test-renderer`
 3. Now, running `cd src/front-end/; npm run test` from the project's top-level directory will run the test suites.
 
-## Linting Installation Details
+### Linting Installation Details
 
 Our team decided to share linting rules, and to enforce these with our continuous integration pipeline. Should your team choose to do the same, you can follow the instructions below in order to copy our setup.
 
@@ -54,22 +54,22 @@ Our team decided to share linting rules, and to enforce these with our continuou
    - When asked about the trailing commas, enter `3`
 5. Now, running `eslint src/front-end/src/**/*.js src/back-end/src/**/*.js` from the project's top-level directory will lint the entire codebase.
 
-## About Continuous Integration
+### About Continuous Integration
 As mentioned, our team uses continuous integration (CI). Our CI pipeline does two things. First, it runs ESLint on the code, and fails if the code is not properly linted. Then, it runs the project's tests, and fails if any of them fail. It is set-up to do so when a Pull Request is made to develop or master, our two default, protected branches. This is all piloted by the `link.yml` file in this repo, please look there to fully understand and modify the CI steps. 
 
-## Maintenance Issues
+### Maintenance Issues
 
 There are two required associated external entities that anyone interested in using this project will want to be aware of: an email address to message users, and a Firebase project. For Pace, who is the original client of this project, there is an option to receive ownership of these two accounts directly from our team. Anyone else using this project in an open-source fashion will need to setup their own Firebase project and email accounts, and change the code in order to link this software to the new accounts.
 Should pace choose to use the same accounts we do, there are three files which are "gitignored" which we will transfer to them: a `.env` file, which stores the password to the Gmail account, a `credentials.json` file, which stored information about our Firebase projects (API key, project ID, etc...) and another file with a very long name which stores information pertaining to the firebase admin SDK, which is therefore used by our backend to bypass the firebase rules. 
 
-### Gmail Account Details
+#### Gmail Account Details
 
 Our team created the following Gmail address, which is currently being used to message users: "pacementormatch@gmail.com". Our team is happy to transfer the password to this email account, should Pace wish to use it. Otherwise, the email address used to message users can easily be changed in the `email-helpers.js` file.
 
-### Firebase Account Details
+#### Firebase Account Details
 
 Ownership of the Firebase project we created can be transferred to Pace, and our team is happy to schedule a meeting in order to do so, should Pace choose to use the same project. Otherwise, the project being used can be changed in the Firebase configuration files, in the code.
 
-## Untested Existing Features, Unimplemented Features
+### Untested Existing Features, Unimplemented Features
 
 Please see the "Updated Test Report" as well as the "Unimplemented Requirements" sections for a note about this.

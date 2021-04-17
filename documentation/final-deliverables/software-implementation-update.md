@@ -1,4 +1,4 @@
-## Updated Test Report
+### Updated Test Report
 
 All of our front-end components within our application are in the 'components' folder within 'src'. Each component folder has a respective '.test.js' file for unit testing purposes. Generally, our team primarily focused on feature development during each sprint of the project's duration, which included rigorous manual testing before merging the PR. These features were then tested to assure quality by unit testing through Jest (a testing framework recommended by React, aimed at specifically testing JavaScript).
 
@@ -7,7 +7,7 @@ In addition, our Github repository has regression testing, which ensures that al
 In total, we have 15 test suites, with 57 tests that pass.
 [Reminder to myself to add something about total coverage here]
 
-## Unimplemented Requirements
+### Unimplemented Requirements
 
 As our application stands, all features required to meet Minimum Viable Product functionality have been developed. As such, there are no requirements that have been unimplemented or that are only partially working. Any feature that might have limitations or that could benefit from future development is listed under the "Limitations and Future Improvements" section.
 
@@ -22,7 +22,7 @@ Despite manually testing to ensure functionality, the back-end could benefit in 
 
 <br>
 
-## Known Bugs
+### Known Bugs
 
 After testing each user flow of the application multiple times, no bugs have been found since we have worked to fix any bugs that we have come across. For reference, some of the bugs that we have fixed can be found in our repository by going to the 'documentation' folder, then clicking on 'known-bugs.md'.
 

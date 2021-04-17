@@ -1,16 +1,17 @@
 # PDF Report
 
-## Description of MentorMatch
+## General Information
+### Description of MentorMatch
 
 The software that we have created over the duration of this project is a web-based Mentorship platform. The goal of this system is to facilitate the matching process between users seeking to learn skills (Mentees) and individuals who can offer guidance in sought after skills (Mentors). At the heart of this project are the Organizations, represented by one or more Admins, who host instances of the Mentee form on their public facing website and request Mentors internally from their part of our website: the admin's account. Suitable matches are created based on the number of similar skillsets and time-zone proximity. Mentors can only be matched with Mentees who signed up on the website of the organization a mentor is part of. These matches are displayed as requests to Mentors, who then have the option to accept or deny requests. Once a Mentor accepts a request, the accepted Mentee is notified, allowing the two users to communicate, and for the Mentoring to begin.
 
 <br>
 
-## User Groups
+### User Groups
 
 Within our system, there are three user groups: Admins, Mentors, and Mentees.
 
-### 1) Admins
+#### 1) Admins
 
 Admins register their Organization by creating an account on our platform. To register, they need to provide the name of the Organization that they're from, as well as their name, email address, and a password. Once registered, an Admin can invite Mentors to join MentorMatch, and see which Mentor requests are pending as well as which Mentors are actively using the system. Admins can view the Mentor Form that requested Mentors receive the link to in an email upon being requested, as well as the Mentee Form, which they can generate an iFrame tag for to embed on their Organization's public website.
 
@@ -18,7 +19,7 @@ Admins register their Organization by creating an account on our platform. To re
 
 After learning about MentorMatch through a friend, and talking to individuals within our Organization, I decided to register. MentorMatch facilitates the process of bringing together skilled individuals from our organization so that they can aide in our vision of teaching skills to others. By going to MentorMatch and clicking on the 'create account' button, I'm able to register my organization and become the admin account holder. Once I have verified my email address by clicking a link I receive, I can manage my Organization's mentors by viewing who is a Mentor on the platform, as well as which of the Mentors that I have requested haven't yet registered. Requesting Mentors is simple, as only providing a valid email address is required to notify prospective Mentors that I'd like them to register on the platform.
 
-### 2) Mentor
+#### 2) Mentor
 
 Once requested by an Admin, Mentor users will receive an email with a link which brings them to that Organization's Mentor Form. Through this link, the user becomes associated with that Organization upon successful form submission. On that form, Mentors provide information about the skills they are able to teach, when they're available to mentor via a calendar link, and some basic information about themselves such as their name, email address, and a description. To be able to create their account, a unique email address must be provided. If the form has been filled out according to specifications, the user will be required to verify their email address before they can access Mentor functionalities within MentorMatch. Verified Mentors can view mentee requests and decide whether to accept or decline them. Though MentorMatch initially puts Mentors and Mentees in contact with each other, they then communicate outside of MentorMatch.
 
@@ -26,7 +27,7 @@ Once requested by an Admin, Mentor users will receive an email with a link which
 
 - As an individual currently working for an Organization registered on MentorMatch, I have experience in valuable skillsets that I would like to share with others. After receiving an email invite to join MentorMatch by my Organization's Admin, I am taken to a form which contains intuitive labels to indicate what information is required of me and offers tooltips and useful warnings in case I get stuck. Having the ability to provide a calendar link to my preferred Google calendar allows for flexibility in my choice of hours of availability, since these changes can be reflected on my calendar by booking times for confirmed Mentees, ensuring double-booking does not happen. After filling out the form and verifying my email, I can read a tutorial which gives a brief introduction to what I'm able to do as a Mentor. The "Mentee Requests" feature offers flexibility, as it allows me to decide whether I'd like to accept or decline a request based on the skills the Mentee is seeking to learn. The 'Accept Mentees' tab provides me with a reminder of the Mentors whose request I have already accepted, as well as basic information about each Mentee so that I can tailor my mentorship sessions towards their needs.
 
-### 3) Mentee
+#### 3) Mentee
 
 Mentees register through the Mentee Form, which can be accessed through an Organization's public website. Our system does not require mentees to have their own account. The Mentee Form prompts users to provide the skills that they want to be Mentored in as well as some basic information about themselves. Once the form has been submitted, a welcome email will be sent to the email address provided, informing the user that they will be notified once a Mentor has accepted their request. Based on the information provided on the form, MentorMatch will suggest Mentees to Mentors, considering common skills and time zones. After a Mentor accepts a Mentee request, that Mentee will receive an email containing information about the Mentor who accepted them, as well as the link which displays the Mentor's availability. From there, both users can correspond through email to arrange meetings.
 
@@ -36,15 +37,15 @@ Mentees register through the Mentee Form, which can be accessed through an Organ
 
 <br>
 
-## DFD
+### DFD
 
-### DFD Level 0
+#### DFD Level 0
 
 - [DFD Level 0](https://github.com/jpabadir/pace-c/blob/develop/documentation/final-deliverables/dfd/dfd-level0.pdf)
 
 - A description of this DFD can be found at the bottom of the linked image.
 
-### DFD Level 1
+#### DFD Level 1
 
 - [DFD Level 1](https://github.com/jpabadir/pace-c/blob/develop/documentation/final-deliverables/dfd/dfd-level-1-full.png)
 - This DFD shows the system architecture within more detail.
@@ -53,7 +54,7 @@ Mentees register through the Mentee Form, which can be accessed through an Organ
 
 <br>
 
-## Functional Requirements
+### Functional Requirements
 
 FR1. Create a static Mentee form which can be embedded into a website via an iFrame tag (with name, email, time-zone, availability, ranked skills, and description fields).
 
@@ -103,7 +104,7 @@ FR23. To "unmatch" Mentees and Mentors, the Mentee can communicate with the Ment
 
 <br>
 
-## Technical Specifications
+### Technical Specifications
 
 **Overview:**
 
@@ -149,7 +150,7 @@ Disclaimer: Our application does not have a UI to remove users. If a user is to 
 
 <br>
 
-## Limitations of MentorMatch, and Future Improvements Needed
+### Limitations of MentorMatch, and Future Improvements Needed
 
 - The way that a mentor's availability is obtained is through a url input field on the Mentor form. This field is currently limited to only accept Google Calendar links.
 
@@ -172,3 +173,111 @@ Disclaimer: Our application does not have a UI to remove users. If a user is to 
 * Currently, any mentor or mentee can change the url we give them when filling out the signup form in order to signup under the name of any company they choose. This is because we are currently using a get-request parameter that we set in the url we give the user in order to determine the name of the organization of the mentor who invited them. This process should be made impervious to potential user interference. 
 
 * In the case that MentorMatch grows and needs to send >500 emails per day, Nodemailer (the solution we use to send custom emails) may become a limitation. 
+
+## Implementation Update
+
+### Updated Test Report
+
+All of our front-end components within our application are in the 'components' folder within 'src'. Each component folder has a respective '.test.js' file for unit testing purposes. Generally, our team primarily focused on feature development during each sprint of the project's duration, which included rigorous manual testing before merging the PR. These features were then tested to assure quality by unit testing through Jest (a testing framework recommended by React, aimed at specifically testing JavaScript).
+
+In addition, our Github repository has regression testing, which ensures that all unit tests have passed before any open PR can be merged (ensuring that no new additions to the repo will impact existing features in an adverse way). Continuous Integration within our repo assisted with quality assurance since it served to find any potential issues early in development once pushed. Before pushing, EsLint and Prettier screened for errors and warnings, displaying any areas requiring attention on the console.
+
+In total, we have 15 test suites, with 57 tests that pass.
+[Reminder to myself to add something about total coverage here]
+
+### Unimplemented Requirements
+
+As our application stands, all features required to meet Minimum Viable Product functionality have been developed. As such, there are no requirements that have been unimplemented or that are only partially working. Any feature that might have limitations or that could benefit from future development is listed under the "Limitations and Future Improvements" section.
+
+Although the majority of features have been unit tested, there are components that we were not able to fully unit test due to the time intensivity of Firebase mocking. Components requiring Firebase mocking have a comment disclosing this. For reference, the files that we were unable to fully test due to the fact that they require a Firebase call to render properly are as follows:
+
+- AdminHome.test.js
+- ManageMentors.test.js
+- MentorAccepted.test.js
+- MentorSuggested.test.js
+
+Despite manually testing to ensure functionality, the back-end could benefit in the future from unit testing via Jest.
+
+<br>
+
+### Known Bugs
+
+After testing each user flow of the application multiple times, no bugs have been found since we have worked to fix any bugs that we have come across. For reference, some of the bugs that we have fixed can be found in our repository by going to the 'documentation' folder, then clicking on 'known-bugs.md'.
+
+- Although this isn't necessarily a bug, it is important to note that a TypeError displaying 'Cannot set property 'id' of null' may occur when navigating to the 'Accepted Mentees' tab. If this occurs, reference the Firebase database to see if the logged in mentor has any suggested or accepted mentees’ IDs that don’t exist in the database. If a mentee ID appears in either field and that mentee doesn't exist as a user in the database, remove that UID. Note: The TypeError is only displayed when the app is being run on localhost, and would not crash the application if deployed.
+
+## Step-by-step guide
+
+### Where to Find the Code
+
+The code for MentorMatch can be found in the GitHub repository: <https://github.com/jpabadir/pace-c>. This repo can be forked in order for the code to be used by anyone. 
+
+### Setup Installation Details
+
+#### General
+
+Install Node:
+
+1. Install nvm: run the following command in a terminal: `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash`
+2. Run `nvm install node` (this will install the latest version of node for you)
+3. Run `node -v` to check that node is installed and that you're using the latest version.
+4. Open your IDE, checkout the develop branch, and pull (`git checkout develop`, `git pull`)
+
+#### Front-end
+
+1. In your terminal, navigate to `pace-c/src/front-end` (`cd pace-c/src/front-end`)
+2. Run `npm install`. This will look into the package.json, and install all required dependencies
+3. Run `npm start`. This will start the MentorMatch app! You should see the homepage of MentorMatch open in your browser.
+4. Your front-end setup is done!
+
+#### Back-end
+
+Note that for the website to work properly, you need to run the backend at the same time as you run the frontend. Therefore, we suggested opening another terminal window or tab before running the instructions below.
+
+1. In your terminal, navigate to `pace-c/src/back-end`.
+2. Run `npm install`. This will install all required dependencies.
+3. Run `nodemon src/app.js`. Nodemon is a small package that helps us develop faster. All it does is detect when the file `app.js` has been modified, and stops and re-runs the server so we don't have to do it manually.
+4. Your back-end setup is done!
+
+### Unit Testing Packages Installation Details
+
+1. Install Jest: run the following command in a terminal:
+   `npm install --save-dev jest@26.6.0`
+2. Install React test renderer: run the following command in a terminal:
+   `npm install react-test-renderer`
+3. Now, running `cd src/front-end/; npm run test` from the project's top-level directory will run the test suites.
+
+### Linting Installation Details
+
+Our team decided to share linting rules, and to enforce these with our continuous integration pipeline. Should your team choose to do the same, you can follow the instructions below in order to copy our setup.
+
+1. In VSCode (assuming you are using VSCode), click on the "Extensions" icon on the leftmost navigation bar.
+2. Install "Prettier - Code formatter" and "ESLint".
+3. In the terminal type `cd src/front-end`
+4. Run the follow script `npx install-peerdeps --dev eslint-config-airbnb`
+   - For the first prompt, select npm by entering `2`
+   - Enter `2` to indicate that you prefer the ESLint and Prettier configurations to be formatted as .json
+   - When asked to "Write .eslintrc.js (Y/n)? Enter `Y`
+   - For the max line length, say `80`
+   - When asked about the trailing commas, enter `3`
+5. Now, running `eslint src/front-end/src/**/*.js src/back-end/src/**/*.js` from the project's top-level directory will lint the entire codebase.
+
+### About Continuous Integration
+As mentioned, our team uses continuous integration (CI). Our CI pipeline does two things. First, it runs ESLint on the code, and fails if the code is not properly linted. Then, it runs the project's tests, and fails if any of them fail. It is set-up to do so when a Pull Request is made to develop or master, our two default, protected branches. This is all piloted by the `link.yml` file in this repo, please look there to fully understand and modify the CI steps. 
+
+### Maintenance Issues
+
+There are two required associated external entities that anyone interested in using this project will want to be aware of: an email address to message users, and a Firebase project. For Pace, who is the original client of this project, there is an option to receive ownership of these two accounts directly from our team. Anyone else using this project in an open-source fashion will need to setup their own Firebase project and email accounts, and change the code in order to link this software to the new accounts.
+Should pace choose to use the same accounts we do, there are three files which are "gitignored" which we will transfer to them: a `.env` file, which stores the password to the Gmail account, a `credentials.json` file, which stored information about our Firebase projects (API key, project ID, etc...) and another file with a very long name which stores information pertaining to the firebase admin SDK, which is therefore used by our backend to bypass the firebase rules. 
+
+#### Gmail Account Details
+
+Our team created the following Gmail address, which is currently being used to message users: "pacementormatch@gmail.com". Our team is happy to transfer the password to this email account, should Pace wish to use it. Otherwise, the email address used to message users can easily be changed in the `email-helpers.js` file.
+
+#### Firebase Account Details
+
+Ownership of the Firebase project we created can be transferred to Pace, and our team is happy to schedule a meeting in order to do so, should Pace choose to use the same project. Otherwise, the project being used can be changed in the Firebase configuration files, in the code.
+
+### Untested Existing Features, Unimplemented Features
+
+Please see the "Updated Test Report" as well as the "Unimplemented Requirements" sections for a note about this.
