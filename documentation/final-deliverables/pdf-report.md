@@ -293,7 +293,7 @@ Please see the "Updated Test Report" as well as the "Unimplemented Requirements"
 
 ### Link to promotion video
 
-<https://link-to-video>
+<https://youtu.be/K2V_RkKv8PQ>
 
 ### Link to presentation video
 
@@ -301,4 +301,4 @@ Please see the "Updated Test Report" as well as the "Unimplemented Requirements"
 
 ### Link to slideshow
 
-<https://docs.google.com/presentation/d/1sVmy_5QQ0siq0K7j4UhdK43ZlHqF2yE5FaPrWn5iHbU/edit?usp=sharing>
+<https://docs.google.com/presentation/d/1n8Q8Z2-QDmEtR-r-EjWIb12ksIfBgPLgl4lxWe-IOLM/edit?usp=sharing>
