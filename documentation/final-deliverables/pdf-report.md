@@ -1,4 +1,4 @@
-# PDF Report
+# Final Report and Handover Document - Pace C Team
 
 ## General Information
 
@@ -176,7 +176,7 @@ Disclaimer: Our application does not have a UI to remove users. If a user is to 
 
 * In the case that MentorMatch grows and needs to send >500 emails per day, Nodemailer (the solution we use to send custom emails) may become a limitation.
 
-## Implementation Update
+## An Update on the Status of the Software's Implementation
 
 ### Updated Test Report
 
@@ -208,7 +208,7 @@ After testing each user flow of the application multiple times, no bugs have bee
 
 - Although this isn't necessarily a bug, it is important to note that a TypeError displaying 'Cannot set property 'id' of null' may occur when navigating to the 'Accepted Mentees' tab. If this occurs, reference the Firebase database to see if the logged in mentor has any suggested or accepted mentees’ IDs that don’t exist in the database. If a mentee ID appears in either field and that mentee doesn't exist as a user in the database, remove that UID. Note: The TypeError is only displayed when the app is being run on localhost, and would not crash the application if deployed.
 
-## Step-by-step guide
+## A Step-by-step Guide to Installing and Running the Software
 
 ### Where to Find the Code
 
