@@ -4,7 +4,7 @@
 
 ### Description of MentorMatch
 
-The software that we have created over the duration of this project is a web-based Mentorship platform. The goal of this system is to facilitate the matching process between users seeking to learn skills (Mentees) and individuals who can offer guidance in sought after skills (Mentors). At the heart of this project are the Organizations, represented by one or more Admins, who host instances of the Mentee form on their public facing website and request Mentors internally from their part of our website: the admin's account. Suitable matches are created based on the number of similar skillsets and time-zone proximity. Mentors can only be matched with Mentees who signed up on the website of the organization a mentor is part of. These matches are displayed as requests to Mentors, who then have the option to accept or deny requests. Once a Mentor accepts a request, the accepted Mentee is notified, allowing the two users to communicate, and for the Mentoring to begin.
+The software that we have created over the duration of this project is a web-based mentorship platform. The goal of this system is to facilitate the matching process between users seeking to learn skills (Mentees) and individuals who can offer guidance in sought-after skills (Mentors). At the heart of this project are the Organizations, represented by one or more Admins, who host instances of the Mentee form on their public-facing website and request Mentors internally from their part of our website: the Admin account. Suitable matches are created based on the number of similar skills and time-zone proximity. A specific Mentor can only be matched with Mentees who signed up on the website of the organization that mentor is part of. These matches are displayed as requests to Mentors, who then have the option to accept or deny requests. Once a Mentor accepts a request, the accepted Mentee is notified, allowing the two users to communicate, and for the mentorship relation to begin.
 
 <br>
 
@@ -14,7 +14,7 @@ Within our system, there are three user groups: Admins, Mentors, and Mentees.
 
 #### 1) Admins
 
-Admins register their Organization by creating an account on our platform. To register, they need to provide the name of the Organization that they're from, as well as their name, email address, and a password. Once registered, an Admin can invite Mentors to join MentorMatch, and see which Mentor requests are pending as well as which Mentors are actively using the system. Admins can view the Mentor Form that requested Mentors receive the link to in an email upon being requested, as well as the Mentee Form, which they can generate an iFrame tag for to embed on their Organization's public website.
+Admins register their Organization by creating an account on our platform. To register, they need to provide the name of the Organization that they're from, as well as their name, email address, and a password. Once registered, an Admin can invite Mentors to join MentorMatch, and see which Mentor requests are pending as well as which Mentors are actively using the system. Admins can view the Mentor Form that requested Mentors receive the link to in an email upon being requested, as well as the Mentee Form, which they can generate an iFrame tag for to embed it on their Organization's public website.
 
 **An example of how Admins interact with the system:**<br>
 
@@ -22,7 +22,7 @@ After learning about MentorMatch through a friend, and talking to individuals wi
 
 #### 2) Mentor
 
-Once requested by an Admin, Mentor users will receive an email with a link which brings them to that Organization's Mentor Form. Through this link, the user becomes associated with that Organization upon successful form submission. On that form, Mentors provide information about the skills they are able to teach, when they're available to mentor via a calendar link, and some basic information about themselves such as their name, email address, and a description. To be able to create their account, a unique email address must be provided. If the form has been filled out according to specifications, the user will be required to verify their email address before they can access Mentor functionalities within MentorMatch. Verified Mentors can view mentee requests and decide whether to accept or decline them. Though MentorMatch initially puts Mentors and Mentees in contact with each other, they then communicate outside of MentorMatch.
+Once requested by an Admin, Mentor users will receive an email with a link which brings them to that Organization's Mentor Form. Through this link, the user becomes associated with that Organization upon successful form submission. On that form, Mentors provide information about the skills they are able to teach, when they're available to mentor via a calendar link, and some basic information about themselves such as their name, email address, and a description. To be able to create their account, a unique email address must be provided. If the form has been filled-out according to specifications, the user will be required to verify their email address before they can access Mentor functionalities within MentorMatch. Verified Mentors can view mentee requests and decide whether to accept or decline them. Though MentorMatch initially puts Mentors and Mentees in contact with each other, they then communicate outside of MentorMatch.
 
 **An example of how Mentors interact with the system:**<br>
 
@@ -297,7 +297,7 @@ Please see the "Updated Test Report" as well as the "Unimplemented Requirements"
 
 ### Link to presentation video
 
-<https://link-to-video>
+<https://www.youtube.com/watch?v=K2V_RkKv8PQ>
 
 ### Link to slideshow
 
