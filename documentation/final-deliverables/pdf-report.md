@@ -42,9 +42,7 @@ Mentees register through the Mentee Form, which can be accessed through an Organ
 
 #### DFD Level 0
 
-- [DFD Level 0](https://github.com/jpabadir/pace-c/blob/develop/documentation/final-deliverables/dfd/dfd-level0.pdf)
-
-- A description of this DFD can be found at the bottom of the linked image.
+- The DFD Level 0 can be viewed at [this link](https://github.com/jpabadir/pace-c/blob/develop/documentation/final-deliverables/dfd/dfd-level0.pdf). It will also be on the next page of this document. A description of this DFD appears at the bottom of the image it is on.
 
 #### DFD Level 1
 
